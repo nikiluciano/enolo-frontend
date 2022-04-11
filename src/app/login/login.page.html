@@ -1,9 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<ion-content class="sfondo">
+  <p class="logo">
+ 
+  </p>
+  <div class="login-form">
+    <div class="sign-in-htm">
+      <div class="group">
+        <input [(ngModel)]="email"  placeholder="Email" id="user" type="text" class="input" data-type="email">
+      </div>
+      <div class="group">
+        <input [(ngModel)]="password" placeholder="Password" id="pass" type="password" class="input" data-type="password"/>
+      </div>
+  
+      <div>
 
-<ion-content>
+        <button (click)="accedi()" fill="outline" mode="ios" mode="md" class="center"  [routerLink]="['/login']">
 
+          <h1>
+            <font  face="Caviar Dreams" size="4">ACCEDI</font><br />
+          </h1>
+        </button>
+      </div>
+
+      <div class="foot-lnk">
+        <a [routerLink]="['/forgot-password']"  class="small-text">Recupera password</a>
+      </div>
+
+      <div class="foot-lnk-registrati">
+        <a [routerLink]="['/registra-gestore']" class="small-text">Registrati</a>
+      </div>
+    </div>
+</div>
 </ion-content>
