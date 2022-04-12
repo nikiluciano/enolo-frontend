@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 @Component({
@@ -18,7 +19,7 @@ export class AppComponent {
   }
 
   button3(){
-    this.router.navigate(["./carichi"])
+    //this.router.navigate(["./carichi"]) 
   }
 
   button4(){
