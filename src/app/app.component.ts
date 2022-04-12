@@ -19,7 +19,7 @@ export class AppComponent {
   }
 
   button3(){
-    //this.router.navigate(["./carichi"]) 
+     
   }
 
   button4(){
