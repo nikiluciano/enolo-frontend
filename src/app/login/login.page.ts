@@ -12,7 +12,7 @@ export class LoginPage implements OnInit {
   ngOnInit() { 
   } 
   getCredentials() { 
-    console.log(this.email); 
+    console.log(this.email);  
   } 
   pwdIcon = "eye-outline"; 
   showPwd = false; 

@@ -23,7 +23,7 @@ export class SignUpPage implements OnInit {
   pwdIcon = "eye-outline";
   showPwd = false;
 
-  togglePwd() {
+  togglePwd() { 
     this.showPwd = !this.showPwd;
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline";
   }
