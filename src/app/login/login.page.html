@@ -1,34 +1,35 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<ion-content class="sfondo">
-  <p class="logo">
- 
-  </p>
-  <div class="login-form">
-    <div class="sign-in-htm">
-      <div class="group">
-        <input [(ngModel)]="email"  placeholder="Email" id="user" type="text" class="input" data-type="email">
-      </div>
-      <div class="group">
-        <input [(ngModel)]="password" placeholder="Password" id="pass" type="password" class="input" data-type="password"/>
-      </div>
-  
-      <div>
-
-        <button (click)="accedi()" fill="outline" mode="ios" mode="md" class="center"  [routerLink]="['/login']">
-
-          <h1>
-            <font  face="Caviar Dreams" size="4">ACCEDI</font><br />
-          </h1>
-        </button>
-      </div>
-
-      <div class="foot-lnk">
-        <a [routerLink]="['/forgot-password']"  class="small-text">Recupera password</a>
-      </div>
-
-      <div class="foot-lnk-registrati">
-        <a [routerLink]="['/registra-gestore']" class="small-text">Registrati</a>
-      </div>
-    </div>
-</div>
+<ion-content> 
+  <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"> </ion-img> 
+  <ion-card> 
+   
+      <ion-item> 
+        <ion-label position="stacked"> 
+          <ion-icon name="person-outline" class="lab"></ion-icon> 
+          Email 
+        </ion-label> 
+        <ion-input  placeholder="inserisci E-mail" [(ngModel)]="email"> 
+        </ion-input> 
+      </ion-item> 
+      <ion-item > 
+        <ion-label position="stacked"> 
+          <ion-icon name="lock-closed-outline" class="lab"></ion-icon>Password 
+        </ion-label> 
+        <ion-input 
+          [type]="showPwd ? 'text' : 'password'"  placeholder="Inserisci Password" [(ngModel)]="pass"> 
+        </ion-input> 
+        <ion-icon 
+          slot="end" 
+          [name]="pwdIcon" 
+          (click)="togglePwd()" 
+        > 
+        </ion-icon> 
+      </ion-item> 
+      <ion-button expand="block" type="submit" (click)="getCredentials()" > 
+        Login 
+        <ion-icon name="log-in-outline"></ion-icon> 
+      </ion-button> 
+    
+  </ion-card> 
+  <ion-textarea [routerLink]="['/sign-up']" class="small-text">Registrati</ion-textarea> 
+   <ion-textarea class="small-text">Recupera password</ion-textarea> 
 </ion-content>
