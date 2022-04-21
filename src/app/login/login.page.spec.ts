@@ -12,7 +12,7 @@ describe('LoginPage', () => {
       declarations: [ LoginPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents(); 
-
+ 
     fixture = TestBed.createComponent(LoginPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -22,3 +22,4 @@ describe('LoginPage', () => {
     expect(component).toBeTruthy();
   });
 });
+ 

@@ -13,13 +13,13 @@ export class LoginPage implements OnInit {
   } 
   getCredentials() { 
     console.log(this.email);  
-  } 
+  }  
   pwdIcon = "eye-outline"; 
   showPwd = false; 
  
   togglePwd() { 
     this.showPwd = !this.showPwd; 
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline"; 
-  } 
+  }  
  
 }
