@@ -8,6 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private router: Router) { }
+  constructor() { }
 
 }
