@@ -6,24 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up.page.scss'],
 })
 export class SignUpPage implements OnInit {
-  nome: string;
-  cognome: string;
+  name: string;
+  surname: string;
   pass: string;
-  numerotel: string;
+  telephone: string;
 
   ngOnInit() {
   }
   getCredentials() {
-    console.log(this.nome);
-    console.log(this.cognome);
-    console.log(this.numerotel);
+    console.log(this.name);
+    console.log(this.surname);
+    console.log(this.telephone);
 
 
   }
   pwdIcon = "eye-outline";
   showPwd = false;
 
-  togglePwd() { 
+  togglePwd() {
     this.showPwd = !this.showPwd;
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline";
   }
