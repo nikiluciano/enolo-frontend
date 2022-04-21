@@ -9,14 +9,15 @@
   background-size: 100% 100%;
 }
 
-ion-button {
+.btn-bg {
   .login-form {
     border-radius: 70%;
   }
-
-  --background: #8F002C;
 }
 
+.btn-bg {
+  --background: #8F002C;
+}
 
 .lab {
   color: #8F002C;
