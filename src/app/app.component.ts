@@ -8,26 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private router:Router) {}
-
-  button1(){
-
-  }
-
-  button2(){
-
-  }
-
-  button3(){
-     
-  }
-
-  button4(){
-
-  }
-  
-  button5(){
-
-   }
+  constructor(private router: Router) { }
 
 }
