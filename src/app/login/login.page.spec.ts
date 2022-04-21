@@ -11,8 +11,8 @@ describe('LoginPage', () => {
     TestBed.configureTestingModule({
       declarations: [ LoginPage ],
       imports: [IonicModule.forRoot()]
-    }).compileComponents();
-
+    }).compileComponents(); 
+ 
     fixture = TestBed.createComponent(LoginPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -22,3 +22,4 @@ describe('LoginPage', () => {
     expect(component).toBeTruthy();
   });
 });
+ 

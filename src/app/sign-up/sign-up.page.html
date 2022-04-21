@@ -1,9 +1,56 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>sign-up</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"> </ion-img>
+
+
+  <ion-item>
+    <ion-label position="stacked">
+      <ion-icon name="person-outline" class="lab"></ion-icon>
+      Nome
+    </ion-label>
+    <ion-input placeholder="inserisci nome" [(ngModel)]="name">
+    </ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="stacked">
+      <ion-icon name="person-outline" class="lab"></ion-icon>
+      Cognome
+    </ion-label>
+    <ion-input placeholder="inserisci cognome" [(ngModel)]="surname">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">
+      <ion-icon name="lock-closed-outline" class="lab"></ion-icon>Password
+    </ion-label>
+    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Inserisci Password" [(ngModel)]="pass">
+    </ion-input>
+    <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
+    </ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">
+      <ion-icon name="lock-closed-outline" class="lab"></ion-icon>
+      Conferma Password
+    </ion-label>
+    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Conferma password">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+
+
+    <ion-label position="stacked">
+      <ion-icon name="call-outline" class="lab"></ion-icon>
+      Numerdo di telefono
+    </ion-label>
+    <ion-input placeholder="Inserisci numero" [(ngModel)]="telephone">
+    </ion-input>
+  </ion-item>
+  <ion-button class="btn-bg" expand="block" type="submit" (click)="getCredentials()">
+    Registrati
+    <ion-icon name="log-in-outline"></ion-icon>
+  </ion-button>
 
 </ion-content>
