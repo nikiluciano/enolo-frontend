@@ -1,4 +1,5 @@
 <ion-content>
+  <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/login']"></ion-icon>
   <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"> </ion-img>
 
 
@@ -20,27 +21,54 @@
     <ion-input placeholder="inserisci cognome" [(ngModel)]="surname">
     </ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="stacked">
-      <ion-icon name="lock-closed-outline" class="lab"></ion-icon>Password
-    </ion-label>
-    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Inserisci Password" [(ngModel)]="pass">
-    </ion-input>
-    <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
-    </ion-icon>
+
+
+  <ion-item> 
+    <ion-label position="stacked"> 
+      <ion-icon name="lock-closed-outline" class="lab"></ion-icon>Password 
+    </ion-label> 
+    <ion-input formControlName="password" [type]="showPwd ? 'text' : 'password'" placeholder="Inserisci Password"> 
+    </ion-input> 
+    <div class="error-messages"> 
+      <ng-container *ngFor="let error of error_messages.password"> 
+        <div class="error-message" 
+          *ngIf="SignUpForm.get('password')&& (loginForm.get('password').dirty || SignUpForm.get('password').touched)"> 
+          {{ error.message }} 
+        </div> 
+      </ng-container> 
+    </div> 
+    <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()"> 
+    </ion-icon> 
   </ion-item>
+
+
 
   <ion-item>
     <ion-label position="stacked">
       <ion-icon name="lock-closed-outline" class="lab"></ion-icon>
       Conferma Password
     </ion-label>
-    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Conferma password">
+    <ion-input formControlName="confirmpassword" [type]="showPwd ? 'text' : 'password'" placeholder="Conferma password">
     </ion-input>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.confirmpassword">
+        <div class="error-message"
+          *ngIf= "loginForm.get('confirmpassword').hasError(error.type) && (loginForm.get('confirmpassword').dirty  loginForm.get('confirmpassword').touched)">
+          {{ error.message }}
+        </div>
+      </ng-container>
+      <div class="error-message"
+        *ngIf="!loginForm.get('confirmpassword').errors && loginForm.hasError('passwordNotMatch') && (loginForm.get('confirmpassword').dirty  loginForm.get('confirmpassword').touched)">
+        Password and Confirm Password fields should match
+      </div>
+    </div>
   </ion-item>
+
+
+
+
+
   <ion-item>
-
-
     <ion-label position="stacked">
       <ion-icon name="call-outline" class="lab"></ion-icon>
       Numerdo di telefono

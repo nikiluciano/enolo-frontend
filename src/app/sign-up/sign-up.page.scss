@@ -15,8 +15,25 @@ ion-button {
   }
 }
 
+.arrow{
+  color: #8F002C;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 25px; 
+  height: 25px;
+
+}
 
 
 .lab {
   color: #8F002C;
+}
+p {
+  font-family: Lato;
+}
+.error-message {
+  color: red;
+}
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
 }
