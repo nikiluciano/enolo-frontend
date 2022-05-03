@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forgot-pw.page.scss'],
 })
 export class ForgotPwPage implements OnInit {
+  email: string;
 
   constructor() { }
 
   ngOnInit() {
   }
+  getCredentials() {
+    console.log(this.email);
+  }
+
 
 }
