@@ -1,40 +1,43 @@
-.logo {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2cm;
+.logo{  
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 2cm; 
   width: 120px; 
-  height: 120px;
-  border-radius: 50px;
-  background-position: center;
+  height: 120px; 
+  border-radius: 50px; 
+  background-position: center; 
   background-size: 100% 100%;
-
-
-} 
-
-.small-text {
-  color: #8F002C;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: relative;
-  margin-left: 50px;
-  top: 0%;
-} 
-
-.lab {
-  color: #8F002C;
 }
-
-ion-button {
-  .login-form {
+ 
+ion-button{
+  .login-form{
     border-radius: 70%;
   }
+  
+  --background: #8F002C;
 }
 
-.text {
-  color: #8F002C;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: center;
-  margin-left: 95px;
-  top: 50%;
 
+.small-text{
+  color:#8F002C;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  position: relative; 
+  margin-left:50px; 
+
+}
+
+
+.lab{
+  color: #8F002C;
+}
+
+p {
+  font-family: Lato;
+}
+.error-message {
+  color:#8F002C;
+}
+input.ng-touched.ng-invalid {
+  border: 1px solid #8F002C;
 }
