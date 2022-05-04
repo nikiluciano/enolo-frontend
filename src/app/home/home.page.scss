@@ -34,12 +34,73 @@
   color: black;
 }
 
-.slide {
-  height: 200px;
-  width: 100% !important;
-}
-
 .card {
   height: 180px;
   width: 100%;
+}
+
+.stato {
+  min-height: 300px;
+  margin-top: 10px;
+  border-bottom-style: ridge;
+}
+
+.mag {
+  min-height: 250px;
+  margin-top: 10px;
+  border-bottom-style: ridge;
+}
+
+.c {
+  min-height: 250px;
+  margin-top: 10px;
+  border-bottom-style: ridge;
+}
+
+.gridstyle {
+  height: auto;
+  flex-flow: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 150px;
+  padding-bottom: 10px;
+}
+
+.cont {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  font-size: 50px;
+}
+
+.conten {
+  margin-bottom: 25px;
+  margin-top: 10px;
+  font-size: 30px;
+
+}
+
+.labm {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.sm {
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.bar {
+  margin-top: 15px;
+  height: 20px;
+  border-radius: 50px;
+}
+
+.labc {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.sc {
+  margin-top: 20px;
+  font-size: 40px;
 }
