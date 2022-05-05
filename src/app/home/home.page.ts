@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonChip } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -11,12 +12,10 @@ export class HomePage {
   constructor() { }
 
   Contatti = [
-    { id: 1, name: 'mario' },
-    { id: 2, name: 'benzema' },
-    { id: 3, name: 'marra' },
-    { id: 4, name: 'simone' }
-
+    { id: 1, name: 'mario', carico:'deraspatura' },
+    { id: 2, name: 'benzema',carico:'deraspatura' },
+    { id: 3, name: 'marra' ,carico:'vinatura'},
+    { id: 4, name: 'simone',carico:'vinatura' }
   ]
-
 
 }

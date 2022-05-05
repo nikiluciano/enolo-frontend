@@ -70,23 +70,26 @@
   margin-left: 15px;
   margin-bottom: 15px;
   font-size: 50px;
+  font-family: "caviardreams";
 }
 
 .conten {
   margin-bottom: 25px;
   margin-top: 10px;
   font-size: 30px;
-
+  font-family: "caviardreams";
 }
 
 .labm {
   margin-top: 30px;
   font-size: 18px;
+  font-family: "caviardreams";
 }
 
 .sm {
   margin-top: 20px;
   font-size: 40px;
+  font-family: "caviardreams";
 }
 
 .bar {
@@ -98,9 +101,20 @@
 .labc {
   font-size: 20px;
   margin-top: 15px;
+  font-family: "caviardreams";
 }
 
 .sc {
   margin-top: 20px;
   font-size: 40px;
+  font-family: "caviardreams";
+}
+
+@font-face {
+  font-family: 'caviardreams';
+  src: ".../assets/font/CaviarDreams.ttf"
+}
+.scroll{
+  overflow: scroll;
+  max-height: 150px;
 }
