@@ -28,20 +28,18 @@ export class LoginPage implements OnInit {
     this.showPwd = !this.showPwd;
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline";
   }
-
   error_messages = {
+
     'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'minlength', message: 'Email length.' },
-      { type: 'maxlength', message: 'Email length.' },
-      { type: 'email', message: 'Please enter a valid email address.' }
+      { type: 'required', message: 'É richiesta la e-mail.' },
+      { type: 'email', message: 'Inserire un indirizzo e-mail valido.' }
     ],
 
     'password': [
-      { type: 'required', message: 'Password is required.' },
-      { type: 'minlength', message: 'Password length.' },
-      { type: 'maxlength', message: 'Password length.' },
-      { type: 'password', message: 'Please enter a valid password.' }
+      { type: 'required', message: 'É richiesta la password.' },
+      { type: 'minlength', message: 'Password minima di 8 caratteri.' },
+      { type: 'maxlength', message: 'Password massima di 30 caratteri.' },
+      { type: 'password', message: 'Inserire una password valida.' }
     ],
   }
 
@@ -50,8 +48,8 @@ export class LoginPage implements OnInit {
       email: new FormControl('', Validators.compose([
         Validators.required,
         Validators.email,
-        Validators.maxLength(30)
       ])),
+
       password: new FormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(8),
@@ -60,13 +58,20 @@ export class LoginPage implements OnInit {
     });
   }
 
-  async presentToast() {
-    const toast = await this.toastController.create({
-      message: 'Email or password not entered.',
-      duration: 2000,
 
-    });
-    toast.present();
+
+  emailCheck(error): boolean {
+    return this.loginForm.get('email').hasError(error.type) &&
+      (this.loginForm.get('email').dirty ||
+        this.loginForm.get('email').touched)
+
+  }
+
+  passwordCheck(error): boolean {
+
+    return this.loginForm.get('password').hasError(error.type) &&
+      (this.loginForm.get('password').dirty ||
+        this.loginForm.get('password').touched)
   }
 
 }
