@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"> </ion-img>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-label position="stacked">
+        <ion-icon name="mail-outline" class="lab"></ion-icon>
+        Email
+      </ion-label>
+
+      <ion-input placeholder="Recupera e-mail" [(ngModel)]="email">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-button expand="block" type="submit" (click)="getCredentials()">
+      Invia
+      <ion-icon name="log-in-outline"></ion-icon>
+    </ion-button>
+  </ion-card>
+  <ion-text class="testo">
+    Inserisci l'indirizzo email utilizzato
+    al momento della registrazione per il tuo account Enolo.
+  </ion-text>
+
+
+</ion-content>
