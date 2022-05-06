@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { ToastController } from '@ionic/angular';
+import { ToastService } from '../services/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -10,16 +10,59 @@ import { ToastController } from '@ionic/angular';
 export class LoginPage implements OnInit {
 
 
-  email: string;
-  password: string;
+
   loginForm: FormGroup;
 
-  ngOnInit() {
+  postData = {
+    email: '',
+    password: ''
   }
-  getCredentials() {
-    console.log(this.email);
+
+
+  constructor(public formBuilder: FormBuilder, private toastService: ToastService) {
+    this.loginForm = this.formBuilder.group({
+      email: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.email,
+      ])),
+
+      password: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.minLength(8),
+        Validators.maxLength(30)
+      ])),
+    });
+  }
+
+
+  ngOnInit() {
+    if (this.loginAction) {
+
+
+    } else {
+
+
+    }
+  }
+
+  loginAction(): boolean {
+    let username = this.postData.email.trim();
+    let password = this.postData.password.trim();
+    return (
+      this.postData.email &&
+      this.postData.password &&
+      username.length > 0 &&
+      password.length > 0
+    );
+
 
   }
+
+  inputValids(): boolean {
+
+    return true;
+  }
+
 
   pwdIcon = "eye-outline";
   showPwd = false;
@@ -41,21 +84,6 @@ export class LoginPage implements OnInit {
       { type: 'maxlength', message: 'Password massima di 30 caratteri.' },
       { type: 'password', message: 'Inserire una password valida.' }
     ],
-  }
-
-  constructor(public formBuilder: FormBuilder, public toastController: ToastController,) {
-    this.loginForm = this.formBuilder.group({
-      email: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.email,
-      ])),
-
-      password: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.minLength(8),
-        Validators.maxLength(30)
-      ])),
-    });
   }
 
 
