@@ -45,7 +45,14 @@
   border-bottom-style: ridge;
 }
 
-.mag {
+.row-warehouse {
+  min-height: 250px;
+  border-bottom-style: ridge;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.style-c {
   min-height: 250px;
   margin-top: 10px;
   border-bottom-style: ridge;
@@ -66,55 +73,194 @@
   padding-bottom: 10px;
 }
 
-.cont {
-  margin-left: 15px;
+.title-c {
+  margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 50px;
-  font-family: "caviardreams";
+  font-size: 24px;
+  margin: auto;
+  font-family: "quicksand-regular";
 }
 
-.conten {
+.style-labs-c {
+  margin-left: 15px;
   margin-bottom: 25px;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 30px;
-  font-family: "caviardreams";
+  font-family: "quicksand-regular";
 }
 
-.labm {
+.calendar-label-style {
+  font-size: 20px;
+  font-family: "quicksand-regular";
+}
+
+.style-labs-warehouse {
   margin-top: 30px;
   font-size: 18px;
-  font-family: "caviardreams";
+  text-align: center;
 }
 
-.sm {
-  margin-top: 20px;
-  font-size: 40px;
-  font-family: "caviardreams";
+.title-warehouse {
+
+
+  font-size: 20px;
+  font-family: "quicksand-semibold";
 }
 
-.bar {
-  margin-top: 15px;
-  height: 20px;
+.bar-caps {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  height: 15px;
   border-radius: 50px;
+  margin: auto;
+  --background: white;
+  --progress-background: #fc736a;
+  border: 1px solid black;
+  width: 90%;
 }
 
 .labc {
   font-size: 20px;
   margin-top: 15px;
-  font-family: "caviardreams";
+
 }
 
-.sc {
+.style-title-c {
+  margin-bottom: 40px;
   margin-top: 20px;
-  font-size: 40px;
-  font-family: "caviardreams";
+  font-size: 20px;
+  font-family: "quicksand-semibold";
+  padding-left: 10px;
+}
+
+
+.bar-c {
+  margin-top: 15px;
+  height: 16px;
+  border-radius: 50px;
+  width: 60%;
+  margin: auto;
+  --background: white;
+  --progress-background: #E692F8;
+  border: 1px solid black;
+}
+
+.style-row-title {
+  margin-bottom: 15px;
 }
 
 @font-face {
-  font-family: 'caviardreams';
-  src: ".../assets/font/CaviarDreams.ttf"
+  font-family: 'quicksand-regular';
+  src: url('../../assets/font/Quicksand-Regular.ttf')
 }
-.scroll{
-  overflow: scroll;
-  max-height: 150px;
+
+@font-face {
+  font-family: 'quicksand-semibold';
+  src: url('../../assets/font/Quicksand-SemiBold.ttf')
+}
+
+.weight-col-style {
+  height: 80px;
+  flex-flow: column wrap;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 15px;
+
+}
+
+.wine-type-col-style {
+  height: 80px;
+  flex-flow: column wrap;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 15px;
+
+}
+
+.down-col-style {
+  height: 80px;
+  flex-flow: column wrap;
+  margin-bottom: 50px;
+  text-align: left;
+  padding-left: 10px;
+
+}
+
+.style-labs-f {
+  font-size: 20px;
+  font-family: "quicksand-regular";
+  color: #8c8c8c;
+}
+
+.icon-style {
+  height: 20px;
+
+}
+
+.style-labs-peso {
+
+  font-size: 30px;
+  font-family: "quicksand-regular";
+}
+
+.style-kg {
+  font-size: 20px;
+  font-family: "quicksand-regular";
+}
+
+.supplier-col-style {
+
+  height: 80px;
+  flex-flow: column wrap;
+  text-align: right;
+  padding-right: 10px;
+
+}
+
+.title-home {
+  text-align: center;
+  font-family: "quicksand-semibold";
+  font-size: 22px;
+}
+
+.bar-labels {
+
+  height: 15px;
+  border-radius: 50px;
+  margin: auto;
+  --background: white;
+  --progress-background: #92f8aa;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.bar-bottle {
+  margin-top: 40px;
+  height: 15px;
+  border-radius: 50px;
+  margin: auto;
+  --background: white;
+  --progress-background: #e9f892;
+  border: 1px solid black;
+  width: 90%;
+}
+
+.style-button {
+  color: black;
+  height: 80px;
+  width: 30px;
+
+}
+
+.row-style-warehouse {
+  margin-bottom: 15px;
+}
+
+.title-bar-warehouse {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  margin: auto;
+  font-family: "quicksand-regular";
 }

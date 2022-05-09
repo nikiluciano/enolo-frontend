@@ -3,68 +3,90 @@
     <ion-buttons slot="start">
       <ion-menu-button class="col"></ion-menu-button>
     </ion-buttons>
-    <ion-label>Home</ion-label>
+    <ion-item lines="none">
+      <ion-label class="title-home">Home</ion-label>
+      <ion-button (click)="account" fill="clear">
+        <ion-icon name="person-circle-outline" slot="end" class="style-button"></ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-toolbar>
 
 </ion-header>
 <ion-content>
   <ion-grid class="gridstyle">
-    <ion-row class="stato">
-      <ion-col>
-        <ion-label class="sc">Stato carichi</ion-label>
-      </ion-col>
-      <ion-slides pager="true" [options]="slideOpts">
+    <ion-col>
+    
+      <ion-row>
+        <ion-label class="style-title-c">Conferimenti attivi</ion-label>
+      </ion-row>
+      <ion-card>
+      <ion-slides pager="true" [options]="slideOpts" class="style-c">
         <ion-slide *ngFor="let nome of Contatti">
           <ion-col>
-            <ion-label class="cont">{{nome.carico}}</ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-row>
-              <ion-label class="conten">Tipo d'uva</ion-label>
+            <ion-row class="style-row-title">
+              <ion-label class="title-c"> In {{nome.carico}}</ion-label>
             </ion-row>
             <ion-row>
-              <ion-label class="conten">quantita'</ion-label>
+              <ion-progress-bar value="0.25" class="bar-c"></ion-progress-bar>
             </ion-row>
             <ion-row>
-              <ion-label class="conten">{{nome.name}}</ion-label>
+              <ion-col class="weight-col-style">
+                <ion-label class="style-labs-peso">{{nome.peso}}<sub class="style-kg"> kg</sub></ion-label>
+              </ion-col>
+
+              <ion-col class="wine-type-col-style">
+                <ion-label class="style-labs-c">Tipo d'uva</ion-label>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col class="down-col-style">
+                <ion-item lines="none" class="ion-no-padding">
+                  <ion-icon name="calendar-outline" class="icon-style"></ion-icon>
+                  <ion-label class="calendar-label-style"> 08/05/2022</ion-label>
+                </ion-item>
+              </ion-col>
+
+              <ion-col class="supplier-col-style">
+                <ion-item class="ion-no-padding" lines="none">
+                  <ion-label class="style-labs-f" slot="end">{{nome.name}}</ion-label>
+                </ion-item>
+              </ion-col>
+
             </ion-row>
           </ion-col>
         </ion-slide>
       </ion-slides>
-    </ion-row>
+      </ion-card>
+    </ion-col>
 
-    <ion-row class="mag">
+    <ion-row class="row-warehouse">
       <ion-col>
-        <ion-row>
-          <ion-label class="sm">Il tuo magazzino</ion-label>
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-warehouse">Il tuo magazzino</ion-label>
         </ion-row>
-        <ion-row>
-          <ion-label class="labm">Tappi</ion-label>
-          <ion-progress-bar color="danger" value="0.25" class="bar"></ion-progress-bar>
+     
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse">N. Tappi</ion-label>
         </ion-row>
-        <ion-row>
-          <ion-label class="labm">Bottiglie</ion-label>
-          <ion-progress-bar color="success" value="0.75" class="bar"></ion-progress-bar>
+        <ion-row class="row-style-warehouse">
+          <ion-progress-bar value="0.25" class="bar-caps"></ion-progress-bar>
         </ion-row>
-        <ion-row>
-          <ion-label class="labm">Etichette</ion-label>
-          <ion-progress-bar color="success" value="0.75" class="bar"></ion-progress-bar>
-        </ion-row>
-      </ion-col>
-    </ion-row>
 
-    <ion-row class="c">
-      <ion-col>
-        <ion-row>
-          <ion-label class="sm">Fornitori recenti</ion-label>
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse">N. Bottiglie</ion-label>
         </ion-row>
-        <ion-list lines="none"  class="scroll">
-          <ion-item *ngFor="let nome of Contatti">
-            <ion-label class="labc">
-              {{ nome.name }}
-            </ion-label>
-          </ion-item>
-        </ion-list>
+        <ion-row class="row-style-warehouse">
+          <ion-progress-bar value="0.50" class="bar-bottle"></ion-progress-bar>
+        </ion-row>
+
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse"> N. Etichette</ion-label>
+        </ion-row>
+        <ion-row class="row-style-warehouse">
+          <ion-progress-bar value="0.75" class="bar-labels"></ion-progress-bar>
+        </ion-row>
+        
       </ion-col>
     </ion-row>
   </ion-grid>
