@@ -24,20 +24,27 @@ export class SignUpPage implements OnInit {
         Validators.minLength(8),
         Validators.maxLength(30)
       ])),
-      confirmpassword: new FormControl('', Validators.compose([
+      confirmPassword: new FormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(8),
         Validators.maxLength(30)
       ])),
-      nome: new FormControl('', Validators.compose([
+      name: new FormControl('', Validators.compose([
         Validators.required,
 
       ])),
-      cognome: new FormControl('', Validators.compose([
+      surname: new FormControl('', Validators.compose([
         Validators.required,
 
       ])),
-      numerotel: new FormControl('', Validators.compose([
+      username: new FormControl('', ([
+
+      ])),
+      address: new FormControl('', ([
+        
+
+      ])),
+      telephoneNumber: new FormControl('', Validators.compose([
         Validators.required,
 
       ]))
