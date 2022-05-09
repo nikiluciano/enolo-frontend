@@ -15,10 +15,12 @@
 <ion-content>
   <ion-grid class="gridstyle">
     <ion-col>
+    
       <ion-row>
         <ion-label class="style-title-c">Conferimenti attivi</ion-label>
       </ion-row>
-      <ion-slides pager="true" [options]="slideOpts">
+      <ion-card>
+      <ion-slides pager="true" [options]="slideOpts" class="style-c">
         <ion-slide *ngFor="let nome of Contatti">
           <ion-col>
             <ion-row class="style-row-title">
@@ -36,8 +38,8 @@
                 <ion-label class="style-labs-c">Tipo d'uva</ion-label>
               </ion-col>
             </ion-row>
-            <ion-row>
 
+            <ion-row>
               <ion-col class="down-col-style">
                 <ion-item lines="none" class="ion-no-padding">
                   <ion-icon name="calendar-outline" class="icon-style"></ion-icon>
@@ -55,36 +57,36 @@
           </ion-col>
         </ion-slide>
       </ion-slides>
+      </ion-card>
     </ion-col>
 
-    <ion-row class="mag">
+    <ion-row class="row-warehouse">
       <ion-col>
-        <ion-row>
+        <ion-row class="row-style-warehouse">
           <ion-label class="title-warehouse">Il tuo magazzino</ion-label>
         </ion-row>
-
-        <ion-row>
-          <ion-label class="title-c">N. Tappi</ion-label>
+     
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse">N. Tappi</ion-label>
         </ion-row>
-        <ion-row>
+        <ion-row class="row-style-warehouse">
           <ion-progress-bar value="0.25" class="bar-caps"></ion-progress-bar>
         </ion-row>
 
-        <ion-row>
-
-          <ion-label class="title-c">N. Bottiglie</ion-label>
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse">N. Bottiglie</ion-label>
         </ion-row>
-        <ion-row>
+        <ion-row class="row-style-warehouse">
           <ion-progress-bar value="0.50" class="bar-bottle"></ion-progress-bar>
         </ion-row>
 
-        <ion-row>
-          <ion-label class="title-c"> N. Etichette</ion-label>
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse"> N. Etichette</ion-label>
         </ion-row>
-        <ion-row>
+        <ion-row class="row-style-warehouse">
           <ion-progress-bar value="0.75" class="bar-labels"></ion-progress-bar>
         </ion-row>
-
+        
       </ion-col>
     </ion-row>
   </ion-grid>
