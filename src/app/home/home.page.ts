@@ -12,10 +12,10 @@ export class HomePage {
   constructor() { }
 
   Contatti = [
-    { id: 1, name: 'mario', carico:'deraspatura' },
-    { id: 2, name: 'benzema',carico:'deraspatura' },
-    { id: 3, name: 'marra' ,carico:'vinatura'},
-    { id: 4, name: 'simone',carico:'vinatura' }
+    { id: 1, name: 'mario', carico:'deraspatura',peso:1000 },
+    { id: 2, name: 'benzema',carico:'deraspatura', peso:1306 },
+    { id: 3, name: 'marra' ,carico:'vinatura',peso:1067 },
+    { id: 4, name: 'simone',carico:'vinatura',peso:1100 }
   ]
 
 }
