@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { ToastService } from '../services/toast.service';
+
 
 @Component({
   selector: 'app-sign-up',
@@ -7,17 +11,30 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
   styleUrls: ['./sign-up.page.scss'],
 })
 export class SignUpPage implements OnInit {
-
+  postData = {
+    username: '',
+    email: '',
+    confirmPassword: '',
+    pass: '',
+    name: '',
+    surname: '',
+    address: '',
+    telephoneNumber: ''
+  };
 
   SignUpForm: FormGroup;
 
   constructor(
+    private authService: AuthService,
+    private toastService: ToastService,
+    private router: Router,
     public formBuilder: FormBuilder
   ) {
     this.SignUpForm = this.formBuilder.group({
 
       email: new FormControl('', Validators.compose([
         Validators.required,
+        Validators.email
       ])),
       pass: new FormControl('', Validators.compose([
         Validators.required,
@@ -41,7 +58,7 @@ export class SignUpPage implements OnInit {
 
       ])),
       address: new FormControl('', ([
-        
+
 
       ])),
       telephoneNumber: new FormControl('', Validators.compose([
@@ -53,15 +70,8 @@ export class SignUpPage implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-  
-
-  getCredentials() {
-
-
-  }
   pwdIcon = "eye-outline";
   showPwd = false;
 
@@ -70,49 +80,72 @@ export class SignUpPage implements OnInit {
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline";
   }
 
+
+  validateInputs() {
+    console.log(this.postData);
+    let username = this.postData.username.trim();
+    let password = this.postData.pass.trim();
+    let email = this.postData.email.trim();
+    return (
+      this.postData.username &&
+      this.postData.pass &&
+      this.postData.email &&
+      username.length > 0 &&
+      email.length > 0 &&
+      password.length > 0
+    );
+  }
+
+  signAction() {
+    if (this.validateInputs()) {
+      this.authService.signup(this.postData).subscribe(
+        (res: any) => {
+          if (res.userData) {
+            this.router.navigate(['home/feed']);
+          } else {
+            this.toastService.presentToast(
+              'Data alreay exists, please enter new details.'
+            );
+          }
+        },
+        (error: any) => {
+          this.toastService.presentToast('Network Issue.');
+        }
+      );
+    } else {
+      this.toastService.presentToast(
+        'Please enter email, username or password.'
+      );
+    }
+  }
+
+
   password(formGroup: FormGroup) {
     const { value: password } = formGroup.get('pass');
     const { value: confirmPassword } = formGroup.get('confirmPassword');
     return password === confirmPassword ? null : { passwordNotMatch: true };
   }
 
-  error_messages = {
-
-    'email': [
-      { type: 'required', message: 'É richiesta l E-mail.' },
-      { type: 'required', message: 'inserire un indirizzo E-mail valido.' }
-    ],
-
-    'pass': [
-      { type: 'required', message: 'É richiesta la password.' },
-      { type: 'minlength', message: 'Inserire una password minima di 8 caratteri.' },
-      { type: 'maxlength', message: 'Inserire una password massima di 30 caratteri.' }
-    ],
-    'confirmpassword': [
-      { type: 'required', message: 'É richiesta la password.' },
-    ],
-  }
- 
   emailCheck(error): boolean {
-    return this.SignUpForm.get('email').hasError(error.type) &&
+    return this.SignUpForm.get('email') &&
       (this.SignUpForm.get('email').dirty || this.SignUpForm.get('email').touched)
   }
 
   pwCheck(error): boolean {
-    return this.SignUpForm.get('pass').hasError(error.type) &&
+    return this.SignUpForm.get('pass') &&
       (this.SignUpForm.get('pass').dirty || this.SignUpForm.get('pass').touched)
 
   }
 
   confpwCheck(error): boolean {
-    return this.SignUpForm.get('confirmPassword').hasError(error.type) &&
+    return this.SignUpForm.get('confirmPassword') &&
       (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
 
   }
 
-  comparepwCheck(error): boolean{
-return !this.SignUpForm.get('confirmPassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
-(this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
+  comparepwCheck(error): boolean {
+    return !this.SignUpForm.get('confirmPassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
+      (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
   }
 
 }

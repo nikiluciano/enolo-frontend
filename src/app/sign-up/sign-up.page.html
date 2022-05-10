@@ -20,20 +20,17 @@
   <ion-item>
     <ion-input placeholder="E-mail" formControlName="email">
     </ion-input>
-    <div *ngFor="let error of error_messages.email" class="error-messages">
-      <div *ngIf="emailCheck(error)" class="error-message">
-        {{ error.message }}
+    <div>
+      <div *ngIf="emailCheck(error)">
+
       </div>
     </div>
   </ion-item>
 
   <ion-item>
-    <ion-input [type]="showPwd ? 'text' : 'pass'" placeholder="Password" formControlName="pass">
+    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Password" formControlName="pass">
     </ion-input>
-    <div *ngFor="let error of error_messages.pass" class="error-messages">
-      <div class="error-message" *ngIf="pwCheck(error)">
-        {{ error.message }}
-      </div>
+    <div *ngIf="pwCheck(error)">
     </div>
     <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
     </ion-icon>
@@ -42,21 +39,19 @@
   <ion-item>
     <ion-input [type]="showPwd ? 'text' : 'pass'" placeholder="Conferma password" formControlName="confirmPassword">
     </ion-input>
-    <div *ngFor="let error of error_messages.confirmpassword" class="error-messages">
-      <div class="error-message" *ngIf="confpwCheck(error)">
-        {{ error.message }}
+    <div>
+      <div *ngIf="confpwCheck(error)">
       </div>
-      <div class="error-message" *ngIf="comparepwCheck(error)">
-        Password e conferma Password non corrispondono
+      <div *ngIf="comparepwCheck(error)">
       </div>
     </div>
   </ion-item>
-  
+
   <ion-item>
     <ion-input placeholder="Numero Telefonico" formControlName="telephoneNumber">
     </ion-input>
   </ion-item>
-  <ion-button expand="block" type="submit" (click)="getCredentials()">
+  <ion-button expand="block" type="submit" (click)="signAction()">
     Registrati
     <ion-icon name="log-in-outline"></ion-icon>
   </ion-button>
