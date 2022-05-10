@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastService } from '../services/toast.service';
+import { AuthService } from '../services/auth.service';
+
+
 
 @Component({
   selector: 'app-login',
@@ -9,60 +12,20 @@ import { ToastService } from '../services/toast.service';
 })
 export class LoginPage implements OnInit {
 
-
-
-  loginForm: FormGroup;
-
   postData = {
-    email: '',
+    username: '',
     password: ''
   }
 
 
-  constructor(public formBuilder: FormBuilder, private toastService: ToastService) {
-    this.loginForm = this.formBuilder.group({
-      email: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.email,
-      ])),
+  constructor( private authService: AuthService,
+              private router: Router,
+               private toastService: ToastService)
 
-      password: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.minLength(8),
-        Validators.maxLength(30)
-      ])),
-    });
-  }
+               {}
 
 
-  ngOnInit() {
-    if (this.loginAction) {
-
-
-    } else {
-
-
-    }
-  }
-
-  loginAction(): boolean {
-    let username = this.postData.email.trim();
-    let password = this.postData.password.trim();
-    return (
-      this.postData.email &&
-      this.postData.password &&
-      username.length > 0 &&
-      password.length > 0
-    );
-
-
-  }
-
-  inputValids(): boolean {
-
-    return true;
-  }
-
+  ngOnInit() {}
 
   pwdIcon = "eye-outline";
   showPwd = false;
@@ -71,35 +34,40 @@ export class LoginPage implements OnInit {
     this.showPwd = !this.showPwd;
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline";
   }
-  error_messages = {
 
-    'email': [
-      { type: 'required', message: 'É richiesta la e-mail.' },
-      { type: 'email', message: 'Inserire un indirizzo e-mail valido.' }
-    ],
+  validateInputs(): boolean {
+    let username = this.postData.username.trim();
+    let password = this.postData.password.trim();
+    return (
+      this.postData.username &&
+      this.postData.password &&
+      username.length > 0 &&
+      password.length > 0
+    );
 
-    'password': [
-      { type: 'required', message: 'É richiesta la password.' },
-      { type: 'minlength', message: 'Password minima di 8 caratteri.' },
-      { type: 'maxlength', message: 'Password massima di 30 caratteri.' },
-      { type: 'password', message: 'Inserire una password valida.' }
-    ],
-  }
+ }
 
 
+  loginAction() {
+    if (this.validateInputs()) {
+    this.authService.login(this.postData).subscribe(
+    (res: any) => {
+    if (res.userData) {
+    
+    this.router.navigate(['home/feed']);
+    } else {
+      this.toastService.presentToast('incorrect password.');
+    }
+    },
+    (error: any) => {
+      this.toastService.presentToast('Network Issue.');
+    }
+    );
+    } else {
+      this.toastService.presentToast('Please enter username or password.');
+    }
+    }
 
-  emailCheck(error): boolean {
-    return this.loginForm.get('email').hasError(error.type) &&
-      (this.loginForm.get('email').dirty ||
-        this.loginForm.get('email').touched)
 
-  }
-
-  passwordCheck(error): boolean {
-
-    return this.loginForm.get('password').hasError(error.type) &&
-      (this.loginForm.get('password').dirty ||
-        this.loginForm.get('password').touched)
-  }
 
 }
