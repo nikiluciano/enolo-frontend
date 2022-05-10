@@ -72,7 +72,7 @@ export class SignUpPage implements OnInit {
 
   password(formGroup: FormGroup) {
     const { value: password } = formGroup.get('pass');
-    const { value: confirmPassword } = formGroup.get('confirmpassword');
+    const { value: confirmPassword } = formGroup.get('confirmPassword');
     return password === confirmPassword ? null : { passwordNotMatch: true };
   }
 
@@ -105,14 +105,14 @@ export class SignUpPage implements OnInit {
   }
 
   confpwCheck(error): boolean {
-    return this.SignUpForm.get('confirmpassword').hasError(error.type) &&
-      (this.SignUpForm.get('confirmpassword').dirty || this.SignUpForm.get('confirmpassword').touched)
+    return this.SignUpForm.get('confirmPassword').hasError(error.type) &&
+      (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
 
   }
 
   comparepwCheck(error): boolean{
-return !this.SignUpForm.get('confirmpassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
-(this.SignUpForm.get('confirmpassword').dirty || this.SignUpForm.get('confirmpassword').touched)
+return !this.SignUpForm.get('confirmPassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
+(this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
   }
 
 }
