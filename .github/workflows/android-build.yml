@@ -1,0 +1,30 @@
+name: android-build-apk
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    #installation of dependencies necessary to build an android APK with cordova
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install @angular/cli
+      run: npm i -D -E @angular/cli
+    - name: Use coturiv/setup-ionic
+      uses: coturiv/setup-ionic@v1
+      with:
+        cordova-version: 8
+
+    - name: Build
+      run: ionic cordova build android
+    - name: Upload app
+      uses: actions/upload-artifact@v1
+      with:
+        name: app
+        path: platforms/android/app/build/outputs/apk/debug/enolo.apk
