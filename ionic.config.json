@@ -1,7 +1,6 @@
 {
   "name": "enolo-frontend",
   "integrations": {
-    "capacitor": {}
   },
   "type": "angular"
 }
