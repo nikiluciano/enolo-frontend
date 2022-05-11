@@ -1,6 +1,7 @@
 {
   "name": "enolo-frontend",
   "integrations": {
+    "cordova": {}
   },
   "type": "angular"
 }
