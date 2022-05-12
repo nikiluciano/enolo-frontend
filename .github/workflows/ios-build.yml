@@ -23,7 +23,7 @@ jobs:
         cordova-version: 8
     - name: Build
       run: |
-          #ionic cordova platform add ios
+          ionic cordova platform add ios
           ionic cordova prepare ios
           cd platforms/ios
           ls -R
