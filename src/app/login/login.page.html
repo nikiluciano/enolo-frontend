@@ -1,44 +1,36 @@
-<ion-content [formGroup]="loginForm">
-  <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"></ion-img>
-  <ion-card>
+<ion-content>
+  
 
+  <ion-card>
+    <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"></ion-img>
     <ion-item>
-      <ion-label position="stacked">
-        <ion-icon name="mail-outline" class="lab"></ion-icon>
-        E-mail
-      </ion-label>
-      <ion-input  formControlName="email" placeholder="Inserisci E-mail" [(ngModel)]="email">
+      <ion-input name="username" placeholder="Username" [(ngModel)]="postData.username">
       </ion-input>
-      <div *ngFor="let error of error_messages.email" class="error-messages">
-        <div class="error-message" *ngIf="emailCheck(error)">
-          {{ error.message }}
-        </div>
-      </div>
     </ion-item>
 
-
-
     <ion-item>
-      <ion-label position="stacked">
-        <ion-icon name="lock-closed-outline" class="lab"></ion-icon>Password
-      </ion-label>
-      <ion-input formControlName="password" [type]="showPwd ? 'text' : 'password'" placeholder="Inserisci Password">
+      <ion-input name="password" [type]="showPwd ? 'text' : 'password'" placeholder="Password" [(ngModel)]="postData.password">
       </ion-input>
-      <div *ngFor="let error of error_messages.password" class="error-messages">
-        <div class="error-message" *ngIf="passwordCheck(error)">
-          {{ error.message }}
-        </div>
-      </div>
       <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
       </ion-icon>
     </ion-item>
 
-    <ion-button (click)="getCredentials()" expand="block" type="submit">
-      Accedi
-      <ion-icon name="log-in-outline"></ion-icon>
-    </ion-button>
-
+  
   </ion-card>
-  <ion-text class="small-text">Password Dimenticata?</ion-text>
-  <ion-text [routerLink]="['/sign-up']" class="small-text"> Registrati</ion-text>
+  <ion-button class="button" (click)="loginAction()" expand="block" type="submit">
+    Accedi
+    <ion-icon name="log-in-outline"></ion-icon>
+  </ion-button>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class = "col1" text-wrap>
+        <ion-text class="small-text">Password Dimenticata?</ion-text>
+      </ion-col>
+      <ion-col class = "col2" text-wrap text-left>
+        <ion-text  [routerLink]="['/sign-up']" class="small-text"> Registrati</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
