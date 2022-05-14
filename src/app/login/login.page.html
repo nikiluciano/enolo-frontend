@@ -4,12 +4,12 @@
   <ion-card>
     <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"></ion-img>
     <ion-item>
-      <ion-input Name="username" placeholder="Username" [(ngModel)]="postData.username">
+      <ion-input name="username" placeholder="Username" [(ngModel)]="postData.username">
       </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input Name="password" [type]="showPwd ? 'text' : 'password'" placeholder="Password" [(ngModel)]="postData.password">
+      <ion-input name="password" [type]="showPwd ? 'text' : 'password'" placeholder="Password" [(ngModel)]="postData.password">
       </ion-input>
       <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
       </ion-icon>

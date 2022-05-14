@@ -49,24 +49,27 @@ export class LoginPage implements OnInit {
 
 
   loginAction() {
-    if (this.validateInputs()) {
-    this.authService.login(this.postData).subscribe(
-    (res: any) => {
-    if (res.userData) {
     
-    this.router.navigate(['home/feed']);
+    console.log("type"+this.postData)
+    this.authService.login(this.postData).subscribe(
+
+    (res: any) => {
+    if (res) {
+    
+    this.router.navigate(['home']);
     } else {
       this.toastService.presentToast('incorrect password.');
     }
     },
     (error: any) => {
+      console.log(error)
       this.toastService.presentToast('Network Issue.');
     }
     );
-    } else {
-      this.toastService.presentToast('Please enter username or password.');
+    // } else {
+    //   this.toastService.presentToast('Please enter username or password.');
     }
-    }
+    
 
 
 
