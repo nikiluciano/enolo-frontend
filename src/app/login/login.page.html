@@ -1,36 +1,59 @@
-<ion-content>
-  
 
-  <ion-card>
-    <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"></ion-img>
-    <ion-item>
-      <ion-input name="username" placeholder="Username" [(ngModel)]="postData.username">
-      </ion-input>
-    </ion-item>
+<ion-content >
+  <div  class="div1">
+    <div class = "div2">
+      <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"></ion-img>
+    </div>
+    <div class = "login-div">
+      <ion-list class="list-style">
 
-    <ion-item>
-      <ion-input name="password" [type]="showPwd ? 'text' : 'password'" placeholder="Password" [(ngModel)]="postData.password">
-      </ion-input>
-      <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
-      </ion-icon>
-    </ion-item>
+        <!--SHOWN ONLY IF PASSWORD AND/OR EMAIL ARE OK-->
+        <ion-item *ngIf="!missingUsername" class="username-item" lines="none">
+          <ion-input class="username-input" name="username" placeholder="username" [(ngModel)]="postData.username">
+          </ion-input>
+       
+        </ion-item>
 
-  
-  </ion-card>
-  <ion-button class="button" (click)="loginAction()" expand="block" type="submit">
-    Accedi
-    <ion-icon name="log-in-outline"></ion-icon>
-  </ion-button>
+        <!--SHOWN ONLY IF PASSWORD AND/OR EMAIL MISSING OR WRONG-->
+        <ion-item *ngIf="missingUsername" class="username-item-wrong" lines="none">
+          <ion-input class="username-input" name="username" placeholder="username" [(ngModel)]="postData.username">
+          </ion-input>
+          
+        </ion-item>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col class = "col1" text-wrap>
-        <ion-text class="small-text">Password Dimenticata?</ion-text>
-      </ion-col>
-      <ion-col class = "col2" text-wrap text-left>
-        <ion-text  [routerLink]="['/sign-up']" class="small-text"> Registrati</ion-text>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        <ion-item *ngIf="!missingPassword" class="pw-item" lines="none">
+          <ion-input class="pw-input" name="password" [type]="showPwd ? 'text' : 'password'"
+            placeholder="Password" [(ngModel)]="postData.password">
+          </ion-input>
+         
+          <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
+          </ion-icon>
+        </ion-item>
 
+        <ion-item *ngIf="missingPassword" class="pw-item-wrong" lines="none">
+          <ion-input class="pw-input" name="password" [type]="showPwd ? 'text' : 'password'"
+            placeholder="Password" [(ngModel)]="postData.password">
+          </ion-input>
+         
+          <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
+          </ion-icon>
+        </ion-item>
+
+
+        <ion-item color ="active" class="forgotpw-item" lines="none">
+          <ion-label color="primary">Password dimenticata?
+          </ion-label>
+        </ion-item>
+        <ion-button shape="round" class="login-btn" (click)="loginAction()" expand="block" type="submit">
+          Accedi
+        </ion-button>
+        <ion-item  class="signup-item" lines="none" text-center>
+          <ion-label >Non hai un account? 
+            <a [routerLink]="['/sign-up']" color="primary">Registrati</a>
+          </ion-label>
+          </ion-item>
+      </ion-list>
+    </div>
+    <div class = "div3"></div>
+  </div>
 </ion-content>

@@ -16,6 +16,8 @@ export class LoginPage implements OnInit {
     username: '',
     password: ''
   }
+  missingPassword = false;
+  missingUsername = false;
 
 
   constructor( private authService: AuthService,
@@ -47,30 +49,40 @@ export class LoginPage implements OnInit {
 
  }
 
+ 
 
-  loginAction() {
+ loginAction() {
+  if (this.validateInputs()) {
+  this.authService.login(this.postData).subscribe(
+  (res: any) => {
+  if (res) {
+  this.router.navigate(['home']);
+  } else {
+  this.toastService.presentToast('Username o password errati.');
+  }
+  },
+  (error: any) => {
+  this.toastService.presentToast('Network Issue.');
+  }
+  );
+  } else {
+  this.toastService.presentToast(
+  'Inserire username o password.'
+  );
+  }
+  console.log(this.postData.username);
+    if (this.postData.username.length <= 0)
+      this.missingUsername = true;
+    else
+      this.missingUsername = false;
+
+    if (this.postData.password.length <= 0)
+      this.missingPassword = true;
+    else
+      this.missingPassword = false;
+
+  }
+
+ 
     
-    console.log("type"+this.postData)
-    this.authService.login(this.postData).subscribe(
-
-    (res: any) => {
-    if (res) {
-    
-    this.router.navigate(['home']);
-    } else {
-      this.toastService.presentToast('incorrect password.');
-    }
-    },
-    (error: any) => {
-      console.log(error)
-      this.toastService.presentToast('Network Issue.');
-    }
-    );
-    // } else {
-    //   this.toastService.presentToast('Please enter username or password.');
-    }
-    
-
-
-
 }
