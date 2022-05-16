@@ -66,7 +66,7 @@ export class SignUpPage implements OnInit {
 
       ]))
     }, {
-      validators: this.password.bind(this)
+      validators: this.pass.bind(this)
     });
   }
 
@@ -84,7 +84,7 @@ export class SignUpPage implements OnInit {
   validateInputs() {
     console.log(this.postData);
     let username = this.postData.username.trim();
-    let password = this.postData.pass.trim();
+    let pass = this.postData.pass.trim();
     let email = this.postData.email.trim();
     return (
       this.postData.username &&
@@ -92,7 +92,7 @@ export class SignUpPage implements OnInit {
       this.postData.email &&
       username.length > 0 &&
       email.length > 0 &&
-      password.length > 0
+      pass.length > 0
     );
   }
 
@@ -100,8 +100,8 @@ export class SignUpPage implements OnInit {
     if (this.validateInputs()) {
       this.authService.signup(this.postData).subscribe(
         (res: any) => {
-          if (res.userData) {
-            this.router.navigate(['home/feed']);
+          if (res) {
+            this.router.navigate(['home']);
           } else {
             this.toastService.presentToast(
               'Data alreay exists, please enter new details.'
@@ -120,10 +120,10 @@ export class SignUpPage implements OnInit {
   }
 
 
-  password(formGroup: FormGroup) {
-    const { value: password } = formGroup.get('pass');
+  pass(formGroup: FormGroup) {
+    const { value: pass } = formGroup.get('pass');
     const { value: confirmPassword } = formGroup.get('confirmPassword');
-    return password === confirmPassword ? null : { passwordNotMatch: true };
+    return pass === confirmPassword ? null : { passwordNotMatch: true };
   }
 
   emailCheck(error): boolean {

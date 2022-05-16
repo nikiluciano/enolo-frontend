@@ -2,23 +2,23 @@
   <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/login']"></ion-icon>
   <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"> </ion-img>
   <ion-item>
-    <ion-input placeholder="Nome" formControlName="name">
+    <ion-input placeholder="Nome" formControlName="name" [(ngModel)]="postData.name">
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="Cognome" formControlName="surname">
+    <ion-input placeholder="Cognome" formControlName="surname" [(ngModel)]="postData.surname">
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="Username" formControlName="username">
+    <ion-input placeholder="Username" formControlName="username" [(ngModel)]="postData.username">
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="Indirizzo" formControlName="address">
+    <ion-input placeholder="Indirizzo" formControlName="address" [(ngModel)]="postData.address">
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="E-mail" formControlName="email">
+    <ion-input placeholder="E-mail" formControlName="email" [(ngModel)]="postData.email">
     </ion-input>
     <div>
       <div *ngIf="emailCheck(error)">
@@ -28,7 +28,7 @@
   </ion-item>
 
   <ion-item>
-    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Password" formControlName="pass">
+    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Password" formControlName="pass" [(ngModel)]="postData.pass">
     </ion-input>
     <div *ngIf="pwCheck(error)">
     </div>
@@ -37,7 +37,7 @@
   </ion-item>
 
   <ion-item>
-    <ion-input [type]="showPwd ? 'text' : 'pass'" placeholder="Conferma password" formControlName="confirmPassword">
+    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Conferma password" formControlName="confirmPassword" [(ngModel)]="postData.confirmPassword">
     </ion-input>
     <div>
       <div *ngIf="confpwCheck(error)">
@@ -48,7 +48,7 @@
   </ion-item>
 
   <ion-item>
-    <ion-input placeholder="Numero Telefonico" formControlName="telephoneNumber">
+    <ion-input placeholder="Numero Telefonico" formControlName="telephoneNumber" [(ngModel)]="postData.telephoneNumber">
     </ion-input>
   </ion-item>
   <ion-button expand="block" type="submit" (click)="signAction()">
