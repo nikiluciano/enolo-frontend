@@ -2,15 +2,32 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-
+        
         <ion-list id="inbox-list">
+          <div class="style-logo">
           <ion-list-header>
             <img src="assets/icon/logo_enolo.jpg" class="img">
           </ion-list-header>
-          <ion-note class="ute">nome azienda</ion-note><br>
-          <ion-note class="ute">E-mail utente</ion-note>
+        </div>
+
+          <div class="style-avatar">
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
+              </ion-avatar>
+              <ion-col>
+                <ion-row>
+                  <ion-label>Vinicola</ion-label>
+                </ion-row>
+                <ion-row>
+                  <ion-label>Vinicola@gmail.com</ion-label>
+                </ion-row>
+              </ion-col>
+            </ion-item>
+          </div>
           
-          <ion-menu-toggle>
+          <div class="style-menu">
+          <ion-menu-toggle >
             <ion-button (click)="button1()" fill="clear" color="dark" [routerLink]="['/home']">
               <ion-icon name="home-outline"></ion-icon>
               <ion-label class="lab">Home</ion-label>
@@ -23,7 +40,7 @@
 
             <ion-button (click)="button3()" fill="clear" color="dark" [routerLink]="['/load']">
               <ion-icon name="archive-outline"></ion-icon>
-              <ion-label class="lab">Carichi</ion-label>
+              <ion-label class="lab">Conferimenti</ion-label>
             </ion-button>
 
             <ion-button (click)="button4()" fill="clear" color="dark" [routerLink]="['/statistics']">
@@ -31,24 +48,23 @@
               <ion-label class="lab">Statistiche</ion-label>
             </ion-button>
           </ion-menu-toggle>
-
+          </div>
         </ion-list>
+        
+        
 
+      </ion-content>
+      
+      <ion-footer>
         <ion-menu-toggle>
-          <ion-button (click)="button5()" fill="clear" color="dark"
-            style="margin-top: 5rem; position: fixed; bottom: 20px;" [routerLink]="['/settings']">
+          <ion-button (click)="button5()" fill="clear" color="dark" class="style-settings" [routerLink]="['/settings']">
             <ion-icon name="cog-outline"></ion-icon>
             <ion-label class="lab">Impostazioni </ion-label>
           </ion-button>
         </ion-menu-toggle>
-
-      </ion-content>
-
+        </ion-footer>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
 
   </ion-split-pane>
 </ion-app>
-
-
- 

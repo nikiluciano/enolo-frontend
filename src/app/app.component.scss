@@ -117,18 +117,42 @@ ion-menu ion-content {
   }
   .lab {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     width: 200px;
+    padding-left: 20px;
+
   }
    img{
-  
+    border-radius: 60px;
     max-height: 250px;
     display:flex;
-    justify-content: center;
+    margin: auto;
+    width: 100px;
        
    }
    .ute {
     display: flex;
-    justify-content:center;
+    margin-left: auto;
     width: 200px;
+  
   }
+  .style-settings{
+    
+    bottom: 20px;
+  }
+  .style-logo{
+    margin-top:0px;
+    border-radius: 0px 0px 20px 20px;
+    border-style:outset;
+  }
+  .style-menu{
+    margin-top:30px;
+    border-color: #E692F8;
+    border-style:outset;
+  }
+  .style-avatar{
+    border-color: #E692F8;
+    border-style:outset;
+    margin-top:20px;
+  }
+  
