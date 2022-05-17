@@ -117,18 +117,61 @@ ion-menu ion-content {
   }
   .lab {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     width: 200px;
+    padding-left: 20px;
+
   }
    img{
-  
+    border-radius: 60px;
     max-height: 250px;
     display:flex;
-    justify-content: center;
-       
+    margin: auto;
+    width: 65px;
+    
    }
-   .ute {
-    display: flex;
-    justify-content:center;
-    width: 200px;
+  
+  .style-settings{
+    bottom: 20px;
+    opacity: 0.75;
+    font-family:"quicksand-regular";
   }
+  .style-logo{
+
+    border-radius: 0px 0px 70px 70px;
+    background-color: #3B5360;
+    
+    
+  }
+  .style-menu{
+    margin-top:30px;
+    background-color:#D6B0B1;
+    border-radius: 30px;
+  }
+  .style-grid{
+    border-radius: 50px;
+    background-color:  #D6B0B1;
+    margin-top:5px;
+    height: 80px;
+    
+  }
+  .style-email{
+    font-size: 15px;
+    margin-top: 5px;
+    padding-right: 50px;
+    font-family: "quicksand-regular";
+    color: #3B5360;
+  }
+  .style-user{
+    margin-top: 7px;
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: "quicksand-semibold";
+    
+  }
+.style-labs-menu{
+  font-family:"quicksand-regular";
+  color:black;
+}
+  
+
