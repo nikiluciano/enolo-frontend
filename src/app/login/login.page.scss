@@ -1,43 +1,129 @@
-.logo{  
-  margin-left: auto; 
-  margin-right: auto; 
-  margin-top: 2cm; 
-  width: 120px; 
-  height: 120px; 
-  border-radius: 50px; 
-  background-position: center; 
+@font-face {
+  font-family: 'quicksand-regular';
+  src: url('../../assets/font/Quicksand-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'quicksand-semibold';
+  src: url('../../assets/font/Quicksand-SemiBold.ttf')
+}
+
+
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2cm;
+  width: 160px;
+  height: 160px;
+  border-radius: 50px;
+  background-position: center;
   background-size: 100% 100%;
 }
- 
-ion-button{
-  .login-form{
-    border-radius: 70%;
-  }
+
+
+.username-item {
+
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+}
+
+.username-item-wrong {
+
+  border: 1px solid red;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+}
+
+.pw-item {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+
+}
+
+.pw-item-wrong {
+  border: 1px solid red;
+  border-radius: 25px;
+
+}
+
+.pw-input {
+  font-size: 15px;
+  margin: 5px;
+}
+
+.username-input {
+  font-size: 15px;
+  margin: 5px;
+}
+
+
+  .div-login {
+    padding: 10px;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+ }
+
+.font{
+  font-family: "quicksand-regular"
+}
+
+.font2{
+  font-size: 15px;
+  font-family: "quicksand-semibold"
+}
+
+
+.list-style {
+  border: none;
+}
+
+.forgotpw-item {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.signup-item {
+  font-size: 15px;
   
-  --background: #8F002C;
 }
 
 
-.small-text{
-  color:#8F002C;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
-  position: relative; 
-  margin-left:50px; 
+.login-btn {
+  height: 40px;
+  --background: #8B5E83;
+  font-family: "quicksand-regular";
+}
+
+.div1{
+  max-width: 300px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.div2{
+  height:30%;
 
 }
 
+.div3{
+  height:10%;
 
-.lab{
-  color: #8F002C;
 }
 
-p {
-  font-family: Lato;
+.login-div{
+height:40%;
 }
-.error-message {
-  color:#8F002C;
-}
-input.ng-touched.ng-invalid {
-  border: 1px solid #8F002C;
+
+.title{
+  font-size: large;
+  margin-bottom: 20px;
 }
