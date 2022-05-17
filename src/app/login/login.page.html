@@ -9,20 +9,20 @@
 
         <!--SHOWN ONLY IF PASSWORD AND/OR EMAIL ARE OK-->
         <ion-item *ngIf="!missingUsername" class="username-item" lines="none">
-          <ion-input class="username-input" name="username" placeholder="username" [(ngModel)]="postData.username">
+          <ion-input class="username-input" class="font"  name="username" placeholder="Username" [(ngModel)]="postData.username">
           </ion-input>
        
         </ion-item>
 
         <!--SHOWN ONLY IF PASSWORD AND/OR EMAIL MISSING OR WRONG-->
         <ion-item *ngIf="missingUsername" class="username-item-wrong" lines="none">
-          <ion-input class="username-input" name="username" placeholder="username" [(ngModel)]="postData.username">
+          <ion-input class="username-input" name="username" placeholder="Username" [(ngModel)]="postData.username">
           </ion-input>
           
         </ion-item>
 
         <ion-item *ngIf="!missingPassword" class="pw-item" lines="none">
-          <ion-input class="pw-input" name="password" [type]="showPwd ? 'text' : 'password'"
+          <ion-input class="pw-input" class="font"  name="password" [type]="showPwd ? 'text' : 'password'"
             placeholder="Password" [(ngModel)]="postData.password">
           </ion-input>
          
@@ -40,16 +40,18 @@
         </ion-item>
 
 
-        <ion-item color ="active" class="forgotpw-item" lines="none">
-          <ion-label color="primary">Password dimenticata?
+        <ion-item  class="forgotpw-item" lines="none">
+          <ion-label>
+            <a [routerLink]="['/forgot-pw']" class="font2"> Password dimenticata?</a>
           </ion-label>
+          
         </ion-item>
-        <ion-button shape="round" class="login-btn" (click)="loginAction()" expand="block" type="submit">
+        <ion-button shape="round" class="login-btn"  (click)="loginAction()" expand="block" type="submit">
           Accedi
         </ion-button>
-        <ion-item  class="signup-item" lines="none" text-center>
-          <ion-label >Non hai un account? 
-            <a [routerLink]="['/sign-up']" color="primary">Registrati</a>
+        <ion-item  class="signup-item"  class="font" lines="none" text-center>
+          <ion-label >Non hai un account?  
+            <a [routerLink]="['/sign-up']"  class="font2">Registrati</a>
           </ion-label>
           </ion-item>
       </ion-list>
