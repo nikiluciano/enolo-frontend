@@ -1,58 +1,79 @@
 <ion-content [formGroup]="SignUpForm">
-  <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/login']"></ion-icon>
-  <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"> </ion-img>
-  <ion-item>
-    <ion-input placeholder="Nome" formControlName="name" [(ngModel)]="postData.name">
-    </ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input placeholder="Cognome" formControlName="surname" [(ngModel)]="postData.surname">
-    </ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input placeholder="Username" formControlName="username" [(ngModel)]="postData.username">
-    </ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input placeholder="Indirizzo" formControlName="address" [(ngModel)]="postData.address">
-    </ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input placeholder="E-mail" formControlName="email" [(ngModel)]="postData.email">
-    </ion-input>
-    <div>
-      <div *ngIf="emailCheck(error)">
+  <div class="toolbar-style">
+    <ion-icon color="antique-fuchsia" class="arrow" name="arrow-back-outline" [routerLink]="['/login']"></ion-icon>
+   </div>
+   <div class = "sign-up-div">
+    <ion-list>
+      <ion-text class="title">
+        Registrati
+      </ion-text>
+      
+  
+      <ion-item class="item name" lines="none">
+        <ion-input placeholder="Nome" formControlName="name">
+        </ion-input>
+      </ion-item>
+  
+      <ion-item class="item" lines="none">
+        <ion-input placeholder="Cognome" formControlName="surname">
+        </ion-input>
+      </ion-item>
 
-      </div>
+      <ion-item class="item" lines="none">
+        <ion-input placeholder="Username" formControlName="username">
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="item" lines="none">
+        <ion-input placeholder="Email" formControlName="email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="item" lines="none">
+        <ion-input placeholder="Indirizzo" formControlName="address">
+        </ion-input>
+      </ion-item>
+  
+      <ion-item class="item" lines="none">
+        <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Inserisci Password" formControlName="pass">
+        </ion-input>
+        <div>
+           
+            <div 
+              *ngIf="pwCheck(error)">
+             
+            </div>
+          
+        </div>
+        <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
+        </ion-icon>
+      </ion-item>
+  
+      <ion-item class="item" lines="none">
+        <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Conferma password" formControlName="confirmPassword">
+        </ion-input>
+        <div class="error-messages">
+         
+            <div 
+              *ngIf="confpwCheck(error)">
+              
+            </div>
+      
+        </div>
+      </ion-item>
+      <div class="error_message"
+      *ngIf="comparepwCheck(error)">
+      Password and Confirm Password fields should match
     </div>
-  </ion-item>
-
-  <ion-item>
-    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Password" formControlName="pass" [(ngModel)]="postData.pass">
-    </ion-input>
-    <div *ngIf="pwCheck(error)">
-    </div>
-    <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
-    </ion-icon>
-  </ion-item>
-
-  <ion-item>
-    <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Conferma password" formControlName="confirmPassword" [(ngModel)]="postData.confirmPassword">
-    </ion-input>
-    <div>
-      <div *ngIf="confpwCheck(error)">
-      </div>
-      <div *ngIf="comparepwCheck(error)">
-      </div>
-    </div>
-  </ion-item>
-
-  <ion-item>
-    <ion-input placeholder="Numero Telefonico" formControlName="telephoneNumber" [(ngModel)]="postData.telephoneNumber">
-    </ion-input>
-  </ion-item>
-  <ion-button expand="block" type="submit" (click)="signAction()">
-    Registrati
-    <ion-icon name="log-in-outline"></ion-icon>
-  </ion-button>
+      <ion-item class="item" lines="none">
+        <ion-input placeholder="Numero di telefono" formControlName="telephoneNumber">
+        </ion-input>
+      </ion-item>
+  
+      <ion-button color="antique-fuchsia" class="btn-style" expand="block" shape="round" type="submit" (click)="signAction()">
+        Prosegui
+      </ion-button>
+    </ion-list>
+  
+   </div>
 </ion-content>
