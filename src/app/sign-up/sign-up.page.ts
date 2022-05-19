@@ -148,6 +148,10 @@ export class SignUpPage implements OnInit {
       (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
   }
 
+ 
+
+
+
 }
 
 
