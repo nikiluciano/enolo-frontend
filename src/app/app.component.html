@@ -1,54 +1,75 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
+      <div class="style-logo">
+        <div>
+          <img src="assets/icon/logo_enolo.jpg" class="img" >
+        </div>
+      </div>
 
+      <ion-content>  
         <ion-list id="inbox-list">
-          <ion-list-header>
-            <img src="assets/icon/logo_enolo.jpg" class="img">
-          </ion-list-header>
-          <ion-note class="ute">nome azienda</ion-note><br>
-          <ion-note class="ute">E-mail utente</ion-note>
           
-          <ion-menu-toggle>
-            <ion-button (click)="button1()" fill="clear" color="dark" [routerLink]="['/home']">
+          <ion-grid class="style-grid">
+            <ion-row>
+              <ion-col>
+                <ion-avatar class="style-avatar">
+                  <img src="https://img.myloview.it/adesivi/user-icon-vector-male-person-symbol-profile-circle-avatar-sign-in-flat-color-glyph-pictogram-illustration-700-168677638.jpg" />
+                </ion-avatar>
+              </ion-col>
+              <ion-col>
+                <ion-row>
+                  <ion-label class="style-user">Vinicola</ion-label>
+                </ion-row>
+                <ion-row>
+                  <ion-label class="style-email">Vinicola@gmail.com</ion-label>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+               
+       
+
+
+          <div class="style-menu">
+          <ion-menu-toggle >
+            <ion-button (click)="button1()" fill="clear" class="style-labs-menu" [routerLink]="['/home']">
               <ion-icon name="home-outline"></ion-icon>
               <ion-label class="lab">Home</ion-label>
             </ion-button>
 
-            <ion-button (click)="button2()" fill="clear" color="dark" [routerLink]="['/warehouse']">
+            <ion-button (click)="button2()" fill="clear" class="style-labs-menu" [routerLink]="['/warehouse']">
               <ion-icon name="wine-outline"></ion-icon>
               <ion-label class="lab">Magazzino </ion-label>
             </ion-button>
 
-            <ion-button (click)="button3()" fill="clear" color="dark" [routerLink]="['/load']">
+            <ion-button (click)="button3()" fill="clear" class="style-labs-menu" [routerLink]="['/load']">
               <ion-icon name="archive-outline"></ion-icon>
-              <ion-label class="lab">Carichi</ion-label>
+              <ion-label class="lab">Conferimenti</ion-label>
             </ion-button>
 
-            <ion-button (click)="button4()" fill="clear" color="dark" [routerLink]="['/statistics']">
+            <ion-button (click)="button4()" fill="clear" class="style-labs-menu" [routerLink]="['/statistics']">
               <ion-icon name="stats-chart-outline"></ion-icon>
               <ion-label class="lab">Statistiche</ion-label>
             </ion-button>
           </ion-menu-toggle>
-
+          </div>
         </ion-list>
+        
+        
 
+      </ion-content>
+      
+      <ion-footer>
         <ion-menu-toggle>
-          <ion-button (click)="button5()" fill="clear" color="dark"
-            style="margin-top: 5rem; position: fixed; bottom: 20px;" [routerLink]="['/settings']">
+          <ion-button (click)="button5()" fill="clear" color="dark" class="style-settings" [routerLink]="['/settings']">
             <ion-icon name="cog-outline"></ion-icon>
             <ion-label class="lab">Impostazioni </ion-label>
           </ion-button>
         </ion-menu-toggle>
-
-      </ion-content>
-
+        </ion-footer>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
 
   </ion-split-pane>
 </ion-app>
-
-
- 

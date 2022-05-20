@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonChip } from '@ionic/angular';
 
 
@@ -7,15 +7,20 @@ import { IonChip } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   constructor() { }
 
   Contatti = [
-    { id: 1, name: 'mario', carico:'deraspatura' },
-    { id: 2, name: 'benzema',carico:'deraspatura' },
-    { id: 3, name: 'marra' ,carico:'vinatura'},
-    { id: 4, name: 'simone',carico:'vinatura' }
+    { id: 1, name: 'mario', carico: 'deraspatura', peso: 1000 },
+    { id: 2, name: 'benzema', carico: 'deraspatura', peso: 1306 },
+    { id: 3, name: 'marra', carico: 'vinatura', peso: 1067 },
+    { id: 4, name: 'simone', carico: 'vinatura', peso: 1100 }
   ]
 
+  warehouse = [];
+  
+  ngOnInit() {
+
+  }
 }
