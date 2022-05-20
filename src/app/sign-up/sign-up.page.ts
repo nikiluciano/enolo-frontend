@@ -1,96 +1,204 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { ToastService } from '../services/toast.service';
 
-@Component({ 
-  selector: 'app-sign-up',  
-  templateUrl: './sign-up.page.html', 
-  styleUrls: ['./sign-up.page.scss'], 
-}) 
-export class SignUpPage implements OnInit { 
-  
+
+@Component({
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.page.html',
+  styleUrls: ['./sign-up.page.scss'],
+})
+export class SignUpPage implements OnInit {
+  postData = {
+    username: '',
+    email: '',
+    password: '',
+    name: '',
+    surname: '',
+    address: '',
+    phone: ''
+  };
+
+  missingPassword = false;
+  missingUsername = false;
+  missingName = false;
+  missingSurname = false;
+  missingAddress = false;
+  missingEmail = false;
+  missingPhone = false;
+  missingConfirmPassword = false;
+
+
 
   SignUpForm: FormGroup;
-   
-  ngOnInit() { 
-  } 
-  getCredentials() { 
 
-     
-  } 
-  pwdIcon = "eye-outline"; 
-  showPwd = false; 
- 
-  togglePwd() { 
-    this.showPwd = !this.showPwd; 
-    this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline"; 
-  } 
-
-  password(formGroup: FormGroup) {
-    const { value: password } = formGroup.get('pass');
-    const { value: confirmPassword } = formGroup.get('confirmpassword');
-    return password === confirmPassword ? null : { passwordNotMatch: true };
-  } 
- 
-  error_messages = {
-    
-    'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'minlength', message: 'Email length.' },
-      { type: 'maxlength', message: 'Email length.' },
-      { type: 'required', message: 'please enter a valid email address.' }
-    ],
-
-    'pass': [
-      { type: 'required', message: 'password is required.' },
-      { type: 'minlength', message: 'password length.' },
-      { type: 'maxlength', message: 'password length.' }
-    ],
-    'confirmpassword': [
-      { type: 'required', message: 'password is required.' },
-      { type: 'minlength', message: 'password length.' },
-      { type: 'maxlength', message: 'password length.' },
-    ],
-  }
   constructor(
+    private authService: AuthService,
+    private toastService: ToastService,
+    private router: Router,
     public formBuilder: FormBuilder
   ) {
     this.SignUpForm = this.formBuilder.group({
-    
+
       email: new FormControl('', Validators.compose([
         Validators.required,
-        Validators.minLength(6),
+        Validators.email
+      ])),
+      password: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.minLength(8),
         Validators.maxLength(30)
       ])),
-      pass: new FormControl('', Validators.compose([
+      confirmPassword: new FormControl('', Validators.compose([
         Validators.required,
-        Validators.minLength(6),
+        Validators.minLength(8),
         Validators.maxLength(30)
       ])),
-      confirmpassword: new FormControl('', Validators.compose([
+      name: new FormControl('', Validators.compose([
         Validators.required,
-        Validators.minLength(6),
-        Validators.maxLength(30)
+
       ])),
-      nome: new FormControl('', Validators.compose([
+      surname: new FormControl('', Validators.compose([
         Validators.required,
-       
+
       ])),
-      cognome: new FormControl('', Validators.compose([
-        Validators.required,
- 
+      username: new FormControl('', ([
+
       ])),
-      numerotel: new FormControl('', Validators.compose([
+      address: new FormControl('', ([
+
+
+      ])),
+      phone: new FormControl('', Validators.compose([
         Validators.required,
- 
+
       ]))
-    }, { 
-      validators: this.password.bind(this)
+    }, {
+      validators: this.pass.bind(this)
     });
   }
 
+  ngOnInit() { }
+
+  pwdIcon = "eye-outline";
+  showPwd = false;
+
+  togglePwd() {
+    this.showPwd = !this.showPwd;
+    this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline";
+  }
+
+
+  validateInputs() {
+    console.log(this.postData);
+    let username = this.postData.username.trim();
+    let pass = this.postData.password.trim();
+    let email = this.postData.email.trim();
+    return (
+      this.postData.username &&
+      this.postData.password &&
+      this.postData.email &&
+      username.length > 0 &&
+      email.length > 0 &&
+      pass.length > 0
+    );
+  }
+
+  signAction() {
+    if (this.validateInputs()) {
+      this.authService.signup(this.postData).subscribe(
+        (res: any) => {
+          if (res) {
+            this.router.navigate(['login']);
+          } else {
+            this.toastService.presentToast(
+              'Data alreay exists, please enter new details.'
+            );
+          }
+        },
+        (error: any) => {
+          this.toastService.presentToast('Network Issue.');
+        }
+      );
+    } else {
+      this.toastService.presentToast(
+        'Please enter email, username or password.'
+      );
+    }
+    console.log(this.postData.username);
+    if (this.postData.username.length <= 0)
+      this.missingUsername = true;
+    else
+      this.missingUsername = false;
+
+    if (this.postData.password.length <= 0)
+      this.missingPassword = true;
+    else
+      this.missingPassword = false;
+
+    if (this.postData.name.length <= 0)
+      this.missingName = true;
+    else
+      this.missingName = false;
+
+    if (this.postData.surname.length <= 0)
+      this.missingSurname = true;
+    else
+      this.missingSurname = false;
+
+    if (this.postData.address.length <= 0)
+      this.missingAddress = true;
+    else
+      this.missingAddress = false;
+
+    if (this.postData.phone.length <= 0)
+      this.missingPhone = true;
+    else
+      this.missingPhone = false;
+
+    if (this.postData.email.length <= 0)
+      this.missingEmail = true;
+    else
+      this.missingEmail = false;
+
+
+
+  }
+
+
+  pass(formGroup: FormGroup) {
+    const { value: password } = formGroup.get('password');
+    const { value: confirmPassword } = formGroup.get('confirmPassword');
+    return password === confirmPassword ? null : { passwordNotMatch: true };
+  }
+
+  emailCheck(error): boolean {
+    return this.SignUpForm.get('email') &&
+      (this.SignUpForm.get('email').dirty || this.SignUpForm.get('email').touched)
+  }
+
+  pwCheck(error): boolean {
+    return this.SignUpForm.get('password') &&
+      (this.SignUpForm.get('password').dirty || this.SignUpForm.get('password').touched)
+
+  }
+
+  confpwCheck(error): boolean {
+    return this.SignUpForm.get('confirmPassword') &&
+      (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
+
+  }
+
+  comparepwCheck(error): boolean {
+    return !this.SignUpForm.get('confirmPassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
+      (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
+  }
+
+
 }
 
- 
 
 
- 
+
