@@ -17,4 +17,11 @@ export class WineService {
     return this.http.post(url,data, options);
     }
 
+    get(serviceName: string,) {
+      const headers = new HttpHeaders();
+      const options = { headers: headers, withCredintials: false };
+      const url = environment.apiUrl + serviceName;
+      return this.http.post(url, options);
+      }
+
 }

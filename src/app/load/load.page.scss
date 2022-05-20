@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../../assets/font/Quicksand-Regular.ttf')
+  }
+  
+  @font-face {
+    font-family: 'quicksand-semibold';
+    src: url('../../assets/font/Quicksand-SemiBold.ttf')
+  }
+
+
+
+.arrow{ 
+    margin-top: 25px; 
+    margin-left:0%; 
+    width: 22px;  
+    height: 22px; 
+ } 
+
+ .add{
+    margin-top: 25px;
+    margin-right:0%; 
+    width: 25px;  
+    height: 25px; 
+
+ }
+   
+  .title {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "quicksand-semibold";
+    font-size: 20px;
+    color:black;
+  }
+
+  .searchbar{
+     
+      height:15%;
+      --border-radius: 40px;
+      --placeholder-font-style: "quicksanf-regular"
+      
+      
+  }

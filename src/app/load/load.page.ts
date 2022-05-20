@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonSearchbar } from '@ionic/angular';
 
 @Component({
   selector: 'app-load',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./load.page.scss'],
 })
 export class LoadPage implements OnInit {
+  public list: Array<Object> = [];
+  public searchedItem: any;
 
-  constructor() { }
+  constructor() { 
+  
+
+  }
+  
+
+  
 
   ngOnInit() {
+    
   }
 
 }
