@@ -29,7 +29,7 @@ export class SignUpPage implements OnInit {
   missingEmail = false;
   missingPhone = false;
   missingConfirmPassword = false;
-  
+
 
 
   SignUpForm: FormGroup;
@@ -138,25 +138,32 @@ export class SignUpPage implements OnInit {
     else
       this.missingPassword = false;
 
-      if (this.postData.name.length <=0)
+    if (this.postData.name.length <= 0)
       this.missingName = true;
-      else
-      this.missingName =false;
+    else
+      this.missingName = false;
 
-      if (this.postData.surname.length <=0)
+    if (this.postData.surname.length <= 0)
       this.missingSurname = true;
-      else
+    else
+      this.missingSurname = false;
 
-      this.missingAddress =false;
-      if (this.postData.address.length <=0)
+    if (this.postData.address.length <= 0)
       this.missingAddress = true;
-      else
-      this.missingAddress =false;
+    else
+      this.missingAddress = false;
 
-      if (this.postData.phone.length <=0)
+    if (this.postData.phone.length <= 0)
       this.missingPhone = true;
-      else
-      this.missingPhone =false;
+    else
+      this.missingPhone = false;
+
+    if (this.postData.email.length <= 0)
+      this.missingEmail = true;
+    else
+      this.missingEmail = false;
+
+
 
   }
 
