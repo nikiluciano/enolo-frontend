@@ -9,44 +9,60 @@
       </ion-text>
 
 
-      <ion-item class="item name" lines="none">
-        <ion-input placeholder="Nome" formControlName="name">
+      <ion-item *ngIf="!missingUsername" class="item" lines="none">
+        <ion-input class="input"  formControlName="name" placeholder="nome" [(ngModel)]="postData.name">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item *ngIf="missingUsername" class="item-wrong" lines="none">
+        <ion-input class="input"  formControlName="name" placeholder="nome" [(ngModel)]="postData.name">
+        </ion-input>
+      </ion-item>
+      <ion-item class="item" lines="none">
+        <ion-input placeholder="Cognome" formControlName="surname" [(ngModel)]="postData.surname">
+        </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!missingUsername" class="item" lines="none">
+        <ion-input class="input"  formControlName="username" placeholder="Username" [(ngModel)]="postData.username">
+        </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="missingUsername" class="item-wrong" lines="none">
+        <ion-input class="input"  formControlName="username" placeholder="Username" [(ngModel)]="postData.username">
+        </ion-input>
+
+      </ion-item>
+      <ion-item class="item" lines="none">
+        <ion-input placeholder="Email" formControlName="email" [(ngModel)]="postData.email">
         </ion-input>
       </ion-item>
 
       <ion-item class="item" lines="none">
-        <ion-input placeholder="Cognome" formControlName="surname">
+        <ion-input placeholder="Indirizzo" formControlName="address" [(ngModel)]="postData.address">
         </ion-input>
       </ion-item>
 
-      <ion-item class="item" lines="none">
-        <ion-input placeholder="Username" formControlName="username">
+       <ion-item *ngIf="!missingPassword" class="pw-item" lines="none">
+        <ion-input class="pw-input" formControlName="password" [type]="showPwd ? 'text' : 'password'"
+          placeholder="Password" [(ngModel)]="postData.password">
         </ion-input>
-      </ion-item>
-
-      <ion-item class="item" lines="none">
-        <ion-input placeholder="Email" formControlName="email">
-        </ion-input>
-      </ion-item>
-
-      <ion-item class="item" lines="none">
-        <ion-input placeholder="Indirizzo" formControlName="address">
-        </ion-input>
-      </ion-item>
-
-      <ion-item class="item" lines="none">
-        <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Inserisci Password" formControlName="pass">
-        </ion-input>
-        <div>
-
-          <div *ngIf="pwCheck(error)">
-
-          </div>
-
+        <div *ngIf="pwCheck(error)">
         </div>
+
         <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
         </ion-icon>
       </ion-item>
+
+      <ion-item *ngIf="missingPassword" class="pw-item-wrong" lines="none">
+        <ion-input class="pw-input" formControlName="password" [type]="showPwd ? 'text' : 'password'"
+          placeholder="Password" [(ngModel)]="postData.password">
+        </ion-input>
+        
+        <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
+        </ion-icon>
+      </ion-item> 
 
       <ion-item class="item" lines="none">
         <ion-input [type]="showPwd ? 'text' : 'password'" placeholder="Conferma password"
@@ -64,7 +80,7 @@
         Password and Confirm Password fields should match
       </div>
       <ion-item class="item" lines="none">
-        <ion-input placeholder="Numero di telefono" formControlName="telephoneNumber">
+        <ion-input placeholder="Numero di telefono" formControlName="phone" [(ngModel)]="postData.phone">
         </ion-input>
       </ion-item>
 

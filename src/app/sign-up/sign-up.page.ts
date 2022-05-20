@@ -14,13 +14,23 @@ export class SignUpPage implements OnInit {
   postData = {
     username: '',
     email: '',
-    confirmPassword: '',
-    pass: '',
+    password: '',
     name: '',
     surname: '',
     address: '',
-    telephoneNumber: ''
+    phone: ''
   };
+
+  missingPassword = false;
+  missingUsername = false;
+  missingName = false;
+  missingSurname = false;
+  missingAddress = false;
+  missingEmail = false;
+  missingPhone = false;
+  missingConfirmPassword = false;
+  
+
 
   SignUpForm: FormGroup;
 
@@ -36,7 +46,7 @@ export class SignUpPage implements OnInit {
         Validators.required,
         Validators.email
       ])),
-      pass: new FormControl('', Validators.compose([
+      password: new FormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(8),
         Validators.maxLength(30)
@@ -61,7 +71,7 @@ export class SignUpPage implements OnInit {
 
 
       ])),
-      telephoneNumber: new FormControl('', Validators.compose([
+      phone: new FormControl('', Validators.compose([
         Validators.required,
 
       ]))
@@ -84,11 +94,11 @@ export class SignUpPage implements OnInit {
   validateInputs() {
     console.log(this.postData);
     let username = this.postData.username.trim();
-    let pass = this.postData.pass.trim();
+    let pass = this.postData.password.trim();
     let email = this.postData.email.trim();
     return (
       this.postData.username &&
-      this.postData.pass &&
+      this.postData.password &&
       this.postData.email &&
       username.length > 0 &&
       email.length > 0 &&
@@ -101,7 +111,7 @@ export class SignUpPage implements OnInit {
       this.authService.signup(this.postData).subscribe(
         (res: any) => {
           if (res) {
-            this.router.navigate(['home']);
+            this.router.navigate(['login']);
           } else {
             this.toastService.presentToast(
               'Data alreay exists, please enter new details.'
@@ -117,13 +127,44 @@ export class SignUpPage implements OnInit {
         'Please enter email, username or password.'
       );
     }
+    console.log(this.postData.username);
+    if (this.postData.username.length <= 0)
+      this.missingUsername = true;
+    else
+      this.missingUsername = false;
+
+    if (this.postData.password.length <= 0)
+      this.missingPassword = true;
+    else
+      this.missingPassword = false;
+
+      if (this.postData.name.length <=0)
+      this.missingName = true;
+      else
+      this.missingName =false;
+
+      if (this.postData.surname.length <=0)
+      this.missingSurname = true;
+      else
+
+      this.missingAddress =false;
+      if (this.postData.address.length <=0)
+      this.missingAddress = true;
+      else
+      this.missingAddress =false;
+
+      if (this.postData.phone.length <=0)
+      this.missingPhone = true;
+      else
+      this.missingPhone =false;
+
   }
 
 
   pass(formGroup: FormGroup) {
-    const { value: pass } = formGroup.get('pass');
+    const { value: password } = formGroup.get('password');
     const { value: confirmPassword } = formGroup.get('confirmPassword');
-    return pass === confirmPassword ? null : { passwordNotMatch: true };
+    return password === confirmPassword ? null : { passwordNotMatch: true };
   }
 
   emailCheck(error): boolean {
@@ -132,8 +173,8 @@ export class SignUpPage implements OnInit {
   }
 
   pwCheck(error): boolean {
-    return this.SignUpForm.get('pass') &&
-      (this.SignUpForm.get('pass').dirty || this.SignUpForm.get('pass').touched)
+    return this.SignUpForm.get('password') &&
+      (this.SignUpForm.get('password').dirty || this.SignUpForm.get('password').touched)
 
   }
 
@@ -147,9 +188,6 @@ export class SignUpPage implements OnInit {
     return !this.SignUpForm.get('confirmPassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
       (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
   }
-
- 
-
 
 
 }

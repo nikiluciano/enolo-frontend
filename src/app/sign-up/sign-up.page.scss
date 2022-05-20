@@ -1,3 +1,5 @@
+
+
 .logo {
   margin-left: auto;
   margin-right: auto;
@@ -8,6 +10,8 @@
   background-position: center;
   background-size: 100% 100%;
 }
+
+
 
 .arrow {
   margin-left: 20px;
@@ -73,4 +77,41 @@ p {
 .btn-style {
   margin-top: 60px;
 
+}
+
+.username-input {
+  font-size: 15px;
+  margin: 5px;
+}
+.item {
+
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+}
+
+.item-wrong {
+
+  border: 1px solid red;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+}
+
+.pw-item {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+
+}
+
+.pw-item-wrong {
+  border: 1px solid red;
+  border-radius: 25px;
+
+}
+
+.pw-input {
+  font-size: 15px;
+  margin: 5px;
 }
