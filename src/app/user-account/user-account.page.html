@@ -18,66 +18,50 @@
       {{postData.cognome}}
     </ion-label>
   
-
-
-  <ion-card>
-    <ion-card-content>
-
-      <ion-item>
-        <ion-label class="lable">
+    <div class="fields">
+      <ion-label class="lable1">
           Username:
         </ion-label>
         <ion-input class="item">
         {{postData.username}}
       </ion-input>
-            </ion-item>
-
-
-
-
-            <ion-item>
-              <ion-label class="lable">
+            
+           <ion-label class="lable">
                 E-mail:
               </ion-label>
               <ion-input class="item">
               {{postData.email}}
             </ion-input>
-                  </ion-item>
-
-
-
-
-                  <ion-item>
-                    <ion-label class="lable">
+                  
+            <ion-label class="lable">
                       Indirizzo:
                     </ion-label>
                     <ion-input class="item">
                     {{postData.indirizzo}}
                   </ion-input>
-                        </ion-item>
-
-
-
-
-      
-
-      <ion-item>
-        
+                   
         <ion-label class="lable">
           Password:
         </ion-label>
-        <ion-input type = "password" value="Password" > </ion-input>
+       
+        <ion-item lines="none" class="ion-no-padding">  
+          <ion-input  [type]="showPwd ? 'text' : 'password'"
+            placeholder="Password" value="password">
+          </ion-input>
+         
           <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
-          </ion-icon> 
+          </ion-icon>
+        </ion-item>
+
+
+        </div>
       
-          
-      </ion-item>
+      
 
-    </ion-card-content>
-  </ion-card>
+  
 
 
-<ion-item>
+
   <ion-icon class="telefone" name="call-outline"></ion-icon>
 
     <ion-label>
@@ -85,6 +69,6 @@
       {{postData.telefono}}
       </ion-input>
     </ion-label>
-  </ion-item>
+  
 
 </ion-content>
