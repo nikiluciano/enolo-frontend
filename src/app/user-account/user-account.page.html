@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon class="arrow" slot="start" name="arrow-back-outline"></ion-icon>
+    <ion-title>Account</ion-title>
+    <ion-icon class="hammer" slot="end" name="hammer-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-img src="assets/profilo.jpeg"></ion-img>
+ 
+
+
+  
+    <ion-label class="name"> 
+      {{postData.nome}}
+      {{postData.cognome}}
+    </ion-label>
+  
+    <div class="fields">
+      <ion-label class="lable1">
+          Username:
+        </ion-label>
+        <ion-input class="item">
+        {{postData.username}}
+      </ion-input>
+            
+           <ion-label class="lable">
+                E-mail:
+              </ion-label>
+              <ion-input class="item">
+              {{postData.email}}
+            </ion-input>
+                  
+            <ion-label class="lable">
+                      Indirizzo:
+                    </ion-label>
+                    <ion-input class="item">
+                    {{postData.indirizzo}}
+                  </ion-input>
+                   
+        <ion-label class="lable">
+          Password:
+        </ion-label>
+       
+        <ion-item lines="none" class="ion-no-padding">  
+          <ion-input  [type]="showPwd ? 'text' : 'password'"
+            placeholder="Password" value="password">
+          </ion-input>
+         
+          <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
+          </ion-icon>
+        </ion-item>
+
+
+        </div>
+      
+      
+
+  
+
+
+
+  <ion-icon class="telefone" name="call-outline"></ion-icon>
+
+    <ion-label>
+      <ion-input class="number" type="tel">
+      {{postData.telefono}}
+      </ion-input>
+    </ion-label>
+  
+
+</ion-content>
