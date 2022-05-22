@@ -1,40 +1,129 @@
+@font-face {
+  font-family: 'quicksand-regular';
+  src: url('../../assets/font/Quicksand-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'quicksand-semibold';
+  src: url('../../assets/font/Quicksand-SemiBold.ttf')
+}
+
+
+
 .logo {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2cm;
-  width: 120px; 
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50px;
   background-position: center;
   background-size: 100% 100%;
-
-
-} 
-
-.small-text {
-  color: #8F002C;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: relative;
-  margin-left: 50px;
-  top: 0%;
-} 
-
-.lab {
-  color: #8F002C;
 }
 
-ion-button {
-  .login-form {
-    border-radius: 70%;
-  }
+
+.username-item {
+
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
 }
 
-.text {
-  color: #8F002C;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: center;
-  margin-left: 95px;
-  top: 50%;
+.username-item-wrong {
 
+  border: 1px solid red;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+}
+
+.pw-item {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+
+}
+
+.pw-item-wrong {
+  border: 1px solid red;
+  border-radius: 25px;
+
+}
+
+.pw-input {
+  font-size: 15px;
+  margin: 5px;
+}
+
+.username-input {
+  font-size: 15px;
+  margin: 5px;
+}
+
+
+  .div-login {
+    padding: 10px;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+ }
+
+.font{
+  font-family: "quicksand-regular"
+}
+
+.font2{
+  font-size: 15px;
+  font-family: "quicksand-semibold"
+}
+
+
+.list-style {
+  border: none;
+}
+
+.forgotpw-item {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.signup-item {
+  font-size: 15px;
+  
+}
+
+
+.login-btn {
+  height: 40px;
+  --background: #8B5E83;
+  font-family: "quicksand-regular";
+}
+
+.div1{
+  max-width: 300px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.div2{
+  height:30%;
+
+}
+
+.div3{
+  height:10%;
+
+}
+
+.login-div{
+height:40%;
+}
+
+.title{
+  font-size: large;
+  margin-bottom: 20px;
 }

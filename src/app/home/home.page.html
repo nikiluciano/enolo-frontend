@@ -1,24 +1,93 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-    <ion-menu-button class="col"></ion-menu-button>
+  <ion-toolbar color="police-blue">
+    <ion-buttons slot="start" >
+      <ion-menu-button class="style-burger" ></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-item lines="none" color="police-blue">
+      <ion-label class="title-home">Home</ion-label>
+      <ion-button (click)="account" fill="clear">
+        <ion-icon name="person-circle-outline" slot="end" class="style-button"></ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-toolbar>
-  
+
 </ion-header>
+<ion-content>
+  <ion-grid class="gridstyle">
+    <ion-col>
+    
+      <ion-row>
+        <ion-label class="style-title-c">Conferimenti attivi</ion-label>
+      </ion-row>
+      <ion-card>
+      <ion-slides pager="true" [options]="slideOpts" class="style-c">
+        <ion-slide *ngFor="let nome of Contatti">
+          <ion-col>
+            <ion-row class="style-row-title">
+              <ion-label class="title-c"> In {{nome.carico}}</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-progress-bar value="0.25" class="bar-c"></ion-progress-bar>
+            </ion-row>
+            <ion-row>
+              <ion-col class="weight-col-style">
+                <ion-label class="style-labs-peso">{{nome.peso}}<sub class="style-kg"> kg</sub></ion-label>
+              </ion-col>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+              <ion-col class="wine-type-col-style">
+                <ion-label class="style-labs-c">Tipo d'uva</ion-label>
+              </ion-col>
+            </ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+            <ion-row>
+              <ion-col class="down-col-style">
+                <ion-item lines="none" class="ion-no-padding">
+                  <ion-icon name="calendar-outline" class="icon-style"></ion-icon>
+                  <ion-label class="calendar-label-style"> 08/05/2022</ion-label>
+                </ion-item>
+              </ion-col>
+
+              <ion-col class="supplier-col-style">
+                <ion-item class="ion-no-padding" lines="none">
+                  <ion-label class="style-labs-f" slot="end">{{nome.name}}</ion-label>
+                </ion-item>
+              </ion-col>
+
+            </ion-row>
+          </ion-col>
+        </ion-slide>
+      </ion-slides>
+      </ion-card>
+    </ion-col>
+
+    <ion-row class="row-warehouse">
+      <ion-col>
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-warehouse">Il tuo magazzino</ion-label>
+        </ion-row>
+     
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse">N. Tappi</ion-label>
+        </ion-row>
+        <ion-row class="row-style-warehouse">
+          <ion-progress-bar value="0.25" class="bar-caps"></ion-progress-bar>
+        </ion-row>
+
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse">N. Bottiglie</ion-label>
+        </ion-row>
+        <ion-row class="row-style-warehouse">
+          <ion-progress-bar value="0.50" class="bar-bottle"></ion-progress-bar>
+        </ion-row>
+
+        <ion-row class="row-style-warehouse">
+          <ion-label class="title-bar-warehouse"> N. Etichette</ion-label>
+        </ion-row>
+        <ion-row class="row-style-warehouse">
+          <ion-progress-bar value="0.75" class="bar-labels"></ion-progress-bar>
+        </ion-row>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
