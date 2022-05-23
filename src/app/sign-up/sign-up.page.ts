@@ -124,7 +124,7 @@ export class SignUpPage implements OnInit {
       );
     } else {
       this.toastService.presentToast(
-        'Please enter email, username or password.'
+        'Riempire tutti i campi correttamente.'
       );
     }
     console.log(this.postData.username);

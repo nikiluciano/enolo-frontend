@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'forgot-pw',
     loadChildren: () => import('./forgot-pw/forgot-pw.module').then( m => m.ForgotPwPageModule)
   },
+  {
+    path: 'insert-conferment',
+    loadChildren: () => import('./insert-conferment/insert-conferment.module').then( m => m.InsertConfermentPageModule)
+  },
 
 ];
 
