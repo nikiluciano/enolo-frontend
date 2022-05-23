@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonSearchbar } from '@ionic/angular';
+import { Platform, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-load',
@@ -7,19 +7,31 @@ import { IonSearchbar } from '@ionic/angular';
   styleUrls: ['./load.page.scss'],
 })
 export class LoadPage implements OnInit {
-  public list: Array<Object> = [];
-  public searchedItem: any;
 
-  constructor() { 
-  
+ load= [];
+
+  constructor(public platform: Platform, public loadingController: LoadingController) {
+    this.platform.ready().then(() => {
+      this.loadingController.create({
+        message: "loading..."
+      }).then((loadingElement) => {
+        loadingElement.present();
+
+        var ref = this;
+        setTimeout(function () {
+          ref.loadingController.dismiss();
+        }, 2000)
+      })
+    }
+    )
+
 
   }
-  
 
-  
 
-  ngOnInit() {
-    
-  }
+
+
+  ngOnInit() { }
+
 
 }

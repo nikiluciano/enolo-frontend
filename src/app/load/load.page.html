@@ -1,15 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="police-blue">
+    <ion-item lines="none" color="police-blue"  >
+      <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
+      <ion-text class="title">Gestisci i carichi</ion-text>
+      <ion-icon class="add" name="add-outline" [routerLink]="['/insert-conferment']" ></ion-icon> 
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+
 
 <ion-content>
-<ion-list>
-  <ion-item  lines="none">
-    <ion-icon color="antique-fuchsia" class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
-    <ion-text class="title">
-      Gestisci i carichi
-    </ion-text>
-    <ion-icon color="antique-fuchsia" class="add" name="add-outline" [routerLink]="['/home']" ></ion-icon> 
-   </ion-item>
-</ion-list>
- 
+
 
  <ion-searchbar showCancelButton="focus" cancelButtonText="Cancel" class="searchbar" placeholder="Cerca un carico">
  </ion-searchbar>
