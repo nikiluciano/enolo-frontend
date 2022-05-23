@@ -1,7 +1,8 @@
 {
   "name": "enolo-frontend",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

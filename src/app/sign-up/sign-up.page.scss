@@ -1,48 +1,117 @@
-.logo{   
-  margin-left: auto;  
-  margin-right: auto;  
-    
-  width: 120px;  
-  height: 120px;  
-  border-radius: 50px;  
-  background-position: center;  
-  background-size: 100% 100%; 
-} 
 
-.arrow{ 
-  color: #8F002C; 
-  margin-left: 20px; 
-  margin-top: 20px; 
-  width: 25px;  
-  height: 25px; 
-   
-} 
- 
- 
-ion-button{ 
-  .login-form{ 
-    border-radius: 70%; 
-  } 
-   
-  --background: #8F002C; 
-} 
- 
 
-.lab{ 
-  color: #8F002C; 
-} 
+.logo {
+  margin-left: auto;
+  margin-right: auto;
 
-.text{ 
- margin-left: 20px; 
- color: #8F002C; 
+  width: 120px;
+  height: 120px;
+  border-radius: 50px;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+
+
+.arrow {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+
+.lab {
+  color: #8F002C;
+}
+
+.text {
+  margin-left: 20px;
+  color: #8F002C;
 }
 
 p {
   font-family: Lato;
 }
-.error-message {
-  color: red;
+
+
+.sign-up-div {
+  position: absolute;
+  margin-top: 0;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  max-width: 300px;
+
 }
-input.ng-touched.ng-invalid {
+
+.item {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+
+.name {
+  margin-top: 30px;
+
+}
+
+.title {
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.toolbar-style {
+
+  margin-bottom: 20px;
+}
+
+.btn-style {
+  margin-top: 60px;
+
+}
+
+.username-input {
+  font-size: 15px;
+  margin: 5px;
+}
+.item {
+
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+}
+
+.item-wrong {
+
   border: 1px solid red;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+}
+
+.pw-item {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+
+}
+
+.pw-item-wrong {
+  border: 1px solid red;
+  border-radius: 25px;
+
+}
+
+.pw-input {
+  font-size: 15px;
+  margin: 5px;
 }
