@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonChip } from '@ionic/angular';
-
+import { WarehouseService } from '../services/warehouse.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { IonChip } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(public warehouseservice:WarehouseService) {}
 
   Contatti = [
     { id: 1, name: 'mario', carico: 'deraspatura', peso: 1000 },
@@ -23,4 +23,12 @@ export class HomePage implements OnInit {
   ngOnInit() {
 
   }
+
+doRefresh(event){
+  setTimeout(()=>{
+    console.log("piju ngul")
+    event.target.complete()
+  }, 2000);
 }
+}
+
