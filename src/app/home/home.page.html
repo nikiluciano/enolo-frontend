@@ -13,6 +13,9 @@
 
 </ion-header>
 <ion-content>
+  <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
   <ion-grid class="gridstyle">
     <ion-col>
     
@@ -67,10 +70,10 @@
         </ion-row>
      
         <ion-row class="row-style-warehouse">
-          <ion-label class="title-bar-warehouse">N. Tappi</ion-label>
+          <ion-label class="title-bar-warehouse" *ngFor="let Tappi of warehouse">{{Tappi.caps_quantity}} Tappi</ion-label>
         </ion-row>
         <ion-row class="row-style-warehouse">
-          <ion-progress-bar value="0.25" class="bar-caps"></ion-progress-bar>
+          <ion-progress-bar class="bar-caps" type="determinate"></ion-progress-bar>
         </ion-row>
 
         <ion-row class="row-style-warehouse">
