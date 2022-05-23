@@ -9,15 +9,15 @@ import { WineService } from './wine.service';
 export class ConfermentService {
 
   constructor(private wineService: WineService,
-              private router: Router) { }
+    private router: Router) { }
 
-              getAllConferments(): Observable<any>{
-              return this.wineService.get('wineConferment');
-              }
+      getAllConferments(): Promise<any> {
+        return this.wineService.get('wineConferment');
+      }
 
-              insertConferment(postData: any): Observable<any>{
-               return this.wineService.post('wineConferment',postData);
-  
-              }
-              
+      insertConferment(postData: any) {
+        return this.wineService.postWithToken('wineConferment', postData);
+
+      }
+
 }
