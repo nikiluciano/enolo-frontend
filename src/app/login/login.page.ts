@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastService } from '../services/toast.service';
 import { AuthService } from '../services/auth.service';
-
-
+import { Storage } from '@capacitor/storage';
+import { get, set } from '../storage/data-storage'
 
 @Component({
   selector: 'app-login',
@@ -20,14 +20,13 @@ export class LoginPage implements OnInit {
   missingUsername = false;
 
 
-  constructor( private authService: AuthService,
-              private router: Router,
-               private toastService: ToastService)
+  constructor(private authService: AuthService,
+    private router: Router,
+    private toastService: ToastService
+  ) { }
 
-               {}
 
-
-  ngOnInit() {}
+  ngOnInit() { }
 
   pwdIcon = "eye-outline";
   showPwd = false;
@@ -47,30 +46,34 @@ export class LoginPage implements OnInit {
       password.length > 0
     );
 
- }
+  }
 
- 
 
- loginAction() {
-  if (this.validateInputs()) {
-  this.authService.login(this.postData).subscribe(
-  (res: any) => {
-  if (res) {
-  this.router.navigate(['home']);
-  } else {
-  this.toastService.presentToast('Username o password errati.');
+  async loginAction() {
+    if (this.validateInputs()) {
+      this.authService.login(this.postData).subscribe(
+        (res: any) => {
+          if (res) {
+            this.router.navigate(['home']);
+            let token = res.token;
+            set('token', token);
+
+          } 
+        },
+        (error: any) => {
+          this.toastService.presentToast('Username o password errati.');
+        }
+      );
+    } else {
+      this.toastService.presentToast(
+        'Inserire username o password.'
+      );
+    }
+    this.checkEmptyFields();
+
   }
-  },
-  (error: any) => {
-  this.toastService.presentToast('Network Issue.');
-  }
-  );
-  } else {
-  this.toastService.presentToast(
-  'Inserire username o password.'
-  );
-  }
-  console.log(this.postData.username);
+
+  checkEmptyFields() {
     if (this.postData.username.length <= 0)
       this.missingUsername = true;
     else
@@ -80,9 +83,6 @@ export class LoginPage implements OnInit {
       this.missingPassword = true;
     else
       this.missingPassword = false;
-
   }
 
- 
-    
 }
