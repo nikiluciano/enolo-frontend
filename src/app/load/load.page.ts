@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Platform, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-load',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadPage implements OnInit {
 
-  constructor() { }
+ load= [];
 
-  ngOnInit() {
+  constructor(public platform: Platform, public loadingController: LoadingController) {
+    this.platform.ready().then(() => {
+      this.loadingController.create({
+        message: "loading..."
+      }).then((loadingElement) => {
+        loadingElement.present();
+
+        var ref = this;
+        setTimeout(function () {
+          ref.loadingController.dismiss();
+        }, 2000)
+      })
+    }
+    )
+
+
   }
+
+
+
+
+  ngOnInit() { }
+
 
 }

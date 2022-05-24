@@ -36,9 +36,16 @@ const routes: Routes = [
     loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule)
   },
   {
+    path: 'forgot-pw',
+    loadChildren: () => import('./forgot-pw/forgot-pw.module').then( m => m.ForgotPwPageModule)
+  },
+  {
+    path: 'insert-conferment',
+    loadChildren: () => import('./insert-conferment/insert-conferment.module').then( m => m.InsertConfermentPageModule)
+  },
     path: 'user-account',
     loadChildren: () => import('./user-account/user-account.module').then( m => m.UserAccountPageModule)
-  },
+  }
 ];
 
 @NgModule({
