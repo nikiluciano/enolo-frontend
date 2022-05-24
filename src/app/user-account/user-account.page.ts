@@ -31,5 +31,5 @@ export class UserAccountPage implements OnInit {
     this.showPwd = !this.showPwd; 
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline"; 
   }  
-
+ 
 }
