@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { ToastService } from '../services/toast.service';
 
 @Component({
   selector: 'app-insert-conferment',
   templateUrl: './insert-conferment.page.html',
   styleUrls: ['./insert-conferment.page.scss'],
 })
-
-
-
-
 
 
 export class InsertConfermentPage implements OnInit {
@@ -24,6 +23,8 @@ export class InsertConfermentPage implements OnInit {
     date: ''
   };
 
+
+
   missingId = false;
   missingStatus = false;
   missingCountry = false;
@@ -34,13 +35,34 @@ export class InsertConfermentPage implements OnInit {
   missingDate = false;
 
 
-  constructor() { }
+  constructor(
+    private authService: AuthService,
+    private toastService: ToastService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
+
+  validateInputs() {
+    console.log(this.postData);
+    let id = this.postData.id.trim();
+    let status = this.postData.status.trim();
+    let country = this.postData.country.trim();
+    return (
+      this.postData.id &&
+      this.postData.status &&
+      this.postData.country &&
+      id.length > 0 &&
+      status.length > 0 &&
+      country.length > 0
+    );
+  }
+
+
   checkEmpityFields() {
 
-    console.log(this.postData.id);
+    console.log(this.postData);
     if (this.postData.id.length <= 0)
       this.missingId = true;
     else
