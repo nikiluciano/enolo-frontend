@@ -12,11 +12,10 @@
       <ion-item *ngIf="!missingName" class="item" lines="none">
         <ion-input class="input" formControlName="name" placeholder="Nome" [(ngModel)]="postData.name">
         </ion-input>
-
       </ion-item>
 
       <ion-item *ngIf="missingName" class="item-wrong" lines="none">
-        <ion-input class="input"  formControlName="name" placeholder="Nome" [(ngModel)]="postData.name">
+        <ion-input class="input" formControlName="name" placeholder="Nome" [(ngModel)]="postData.name">
         </ion-input>
       </ion-item>
 
