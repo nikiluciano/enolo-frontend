@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-item lines="none" color="police-blue">
       <ion-label class="title-home">Home</ion-label>
-      <ion-button (click)="account" fill="clear">
+      <ion-button [routerLink]="['/user-account']" fill="clear">
         <ion-icon name="person-circle-outline" slot="end" class="style-button"></ion-icon>
       </ion-button>
     </ion-item>
@@ -13,9 +13,11 @@
 
 </ion-header>
 <ion-content>
+ 
   <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
+  <div *ngIf="contentLoaded">
   <ion-grid class="gridstyle">
     <ion-col>
     
@@ -65,32 +67,35 @@
 
     <ion-row class="row-warehouse">
       <ion-col>
-        <ion-row class="row-style-warehouse">
+       <ion-row class="row-style-warehouse">
           <ion-label class="title-warehouse">Il tuo magazzino</ion-label>
         </ion-row>
-     
+
         <ion-row class="row-style-warehouse">
-          <ion-label class="title-bar-warehouse" *ngFor="let Tappi of warehouse">{{Tappi.caps_quantity}} Tappi</ion-label>
+          <ion-label class="title-bar-warehouse" >{{warehouse.caps_quantity}} Tappi</ion-label>
         </ion-row>
+
+
+
         <ion-row class="row-style-warehouse">
           <ion-progress-bar class="bar-caps" type="determinate"></ion-progress-bar>
         </ion-row>
 
         <ion-row class="row-style-warehouse">
-          <ion-label class="title-bar-warehouse">N. Bottiglie</ion-label>
+          <ion-label class="title-bar-warehouse"> {{warehouse.bottles.bottles_quantity}} Bottiglie</ion-label>
         </ion-row>
         <ion-row class="row-style-warehouse">
           <ion-progress-bar value="0.50" class="bar-bottle"></ion-progress-bar>
         </ion-row>
 
         <ion-row class="row-style-warehouse">
-          <ion-label class="title-bar-warehouse"> N. Etichette</ion-label>
+          <ion-label class="title-bar-warehouse"> {{warehouse.tags_quantity}} Etichette</ion-label>
         </ion-row>
         <ion-row class="row-style-warehouse">
           <ion-progress-bar value="0.75" class="bar-labels"></ion-progress-bar>
         </ion-row>
-        
       </ion-col>
     </ion-row>
   </ion-grid>
+</div>
 </ion-content>
