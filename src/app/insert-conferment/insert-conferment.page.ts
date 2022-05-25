@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { ToastService } from '../services/toast.service';
+import { ConfermentService } from '../services/conferment.service';
 
 @Component({
   selector: 'app-insert-conferment',
@@ -13,7 +14,7 @@ import { ToastService } from '../services/toast.service';
 export class InsertConfermentPage implements OnInit {
 
   postData = {
-    id: '',
+    _idworker: '',
     status: '',
     country: '',
     supplier: '',
@@ -25,7 +26,7 @@ export class InsertConfermentPage implements OnInit {
 
 
 
-  missingId = false;
+  missing_idworker = false;
   missingStatus = false;
   missingCountry = false;
   missingSupplier = false;
@@ -38,7 +39,8 @@ export class InsertConfermentPage implements OnInit {
   constructor(
     private authService: AuthService,
     private toastService: ToastService,
-    private router: Router
+    private router: Router,
+    public confermentService: ConfermentService
   ) { }
 
   ngOnInit() {
@@ -46,14 +48,13 @@ export class InsertConfermentPage implements OnInit {
 
   validateInputs() {
     console.log(this.postData);
-    let id = this.postData.id.trim();
+    let _idworker = this.postData._idworker.trim();
     let status = this.postData.status.trim();
     let country = this.postData.country.trim();
-    return (
-      this.postData.id &&
+    return (  
+       this.postData._idworker &&
       this.postData.status &&
       this.postData.country &&
-      id.length > 0 &&
       status.length > 0 &&
       country.length > 0
     );
@@ -61,12 +62,36 @@ export class InsertConfermentPage implements OnInit {
 
 
   checkEmpityFields() {
+    if (this.validateInputs()) {
+      this.confermentService.insertConferment(this.postData).then(
+        (res: any) => {
+          if (res) {
+            this.router.navigate(['load']);
+            this.toastService.presentToast(
+              'Conferimento aggiunto con successo.'
+            );
+          } else {
+            this.toastService.presentToast(
+              'Data alreay exists, please enter new details.'
+            );
+          }
+        },
+        (error: any) => {
+          this.toastService.presentToast('Network Issue.');
+        }
+      );
+    } else {
+      this.toastService.presentToast(
+        'Riempire tutti i campi correttamente.'
+      );
+    }
 
     console.log(this.postData);
-    if (this.postData.id.length <= 0)
-      this.missingId = true;
-    else
-      this.missingId = false;
+    if (this.postData._idworker.length <= 0)
+     this.missing_idworker = true;
+   else
+     this.missing_idworker = false;
+
 
     if (this.postData.status.length <= 0)
       this.missingStatus = true;

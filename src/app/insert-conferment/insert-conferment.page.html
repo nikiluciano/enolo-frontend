@@ -1,24 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="police-blue">
+    <ion-item color="police-blue" lines="none">
     <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/load']"></ion-icon>
     <ion-text class="title">Conferimento</ion-text>
+  </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="insert-div">
     <ion-list>
-      <ion-item *ngIf="!missingId" class="item" lines="none">
-        <ion-input class="input" name="id" placeholder="Id" [(ngModel)]="postData.id">
+       <ion-item *ngIf="!missing_idworker" class="it" lines="none">
+        <ion-input class="input" name="_idworker" placeholder="Id" [(ngModel)]="postData._idworker">
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="missingId" class="item-wrong" lines="none">
-        <ion-input class="input" name="id" placeholder="Id" [(ngModel)]="postData.id">
+      <ion-item *ngIf="missing_idworker" class="item-wrong" lines="none">
+        <ion-input class="input" name="_idworker" placeholder="Id" [(ngModel)]="postData._idworker">
         </ion-input>
-      </ion-item>
+      </ion-item> 
 
-      <ion-item *ngIf="!missingStatus" class="item" lines="none">
+      <ion-item *ngIf="!missingStatus" class="it" lines="none">
         <ion-input class="input" name="status" placeholder="Stato" [(ngModel)]="postData.status">
         </ion-input>
       </ion-item>
@@ -28,7 +30,7 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingCountry" class="item" lines="none">
+      <ion-item *ngIf="!missingCountry" class="it" lines="none">
         <ion-input class="input" name="country" placeholder="Provenienza" [(ngModel)]="postData.country">
         </ion-input>
       </ion-item>
@@ -38,7 +40,7 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingSupplier" class="item" lines="none">
+      <ion-item *ngIf="!missingSupplier" class="it" lines="none">
         <ion-input class="input" name="supplier" placeholder="Fornitore" [(ngModel)]="postData.supplier">
         </ion-input>
       </ion-item>
@@ -48,7 +50,7 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingDescription" class="item" lines="none">
+      <ion-item *ngIf="!missingDescription" class="it" lines="none">
         <ion-input class="input" name="description" placeholder="Descrizione" [(ngModel)]="postData.description">
         </ion-input>
       </ion-item>
@@ -58,7 +60,7 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingTypology" class="item" lines="none">
+      <ion-item *ngIf="!missingTypology" class="it" lines="none">
         <ion-input class="input" name="typology" placeholder="Tipologia" [(ngModel)]="postData.typology">
         </ion-input>
       </ion-item>
@@ -68,7 +70,7 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingOrigin" class="item" lines="none">
+      <ion-item *ngIf="!missingOrigin" class="it" lines="none">
         <ion-input class="input" name="origin" placeholder="Origine" [(ngModel)]="postData.origin">
         </ion-input>
       </ion-item>
@@ -78,13 +80,13 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingDate" class="item" lines="none">
+      <ion-item *ngIf="!missingDate" class="it" lines="none">
         <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.date">
         </ion-input>
       </ion-item>
 
       <ion-item *ngIf="missingDate" class="item-wrong" lines="none">
-        <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.dat">
+        <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.date">
         </ion-input>
       </ion-item>
 
