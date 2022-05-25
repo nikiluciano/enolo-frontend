@@ -51,8 +51,8 @@ export class InsertConfermentPage implements OnInit {
     let _idworker = this.postData._idworker.trim();
     let status = this.postData.status.trim();
     let country = this.postData.country.trim();
-    return (  
-       this.postData._idworker &&
+    return (
+      this.postData._idworker &&
       this.postData.status &&
       this.postData.country &&
       status.length > 0 &&
@@ -88,9 +88,9 @@ export class InsertConfermentPage implements OnInit {
 
     console.log(this.postData);
     if (this.postData._idworker.length <= 0)
-     this.missing_idworker = true;
-   else
-     this.missing_idworker = false;
+      this.missing_idworker = true;
+    else
+      this.missing_idworker = false;
 
 
     if (this.postData.status.length <= 0)

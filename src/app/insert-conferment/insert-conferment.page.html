@@ -1,16 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="police-blue">
     <ion-item color="police-blue" lines="none">
-    <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/load']"></ion-icon>
-    <ion-text class="title">Conferimento</ion-text>
-  </ion-item>
+      <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/load']"></ion-icon>
+      <ion-text class="title">Conferimento</ion-text>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="insert-div">
     <ion-list>
-       <ion-item *ngIf="!missing_idworker" class="it" lines="none">
+      <ion-item *ngIf="!missing_idworker" class="it" lines="none">
         <ion-input class="input" name="_idworker" placeholder="Id" [(ngModel)]="postData._idworker">
         </ion-input>
       </ion-item>
@@ -18,7 +18,7 @@
       <ion-item *ngIf="missing_idworker" class="item-wrong" lines="none">
         <ion-input class="input" name="_idworker" placeholder="Id" [(ngModel)]="postData._idworker">
         </ion-input>
-      </ion-item> 
+      </ion-item>
 
       <ion-item *ngIf="!missingStatus" class="it" lines="none">
         <ion-input class="input" name="status" placeholder="Stato" [(ngModel)]="postData.status">
