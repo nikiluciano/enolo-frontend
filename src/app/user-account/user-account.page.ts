@@ -10,7 +10,7 @@ export class UserAccountPage implements OnInit {
 
   
   postData = {
-    email: 'nome a caso',
+    email: 'prova@prova.it',
     nome: 'Nome_user',
     cognome:'Cognome_user',
     username:'prova',
