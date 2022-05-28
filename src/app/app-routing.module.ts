@@ -11,10 +11,10 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
-  {
-    path: 'login',
+ {
+   path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
-  },
+  }, 
   {
     path: 'sign-up',
     loadChildren: () => import('./sign-up/sign-up.module').then(m => m.SignUpPageModule)
@@ -43,7 +43,8 @@ const routes: Routes = [
     path: 'insert-conferment',
     loadChildren: () => import('./insert-conferment/insert-conferment.module').then( m => m.InsertConfermentPageModule)
   },
-    {
+  {
+
     path: 'user-account',
     loadChildren: () => import('./user-account/user-account.module').then( m => m.UserAccountPageModule)
   },
