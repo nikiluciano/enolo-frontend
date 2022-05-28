@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="toolbar" color="customColor">
+    <ion-icon class="arrow" slot="start" name="arrow-back-outline" [routerLink]="['/user-account']"></ion-icon>
+    <ion-title>Modifca account</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  
+ 
+  <ion-item  class="item1" >
+    <ion-input value="{{postData.nome}}" class="input" placeholder="Nome">
+    </ion-input>
+</ion-item>
+
+<ion-item  class="item" >
+  <ion-input class="input" value="{{postData.cognome}}" placeholder="Cognome">
+  </ion-input>
+</ion-item>
+
+<ion-item  class="item" >
+  <ion-input class="input" value="{{postData.username}}" placeholder="Username">
+  </ion-input>
+</ion-item>
+
+<ion-item  class="item" >
+  <ion-input class="input" value="{{postData.email}}" placeholder="E-mail">
+  </ion-input>
+</ion-item>
+
+<ion-item  class="item" >
+  <ion-input class="input" value="{{postData.indirizzo}}" placeholder="Indirizzo">
+  </ion-input>
+</ion-item>
+
+<ion-item  class="item" >
+  <ion-input class="input" value="{{postData.password}}" placeholder="Password">
+  </ion-input>
+</ion-item>
+
+<ion-button color="antique-fuchsia" class="btn-style" expand="block" shape="round" type="submit"
+(click)="signAction()">
+MODIFICA
+</ion-button>
+ 
+</ion-content>
