@@ -1,5 +1,5 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="police-blue">
+<ion-header>
+  <ion-toolbar>
     <ion-item lines="none" color="police-blue">
       <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
       <ion-text class="title">Gestisci conferimenti</ion-text>
@@ -16,68 +16,93 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <!-- <ion-searchbar showCancelButton="focus" cancelButtonText="Annulla" class="searchbar" placeholder="Cerca un carico">
-  </ion-searchbar> -->
+  <ion-searchbar showCancelButton="focus" 
+                 cancelButtonText="Annulla" 
+                 class="searchbar" 
+                 placeholder="Cerca per tipologia"
+                 [(ngModel)]="search">
+  </ion-searchbar>
 
 
-  <ion-list class="list-style" >
-    <ion-item-sliding  *ngFor="let Conf of postData">
-      <ion-item-options side="start">
-        <ion-item-option   color="danger" expandable>
-          <ion-icon slot="icon-only" name="trash"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
+  <ion-list class="list-style">
+    <div *ngFor="let Conf of postData  | filter:search">
+   
+      <ion-item-sliding class="ion-no-padding item-style">
+        <ion-item-options side="start">
+          <ion-item-option color="danger" expandable>
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
 
-      <ion-item  class="ion-no-padding item-style"   lines="none">
-        <ion-grid>
-
-
-          <ion-row class="ion-justify-content-end upper-row">
-            <ion-icon *ngIf="Conf.status === 'READY'" class="green-circle" name="ellipse" float-right></ion-icon>
-            <ion-icon *ngIf="Conf.status !== 'READY'" class="green-tran-circle" name="ellipse" float-right></ion-icon>
-
-            <ion-icon *ngIf=" Conf.status === 'PENDING'" class="orange-circle" name="ellipse"></ion-icon>
-            <ion-icon *ngIf=" Conf.status !== 'PENDING'" class="orange-tran-circle" name="ellipse"></ion-icon>
-
-            <ion-icon *ngIf="Conf.status === 'DELIVERED'" class="red-circle" name="ellipse" float-right></ion-icon>
-            <ion-icon *ngIf="Conf.status !== 'DELIVERED'" class="red-tran-circle" name="ellipse" float-right></ion-icon>
+        <ion-item class="ion-no-padding" lines="none">
+          <ion-grid>
+            <ion-row class="upper-row">
+              <ion-col class="process-col">
+                <ion-text> {{Conf?.current_process}} </ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-row class="ion-justify-content-end ">
 
 
-          </ion-row>
+                  <ion-icon *ngIf="Conf.status === 'READY'" class="green-circle" name="ellipse" float-right></ion-icon>
+                  <ion-icon *ngIf="Conf.status !== 'READY'" class="green-tran-circle" name="ellipse" float-right></ion-icon>
+
+                  <ion-icon *ngIf=" Conf.status === 'PENDING'" class="orange-circle" name="ellipse"></ion-icon>
+                  <ion-icon *ngIf=" Conf.status !== 'PENDING'" class="orange-tran-circle" name="ellipse"></ion-icon>
+
+                  <ion-icon *ngIf="Conf.status === 'DELIVERED'" class="red-circle" name="ellipse" float-right>
+                  </ion-icon>
+                  <ion-icon *ngIf="Conf.status !== 'DELIVERED'" class="red-tran-circle" name="ellipse" float-right>
+                  </ion-icon>
+                </ion-row>
+              </ion-col>
+            </ion-row>
 
 
-          <ion-row class="second-row">
-            <ion-text class="font-wine">{{Conf.typology}}</ion-text>
+            <ion-row  class="second-row">
+              <ion-col>
+                <ion-text class="font-wine">{{Conf?.typology}},{{Conf?.quantity}} kg</ion-text>
+
+                <ion-row class="three-row">
+                  <ion-text class="font-wine text">{{Conf?.supplier}}</ion-text>
+                </ion-row>
+              </ion-col>
+            </ion-row>
 
 
-            <!-- <ion-text class="font-wine">{{Conf.conferment_process.quantity}}</ion-text> -->
-
-          </ion-row>
-
-          <ion-row class="third-row">
-            <ion-chip color="primary">
-              <ion-icon name="calendar-outline"></ion-icon>
-              <ion-text>{{Conf.date}}</ion-text>
-
-            </ion-chip>
-            <ion-chip color="primary">
-              <ion-icon  name="location-outline"></ion-icon>
-              <ion-text>{{Conf.origin}}</ion-text>
-            </ion-chip>
-
-          </ion-row>
-
-        </ion-grid>
 
 
-      </ion-item>
 
-      <ion-item-options side="end">
-        <ion-item-option color="tertiary" expandable>
-          <ion-icon slot="icon-only" name="hammer-outline"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
+
+
+            <ion-row class="third-row">
+              <ion-chip outline color="primary">
+                <ion-icon color="primary" name="calendar-outline"></ion-icon>
+                <ion-text color="primary">{{Conf.date | date: 'dd-MM-yyyy'}}</ion-text>
+
+              </ion-chip>
+              <ion-chip outline color="primary">
+                <ion-icon color="primary" name="location-outline"></ion-icon>
+                <ion-text color="primary">{{Conf.origin}}</ion-text>
+              </ion-chip>
+
+            </ion-row>
+
+          </ion-grid>
+
+
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="tertiary" expandable>
+            <ion-icon slot="icon-only" name="hammer-outline"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+      <div class="space-item">
+
+      </div>
+    </div>
+
 
 
 
