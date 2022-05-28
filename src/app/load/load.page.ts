@@ -58,41 +58,43 @@ export class LoadPage implements OnInit {
     for (let i = 0; i < this.postData.length; i++) {
       if (this.postData[i].status == "READY") {
         this.postData[i].current_process = "Pronto"
+
       } else if (this.postData[i].status == "DELIVERED")
         this.postData[i].current_process = "Non iniziato"
+
       else if (this.postData[i].status == null)
         this.postData[i].current_process = "Non iniziato"
+
       else {
+
         switch (this.postData[i].current_process) {
           case "wine_pressing_process":
-            this.postData.current_process = "Pigiatura"
-        }
-        switch (this.postData[i].current_process) {
+            this.postData[i].current_process = "Pigiatura"
+            break;
+
           case "destemming_process":
             this.postData[i].current_process = "Diraspatura"
-        }
-        switch (this.postData[i].current_process) {
+            break;
+
           case "winemaking_process":
             this.postData[i].current_process = "Vinificazione"
-        }
-        switch (this.postData[i].current_process) {
+            break;
+
           case "racking_process":
             this.postData[i].current_process = "Svinatura"
-        }
-        switch (this.postData[i].current_process) {
+            break;
+
           case "refinement_process":
             this.postData[i].current_process = "Affinamento"
-        }
-        switch (this.postData[i].current_process) {
+            break;
+
           case "bottling_process":
             this.postData[i].current_process = "Imbottigliamento"
+            break;
         }
-
       }
     }
   }
-
-
 
 
   getAllConferment() {
