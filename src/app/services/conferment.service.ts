@@ -11,13 +11,15 @@ export class ConfermentService {
   constructor(private wineService: WineService,
     private router: Router) { }
 
-      getAllConferments(): Promise<any> {
-        return this.wineService.get('wineConferment');
-      }
+  getAllConferments(): Promise<any> {
+    return this.wineService.get('wineConferment');
+  }
 
-      insertConferment(postData: any) {
-        return this.wineService.postWithToken('wineConferment', postData);
+  insertConferment(postData: any) {
+    return this.wineService.postWithToken('wineConferment', postData);
 
-      }
-
+  }
+  getPandingConferments(): Promise<any> {
+    return this.wineService.get('wineConferment');
+  }
 }
