@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { LoadPageRoutingModule } from './load-routing.module';
 
 import { LoadPage } from './load.page';
@@ -13,7 +12,8 @@ import { LoadPage } from './load.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    LoadPageRoutingModule
+    LoadPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [LoadPage]
 })

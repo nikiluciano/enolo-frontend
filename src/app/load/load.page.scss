@@ -1,49 +1,173 @@
-@font-face {
-    font-family: 'quicksand-regular';
-    src: url('../../assets/font/Quicksand-Regular.ttf')
-  }
+@font-face {  
+  font-family: 'quicksand-regular';  
+  src: url('../../assets/font/Quicksand-Regular.ttf')  
+}  
   
-  @font-face {
-    font-family: 'quicksand-semibold';
-    src: url('../../assets/font/Quicksand-SemiBold.ttf')
-  }
-
-
-
-.arrow{ 
-    color: white;
-   
-    margin-left:0%; 
-    width: 22px;  
-    height: 22px; 
+@font-face {  
+  font-family: 'quicksand-semibold';  
+  src: url('../../assets/font/Quicksand-SemiBold.ttf')  
+}  
+ 
+ion-toolbar{ 
+  --background: #3B5360; 
+  
  } 
+ 
 
- .add{
-    color: white;
-    margin-right:0%; 
-    width: 25px;  
-    height: 25px; 
- }
+ .text-chip{ 
+   color: white; 
+   opacity: 0.7; 
+ } 
+ 
+.font-wine{  
+font-family: "quicksand-semibold";  
+font-size: 20px; 
+ 
+}  
+ 
+.arrow{   
+  color: white;  
+  margin-left:0%;   
+  width: 22px;    
+  height: 22px;   
+}   
+ 
+.add{  
+  color: white;  
+  margin-right:0%;   
+  width: 25px;    
+  height: 25px;   
+}  
    
-  .title {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "quicksand-semibold";
-    font-size: 20px;
-    color:white;
-  }
-
-  .searchbar{
-     height:15%;
-    --border-radius: 40px;
-    --placeholder-font-style: "quicksanf-regular"
+ 
+ 
+.title {  
+  text-align: center;  
+  margin-left: auto;  
+  margin-right: auto;  
+  font-family: "quicksand-semibold";  
+  font-size: 20px;  
+  color:white;  
+}  
+ 
+.searchbar{  
+   height:15%;  
+  --border-radius: 40px;  
+  --placeholder-font-style: "quicksanf-regular"  
   
-  }
-
-  .my-custom-class {
-    --background: #222;
-    --spinner-color: #fff;
+}  
+ 
+.calendar-label-style {  
+  font-size: 15px;  
+  font-family: "quicksand-regular";  
+}  
+ 
   
-    color: #fff;
-  }
+.icon-style {  
+height: 20px;  
+margin-left: 15px;  
+}  
+ 
+.icon-style1 {  
+height: 20px;  
+margin-left: auto;  
+ 
+} 
+ 
+ 
+.second-row{ 
+ 
+  width: 100%; 
+  height: 70px; 
+  padding: 10px; 
+} 
+ 
+.third-row{ 
+ 
+  width: 100%; 
+  height: 50px; 
+  padding: 10px; 
+} 
+ 
+.three-row{ 
+ 
+  width: 100%; 
+  height: 30px; 
+  padding: 10px; 
+  margin-left: auto; 
+} 
+ 
+ 
+.upper-row{ 
+  padding-right: 10px; 
+  padding-top: 5px; 
+  padding-bottom: 5px; 
+  border: 1px solid #F1F1F1; 
+  border-radius: 25px;   
+ 
+} 
+
+
+
+
+.text{ 
+  font-size: 15px;  
+  font-family: "quicksand-regular"; 
+  color: #B1A7A6; 
+} 
+ 
+
+.list-style{ 
+  padding:20px; 
+ 
+} 
+ 
+.green-circle{ 
+  color: green; 
+ 
+} 
+ 
+.green-tran-circle{ 
+  color: green; 
+  opacity: 0.33; 
+ 
+} 
+ 
+.orange-circle{ 
+ 
+  color: #FF7514; 
+ 
+} 
+ 
+.orange-tran-circle{ 
+  color: #FF7514; 
+  opacity: 0.33; 
+ 
+} 
+ 
+.red-circle{ 
+ 
+  color: red; 
+ 
+} 
+ 
+.red-tran-circle{ 
+  color: red; 
+  opacity: 0.33; 
+ 
+}
+
+
+.process-col{
+  padding-left: 10px;
+  font-family: "quicksand-semibold"; 
+  font-style: italic;
+  color: #8B5E83;
+
+}
+
+.space-item{
+  margin-top: 25px;
+
+
+}
