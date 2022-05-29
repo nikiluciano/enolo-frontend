@@ -2,54 +2,54 @@
         font-family: 'quicksand-regular';
         src: url('../../assets/font/Quicksand-Regular.ttf')
     }
-    
+
     @font-face {
         font-family: 'quicksand-semibold';
         src: url('../../assets/font/Quicksand-SemiBold.ttf')
     }
-    
+
     .arrow {
         color: white;
         margin-left: 0%;
         width: 22px;
         height: 22px;
     }
-    
+
     .title {
-        text-align: center;
+        text-align: start;
         margin-left: auto;
         margin-right: auto;
         font-family: "quicksand-semibold";
         font-size: 20px;
         color: white;
     }
-    
+
     .btn-style {
         margin-top: 60px;
     }
-    
+
     .space {
         height: 15%;
     }
-    
+
     .input {
         font-family: "quicksand-semibold";
     }
-    
+
     .it {
         border: 1px solid #F1F1F1;
-       border-radius: 25px;
-   margin-bottom: 30px;
-   }
-   
-    
+        border-radius: 25px;
+        margin-bottom: 30px;
+    }
+
+
     .item-wrong {
         border: 1px solid red;
         border-radius: 25px;
         margin-bottom: 30px;
     }
-    
-  
+
+
     .insert-div {
         position: absolute;
         margin-top: 0;

@@ -4,6 +4,7 @@ import { AuthService } from '../services/auth.service';
 import { ToastService } from '../services/toast.service';
 import { ConfermentService } from '../services/conferment.service';
 
+
 @Component({
   selector: 'app-insert-conferment',
   templateUrl: './insert-conferment.page.html',
@@ -15,7 +16,7 @@ export class InsertConfermentPage implements OnInit {
 
   postData = {
     _idworker: '',
-    status: '',
+    // status: '',
     country: '',
     supplier: '',
     description: '',
@@ -25,9 +26,8 @@ export class InsertConfermentPage implements OnInit {
   };
 
 
-
   missing_idworker = false;
-  missingStatus = false;
+  // missingStatus = false;
   missingCountry = false;
   missingSupplier = false;
   missingDescription = false;
@@ -49,13 +49,13 @@ export class InsertConfermentPage implements OnInit {
   validateInputs() {
     console.log(this.postData);
     let _idworker = this.postData._idworker.trim();
-    let status = this.postData.status.trim();
+    // let status = this.postData.status.trim();
     let country = this.postData.country.trim();
     return (
       this.postData._idworker &&
-      this.postData.status &&
+      // this.postData.status &&
       this.postData.country &&
-      status.length > 0 &&
+      // status.length > 0 &&
       country.length > 0
     );
   }
@@ -93,10 +93,10 @@ export class InsertConfermentPage implements OnInit {
       this.missing_idworker = false;
 
 
-    if (this.postData.status.length <= 0)
-      this.missingStatus = true;
-    else
-      this.missingStatus = false;
+    // if (this.postData.status.length <= 0)
+    //   this.missingStatus = true;
+    // else
+    //   this.missingStatus = false;
 
     if (this.postData.country.length <= 0)
       this.missingCountry = true;

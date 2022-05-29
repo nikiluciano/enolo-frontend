@@ -2,7 +2,7 @@
   <ion-toolbar color="police-blue">
     <ion-item color="police-blue" lines="none">
       <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/load']"></ion-icon>
-      <ion-text class="title">Conferimento</ion-text>
+      <ion-text class="title">Aggiungi Conferimento</ion-text>
     </ion-item>
   </ion-toolbar>
 </ion-header>
@@ -20,7 +20,7 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingStatus" class="it" lines="none">
+      <!-- <ion-item *ngIf="!missingStatus" class="it" lines="none">
         <ion-input class="input" name="status" placeholder="Stato" [(ngModel)]="postData.status">
         </ion-input>
       </ion-item>
@@ -28,7 +28,7 @@
       <ion-item *ngIf="missingStatus" class="item-wrong" lines="none">
         <ion-input class="input" name="status" placeholder="Stato" [(ngModel)]="postData.status">
         </ion-input>
-      </ion-item>
+      </ion-item>  -->
 
       <ion-item *ngIf="!missingCountry" class="it" lines="none">
         <ion-input class="input" name="country" placeholder="Provenienza" [(ngModel)]="postData.country">
@@ -43,30 +43,24 @@
 
       <ion-item *ngIf="!missingSupplier" class="it" lines="none">
         <ion-select placeholder="Fornitore" [(ngModel)]="postData.supplier">
-          <ion-select-option  value="tizio">tizio</ion-select-option>
+          <ion-select-option value="tizio">tizio</ion-select-option>
           <ion-select-option value="caio">caio</ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item *ngIf="missingSupplier" class="item-wrong" lines="none">
-        <ion-select placeholder="Select One">
-          <ion-select-option value="f">tizio</ion-select-option>
-          <ion-select-option value="m">caio</ion-select-option>
+        <ion-select placeholder="Fornitore" [(ngModel)]="postData.supplier">
+          <ion-select-option value="tizio">tizio</ion-select-option>
+          <ion-select-option value="caio">caio</ion-select-option>
         </ion-select>
-        <ion-input class="input" name="supplier" placeholder="Fornitore" [(ngModel)]="postData.supplier">
-        </ion-input>
       </ion-item>
 
-
       <ion-item *ngIf="!missingDate" class="it" lines="none" button="true" id="open-date-input">
-        <ion-text slot="end">{{ dateValue }}</ion-text>
+        <ion-text slot="end">{{dateValue}}</ion-text>
         <ion-popover trigger="open-date-input" show-backdrop="false">
           <ng-template>
-            <ion-datetime
-              #popoverDatetime
-              presentation="date"
-              (ionChange)="dateValue = formatDate(popoverDatetime.value)"
-            ></ion-datetime>
+            <ion-datetime #popoverDatetime presentation="date"
+              (ionChange)="dateValue = formatDate(popoverDatetime.value)" [(ngModel)]="postData.date"></ion-datetime>
           </ng-template>
         </ion-popover>
         <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.date">
@@ -107,27 +101,6 @@
         <ion-input class="input" name="origin" placeholder="Origine" [(ngModel)]="postData.origin">
         </ion-input>
       </ion-item>
-
-      <!-- <ion-item *ngIf="!missingDate" class="it" lines="none" button="true" id="open-date-input">
-        <ion-text slot="end">{{ dateValue }}</ion-text>
-        <ion-popover trigger="open-date-input" show-backdrop="false">
-          <ng-template>
-            <ion-datetime
-              #popoverDatetime
-              presentation="date"
-              (ionChange)="dateValue = formatDate(popoverDatetime.value)"
-            ></ion-datetime>
-          </ng-template>
-        </ion-popover>
-        <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.date">
-        </ion-input>
-      </ion-item>
-
-      <ion-item *ngIf="missingDate" class="item-wrong" lines="none">
-        <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.date">
-        </ion-input>
-      </ion-item> -->
-
 
       <ion-button class="input" color="antique-fuchsia" class="btn-style" expand="block" shape="round" type="submit"
         (click)="checkEmpityFields()">
