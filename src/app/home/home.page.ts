@@ -75,6 +75,7 @@ export class HomePage implements OnInit {
       }
     )
   }
+  
   findTheCurrentProcess() {
 
     this.filteredConferments.forEach(element => {
