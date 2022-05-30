@@ -49,11 +49,10 @@ export class HomePage implements OnInit {
         if (res) {
           this.contentLoaded = true
           this.warehouse = res
-          console.log("magazzino" + JSON.stringify(this.warehouse));
 
         } else {
-          console.log("errore");
 
+      
         }
       })
   }
@@ -72,7 +71,6 @@ export class HomePage implements OnInit {
         }
         else {
           this.thereArePendingConferments = false;
-          console.log("errore");
         }
       }
     )
@@ -99,31 +97,26 @@ export class HomePage implements OnInit {
 
           case "destemming_process":
             element.current_process = "diraspatura"
-            let value2 = 1 / 6
             this.statusOfTheProcesses.push(2 / 6)
             break;
 
           case "winemaking_process":
             element.current_process = "vinificazione"
-            let value3 = 1 / 6
             this.statusOfTheProcesses.push(3 / 6)
             break;
 
           case "racking_process":
             element.current_process = "svinatura"
-            let value4 = 1 / 6
             this.statusOfTheProcesses.push(4 / 6)
             break;
 
           case "refinement_process":
             element.current_process = "affinamento"
-            let value5 = 1 / 6
             this.statusOfTheProcesses.push(5 / 6)
             break;
 
           case "bottling_process":
             element.current_process = "imbottigliamento"
-            let value6 = 1 / 6
             this.statusOfTheProcesses.push(6 / 6)
             break;
         }
@@ -140,13 +133,12 @@ export class HomePage implements OnInit {
   filterConferments() {
     this.filteredConferments = []
     this.conferments.forEach(element => {
-      console.log(JSON.stringify(element.status))
       if (element.status == "PENDING")
         this.filteredConferments.push(element)
     });
     if (this.filteredConferments.length == 0)
       this.thereArePendingConferments = false
-    else{
+    else {
       this.thereArePendingConferments = true
       this.findTheCurrentProcess()
     }
