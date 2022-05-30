@@ -10,7 +10,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
   styleUrls: ['./load.page.scss'],
 })
 export class LoadPage implements OnInit {
-
+  
   search: string;
   postData: any;
   conferment = [];
@@ -52,6 +52,7 @@ export class LoadPage implements OnInit {
     this.getAllConferment();
     this.loadConferment();
   }
+
 
 
   findTheCurrentProcess() {

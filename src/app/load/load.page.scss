@@ -8,11 +8,33 @@
   src: url('../../assets/font/Quicksand-SemiBold.ttf')  
 }  
  
+
+ion-accordion::part(content){
+  font-family: 'quicksand-semibold';
+  padding: 2px;
+  background: #F1F1F1;
+
+}
+
+ion-accordion::part(header){
+  font-family: 'quicksand-semibold';
+  padding: 2px;
+  background: #F1F1F1;
+
+}
+
 ion-toolbar{ 
   --background: #3B5360; 
   
  } 
  
+ion-button{
+  --border-radius: 40px;
+  height:30px;
+  margin-left: 20px;
+  font-family: 'quicksand-regular'; 
+
+}
 
  .text-chip{ 
    color: white; 
@@ -107,7 +129,10 @@ margin-left: auto;
  
 } 
 
-
+.status{
+  font-family: "quicksand-semibold";  
+  color: #8B5E83;
+}
 
 
 .text{ 
@@ -124,8 +149,10 @@ margin-left: auto;
  
 .green-circle{ 
   color: green; 
+  
  
 } 
+
  
 .green-tran-circle{ 
   color: green; 
@@ -171,3 +198,4 @@ margin-left: auto;
 
 
 }
+
