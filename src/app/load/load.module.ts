@@ -6,7 +6,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { LoadPageRoutingModule } from './load-routing.module';
 
 import { LoadPage } from './load.page';
-
+import { LoadingComponent
+ } from '../custom-components/loading/loading.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +16,6 @@ import { LoadPage } from './load.page';
     LoadPageRoutingModule,
     Ng2SearchPipeModule
   ],
-  declarations: [LoadPage]
+  declarations: [LoadPage, LoadingComponent]
 })
 export class LoadPageModule {}
