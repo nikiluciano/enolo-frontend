@@ -36,7 +36,7 @@ export class HomePage implements OnInit {
 
   doRefresh(event) {
     this.getWarehouse()
-    this.getPandingConferments()
+    this.getPendingConferments()
     setTimeout(() => {
       event.target.complete()
     }, 2000);
@@ -138,6 +138,7 @@ export class HomePage implements OnInit {
   }
 
   filterConferments() {
+    this.filteredConferments = []
     this.conferments.forEach(element => {
       console.log(JSON.stringify(element.status))
       if (element.status == "PENDING")

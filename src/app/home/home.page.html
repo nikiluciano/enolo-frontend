@@ -22,13 +22,12 @@
     <ion-col>
     
       <ion-row>
-        <ion-label class="style-title-c">Conferimenti attivi</ion-label>
+        <ion-label class="style-title-c">Stato dei conferimenti</ion-label>
       </ion-row>
 
       <div *ngIf="!thereArePendingConferments" lines="none" border-lines="none">
-       <ion-label class="card-conf-style">Nessun conferimento attivo</ion-label>
-       <ion-button fill="clear" [routerLink]="['/load']" class="butt-conf-style">Effettua un nuovo conferimento!</ion-button>
-        
+       <ion-label class="card-conf-style">Nessun conferimento in lavorazione</ion-label>
+      
       </div>
       <ion-card *ngIf="thereArePendingConferments">
       <ion-slides pager="true" [options]="slideOpts" class="style-c">
