@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { ConfermentService } from '../services/conferment.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LoadingComponent } from '../custom-components/loading/loading.component';
 
 
 @Component({
@@ -15,10 +16,12 @@ export class LoadPage implements OnInit {
   postData: any;
   conferment = [];
 
+  loading = false;
 
   constructor(public confermentService: ConfermentService,
     public ng2SearchPipeModule: Ng2SearchPipeModule,
-    private loadingCtrl: LoadingController) { }
+    private loadingCtrl: LoadingController,
+    private loadingComponent: LoadingComponent) { }
 
 
 
@@ -32,14 +35,16 @@ export class LoadPage implements OnInit {
 
   async loadConferment() {
 
-    const loading = await this.loadingCtrl.create({
+/*     const loading = await this.loadingCtrl.create({
       message: 'Caricamento...',
       spinner: 'bubbles',
     });
     await loading.present();
-
+ */
+    this.loading = true;
     this.confermentService.getAllConferments().then((res) => {
-      loading.dismiss();
+      //loading.dismiss();
+      this.loading = false;
       this.conferment = [...this.conferment, ...res];
       console.log(res);
     })

@@ -6,27 +6,26 @@
       <ion-icon class="add" name="add-outline" [routerLink]="['/insert-conferment']"></ion-icon>
     </ion-item>
   </ion-toolbar>
+ 
 </ion-header>
 
 
 
 
 <ion-content>
+  <app-loading *ngIf="loading"></app-loading>
   <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-searchbar showCancelButton="focus" 
-                 cancelButtonText="Annulla" 
-                 class="searchbar" 
-                 placeholder="Cerca per tipologia"
-                 [(ngModel)]="search">
+  <ion-searchbar showCancelButton="focus" cancelButtonText="Annulla" class="searchbar" placeholder="Cerca per tipologia"
+    [(ngModel)]="search">
   </ion-searchbar>
 
 
   <ion-list class="list-style">
     <div *ngFor="let Conf of postData  | filter:search">
-   
+
       <ion-item-sliding class="ion-no-padding item-style">
         <ion-item-options side="start">
           <ion-item-option color="danger" expandable>
@@ -45,7 +44,8 @@
 
 
                   <ion-icon *ngIf="Conf.status === 'READY'" class="green-circle" name="ellipse" float-right></ion-icon>
-                  <ion-icon *ngIf="Conf.status !== 'READY'" class="green-tran-circle" name="ellipse" float-right></ion-icon>
+                  <ion-icon *ngIf="Conf.status !== 'READY'" class="green-tran-circle" name="ellipse" float-right>
+                  </ion-icon>
 
                   <ion-icon *ngIf=" Conf.status === 'PENDING'" class="orange-circle" name="ellipse"></ion-icon>
                   <ion-icon *ngIf=" Conf.status !== 'PENDING'" class="orange-tran-circle" name="ellipse"></ion-icon>
@@ -59,7 +59,7 @@
             </ion-row>
 
 
-            <ion-row  class="second-row">
+            <ion-row class="second-row">
               <ion-col>
                 <ion-text class="font-wine">{{Conf?.typology}}, {{Conf?.quantity}} kg</ion-text>
 

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastService } from '../services/toast.service';
 import { AuthService } from '../services/auth.service';
-import { Storage } from '@capacitor/storage';
 import { get, set } from '../storage/data-storage'
-
+import { LoadingController } from '@ionic/angular';
+import { LoadingComponent } from '../custom-components/loading/loading.component';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -16,15 +16,18 @@ export class LoginPage implements OnInit {
     username: '',
     password: ''
   }
+
   missingPassword = false;
   missingUsername = false;
 
+  isLoading = false;
 
   constructor(private authService: AuthService,
     private router: Router,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private loadingCtrl: LoadingController,
+    private loading: LoadingComponent
   ) { }
-
 
   ngOnInit() { }
 
@@ -50,17 +53,29 @@ export class LoginPage implements OnInit {
 
 
   async loginAction() {
+   /*  const loading = await this.loadingCtrl.create({
+      message: 'Caricamento...',
+      spinner: 'bubbles'
+    });
+    await loading.present(); */
+    //this.loading.watchLoading()
     if (this.validateInputs()) {
+      this.isLoading = true;
       this.authService.login(this.postData).subscribe(
         (res: any) => {
+          //loading.dismiss(); 
+          this.isLoading = false;
+ 
           if (res) {
             this.router.navigate(['home']);
             let token = res.token;
             set('token', token);
 
-          } 
+          }
         },
         (error: any) => {
+          //loading.dismiss();  
+          this.isLoading = false;
           this.toastService.presentToast('Username o password errati.');
         }
       );
