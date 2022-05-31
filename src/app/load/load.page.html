@@ -8,9 +8,6 @@
   </ion-toolbar>
 </ion-header>
 
-
-
-
 <ion-content>
   <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
@@ -21,31 +18,31 @@
   </ion-searchbar>
 
   <div>
-   <ion-row>
-     <ion-item lines="none">
+    <ion-row>
+      <ion-item lines="none">
 
-      <ion-accordion-group>
-        <ion-accordion >
-          <ion-item slot="header">
-            <ion-label >Stato</ion-label>
-          </ion-item>
+        <ion-accordion-group>
+          <ion-accordion>
+            <ion-item slot="header">
+              <ion-label>Stato</ion-label>
+            </ion-item>
 
-          <ion-list slot="content">
-            <ion-item>
-              <ion-label>Pronto</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-label>In lavorazione</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-label>Chiuso</ion-label>
-            </ion-item>
-          </ion-list>
-        </ion-accordion>
-      </ion-accordion-group>
+            <ion-list slot="content">
+              <ion-item>
+                <ion-label>Pronto</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>In lavorazione</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Chiuso</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-accordion>
+        </ion-accordion-group>
 
-     </ion-item>
-     
+      </ion-item>
+
 
     </ion-row>
 
@@ -67,25 +64,11 @@
           <ion-grid>
             <ion-row class="upper-row">
               <ion-col class="process-col">
-                <ion-label>
-                <a class="status"  [routerLink]="['/sign-up']" > {{Conf?.current_process}} </a>
-                </ion-label>
+                <ion-text> {{Conf?.current_process}} </ion-text>
               </ion-col>
-              <ion-col>
+              <ion-col class="progress-bar-col">
                 <ion-row class="ion-justify-content-end ">
-
-
-                  <ion-icon *ngIf="Conf.status === 'READY'" class="green-circle" name="ellipse" float-right></ion-icon>
-                  <ion-icon *ngIf="Conf.status !== 'READY'" class="green-tran-circle" name="ellipse" float-right>
-                  </ion-icon>
-
-                  <ion-icon *ngIf=" Conf.status === 'PENDING'" class="orange-circle" name="ellipse"></ion-icon>
-                  <ion-icon *ngIf=" Conf.status !== 'PENDING'" class="orange-tran-circle" name="ellipse"></ion-icon>
-
-                  <ion-icon *ngIf="Conf.status === 'DELIVERED'" class="red-circle" name="ellipse" float-right>
-                  </ion-icon>
-                  <ion-icon *ngIf="Conf.status !== 'DELIVERED'" class="red-tran-circle" name="ellipse" float-right>
-                  </ion-icon>
+                <ion-progress-bar color="primary" class="bar-c" [value]="0.30"></ion-progress-bar>
                 </ion-row>
               </ion-col>
             </ion-row>
@@ -118,7 +101,6 @@
                 <ion-icon color="primary" name="location-outline"></ion-icon>
                 <ion-text color="primary">{{Conf.origin}}</ion-text>
               </ion-chip>
-
             </ion-row>
 
           </ion-grid>
