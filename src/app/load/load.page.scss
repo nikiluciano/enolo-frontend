@@ -127,7 +127,7 @@ margin-left: auto;
   padding-bottom: 5px;  
   border: 1px solid #F1F1F1;  
   border-radius: 25px;    
-  
+
 }  
  
  
@@ -150,11 +150,12 @@ margin-left: auto;
   font-family: "quicksand-semibold";  
   font-style: italic; 
   color: #8B5E83; 
+  width: 60%;
  
 } 
 
 .progress-bar-col{ 
-  padding-top: 12px;
+  //padding-top: 12px;
 
 } 
 
@@ -167,6 +168,32 @@ margin-left: auto;
 .bar-c {
 height: 7px;
 border-radius: 50px;
-width: 80%;
+width: 60%;
+margin-top: 5px;
+margin-left: 5px;
+margin-right: 5px;
 
 }
+
+.item-progress-bar{
+  width: 100%
+}
+
+.process-not-started{
+color: orangered;
+
+}
+
+.process-ended{
+color: green;
+}
+
+.process-not-started-not-vis{
+  opacity: 0;
+  
+  }
+  
+  .process-ended-not-vis{
+  opacity: 0;
+
+  }

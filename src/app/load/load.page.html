@@ -6,7 +6,7 @@
       <ion-icon class="add" name="add-outline" [routerLink]="['/insert-conferment']"></ion-icon>
     </ion-item>
   </ion-toolbar>
- 
+
 </ion-header>
 
 <ion-content>
@@ -67,14 +67,20 @@
           <ion-grid>
             <ion-row class="upper-row">
               <ion-col class="process-col">
-                <ion-text> {{Conf?.current_process}} </ion-text>
+                <ion-text> {{Conf?.current_process}}, {{Conf?.numberOfTheProgress}} di 6 </ion-text>
               </ion-col>
               <ion-col class="progress-bar-col">
-                <ion-row class="ion-justify-content-end ">
-                <ion-progress-bar color="primary" class="bar-c" [value]="0.30"></ion-progress-bar>
-
+                <ion-row>
+                  <ion-icon *ngIf="Conf.status==='DELIVERED'" class="process-not-started" name="close-circle-outline"></ion-icon>
+                  <ion-icon *ngIf="Conf.status!='DELIVERED'" class="process-not-started-not-vis" name="close-circle-outline"></ion-icon>
+                  <ion-progress-bar  color="primary" class="bar-c" [value]="Conf?.progressBarValue">
+                  </ion-progress-bar>
+                  <ion-icon *ngIf="Conf.status=='READY'" class="process-ended" name="checkmark-circle-outline"></ion-icon>
+                  <ion-icon *ngIf="Conf.status!='READY'" class="process-ended-not-vis" name="checkmark-circle-outline"></ion-icon>
                 </ion-row>
+
               </ion-col>
+
             </ion-row>
 
 
