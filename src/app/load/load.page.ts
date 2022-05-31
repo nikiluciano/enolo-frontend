@@ -1,3 +1,4 @@
+
 import { Component, OnInit, ViewChild } from '@angular/core'; 
 import { LoadingController } from '@ionic/angular'; 
 import { ConfermentService } from '../services/conferment.service'; 
@@ -122,4 +123,3 @@ export class LoadPage implements OnInit {
  
   } 
 }
-
