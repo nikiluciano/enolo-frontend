@@ -12,12 +12,14 @@ export class WineService {
   token = get('token');
 
   constructor(private http: HttpClient) { }
+  
   options: any;
 
 
-  //Functions to make post calls
+  //Function for POST calls
 
-  //post with no Bearer token, used only for login and password
+  //function for post where BearerToken is not needed
+  //this one uses the environment URL, that's pointing to an HEROKU place
   post(serviceName: string, data: any) {
     const headers = new HttpHeaders();
     const options = { headers: headers, withCredintials: false };
@@ -26,12 +28,24 @@ export class WineService {
     return this.http.post(url, data, options);
   }
 
+  //this function won't use server's URL of the app, just for other services
+  getFromOtherServers(apiUrl: string, serviceName: string){
+    const headers = new HttpHeaders();
+    const options = { headers: headers, withCredintials: false };
+    const completeUrl = apiUrl + serviceName;
+
+    return this.http.get(completeUrl);
+
+  }
+
+
   //post that will be concatenated to the function that retrieves Bearer token
   postObjects(serviceName: string, postData: any,  options) {
     let url = environment.apiUrl + serviceName;
     return this.http.post(url, postData, options)
 
   }
+
 
   async postWithToken(serviceName: string, postData: any) {
     await this.getBearerToken();
@@ -40,7 +54,9 @@ export class WineService {
   }
 
 
-  //functions to make get calls
+
+
+  //Function for GET calls
 
   //concatenate the token function with the get call function
   async get(serviceName: string) {
@@ -66,8 +82,5 @@ export class WineService {
     return this.http.get(url, options)
   }
 
-  
-
-  
     
 }
