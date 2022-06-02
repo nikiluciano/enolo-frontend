@@ -37,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: 'forgot-pw',
-    loadChildren: () => import('./forgot-pw/forgot-pw.module').then( m => m.ForgotPwPageModule)
+    loadChildren: () => import('./forgot-pw/forgot-pw.module').then(m => m.ForgotPwPageModule)
   },
   {
     path: 'insert-conferment',
@@ -62,6 +62,6 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule] 
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

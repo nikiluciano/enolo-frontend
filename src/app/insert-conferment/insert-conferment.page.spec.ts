@@ -9,7 +9,7 @@ describe('InsertConfermentPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ InsertConfermentPage ],
+      declarations: [InsertConfermentPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
