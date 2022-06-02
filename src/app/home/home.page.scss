@@ -141,7 +141,7 @@
   width: 60%;
   margin: auto;
   --background: white;
-  --progress-background: #E692F8;
+  --progress-background: #BEE5D3;
   border: 1px solid black;
 }
 
@@ -242,7 +242,7 @@
   border-radius: 50px;
   margin: auto;
   --background: white;
-  --progress-background: #e9f892;
+  --progress-background: #FF7514;
   border: 1px solid black;
   width: 90%;
 }
@@ -265,12 +265,17 @@
   margin: auto;
   font-family: "quicksand-regular";
 }
-@media screen and (max-width: 1100px) {
-  .style-labs-f {
-    width:50%;
-  }
-  .style-labs-c {
-    width:50%;
-  }
- 
+.card-conf-style{
+  font-size: 20px;
+  margin: auto;
+  font-family:"quicksand-regular";
+  padding-left: 15px;
 }
+.butt-conf-style{
+  font-size: 15px;
+  margin: auto;
+  font-family:"quicksand-regular";
+}
+ion-toolbar{
+  --background: #3B5360;
+ }
