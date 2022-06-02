@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { ToastService } from '../services/toast.service';
 import { ConfermentService } from '../services/conferment.service';
+import { CountryProvider } from '../utilites/CountryProvider';
 
 
 @Component({
@@ -35,15 +36,22 @@ export class InsertConfermentPage implements OnInit {
   missingOrigin = false;
   missingDate = false;
 
+  regions: Array<any>
+  flagToShow = "";
+  regionSelected = "";
 
   constructor(
     private authService: AuthService,
     private toastService: ToastService,
     private router: Router,
-    public confermentService: ConfermentService
+    public confermentService: ConfermentService,
+    private countryProvider: CountryProvider
+
   ) { }
 
+
   ngOnInit() {
+    this.regions = this.countryProvider.getItalianRegions().regions;
   }
 
   validateInputs() {
@@ -128,8 +136,83 @@ export class InsertConfermentPage implements OnInit {
     else
       this.missingDate = false;
 
+
   }
 
+  changeRegion() {
+    let index = this.showFlag(this.regionSelected);
+    this.flagToShow = this.regions[index].logo;
+
+  }
+
+  showFlag(regionName: string) {
+    switch (regionName) {
+
+      case "Abruzzo":
+        return 0;
+        
+
+      case "Basilicata":
+        return 1;
+        
+
+      case "Calabria":
+        return 2;
+
+      case "Campania":
+        return 3;
+
+      case "Emilia-Romagna":
+        return 4;
+
+      case "Friuli-Venezia Giulia":
+        return 5;
+
+      case "Lazio":
+        return 6;
+
+      case "Liguria":
+        return 7;
+
+      case "Lombardia":
+        return 8;
+
+      case "Marche":
+        return 9;
+
+      case "Molise":
+        return 10;
+
+      case "Piemonte":
+        return 11;
+
+      case "Puglia":
+        return 12;
+
+      case "Sardegna":
+        return 13;
+
+      case "Sicilia":
+        return 14;
+
+      case "Toscana":
+        return 15;
+
+      case "Trentino-Alto Adige":
+        return 16;
+
+      case "Umbria":
+        return 17;
+
+      case "Valle d'Aosta":
+        return 18;
+
+      case "Veneto":
+        return 19;
+
+    }
+
+  }
 
 
 }

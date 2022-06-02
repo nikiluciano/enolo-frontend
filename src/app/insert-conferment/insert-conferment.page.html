@@ -72,6 +72,17 @@
         </ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-label>Regione</ion-label>
+        <ion-avatar *ngIf="regionSelected != '' ">
+        <img src="{{flagToShow}}">
+    
+      </ion-avatar>
+        <ion-select [(ngModel)]="regionSelected" (ngModelChange)="changeRegion()" ok-text="Si" cancel-text="No" >
+          <ion-select-option *ngFor="let region of regions,  let i  = index" value="{{region.name}}">{{region.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
       <ion-item *ngIf="!missingDescription" class="it" lines="none">
         <ion-input class="input" name="description" placeholder="Descrizione" [(ngModel)]="postData.description">
         </ion-input>
