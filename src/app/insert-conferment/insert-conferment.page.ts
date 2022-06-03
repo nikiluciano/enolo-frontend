@@ -23,7 +23,7 @@ export class InsertConfermentPage implements OnInit {
     description: '',
     typology: '',
     origin: '',
-    date: ''
+    quantity: ''
   };
 
 
@@ -34,7 +34,7 @@ export class InsertConfermentPage implements OnInit {
   missingDescription = false;
   missingTypology = false;
   missingOrigin = false;
-  missingDate = false;
+  missingQuantity = false;
 
   regions: Array<any>
   flagToShow = "";
@@ -131,10 +131,10 @@ export class InsertConfermentPage implements OnInit {
     else
       this.missingOrigin = false;
 
-    if (this.postData.date.length <= 0)
-      this.missingDate = true;
+    if (this.postData.quantity.length <= 0)
+      this.missingQuantity = true;
     else
-      this.missingDate = false;
+      this.missingQuantity = false;
 
 
   }
