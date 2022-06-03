@@ -20,6 +20,7 @@
         </ion-input>
       </ion-item>
 
+
       <!-- <ion-item *ngIf="!missingStatus" class="it" lines="none">
         <ion-input class="input" name="status" placeholder="Stato" [(ngModel)]="postData.status">
         </ion-input>
@@ -40,6 +41,7 @@
         <ion-input class="input" name="country" placeholder="Provenienza" [(ngModel)]="postData.country">
         </ion-input>
       </ion-item> -->
+
 
       <ion-item *ngIf="!missingSupplier" class="it" lines="none">
         <ion-select placeholder="Fornitore" [(ngModel)]="postData.supplier">
@@ -94,14 +96,14 @@
           </ion-select-option>
         </ion-select>
       </ion-item>
-
+      
       <ion-item *ngIf="!missingQuantity" class="it" lines="none">
-        <ion-input class="input" name="quantity" placeholder="Quantità" [(ngModel)]="postData.quantity">
+        <ion-input type="number" class="input" name="quantity" placeholder="Quantità" [(ngModel)]="postData.quantity">
         </ion-input>
       </ion-item>
 
       <ion-item *ngIf="missingQuantity" class="item-wrong" lines="none">
-        <ion-input class="input" name="quantity" placeholder="Quantità" [(ngModel)]="postData.quantity">
+        <ion-input type="number" class="input" name="quantity" placeholder="Quantità" [(ngModel)]="postData.quantity">
         </ion-input>
       </ion-item>
 
