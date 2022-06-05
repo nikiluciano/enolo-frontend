@@ -29,7 +29,7 @@
         <ion-input class="input" name="status" placeholder="Stato" [(ngModel)]="postData.status">
         </ion-input>
       </ion-item>  -->
-
+      <!-- 
       <ion-item *ngIf="!missingCountry" class="it" lines="none">
         <ion-input class="input" name="country" placeholder="Provenienza" [(ngModel)]="postData.country">
         </ion-input>
@@ -39,7 +39,8 @@
       <ion-item *ngIf="missingCountry" class="item-wrong" lines="none">
         <ion-input class="input" name="country" placeholder="Provenienza" [(ngModel)]="postData.country">
         </ion-input>
-      </ion-item>
+      </ion-item> -->
+
 
       <ion-item *ngIf="!missingSupplier" class="it" lines="none">
         <ion-select placeholder="Fornitore" [(ngModel)]="postData.supplier">
@@ -55,7 +56,7 @@
         </ion-select>
       </ion-item>
 
-      <ion-item *ngIf="!missingDate" class="it" lines="none" button="true" id="open-date-input">
+      <!-- <ion-item *ngIf="!missingDate" class="it" lines="none" button="true" id="open-date-input">
         <ion-text slot="end">{{dateValue}}</ion-text>
         <ion-popover trigger="open-date-input" show-backdrop="false">
           <ng-template>
@@ -70,17 +71,51 @@
       <ion-item *ngIf="missingDate" class="item-wrong" lines="none">
         <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.date">
         </ion-input>
-      </ion-item>
+      </ion-item> -->
 
-      <ion-item>
-        <ion-label>Regione</ion-label>
+      <ion-item *ngIf="!missingOrigin" class="it" lines="none">
+        <!-- <ion-select>Regione</ion-select> -->
         <ion-avatar *ngIf="regionSelected != '' ">
-        <img src="{{flagToShow}}">
-    
-      </ion-avatar>
-        <ion-select [(ngModel)]="regionSelected" (ngModelChange)="changeRegion()" ok-text="Si" cancel-text="No" >
+          <img src="{{flagToShow}}">
+        </ion-avatar>
+        <ion-select  placeholder="Regione" [(ngModel)]="postData.origin" [(ngModel)]="regionSelected" (ngModelChange)="changeRegion()"
+          ok-text="Si" cancel-text="No">
           <ion-select-option *ngFor="let region of regions,  let i  = index" value="{{region.name}}">{{region.name}}</ion-select-option>
         </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="missingOrigin" class="item-wrong" lines="none">
+        <!-- <ion-label >Regione</ion-label> -->
+        <ion-avatar *ngIf="regionSelected != '' ">
+          <img src="{{flagToShow}}">
+        </ion-avatar>
+        <ion-select  placeholder="Regione" [(ngModel)]="postData.origin" [(ngModel)]="regionSelected" (ngModelChange)="changeRegion()"
+          ok-text="Si" cancel-text="No">
+          <ion-select-option *ngFor="let region of regions,  let i  = index" value="{{region.name}}">{{region.name}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item *ngIf="!missingTypology" class="it" lines="none">
+        <ion-select  placeholder="Tipologia" class="input" [(ngModel)]="typologySelected" (ngModelChange)="changeTypology()" ok-text="Si" cancel-text="No" >
+          <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">{{typology.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="missingTypology" class="item-wrong" lines="none">
+        <ion-select  placeholder="Tipologia" class="input" [(ngModel)]="typologySelected" (ngModelChange)="changeTypology()" ok-text="Si" cancel-text="No" >
+          <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">{{typology.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!missingQuantity" class="it" lines="none">
+        <ion-input type="number" class="input" name="quantity" placeholder="Quantità" [(ngModel)]="postData.quantity">
+        </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="missingQuantity" class="item-wrong" lines="none">
+        <ion-input type="number" class="input" name="quantity" placeholder="Quantità" [(ngModel)]="postData.quantity">
+        </ion-input>
       </ion-item>
 
       <ion-item *ngIf="!missingDescription" class="it" lines="none">
@@ -93,17 +128,7 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingTypology" class="it" lines="none">
-        <ion-input class="input" name="typology" placeholder="Tipologia" [(ngModel)]="postData.typology">
-        </ion-input>
-      </ion-item>
-
-      <ion-item *ngIf="missingTypology" class="item-wrong" lines="none">
-        <ion-input class="input" name="typology" placeholder="Tipologia" [(ngModel)]="postData.typology">
-        </ion-input>
-      </ion-item>
-
-      <ion-item *ngIf="!missingOrigin" class="it" lines="none">
+      <!-- <ion-item *ngIf="!missingOrigin" class="it" lines="none">
         <ion-input class="input" name="origin" placeholder="Origine" [(ngModel)]="postData.origin">
         </ion-input>
       </ion-item>
@@ -111,7 +136,7 @@
       <ion-item *ngIf="missingOrigin" class="item-wrong" lines="none">
         <ion-input class="input" name="origin" placeholder="Origine" [(ngModel)]="postData.origin">
         </ion-input>
-      </ion-item>
+      </ion-item> -->
 
       <ion-button class="input" color="antique-fuchsia" class="btn-style" expand="block" shape="round" type="submit"
         (click)="checkEmpityFields()">

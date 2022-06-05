@@ -18,27 +18,29 @@ export class InsertConfermentPage implements OnInit {
   postData = {
     _idworker: '',
     // status: '',
-    country: '',
+    country: 'Italia',
     supplier: '',
     description: '',
     typology: '',
     origin: '',
-    date: ''
+    quantity: ''
   };
 
 
   missing_idworker = false;
   // missingStatus = false;
-  missingCountry = false;
+  // missingCountry = false;
   missingSupplier = false;
   missingDescription = false;
   missingTypology = false;
   missingOrigin = false;
-  missingDate = false;
+  missingQuantity = false;
 
   regions: Array<any>
   flagToShow = "";
   regionSelected = "";
+  typologies = []
+  typologySelected: string;
 
   constructor(
     private authService: AuthService,
@@ -51,7 +53,8 @@ export class InsertConfermentPage implements OnInit {
 
 
   ngOnInit() {
-    this.regions = this.countryProvider.getItalianRegions().regions;
+    this.getRegions()
+    this.getWineTypologies();
   }
 
   validateInputs() {
@@ -106,10 +109,10 @@ export class InsertConfermentPage implements OnInit {
     // else
     //   this.missingStatus = false;
 
-    if (this.postData.country.length <= 0)
-      this.missingCountry = true;
-    else
-      this.missingCountry = false;
+    // if (this.postData.country.length <= 0)
+    //   this.missingCountry = true;
+    // else
+    //   this.missingCountry = false;
 
     if (this.postData.supplier.length <= 0)
       this.missingSupplier = true;
@@ -126,15 +129,15 @@ export class InsertConfermentPage implements OnInit {
     else
       this.missingTypology = false;
 
-    if (this.postData.origin.length <= 0)
-      this.missingOrigin = true;
-    else
-      this.missingOrigin = false;
+     if (this.postData.origin.length <= 0)
+       this.missingOrigin = true;
+     else
+       this.missingOrigin = false;
 
-    if (this.postData.date.length <= 0)
-      this.missingDate = true;
+    if (this.postData.quantity.length <= 0)
+      this.missingQuantity = true;
     else
-      this.missingDate = false;
+      this.missingQuantity = false;
 
 
   }
@@ -212,6 +215,19 @@ export class InsertConfermentPage implements OnInit {
 
     }
 
+  }
+
+  getWineTypologies() {
+    this.typologies = this.countryProvider.getTypologies();
+  }
+
+  getRegions() {
+    this.regions = this.countryProvider.getItalianRegions().regions;
+
+  }
+
+  changeTypology(){
+    this.postData.typology = this.typologySelected
   }
 
 

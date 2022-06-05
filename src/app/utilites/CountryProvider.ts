@@ -2,7 +2,7 @@ import { WineService } from "../services/wine.service";
 import data from '../utilites/ISO_alpha-2_codes.json';
 import regionsData from '../utilites/Italian_regions.json'
 import { Injectable } from '@angular/core';
-
+import typologiesData from '../utilites/typologies_wine.json'
 
 @Injectable({
     providedIn: 'root'
@@ -44,4 +44,17 @@ export class CountryProvider {
         return this.italianRegions;
 
     }
+    
+    getTypologies(){
+        interface Typology{
+            name: string;
+            region: string
+        }
+        var typologies: Array<Typology>
+        typologies = []
+        typologies = typologiesData.typology
+        return typologies;
+
+    }
+
 }
