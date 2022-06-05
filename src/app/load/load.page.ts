@@ -3,6 +3,8 @@ import { LoadingController } from '@ionic/angular';
 import { ConfermentService } from '../services/conferment.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { findTheCurrentProcess } from '../utilites/utilities-functions';
+import { DataService } from '../services/DataService';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-load',
@@ -38,7 +40,9 @@ export class LoadPage implements OnInit {
 
   constructor(public confermentService: ConfermentService,
     public ng2SearchPipeModule: Ng2SearchPipeModule,
-    private loadingCtrl: LoadingController) { }
+    private loadingCtrl: LoadingController,
+    private dataService: DataService,
+    private router: Router) { }
 
   slideOpts = {
     slidesPerView: 2,
@@ -92,6 +96,11 @@ export class LoadPage implements OnInit {
 
   }
 
+  viewDetailsConferment(id: string){
+    this.dataService.setIdConfermentToView(id);
+    console.log(id)
+    this.router.navigate(['/view-conferment']);
+  }
 
   onlyReadyConferments() {
     console.log("funziona")
