@@ -12,7 +12,7 @@ export function findTheCurrentProcess(conferments: any) {
             element.current_process = "Pronto"
             element.progressBarValue = 6 / 6
             element.numberOfTheProgress = 6
-            
+
         }
         else if (element.status == "DELIVERED") {
             element.current_process = "Non iniziato"
@@ -69,4 +69,75 @@ export function findTheCurrentProcess(conferments: any) {
     });
     console.log(obj)
     return obj;
-} 
+}
+
+
+export function findTheCurrentProcessForAConferment(conferment: any) {
+    interface looseConfermentsObj {
+        [key: string]: any
+    }
+
+    var obj: looseConfermentsObj = {};
+
+    obj = conferment;
+
+    if (conferment.status == "READY") {
+        conferment.current_process = "Pronto"
+        conferment.progressBarValue = 6 / 6
+        conferment.numberOfTheProgress = 6
+
+    }
+    else if (conferment.status == "DELIVERED") {
+        conferment.current_process = "Non iniziato"
+        conferment.progressBarValue = 0 / 6
+        conferment.numberOfTheProgress = 0
+
+    }
+
+    else if (conferment.status == null) {
+        conferment.current_process = "Non iniziato"
+        conferment.progressBarValue = 0 / 6
+        conferment.numberOfTheProgress = 0
+
+    }
+
+    else {
+        switch (conferment.current_process) {
+            case "wine_pressing_process":
+                conferment.current_process = "Pigiatura"
+                conferment.progressBarValue = 1 / 6
+                conferment.numberOfTheProgress = 1
+                break;
+
+            case "destemming_process":
+                conferment.current_process = "Diraspatura"
+                conferment.progressBarValue = 2 / 6
+                conferment.numberOfTheProgress = 2
+                break;
+
+            case "winemaking_process":
+                conferment.current_process = "Vinificazione"
+                conferment.progressBarValue = 3 / 6
+                conferment.numberOfTheProgress = 3
+                break;
+
+            case "racking_process":
+                conferment.current_process = "Svinatura"
+                conferment.progressBarValue = 4 / 6
+                conferment.numberOfTheProgress = 4
+                break;
+
+            case "refinement_process":
+                conferment.current_process = "Affinamento"
+                conferment.progressBarValue = 5 / 6
+                conferment.numberOfTheProgress = 5
+                break;
+            case "bottling_process":
+                conferment.current_process = "Imbottigliamento"
+                conferment.progressBarValue = 6 / 6
+                conferment.numberOfTheProgress = 6
+                break;
+        }
+    }
+    return obj;
+}

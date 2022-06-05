@@ -22,4 +22,9 @@ export class ConfermentService {
   getPandingConferments(): Promise<any> {
     return this.wineService.get('wineConferment');
   }
+
+  getConfermentById(id: string){
+    return this.wineService.get('wineConferment/' + id)
+
+  }
 }

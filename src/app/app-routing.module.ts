@@ -54,7 +54,11 @@ const routes: Routes = [
   {
     path: 'patch-account',
     loadChildren: () => import('./patch-account/patch-account.module').then( m => m.PatchAccountPageModule)
+  },  {
+    path: 'view-conferment',
+    loadChildren: () => import('./view-conferment/view-conferment.module').then( m => m.ViewConfermentPageModule)
   }
+
 
 ];
 
