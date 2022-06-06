@@ -54,7 +54,15 @@ const routes: Routes = [
   {
     path: 'patch-account',
     loadChildren: () => import('./patch-account/patch-account.module').then( m => m.PatchAccountPageModule)
+  },  {
+    path: 'info',
+    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
+  },
+  {
+    path: 'info',
+    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
   }
+
 
 ];
 
