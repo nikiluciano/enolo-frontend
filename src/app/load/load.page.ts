@@ -16,6 +16,11 @@ export class LoadPage implements OnInit {
   search: string;
   postData: any;
   conferment = [];
+  thereArePendingConferments = true;
+  contentLoaded = false;
+  filteredConferments = [];
+
+
 
   confermentsStatus = [
     { label: 'Pronto', value: 'READY', isChecked: false },
@@ -108,4 +113,37 @@ export class LoadPage implements OnInit {
 
   }
 
+
+  async getPendingConferments() {
+    await this.confermentService.getPandingConferments().then(
+      (res: any) => {
+        if (res) {
+          this.contentLoaded = true
+          this.conferment = res
+          this.thereArePendingConferments = true;
+
+          this.filterConferments()
+          
+
+        }
+        else {
+          this.thereArePendingConferments = false;
+        }
+      }
+    )
+  }
+
+  filterConferments() {
+    this.filteredConferments = []
+    this.conferment.forEach(element => {
+      if (element.status == "PENDING")
+        this.filteredConferments.push(element)
+    });
+    if (this.filteredConferments.length == 0)
+      this.thereArePendingConferments = false
+    else {
+      this.thereArePendingConferments = true
+      this.postData.findTheCurrentProcess()
+    }
+  }
 }

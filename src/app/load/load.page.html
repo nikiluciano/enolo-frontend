@@ -80,7 +80,10 @@
 
 
   <ion-list class="list-style">
-
+    <div *ngIf="!thereArePendingConferments" lines="none" border-lines="none">
+      <ion-label class="card-conf-style">Nessun conferimento in lavorazione</ion-label>
+     
+     </div>
     <div *ngFor="let Conf of postData | filter:search">
 
       <ion-item-sliding class="ion-no-padding item-style">
