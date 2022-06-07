@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
 import { ConfermentService } from '../services/conferment.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { findTheCurrentProcess } from '../utilites/utilities-functions';
@@ -16,31 +15,36 @@ export class LoadPage implements OnInit {
   search: string;
   postData: any;
   conferment = [];
+  
 
-  confermentsStatus = [
-    { label: 'Pronto', value: 'READY', isChecked: false },
-    { label: 'Non iniziato', value: 'DELIVERED', isChecked: false },
-    { label: 'In lavorazione', value: 'PENDING', isChecked: false }
-  ];
+  thereArePendingConferments = true;
+  conferments: any;
 
+  loading = false;
 
-  filtersOrdering = [
-    { label: 'Quantità crescente', value: 'READY', isChecked: false },
-    { label: 'Quantità decrescente', value: 'DELIVERED', isChecked: false }
-  ];
-
-  filteringSuppliers = [
-    { label: 'Nicola Scinocca', value: 'READY', isChecked: false },
-    { label: 'Luigi Occhionero', value: 'DELIVERED', isChecked: false }
-  ];
+  // confermentsStatus = [
+  //   { label: 'Pronto', value: 'READY', isChecked: false },
+  //   { label: 'Non iniziato', value: 'DELIVERED', isChecked: false },
+  //   { label: 'In lavorazione', value: 'PENDING', isChecked: false }
+  // ];
 
 
+  // filtersOrdering = [
+  //   { label: 'Quantità crescente', value: 'READY', isChecked: false },
+  //   { label: 'Quantità decrescente', value: 'DELIVERED', isChecked: false }
+  // ];
 
-  filteringIsActive = false;
+  // filteringSuppliers = [
+  //   { label: 'Nicola Scinocca', value: 'READY', isChecked: false },
+  //   { label: 'Luigi Occhionero', value: 'DELIVERED', isChecked: false }
+  // ];
+
+
+
+  // filteringIsActive = false;
 
   constructor(public confermentService: ConfermentService,
     public ng2SearchPipeModule: Ng2SearchPipeModule,
-    private loadingCtrl: LoadingController,
     private dataService: DataService,
     private router: Router) { }
 
@@ -53,21 +57,17 @@ export class LoadPage implements OnInit {
 
   ngOnInit() {
     this.getAllConferment();
+
     this.loadConferment();
+    this.getPendingConferments()
   }
 
 
 
   async loadConferment() {
-
-    const loading = await this.loadingCtrl.create({
-      message: 'Caricamento...',
-      spinner: 'bubbles',
-    });
-    await loading.present();
-
-    this.confermentService.getAllConferments().then((res) => {
-      loading.dismiss();
+      this.loading = true;
+      this.confermentService.getAllConferments().then((res) => {
+      this.loading = false;
       this.conferment = [...this.conferment, ...res];
       console.log(res);
     })
@@ -79,6 +79,7 @@ export class LoadPage implements OnInit {
     }, 3000);
     this.getAllConferment();
     this.loadConferment();
+    this.getPendingConferments()
   }
 
 
@@ -96,7 +97,7 @@ export class LoadPage implements OnInit {
 
   }
 
-  viewDetailsConferment(id: string){
+  viewDetailsConferment(id: string) {
     this.dataService.setIdConfermentToView(id);
     console.log(id)
     this.router.navigate(['/view-conferment']);
@@ -107,5 +108,22 @@ export class LoadPage implements OnInit {
 
 
   }
+
+
+  async getPendingConferments() {
+    await this.confermentService.getPandingConferments().then(
+      (res: any) => {
+        if (res) {
+          this.conferments = res
+          this.thereArePendingConferments = true;
+
+        }
+        else {
+          this.thereArePendingConferments = false;
+        }
+      }
+    )
+  }
+
 
 }
