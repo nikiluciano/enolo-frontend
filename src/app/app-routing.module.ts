@@ -54,6 +54,7 @@ const routes: Routes = [
   {
     path: 'patch-account',
     loadChildren: () => import('./patch-account/patch-account.module').then( m => m.PatchAccountPageModule)
+
   },
   {
     path: 'view-conferment',
@@ -62,9 +63,11 @@ const routes: Routes = [
   {
     path: 'splashscreen',
     loadChildren: () => import('./splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule)
+  },
+  {
+    path: 'show-user',
+    loadChildren: () => import('./show-user/show-user.module').then( m => m.ShowUserPageModule)
   }
-
-
 ];
 
 @NgModule({
