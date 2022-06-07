@@ -79,13 +79,18 @@
   </div>
 
 
-  <ion-list class="list-style">
-    <div *ngIf="!thereArePendingConferments" lines="none" border-lines="none">
-      <ion-label class="card-conf-style">Nessun conferimento in lavorazione</ion-label>
-     
-     </div>
-    <div *ngFor="let Conf of postData | filter:search">
+  <ion-list  *ngIf="!loading" class="list-style">
 
+    <div *ngIf="!thereArePendingConferments">
+      <ion-label class="card-conf-style">Nessun conferimento in lavorazione</ion-label>
+
+    </div>
+
+  <div *ngIf="thereArePendingConferments">
+    
+     <div 
+     
+     *ngFor="let Conf of postData | filter:search">
       <ion-item-sliding class="ion-no-padding item-style">
         <ion-item-options side="start">
           <ion-item-option color="danger" expandable>
@@ -155,10 +160,10 @@
       </ion-item-sliding>
       <div class="space-item">
 
-      </div>
-    </div>
+      </div> 
+    </div> 
 
-
+  </div>
 
 
   </ion-list>
