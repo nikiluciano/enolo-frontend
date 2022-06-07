@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/DataService';
-import {ConfermentService} from '../services/conferment.service'
-import { findTheCurrentProcessForAConferment  } from '../utilites/utilities-functions';
+import { ConfermentService } from '../services/conferment.service'
+import { findTheCurrentProcessForAConferment } from '../utilites/utilities-functions';
 
 
 @Component({
@@ -13,21 +13,33 @@ export class ViewConfermentPage implements OnInit {
   conferment: any;
   idConferment = '';
 
-  constructor(private dataService: DataService,
-              private confermentService: ConfermentService
-  ){
-              
-               }
+  loading = false;
 
-  ngOnInit() {
-    this.getConferment();
+  constructor(private dataService: DataService,
+    private confermentService: ConfermentService
+  ) {
 
   }
 
-  getConferment(){
+  ngOnInit() {
+    this.getConferment();
+    this.loadConferment()
+
+  }
+
+  async loadConferment() {
+    this.loading = true;
+    this.confermentService.getAllConferments().then((res) => {
+      this.loading = false;
+      this.conferment = [...this.conferment, ...res];
+      console.log(res);
+    })
+  }
+
+  getConferment() {
     this.idConferment = this.dataService.getIdConfermentToView();
-    this.confermentService.getConfermentById(this.idConferment).then((res)=>{
-      if(res){
+    this.confermentService.getConfermentById(this.idConferment).then((res) => {
+      if (res) {
         this.conferment = findTheCurrentProcessForAConferment(res)
         console.log(JSON.stringify(res))
       }
@@ -35,6 +47,6 @@ export class ViewConfermentPage implements OnInit {
     })
   }
 
- 
+
 
 }
