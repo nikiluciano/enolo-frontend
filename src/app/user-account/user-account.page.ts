@@ -11,12 +11,12 @@ export class UserAccountPage implements OnInit {
   
   postData = {
     email: 'prova@prova.it',
-    nome: 'Nome_user',
-    cognome:'Cognome_user',
-    username:'prova',
+    nome: 'Simone',
+    cognome:'Cassetta',
+    username:'Simone',
     telefono:'123 4567890',
-    indirizzo:'prova',
-    password:'prova'
+    indirizzo:'Via Genova',
+    password:'prova123'
   }
 
 
