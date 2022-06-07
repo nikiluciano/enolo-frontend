@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'splashscreen',
     pathMatch: 'full'
   },
  {
@@ -54,9 +54,14 @@ const routes: Routes = [
   {
     path: 'patch-account',
     loadChildren: () => import('./patch-account/patch-account.module').then( m => m.PatchAccountPageModule)
-  },  {
+  },
+  {
     path: 'view-conferment',
     loadChildren: () => import('./view-conferment/view-conferment.module').then( m => m.ViewConfermentPageModule)
+  },
+  {
+    path: 'splashscreen',
+    loadChildren: () => import('./splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule)
   }
 
 

@@ -5,6 +5,10 @@ import { AuthService } from '../services/auth.service';
 import { get, set } from '../storage/data-storage'
 import { LoadingController } from '@ionic/angular';
 import { LoadingComponent } from '../custom-components/loading/loading.component';
+import { Network } from '@capacitor/network';
+import { User } from '../utilites/User';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -22,14 +26,40 @@ export class LoginPage implements OnInit {
 
   isLoading = false;
 
+  provaUser: string;
+  connection = true;
+
   constructor(private authService: AuthService,
     private router: Router,
     private toastService: ToastService,
     private loadingCtrl: LoadingController,
-    private loading: LoadingComponent
+    private loading: LoadingComponent,
+    private user: User
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    console.log("ciao")
+    let ref = this
+   
+    Network.addListener('networkStatusChange', status => {
+      console.log('Network status changed', status);
+      if (status.connected == true) {
+        this.connection = true;
+      } else {
+        this.connection = false
+      }
+
+    });
+
+    async () => {
+      const status = await Network.getStatus();
+      console.log('Network status:', status.connected);
+    };
+
+    console.log(Network.getStatus())
+
+  }
+
 
   pwdIcon = "eye-outline";
   showPwd = false;
@@ -53,28 +83,20 @@ export class LoginPage implements OnInit {
 
 
   async loginAction() {
-   /*  const loading = await this.loadingCtrl.create({
-      message: 'Caricamento...',
-      spinner: 'bubbles'
-    });
-    await loading.present(); */
-    //this.loading.watchLoading()
     if (this.validateInputs()) {
       this.isLoading = true;
       this.authService.login(this.postData).subscribe(
         (res: any) => {
-          //loading.dismiss(); 
           this.isLoading = false;
- 
+
           if (res) {
             this.router.navigate(['home']);
             let token = res.token;
             set('token', token);
-
+            this.user.setUser(this.postData.username)
           }
         },
         (error: any) => {
-          //loading.dismiss();  
           this.isLoading = false;
           this.toastService.presentToast('Username o password errati.');
         }
@@ -98,6 +120,11 @@ export class LoginPage implements OnInit {
       this.missingPassword = true;
     else
       this.missingPassword = false;
+  }
+
+  setUser(){
+
+
   }
 
 }

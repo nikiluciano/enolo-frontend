@@ -1,4 +1,3 @@
-
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
@@ -65,7 +64,14 @@
           <ion-button (click)="button5()" fill="clear" color="dark" class="style-settings" [routerLink]="['/settings']">
             <ion-icon name="cog-outline"></ion-icon>
             <ion-label class="lab">Impostazioni </ion-label>
+
+
           </ion-button>
+          <ion-button (click)="logout()" fill="clear" color="dark" class="style-settings">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <ion-label class="lab">Logout </ion-label>
+          </ion-button>
+
         </ion-menu-toggle>
       </ion-footer>
 

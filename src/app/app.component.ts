@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from './utilites/User';
 
 
 @Component({
@@ -8,7 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() { }
+  constructor(private user: User) { }
 
+  logout(){
+    this.user.makeLogout();
+
+  }
 }
  

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: quicksand-bold;
+    src: url('/src/assets/font/Quicksand-Bold.ttf');
+}
+
+@font-face {
+    font-family: quicksand-regular;
+    src: url('/src/assets/font/Quicksand-Regular.ttf');
+}
+
+.div-style {
+    border-width: 1px;
+    border-radius: 25px;
+    border-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-style {
+    //font-family: quicksand-bold;
+    font-family: quicksand-regular;
+    font-weight: bold;
+    font-size: 25px;
+    word-wrap: break-word;
+}
+
+.text-style {
+    font-family: quicksand-regular;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+.title-row {
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.text-row {
+    margin-top: 20px;
+
+}
+
+.main-col {
+    margin: 15px;
+
+}
+
+.img-row .img-nowifi {
+    
+    max-width: 200px;
+    display: block;
+    margin: auto;
+  }
+
+  .img-nowifi-size{
+    //max-width:80px;
+
+  }
