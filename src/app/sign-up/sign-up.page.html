@@ -9,33 +9,33 @@
       </ion-text>
 
 
-      <ion-item *ngIf="!missingName" class="item" lines="none">
+      <ion-item *ngIf="!missingName"  class="input" class="item" lines="none">
         <ion-input class="input" formControlName="name" placeholder="Nome" [(ngModel)]="postData.name">
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="missingName" class="item-wrong" lines="none">
+      <ion-item *ngIf="missingName" class="input" class="item-wrong" lines="none">
         <ion-input class="input" formControlName="name" placeholder="Nome" [(ngModel)]="postData.name">
         </ion-input>
       </ion-item>
 
 
-      <ion-item *ngIf="!missingSurname" class="item" lines="none">
+      <ion-item *ngIf="!missingSurname" class="input" class="item" lines="none">
         <ion-input class="input" formControlName="surname" placeholder="Cognome" [(ngModel)]="postData.surname">
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="missingSurname" class="item-wrong" lines="none">
+      <ion-item *ngIf="missingSurname" class="input" class="item-wrong" lines="none">
         <ion-input class="input" formControlName="surname" placeholder="cognome" [(ngModel)]="postData.surname">
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingUsername" class="item" lines="none">
+      <ion-item *ngIf="!missingUsername" class="input" class="item" lines="none">
         <ion-input class="input" formControlName="username" placeholder="Username" [(ngModel)]="postData.username">
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="missingUsername" class="item-wrong" lines="none">
+      <ion-item *ngIf="missingUsername" class="input" class="item-wrong" lines="none">
         <ion-input class="input" formControlName="username" placeholder="Username" [(ngModel)]="postData.username">
         </ion-input>
       </ion-item>
@@ -96,17 +96,17 @@
       </ion-item>
 
       <div class="error_message" *ngIf="comparepwCheck(error)">
-        Password and Confirm Password fields should match
+        Password e conferma password non corrispondono
       </div>
 
 
       <ion-item *ngIf="!missingPhone" class="item" lines="none">
-        <ion-input class="input" formControlName="phone" placeholder="Numero di telefono" [(ngModel)]="postData.phone">
+        <ion-input class="input"  type="number" formControlName="phone" placeholder="Numero di telefono" [(ngModel)]="postData.phone" >
         </ion-input>
       </ion-item>
 
       <ion-item *ngIf="missingPhone" class="item-wrong" lines="none">
-        <ion-input class="input" formControlName="phone" placeholder="Numero di telefono" [(ngModel)]="postData.phone">
+        <ion-input class="input"  type="number" formControlName="phone" placeholder="Numero di telefono" [(ngModel)]="postData.phone" >
         </ion-input>
       </ion-item>
 

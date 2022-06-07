@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="police-blue">
+  <ion-toolbar>
     <ion-item color="police-blue" lines="none">
       <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/load']"></ion-icon>
       <ion-text class="title">Aggiungi Conferimento</ion-text>
@@ -8,6 +8,8 @@
 </ion-header>
 
 <ion-content>
+  <app-loading *ngIf="loading"></app-loading>
+
   <div class="insert-div">
     <ion-list>
       <ion-item *ngIf="!missing_idworker" class="it" lines="none">
@@ -109,12 +111,12 @@
       </ion-item>
 
       <ion-item *ngIf="!missingQuantity" class="it" lines="none">
-        <ion-input type="number" class="input" name="quantity" placeholder="Quantità" [(ngModel)]="postData.quantity">
+        <ion-input type="number" class="input" name="quantity" placeholder="Quantità (Kg)" [(ngModel)]="postData.quantity">
         </ion-input>
       </ion-item>
 
       <ion-item *ngIf="missingQuantity" class="item-wrong" lines="none">
-        <ion-input type="number" class="input" name="quantity" placeholder="Quantità" [(ngModel)]="postData.quantity">
+        <ion-input type="number" class="input" name="quantity" placeholder="Quantità (Kg)" [(ngModel)]="postData.quantity">
         </ion-input>
       </ion-item>
 

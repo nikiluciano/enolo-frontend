@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item color="police-blue" lines="none">
+      <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/settings']"></ion-icon>
+      <ion-text class="title">Pannello Utente</ion-text>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="title">
+  <ion-list>
+    <ion-item-sliding >
+      <ion-item *ngFor="let user of admin">
+        <ion-label>{{user.name}}</ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  
+  </ion-content>

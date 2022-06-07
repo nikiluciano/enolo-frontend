@@ -102,7 +102,8 @@ export class SignUpPage implements OnInit {
       this.postData.email &&
       username.length > 0 &&
       email.length > 0 &&
-      pass.length > 0
+      pass.length > 0 
+      
     );
   }
 
@@ -162,9 +163,7 @@ export class SignUpPage implements OnInit {
       this.missingEmail = true;
     else
       this.missingEmail = false;
-
-
-
+      
   }
 
 
