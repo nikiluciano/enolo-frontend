@@ -57,6 +57,10 @@ const routes: Routes = [
   },  {
     path: 'view-conferment',
     loadChildren: () => import('./view-conferment/view-conferment.module').then( m => m.ViewConfermentPageModule)
+  },
+  {
+    path: 'show-user',
+    loadChildren: () => import('./show-user/show-user.module').then( m => m.ShowUserPageModule)
   }
 
 
