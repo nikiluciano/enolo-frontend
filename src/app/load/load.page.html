@@ -15,155 +15,148 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-searchbar showCancelButton="focus" cancelButtonText="Annulla" class="searchbar" placeholder="Cerca per tipologia"
-    [(ngModel)]="search">
-  </ion-searchbar>
-
-  <div>
-    <!-- <ion-row class="filters-row">
-
-      <ion-slides [options]="slideOpts">
-
-      accordion for filtering by the status of each conferment
-      <ion-accordion-group class="all-accordions accordion-status">
-        <ion-accordion>
-          <ion-item slot="header">
-            <ion-label>Stato</ion-label>
-          </ion-item>
-
-          <ion-list class="ion-no-padding filtering-list" slot="content">
-            <ion-item class="ion-no-padding" *ngFor = "let status of confermentsStatus">
-              <ion-label>{{status.label}}</ion-label>
-              <ion-checkbox slot="end" [(ngModel)]="status.isChecked"></ion-checkbox>
-            </ion-item>
-          </ion-list>
-        </ion-accordion>
-      </ion-accordion-group>
-
-      accordion for filtering by the quantity of each conferment
-      <ion-accordion-group class="all-accordions">
-        <ion-accordion class="all-accordions accordion-quantity">
-          <ion-item slot="header">
-            <ion-label>Ordina per</ion-label>
-          </ion-item>
-
-          <ion-list class="ion-no-padding filtering-list" slot="content">
-            <ion-item class="ion-no-padding" *ngFor = "let filter of filtersOrdering">
-              <ion-label>{{filter.label}}</ion-label>
-              <ion-checkbox slot="end" [(ngModel)]="filter.isChecked"></ion-checkbox>
-            </ion-item>
-          </ion-list>
-        </ion-accordion>
-      </ion-accordion-group>
-
-      <ion-accordion-group>
-        <ion-accordion class="all-accordions">
-          <ion-item slot="header">
-            <ion-label>Fornitore</ion-label>
-          </ion-item>
-
-          <ion-list class="ion-no-padding filtering-list" slot="content">
-            <ion-item class="ion-no-padding" *ngFor = "let supplier of filteringSuppliers">
-              <ion-label>{{supplier.label}}</ion-label>
-              <ion-checkbox slot="end" [(ngModel)]="supplier.isChecked"></ion-checkbox>
-            </ion-item>
-          </ion-list>
-        </ion-accordion>
-      </ion-accordion-group>
-      </ion-slides>
 
 
-    </ion-row> -->
-
-
-  </div>
-
-
-  <ion-list  *ngIf="!loading" class="list-style">
+  <ion-list *ngIf="!loading" class="list-style">
 
     <div *ngIf="!thereArePendingConferments">
       <ion-label class="card-conf-style">Nessun conferimento in lavorazione</ion-label>
 
     </div>
 
-  <div *ngIf="thereArePendingConferments">
+    <div *ngIf="thereArePendingConferments">
+
+      <div>
+        <ion-button class="filter-btn" (click)="handleFilters()">
+          <ion-icon name="options-outline"></ion-icon>
+          <ion-label>Filtri</ion-label>
+        </ion-button>
+
+        <ion-button class="save-btn" (click)="filterConferments()">
+      
+          <ion-label>Salva</ion-label>
+        </ion-button>
+        
+      </div>
+
+      <ion-grid *ngIf="showFilters">
+        <ion-row>
+          <ion-col>
+            <ion-item class="it" lines="none">
+              <ion-select [(ngModel)]="status" placeholder="Stato">
+                <ion-select-option value="READY">Pronto</ion-select-option>
+                <ion-select-option value="PENDING">In lavorazione</ion-select-option>
+                <ion-select-option value="DELIVERED">Non iniziato</ion-select-option>
+              </ion-select>
     
-     <div 
-     
-     *ngFor="let Conf of postData | filter:search">
-      <ion-item-sliding class="ion-no-padding item-style">
-        <ion-item-options side="start">
-          <ion-item-option color="danger" expandable>
-            <ion-icon slot="icon-only" name="trash"></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+  
+          <ion-item class="it" lines="none">
+            <ion-select [(ngModel)]="typology" placeholder="Tipologia">
+              <ion-select-option value="tintilia">tintilia</ion-select-option>
+              <ion-select-option value="montepulciano">montepulciano</ion-select-option>
+            </ion-select>
+  
+          </ion-item>
+          </ion-col>
+  
+          <ion-col>
+            <ion-item class="it" lines="none">
+              <ion-select [(ngModel)]="supplier" placeholder="Fornitore">
+                <ion-select-option value="tizio">tizio</ion-select-option>
+                <ion-select-option value="caio">caio</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="it" lines="none">
+              <ion-select placeholder="Ordina per">
+                <ion-select-option value="1">Crescente</ion-select-option>
+                <ion-select-option value="-1">Decrescente</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        
 
-        <ion-item  class="ion-no-padding" lines="none">
-          <ion-grid>
-            <ion-row class="upper-row">
-              <ion-col class="process-col">
-                <ion-text> {{Conf?.current_process}}, {{Conf?.numberOfTheProgress}} di 6 </ion-text>
-              </ion-col>
-              <ion-col class="progress-bar-col">
-                <ion-row>
-                  <ion-icon *ngIf="Conf.status==='DELIVERED'" class="process-not-started" name="close-circle-outline"></ion-icon>
-                  <ion-icon *ngIf="Conf.status!='DELIVERED'" class="process-not-started-not-vis" name="close-circle-outline"></ion-icon>
-                  <ion-progress-bar  color="primary" class="bar-c" [value]="Conf?.progressBarValue">
-                  </ion-progress-bar>
-                  <ion-icon *ngIf="Conf.status=='READY'" class="process-ended" name="checkmark-circle-outline"></ion-icon>
-                  <ion-icon *ngIf="Conf.status!='READY'" class="process-ended-not-vis" name="checkmark-circle-outline"></ion-icon>
-                </ion-row>
+      </ion-grid>
+   
 
-              </ion-col>
+      <div *ngFor="let Conf of postData | filter:search">
+        <ion-item-sliding class="ion-no-padding item-style">
+          <ion-item-options side="start">
+            <ion-item-option color="danger" expandable>
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
 
-            </ion-row>
+          <ion-item class="ion-no-padding" lines="none">
+            <ion-grid>
+              <ion-row class="upper-row">
+                <ion-col class="process-col">
+                  <ion-text> {{Conf?.current_process}}, {{Conf?.numberOfTheProgress}} di 6 </ion-text>
+                </ion-col>
+                <ion-col class="progress-bar-col">
+                  <ion-row>
+                    <ion-icon *ngIf="Conf.status==='DELIVERED'" class="process-not-started" name="close-circle-outline">
+                    </ion-icon>
+                    <ion-icon *ngIf="Conf.status!='DELIVERED'" class="process-not-started-not-vis"
+                      name="close-circle-outline"></ion-icon>
+                    <ion-progress-bar color="primary" class="bar-c" [value]="Conf?.progressBarValue">
+                    </ion-progress-bar>
+                    <ion-icon *ngIf="Conf.status=='READY'" class="process-ended" name="checkmark-circle-outline">
+                    </ion-icon>
+                    <ion-icon *ngIf="Conf.status!='READY'" class="process-ended-not-vis"
+                      name="checkmark-circle-outline"></ion-icon>
+                  </ion-row>
 
+                </ion-col>
 
-            <ion-row class="second-row">
-              <ion-col>
-                <ion-text class="font-wine">{{Conf?.typology}}, {{Conf?.quantity}} kg</ion-text>
-
-
-                <ion-row class="three-row">
-                  <ion-text class="font-wine text">{{Conf?.supplier}}</ion-text>
-                </ion-row>
-              </ion-col>
-            </ion-row>
-
-
-
-
-
+              </ion-row>
 
 
-            <ion-row class="third-row">
-              <ion-chip outline color="primary">
-                <ion-icon color="primary" name="calendar-outline"></ion-icon>
-                <ion-text color="primary">{{Conf.date | date: 'dd-MM-yyyy'}}</ion-text>
-
-              </ion-chip>
-              <ion-chip outline color="primary">
-                <ion-icon color="primary" name="location-outline"></ion-icon>
-                <ion-text color="primary">{{Conf.origin}}</ion-text>
-              </ion-chip>
-            </ion-row>
-
-          </ion-grid>
+              <ion-row class="second-row">
+                <ion-col>
+                  <ion-text class="font-wine">{{Conf?.typology}}, {{Conf?.quantity}} kg</ion-text>
 
 
-        </ion-item>
-        <ion-item-options side="end">
-          <ion-item-option (click)="viewDetailsConferment(Conf._id)" color="tertiary" expandable>
-          <ion-icon slot="icon-only" name="hammer-outline"  ></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
-      <div class="space-item">
+                  <ion-row class="three-row">
+                    <ion-text class="font-wine text">{{Conf?.supplier}}</ion-text>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
 
-      </div> 
-    </div> 
 
-  </div>
+              <ion-row class="third-row">
+                <ion-chip outline color="primary">
+                  <ion-icon color="primary" name="calendar-outline"></ion-icon>
+                  <ion-text color="primary">{{Conf.date | date: 'dd-MM-yyyy'}}</ion-text>
+
+                </ion-chip>
+                <ion-chip outline color="primary">
+                  <ion-icon color="primary" name="location-outline"></ion-icon>
+                  <ion-text color="primary">{{Conf.origin}}</ion-text>
+                </ion-chip>
+              </ion-row>
+
+            </ion-grid>
+
+
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option (click)="viewDetailsConferment(Conf._id)" color="tertiary" expandable>
+              <ion-icon slot="icon-only" name="hammer-outline"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        <div class="space-item">
+
+        </div>
+      </div>
+
+    </div>
 
 
   </ion-list>

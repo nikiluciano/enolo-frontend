@@ -27,4 +27,9 @@ export class ConfermentService {
     return this.wineService.get('wineConferment/' + id)
 
   }
+  
+  getFilteredConferments(query: string){
+    return this.wineService.get("wineConferments/filters?" + query)
+
+  }
 }

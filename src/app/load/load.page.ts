@@ -14,14 +14,19 @@ export class LoadPage implements OnInit {
 
   search: string;
   postData: any;
-  conferment = [];
-  
+
 
   thereArePendingConferments = true;
   conferments: any;
 
   loading = false;
 
+  isOpen = false;
+
+  typology = ''
+  supplier = ''
+  status = ''
+  showFilters = false
   // confermentsStatus = [
   //   { label: 'Pronto', value: 'READY', isChecked: false },
   //   { label: 'Non iniziato', value: 'DELIVERED', isChecked: false },
@@ -57,40 +62,34 @@ export class LoadPage implements OnInit {
 
   ngOnInit() {
     this.getAllConferment();
-
-    this.loadConferment();
-    this.getPendingConferments()
   }
 
 
 
-  async loadConferment() {
-      this.loading = true;
-      this.confermentService.getAllConferments().then((res) => {
-      this.loading = false;
-      this.conferment = [...this.conferment, ...res];
-      console.log(res);
-    })
-  }
 
   doRefresh(event) {
     setTimeout(() => {
       event.target.complete()
     }, 3000);
     this.getAllConferment();
-    this.loadConferment();
-    this.getPendingConferments()
   }
 
 
   getAllConferment() {
+    this.loading = true
     this.confermentService.getAllConferments().then(
       (res: any) => {
         if (res) {
+          this.loading = false
+
           this.postData = res
           this.postData = findTheCurrentProcess(this.postData)
+          this.thereArePendingConferments = true;
+
         } else {
           console.log("errore");
+          this.thereArePendingConferments = false;
+
         }
       }
     )
@@ -110,19 +109,39 @@ export class LoadPage implements OnInit {
   }
 
 
-  async getPendingConferments() {
-    await this.confermentService.getPandingConferments().then(
-      (res: any) => {
-        if (res) {
-          this.conferments = res
-          this.thereArePendingConferments = true;
+  handleFilters() {
+    if (this.showFilters)
+      this.showFilters = false
+    else
+      this.showFilters = true
 
-        }
-        else {
-          this.thereArePendingConferments = false;
-        }
-      }
-    )
+  }
+
+  filterConferments() {
+    let query: string;
+    if (this.status != '')
+      query = "status=" + this.status
+
+    if (this.supplier)
+      query = query + "&supplier=" + this.supplier
+
+
+    if (this.typology)
+      query = query + "&typology=" + this.typology + "&sort=-1"
+
+    console.log(query)
+    this.loading = true
+    this.confermentService.getFilteredConferments(query)
+      .then(
+        (res) => {
+          this.loading = false
+
+          this.conferments = res
+          this.conferments = findTheCurrentProcess(this.conferments)
+          this.postData = this.conferments
+          console.log(JSON.stringify(this.conferments))
+        })
+
   }
 
 
