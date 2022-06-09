@@ -4,6 +4,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { findTheCurrentProcess } from '../utilites/utilities-functions';
 import { DataService } from '../services/DataService';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-load',
@@ -51,7 +52,8 @@ export class LoadPage implements OnInit {
   constructor(public confermentService: ConfermentService,
     public ng2SearchPipeModule: Ng2SearchPipeModule,
     private dataService: DataService,
-    private router: Router) { }
+    private router: Router,
+    private menu: MenuController) { }
 
   slideOpts = {
     slidesPerView: 2,
@@ -63,8 +65,6 @@ export class LoadPage implements OnInit {
   ngOnInit() {
     this.getAllConferment();
   }
-
-
 
 
   doRefresh(event) {
@@ -95,6 +95,7 @@ export class LoadPage implements OnInit {
     )
 
   }
+
 
   viewDetailsConferment(id: string) {
     this.dataService.setIdConfermentToView(id);
@@ -142,6 +143,15 @@ export class LoadPage implements OnInit {
           console.log(JSON.stringify(this.conferments))
         })
 
+  }
+
+  openMenu() {
+    this.menu.open();
+  }
+
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
   }
 
 

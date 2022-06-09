@@ -3,10 +3,9 @@ import { Router } from '@angular/router';
 import { ToastService } from '../services/toast.service';
 import { AuthService } from '../services/auth.service';
 import { get, set } from '../storage/data-storage'
-import { LoadingController } from '@ionic/angular';
-import { LoadingComponent } from '../custom-components/loading/loading.component';
 import { Network } from '@capacitor/network';
 import { User } from '../utilites/User';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -32,15 +31,15 @@ export class LoginPage implements OnInit {
   constructor(private authService: AuthService,
     private router: Router,
     private toastService: ToastService,
-    private loadingCtrl: LoadingController,
-    private loading: LoadingComponent,
-    private user: User
+    private user: User,
+    private menu: MenuController
   ) { }
 
   ngOnInit() {
+
     console.log("ciao")
     let ref = this
-   
+
     Network.addListener('networkStatusChange', status => {
       console.log('Network status changed', status);
       if (status.connected == true) {
@@ -57,7 +56,6 @@ export class LoginPage implements OnInit {
     };
 
     console.log(Network.getStatus())
-
   }
 
 
@@ -122,9 +120,16 @@ export class LoginPage implements OnInit {
       this.missingPassword = false;
   }
 
-  setUser(){
-
+  setUser() {
 
   }
+
+
+  ionViewWillEnter() {
+    this.menu.enable(false);
+  }
+
+
+
 
 }

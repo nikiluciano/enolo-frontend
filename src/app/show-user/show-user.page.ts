@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-show-user',
@@ -24,9 +25,19 @@ worker = [
 ];
 
   
-  constructor() { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
   }
+
+
+  openMenu() {
+    this.menu.open();
+  }
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
+
 
 }

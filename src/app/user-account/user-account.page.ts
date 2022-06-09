@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-user-account',
@@ -20,7 +21,7 @@ export class UserAccountPage implements OnInit {
   }
 
 
-  constructor() { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
   }
@@ -31,5 +32,15 @@ export class UserAccountPage implements OnInit {
     this.showPwd = !this.showPwd; 
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline"; 
   }  
+
+  openMenu() {
+    this.menu.open();
+  }
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
+
+
  
 }

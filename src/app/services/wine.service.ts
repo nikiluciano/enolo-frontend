@@ -82,5 +82,18 @@ export class WineService {
     return this.http.get(url, options)
   }
 
+  //patch call
+  patchObjects(serviceName: string, postData: any,  options) {
+    let url = environment.apiUrl + serviceName;
+    return this.http.patch(url, postData, options)
+
+  }
+
+  async patch(serviceName: string, data: any){
+    await this.getBearerToken();
+    return this.patchObjects(serviceName, data, this.options).toPromise()
+
+  }
+
     
 }

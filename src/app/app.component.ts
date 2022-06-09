@@ -9,7 +9,9 @@ import { User } from './utilites/User';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private user: User) { }
+  constructor(private user: User) {
+    
+   }
 
   logout(){
     this.user.makeLogout();

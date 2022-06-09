@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 
 
@@ -22,11 +23,20 @@ export class PatchAccountPage implements OnInit {
   
 
 
-  constructor(){
+  constructor(private menu: MenuController){
    
   }
 
   ngOnInit() {
   }
+
+  openMenu() {
+    this.menu.open();
+  }
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
+
  
 }

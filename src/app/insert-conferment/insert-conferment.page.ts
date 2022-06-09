@@ -4,6 +4,7 @@ import { AuthService } from '../services/auth.service';
 import { ToastService } from '../services/toast.service';
 import { ConfermentService } from '../services/conferment.service';
 import { CountryProvider } from '../utilites/CountryProvider';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -47,7 +48,8 @@ export class InsertConfermentPage implements OnInit {
     private toastService: ToastService,
     private router: Router,
     public confermentService: ConfermentService,
-    private countryProvider: CountryProvider
+    private countryProvider: CountryProvider,
+    private menu: MenuController
 
   ) { }
 
@@ -229,6 +231,17 @@ export class InsertConfermentPage implements OnInit {
   changeTypology(){
     this.postData.typology = this.typologySelected
   }
+
+  openMenu() {
+    this.menu.open();
+  }
+
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
+
+
 
 
 }

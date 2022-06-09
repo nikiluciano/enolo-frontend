@@ -1,13 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" >
-      <ion-menu-button class="style-burger" ></ion-menu-button>
-    </ion-buttons>
+
     <ion-item lines="none" color="police-blue">
       <ion-label class="title-home">Home</ion-label>
-      <ion-button [routerLink]="['/user-account']" fill="clear">
+    <!--   <ion-button [routerLink]="['/user-account']" fill="clear">
         <ion-icon name="person-circle-outline" slot="end" class="style-button"></ion-icon>
-      </ion-button>
+      </ion-button> -->
     </ion-item>
   </ion-toolbar>
  
@@ -123,4 +121,11 @@
     </ion-row>
   </ion-grid>
 </div>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" style="opacity: 90%; ">
+  <ion-fab-button  color="antique-fuchsia" (click)="openMenu()" >
+    <ion-icon class="icon-fab" name="menu-outline" style="opacity: 100%; "></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
 </ion-content>
