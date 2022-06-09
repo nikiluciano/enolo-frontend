@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-statistics',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatisticsPage implements OnInit {
 
-  constructor() { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
   }
+
+  openMenu() {
+    this.menu.open();
+  }
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
+
+
 
 }

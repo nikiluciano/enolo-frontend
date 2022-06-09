@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { ToastService } from '../services/toast.service';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -38,7 +39,8 @@ export class SignUpPage implements OnInit {
     private authService: AuthService,
     private toastService: ToastService,
     private router: Router,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private menu: MenuController
   ) {
     this.SignUpForm = this.formBuilder.group({
 
@@ -80,7 +82,10 @@ export class SignUpPage implements OnInit {
     });
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+   }
+
+
 
   pwdIcon = "eye-outline";
   showPwd = false;
@@ -193,6 +198,10 @@ export class SignUpPage implements OnInit {
   comparepwCheck(error): boolean {
     return !this.SignUpForm.get('confirmPassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
       (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
+  }
+
+  ionViewWillEnter() {
+    this.menu.enable(false);
   }
 
 

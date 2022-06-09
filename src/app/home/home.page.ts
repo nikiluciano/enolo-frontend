@@ -4,6 +4,7 @@ import { WarehouseService } from '../services/warehouse.service';
 import { Storage } from '@capacitor/storage';
 import { ConfermentService } from '../services/conferment.service';
 import { Style } from '@capacitor/status-bar';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -25,7 +26,8 @@ export class HomePage implements OnInit {
   filteredConferments = [];
 
   constructor(public warehouseService: WarehouseService,
-    public confermentService: ConfermentService) { }
+    public confermentService: ConfermentService,
+    private menu: MenuController) { }
 
 
 
@@ -33,6 +35,7 @@ export class HomePage implements OnInit {
     this.getWarehouse()
     this.getPendingConferments()
   }
+
 
   doRefresh(event) {
     this.getWarehouse()
@@ -144,5 +147,17 @@ export class HomePage implements OnInit {
       this.findTheCurrentProcess()
     }
   }
+
+  
+  openMenu() {
+    this.menu.open();
+  }
+
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
+
+
 
 }

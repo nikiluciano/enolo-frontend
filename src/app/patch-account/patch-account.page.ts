@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+
+import { MenuController } from '@ionic/angular';
+
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { set } from '../storage/data-storage'
 import { ToastService } from '../services/toast.service';
+
 
 
 
@@ -25,19 +29,24 @@ export class PatchAccountPage implements OnInit {
   
   }
   
-
-
+  
   constructor( private toastService: ToastService,
     private authService: AuthService,
     private router: Router,
     ){
+
    
   }
 
   ngOnInit() {
   }
 
- 
+  openMenu() {
+    this.menu.open();
+  }
 
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
 
 }

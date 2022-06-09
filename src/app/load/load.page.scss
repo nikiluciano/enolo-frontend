@@ -28,13 +28,30 @@ ion-toolbar{
    
  }  
   
-ion-button{ 
+.save-btn{ 
   --border-radius: 40px; 
-  height:30px; 
+  height:40px; 
+  margin-left: 10px; 
+  font-family: 'quicksand-regular';  
+  text-transform: none;
+  --background: #D6B0B1;
+
+  font-size: 15px;
+  margin-bottom: 20px;
+
+} 
+
+.filter-btn{
+  --border-radius: 40px; 
+  height:40px; 
   margin-left: 20px; 
   font-family: 'quicksand-regular';  
- 
-} 
+  text-transform: none;
+  --background: #8B5E83;
+  font-size: 15px;
+  margin-bottom: 20px;
+
+}
  
  .text-chip{  
    color: white;  
@@ -216,3 +233,43 @@ color: green;
     padding: 10px;
 
   }
+
+.title-ion-modal{
+  font-family: quicksand-semibold;
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.radio-list{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.radio-item{}
+
+.radio-label{
+  font-family: quicksand-regular;
+}
+
+.save{  
+  margin-top: 20px;
+
+}
+
+.select-style{
+  border-width: 1px;
+  border-radius: 25px;
+  border-color: black;
+
+}
+
+.it {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  max-width: 120px;
+}
+
+.icon-fab{
+  color: white;
+}
