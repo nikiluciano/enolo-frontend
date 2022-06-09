@@ -14,11 +14,26 @@ export class WarehouseService {
   getWarehouse() {
     return this.wineService.get('warehouse');
   }
-  
 
   constructor(private wineService: WineService) { }
  
-  
+  updateCapsQuantity(patchData : any){
+    return this.wineService.patchWithToken("warehouse/updateCaps", patchData)
+  }
 
+
+  updateTagsQuantity( patchData : any){
+    return this.wineService.patchWithToken("warehouse/updateTags", patchData)
+  }
+
+
+  updateBottleQuantity( patchData : any){
+    return this.wineService.patchWithToken("warehouse/updateBottle", patchData)
+  }
+
+
+  updateBottleFormat( patchData : any){
+    return this.wineService.patchWithToken("warehouse/updateFormat", patchData)
+  }
 
 }

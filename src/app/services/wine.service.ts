@@ -82,16 +82,17 @@ export class WineService {
     return this.http.get(url, options)
   }
 
-  //patch call
-  patchObjects(serviceName: string, postData: any,  options) {
+  
+   //functions to make patch corse
+   patchObjects(serviceName: string, patchData: any,  options) {
     let url = environment.apiUrl + serviceName;
-    return this.http.patch(url, postData, options)
+    return this.http.patch(url, patchData, options)
 
-  }
+  } 
 
-  async patch(serviceName: string, data: any){
+  async patchWithToken(serviceName: string, patchData: any) {
     await this.getBearerToken();
-    return this.patchObjects(serviceName, data, this.options).toPromise()
+    return this.patchObjects(serviceName, patchData, this.options).toPromise()
 
   }
 
