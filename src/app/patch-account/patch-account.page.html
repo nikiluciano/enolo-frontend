@@ -1,51 +1,53 @@
 <ion-header>
-  <ion-toolbar class="toolbar" color="customColor">
-    <ion-icon class="arrow" slot="start" name="arrow-back-outline" [routerLink]="['/user-account']"></ion-icon>
-    <ion-title>Modifca account</ion-title>
-    
+  <ion-toolbar color="police-blue">
+    <ion-item lines="none" color="police-blue">
+      <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/user-account']"></ion-icon>
+      <ion-text class="title">Modifica Account</ion-text>
+    </ion-item>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
-  
-  
+<ion-content >
  
-  <ion-item  class="item1" >
-    <ion-input value="{{postData.nome}}" class="input" placeholder="Nome">
-    </ion-input>
-</ion-item>
+  <ion-list class="div1">
+  
 
-<ion-item  class="item" >
-  <ion-input class="input" value="{{postData.cognome}}" placeholder="Cognome">
-  </ion-input>
-</ion-item>
 
-<ion-item  class="item" >
-  <ion-input class="input" value="{{postData.username}}" placeholder="Username">
-  </ion-input>
-</ion-item>
+    <ion-item class="items" lines="none">
+      <ion-input class="input" value="{{postData.username}}" placeholder="Username">
+      </ion-input>
+    </ion-item>
 
-<ion-item  class="item" >
-  <ion-input class="input" value="{{postData.email}}" placeholder="E-mail">
-  </ion-input>
-</ion-item>
+    <ion-item class="items" lines="none">
+      <ion-input class="input" value="{{postData.email}}" placeholder="E-mail">
+      </ion-input>
+    </ion-item>
 
-<ion-item  class="item" >
-  <ion-input class="input" value="{{postData.indirizzo}}" placeholder="Indirizzo">
-  </ion-input>
-</ion-item>
-
-<ion-item  class="item" >
-  <ion-input class="input" value="{{postData.password}}" placeholder="Password">
-  </ion-input>
-</ion-item>
-
-<ion-button color="antique-fuchsia" class="btn-style" expand="block" shape="round" type="submit"
-(click)="signAction()">
-MODIFICA
-</ion-button>
  
+    <ion-item class="items" lines="none">
+      <ion-input value="{{postData.nome}}" class="input" placeholder="Nome">
+      </ion-input>
+    </ion-item>
 
+    <ion-item class="items" lines="none">
+      <ion-input class="input" value="{{postData.cognome}}" placeholder="Cognome">
+      </ion-input>
+    </ion-item>
+
+   
+
+    <ion-item class="items" lines="none">
+      <ion-input class="input" value="{{postData.indirizzo}}" placeholder="Indirizzo">
+      </ion-input>
+    </ion-item>
+
+
+  
+    <ion-button shape="round" class="login-btn" expand="block" type="submit">
+      Modifica
+    </ion-button>
+  </ion-list>
 
 <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="opacity: 90%; ">
   <ion-fab-button  color="antique-fuchsia" (click)="openMenu()" >
@@ -54,3 +56,4 @@ MODIFICA
 </ion-fab>
 
 </ion-content>
+

@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+
 import { MenuController } from '@ionic/angular';
+
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { set } from '../storage/data-storage'
+import { ToastService } from '../services/toast.service';
+
+
 
 
 
@@ -13,17 +21,20 @@ export class PatchAccountPage implements OnInit {
 
   postData = {
     email: 'prova@gmail.com',
-    nome: 'Nome_user',
-    cognome:'Cognome_user',
-    username:'prova',
+    nome: 'Simone',
+    cognome:'Cassetta',
+    username:'Simtape',
     telefono:'123 4567890',
-    indirizzo:'prova',
-    password:'prova'
+    indirizzo:'Via Genova',
+  
   }
   
+  
+  constructor( private toastService: ToastService,
+    private authService: AuthService,
+    private router: Router,
+    ){
 
-
-  constructor(private menu: MenuController){
    
   }
 
@@ -38,5 +49,4 @@ export class PatchAccountPage implements OnInit {
     this.menu.enable(true);
   }
 
- 
 }
