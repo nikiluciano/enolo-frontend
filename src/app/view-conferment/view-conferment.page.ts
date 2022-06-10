@@ -3,13 +3,15 @@ import { DataService } from '../services/DataService';
 import { ConfermentService } from '../services/conferment.service'
 import { findTheCurrentProcessForAConferment } from '../utilites/utilities-functions';
 import { MenuController } from '@ionic/angular';
-
+import { bottlingDataPatch } from '../utilites/utilities-functions';
 
 @Component({
   selector: 'app-view-conferment',
   templateUrl: './view-conferment.page.html',
   styleUrls: ['./view-conferment.page.scss'],
 })
+
+
 export class ViewConfermentPage implements OnInit {
 
   conferment: any;
@@ -21,6 +23,12 @@ export class ViewConfermentPage implements OnInit {
   description: string;
   waste: number;
 
+  bottles_quantity: number;
+  format: string;
+  caps_quantity: number;
+  tags_quantity: number
+
+
   constructor(private dataService: DataService,
     private confermentService: ConfermentService,
     private menu: MenuController
@@ -31,7 +39,7 @@ export class ViewConfermentPage implements OnInit {
   ngOnInit() {
     this.getConferment();
     console.log("CIAO INIT")
-
+    this.initiazileModels();
   }
 
   getConferment() {
@@ -40,16 +48,14 @@ export class ViewConfermentPage implements OnInit {
     this.confermentService.getConfermentById(this.idConferment).then((res) => {
       if (res) {
         this.loading = false;
+     
         this.conferment = findTheCurrentProcessForAConferment(res)
-        this.getNextProcess(this.conferment.current_process);
         console.log(JSON.stringify(this.conferment))
-        console.log("CIAO")
+        this.getNextProcess(this.conferment.current_process);
+        this.initiazileModels();
       }
-
     })
   }
-
-
 
 
 
@@ -70,7 +76,8 @@ export class ViewConfermentPage implements OnInit {
         case "Pigiatura":
           let patchDestemming = "destemmingProcess";
           let bodyDestemming = {
-            description: this.description
+            description: this.description,
+            waste: this.waste
           }
           await this.confermentService.patchProcess(patchDestemming, id, bodyDestemming)
           this.getConferment();
@@ -80,7 +87,7 @@ export class ViewConfermentPage implements OnInit {
           let patchWineMaking = "winemakingProcess";
           let bodyWineMaking = {
             description: this.description,
-            waste : this.waste
+            waste: this.waste
           }
           await this.confermentService.patchProcess(patchWineMaking, id, bodyWineMaking)
           this.getConferment();
@@ -90,7 +97,6 @@ export class ViewConfermentPage implements OnInit {
           let patchRacking = "rackingProcess";
           let bodyRacking = {
             description: this.description,
-            waste: this.waste
           }
           await this.confermentService.patchProcess(patchRacking, id, bodyRacking)
           this.getConferment();
@@ -109,30 +115,43 @@ export class ViewConfermentPage implements OnInit {
           break;
 
         case "Affinamento":
-          let patchBottling = "bottlingProcess sesto processo patchato";
-          let bodyPatchBottling = {
+          let patchBottling = "bottlingProcess"
+          let bodyBottling = {
+            bottles: {
+              bottles_quantity: this.bottles_quantity,
+              format: this.format
+            },
+            caps_quantity: this.caps_quantity,
+            tags_quantity: this.tags_quantity
 
           }
-          await this.confermentService.patchProcess(patchRefinement, id, bodyPatchBottling)
+          console.log(JSON.stringify(bodyBottling))
+          await this.confermentService.patchProcess(patchBottling, id, bodyBottling)
+            .catch(error => {
+
+            })
           this.getConferment();
           break;
 
-        case "bottling_process":
+        case "Imbottigliamento":
 
           break;
       }
     }
   }
 
+
   openMenu() {
     this.menu.open();
   }
+
 
   ionViewWillEnter() {
     this.menu.enable(true);
   }
 
-  getNextProcess(currentProcess: string){
+
+  getNextProcess(currentProcess: string) {
     switch (currentProcess) {
       case "Pigiatura":
         this.nextProcess = "Diraspatura";
@@ -158,10 +177,16 @@ export class ViewConfermentPage implements OnInit {
 
         break;
     }
-
-
   }
-  
 
 
+  initiazileModels() {
+    //this.bottlingData = "";
+    this.bottles_quantity = null;
+    this.caps_quantity = null;
+    this.tags_quantity = null;
+    this.format = null
+    this.description = null;
+    this.waste = null;
+  }
 }
