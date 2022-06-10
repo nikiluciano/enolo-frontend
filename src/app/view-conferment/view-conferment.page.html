@@ -222,7 +222,7 @@
         <ion-title *ngIf="conferment?.status=='DELIVERED' || conferment?.current_process==null"
           class="title-next-process">Inizia la lavorazione:</ion-title>
 
-        <ion-title class="next-process-style">{{nextProcess}}</ion-title>
+        <ion-title *ngIf="conferment?.status!='READY'" class="next-process-style">{{nextProcess}}</ion-title>
 
       </div>
 

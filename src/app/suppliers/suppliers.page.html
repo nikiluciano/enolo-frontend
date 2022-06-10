@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-item lines="none" color="police-blue">
+      <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/load']"></ion-icon>
+      <ion-label class="title-home ion-text-center">Fornitori</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let supplier of suppliers">
+     <ion-grid>
+      <ion-row class="row-name">
+        <ion-text>{{supplier.name}} {{supplier.surname}}</ion-text>
+      </ion-row>
+      <ion-row class="row-tel">
+        <ion-col >
+          <ion-row>
+            <ion-icon name="call-outline"></ion-icon>
+            <ion-label class="number">{{supplier.phone}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-icon name="mail-outline"></ion-icon>            
+            <ion-label class="address">
+              {{supplier.email}}
+            </ion-label>
+          </ion-row>
+        </ion-col>
+       
+      </ion-row>
+     </ion-grid> 
+
+    </ion-item>
+
+
+
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="opacity: 90%; ">
+    <ion-fab-button color="antique-fuchsia" (click)="openMenu()">
+      <ion-icon class="icon-fab" name="menu-outline" style="opacity: 100%; "></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
