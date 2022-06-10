@@ -8,15 +8,14 @@
 </ion-header>
 
 <ion-content>
+  <div *ngIf="currentAdmin==true">
 <ion-list>
   <ion-item-sliding>
     <ion-item>
-      <ion-label [routerLink]="['/show-user']">Pannello lavoratore</ion-label>
+      <ion-label [routerLink]="['/show-user']">Pannello Admin</ion-label>
       <ion-icon name="chevron-forward-outline"></ion-icon>
-
     </ion-item>
     <ion-item-options side="end">
-    
     </ion-item-options>
   </ion-item-sliding>
 
@@ -47,4 +46,8 @@
     </ion-item-options>
   </ion-item-sliding>
 </ion-list>
+</div>
+<div *ngIf="currentAdmin==false">
+<ion-label>vincenzo</ion-label>
+</div>
 </ion-content>

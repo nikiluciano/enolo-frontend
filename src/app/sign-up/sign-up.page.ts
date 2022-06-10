@@ -128,7 +128,7 @@ export class SignUpPage implements OnInit {
         'Riempire tutti i campi correttamente.'
       );
     }
-    console.log(this.postData.username);
+
     if (this.postData.username.length <= 0)
       this.missingUsername = true;
     else
@@ -162,8 +162,7 @@ export class SignUpPage implements OnInit {
     if (this.postData.email.length <= 0)
       this.missingEmail = true;
     else
-      this.missingEmail = false;
-      
+      this.missingEmail = false;  
   }
 
 

@@ -71,4 +71,9 @@ export class User {
         return get('session')
     }
 
+    async getRole(){
+    return get ("role")
+    
+    }
+
 }
