@@ -12,15 +12,14 @@ import { MenuController } from '@ionic/angular';
 })
 export class ViewConfermentPage implements OnInit {
 
-
-
-  thereArePendingConferments = false;
-  conferments = [];
-
   conferment: any;
   idConferment = '';
+  nextProcess: string;
 
   loading = true;
+
+  description: string;
+  waste: number;
 
   constructor(private dataService: DataService,
     private confermentService: ConfermentService,
@@ -31,6 +30,8 @@ export class ViewConfermentPage implements OnInit {
 
   ngOnInit() {
     this.getConferment();
+    console.log("CIAO INIT")
+
   }
 
   getConferment() {
@@ -40,26 +41,16 @@ export class ViewConfermentPage implements OnInit {
       if (res) {
         this.loading = false;
         this.conferment = findTheCurrentProcessForAConferment(res)
-        console.log("Conferimento caricato correttamente" + JSON.stringify(res))
+        this.getNextProcess(this.conferment.current_process);
+        console.log(JSON.stringify(this.conferment))
+        console.log("CIAO")
       }
 
     })
   }
 
-  async getPendingConferments() {
-    await this.confermentService.getPandingConferments().then(
-      (res: any) => {
-        if (res) {
-          this.conferment = res
-          this.thereArePendingConferments = true;
 
-        }
-        else {
-          this.thereArePendingConferments = false;
-        }
-      }
-    )
-  }
+
 
 
   async newProcess(currentProcess: string, status: string) {
@@ -68,7 +59,7 @@ export class ViewConfermentPage implements OnInit {
     if (status == null || status == "DELIVERED") {
       let patchWinePressing = "winePressingProcess"
       let bodyWinePressing = {
-        description: "giusto per provare"
+        description: this.description
 
       }
       this.confermentService.patchProcess(patchWinePressing, id, bodyWinePressing)
@@ -79,7 +70,7 @@ export class ViewConfermentPage implements OnInit {
         case "Pigiatura":
           let patchDestemming = "destemmingProcess";
           let bodyDestemming = {
-            description: "giusto per provare secondo processo patchato"
+            description: this.description
           }
           await this.confermentService.patchProcess(patchDestemming, id, bodyDestemming)
           this.getConferment();
@@ -88,8 +79,8 @@ export class ViewConfermentPage implements OnInit {
         case "Diraspatura":
           let patchWineMaking = "winemakingProcess";
           let bodyWineMaking = {
-            description: "giusto per provare terzo processo patchato",
-            waste : 150
+            description: this.description,
+            waste : this.waste
           }
           await this.confermentService.patchProcess(patchWineMaking, id, bodyWineMaking)
           this.getConferment();
@@ -98,8 +89,8 @@ export class ViewConfermentPage implements OnInit {
         case "Vinificazione":
           let patchRacking = "rackingProcess";
           let bodyRacking = {
-            description: "giusto per provare quarto processo patchato",
-            waste: 150
+            description: this.description,
+            waste: this.waste
           }
           await this.confermentService.patchProcess(patchRacking, id, bodyRacking)
           this.getConferment();
@@ -110,7 +101,7 @@ export class ViewConfermentPage implements OnInit {
         case "Svinatura":
           let patchRefinement = "refinementProcess";
           let bodyRefinement = {
-            description: "giusto per provare quinto processo patchato"
+            description: this.description,
 
           }
           await this.confermentService.patchProcess(patchRefinement, id, bodyRefinement)
@@ -140,6 +131,37 @@ export class ViewConfermentPage implements OnInit {
   ionViewWillEnter() {
     this.menu.enable(true);
   }
+
+  getNextProcess(currentProcess: string){
+    switch (currentProcess) {
+      case "Pigiatura":
+        this.nextProcess = "Diraspatura";
+        break;
+
+      case "Diraspatura":
+        this.nextProcess = "Vinificazione";
+        break;
+
+      case "Vinificazione":
+        this.nextProcess = "Svinatura";
+        break;
+
+      case "Svinatura":
+        this.nextProcess = "Affinamento";
+        break;
+
+      case "Affinamento":
+        this.nextProcess = "Imbottigliamento";
+        break;
+
+      case "Imbottigliamento":
+
+        break;
+    }
+
+
+  }
+  
 
 
 }
