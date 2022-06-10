@@ -13,7 +13,7 @@
 
             <div class="upper-menu-div">
               <div class="div-avatar">
-                <ion-avatar>
+                <ion-avatar  [routerLink]="['/user-account']">
                   <img
                     src="https://img.myloview.it/adesivi/user-icon-vector-male-person-symbol-profile-circle-avatar-sign-in-flat-color-glyph-pictogram-illustration-700-168677638.jpg" />
                 </ion-avatar>
@@ -21,10 +21,10 @@
 
               <div class="div-user-email">
                 <div class="div-row-user">
-                  <ion-label class="style-user">Vinicola</ion-label>
+                  <ion-label class="style-user">{{username}}</ion-label>
                 </div>
                 <div class="div-row-email">
-                  <ion-label class="style-email">Vinicola@gmail.com</ion-label>
+                  <ion-label class="style-email">{{email}}</ion-label>
                 </div>
               </div>
 

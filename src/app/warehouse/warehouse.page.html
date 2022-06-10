@@ -24,10 +24,13 @@
         </ion-row>
 
         <ion-row>
-          <ion-segment scrollable>
-            <ion-label class="style-lab-warehouse" *ngFor="let bottle of warehouse.bottles.formats">
+          <ion-segment  scrollable >
+            <ion-segment-button expand="block" fill="clear" class="style-color-segment" 
+              *ngFor="let bottle of warehouse.bottles.formats">
+            <ion-label class="style-lab-warehouse" >
               {{bottle.quantity}}<sub class="style-sub">{{bottle.format}} </sub>
             </ion-label>
+            </ion-segment-button>
           </ion-segment>
           <!--  <swiper [pagination]="true" >
             <ng-template swiperSlide *ngFor="let bottle of warehouse.bottles.formats" >

@@ -261,8 +261,8 @@
 .title-bar-warehouse {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 15px;
-  margin: auto;
+  font-size: 20px;
+ 
   font-family: "quicksand-regular";
 }
 .card-conf-style{
@@ -283,3 +283,133 @@ ion-toolbar{
  .icon-fab{
    color: white;
  }
+ @media (max-width: 392px) {
+
+  .style-labs-c {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-family: "quicksand-regular";
+  }
+
+  .style-labs-peso {
+
+    font-size: 22px;
+    font-family: "quicksand-regular";
+  }
+
+  .calendar-label-style {
+    font-size: 13px;
+    font-family: "quicksand-regular";
+  }
+
+  .style-labs-f {
+    font-size: 16px;
+    font-family: "quicksand-regular";
+    color: #8c8c8c;
+  }
+
+  .style-kg {
+    font-size: 16px;
+    font-family: "quicksand-regular";
+  }
+  .icon-style {
+    height: 15px;
+  
+  }
+}
+
+@media (max-width: 356px) {
+
+  .style-labs-c {
+
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: "quicksand-regular";
+
+  }
+
+  .style-labs-peso {
+
+    font-size: 20px;
+    font-family: "quicksand-regular";
+
+  }
+
+  .calendar-label-style {
+
+    font-size: 11px;
+    font-family: "quicksand-regular";
+
+  }
+
+  .style-labs-f {
+
+    font-size: 14px;
+    font-family: "quicksand-regular";
+    color: #8c8c8c;
+
+  }
+
+  .style-kg {
+
+    font-size: 14px;
+    font-family: "quicksand-regular";
+  }
+  .icon-style {
+    height: 12px;
+  
+  }
+}
+
+@media (max-width: 330px) {
+
+  .style-labs-c {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-family: "quicksand-regular";
+
+  }
+
+  .style-labs-peso {
+
+    font-size: 17px;
+    font-family: "quicksand-regular";
+
+  }
+
+  .calendar-label-style {
+    font-size: 8px;
+    font-family: "quicksand-regular";
+
+  }
+
+  .style-labs-f {
+    font-size: 11px;
+    font-family: "quicksand-regular";
+    color: #8c8c8c;
+
+  }
+
+  .style-kg {
+    font-size: 11px;
+    font-family: "quicksand-regular";
+  }
+  .icon-style {
+    height: 9px;
+  
+  }
+}
+.title-bar-warehouse-number{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  margin-right: auto;
+  font-family: "quicksand-regular";
+  color:#3B5360;
+}

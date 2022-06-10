@@ -64,6 +64,7 @@ ion-toolbar {
     margin-top: 15px;
     font-family: "quicksand-regular";
     font-size: 24px;
+    color:#3B5360;
 }
 
 .style-col {
@@ -80,6 +81,7 @@ ion-toolbar {
     font-family: "quicksand-regular";
     font-size: 24px;
     margin-left: 50px;
+    color:#3B5360;
 }
 
 .style-title-label-caps {
@@ -107,13 +109,14 @@ ion-toolbar {
     width: 250px;
     height: 60px;
     border-radius: 400px;
-    --background: #BEE5D3;
-    color:black;
+    --background: #8B5E83;
 }
 .style-picker{
     height: 80px;
     font-family: "quicksand-regular";
     padding-left: 15px;
+    --indicator-color:#8B5E83;
+    --color-checked:#8B5E83;
 }
 .style-picker-tags{
     margin-right: 25px;
@@ -125,6 +128,7 @@ ion-toolbar {
     font-family: "quicksand-regular";
     font-size: 24px;
     margin-left: 5px;
+    color:#8B5E83;
 }
 .style-title-label-tags-picker{
     font-family: "quicksand-regular";
@@ -142,4 +146,9 @@ ion-toolbar {
     font-family: "quicksand-regular";
     font-size: 24px;
     margin-left: 5px;
+    color:#8B5E83;
+}
+.style-color-segment{
+    --indicator-color:#3B5360;
+    --color-checked:#3B5360;
 }

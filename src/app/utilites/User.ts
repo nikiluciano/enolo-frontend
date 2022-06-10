@@ -71,4 +71,24 @@ export class User {
         return get('session')
     }
 
+    async getSavedUsername(){
+        return get('username')
+    }
+
+    getName(){
+        return this.name
+    }
+
+    getUsername(){
+        return this.username
+    }
+
+    getSurname(){
+        return this.surname
+    }
+
+    getEmail(){
+        return this.email
+    }
+    
 }

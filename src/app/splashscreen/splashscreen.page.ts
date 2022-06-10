@@ -25,8 +25,11 @@ export class SplashscreenPage implements OnInit {
 
   async checkSession() {
     const sessionExists = await this.user.checkSession()
-    if (sessionExists)
+    if (sessionExists){
+      const username=await this.user.getSavedUsername()
+      this.user.setUser(username)
       this.router.navigate(['/home'])
+    }
     else
       this.router.navigate(['/login'])
 
