@@ -33,7 +33,10 @@ const routes: Routes = [
   },
   {
     path: 'settings',
-    loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule)
+    loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule),
+    data: {
+      role: 'ADMIN'
+    }
   },
   {
     path: 'forgot-pw',
@@ -67,7 +70,8 @@ const routes: Routes = [
   {
     path: 'show-user',
     loadChildren: () => import('./show-user/show-user.module').then( m => m.ShowUserPageModule)
-  },  {
+  },
+  {
     path: 'suppliers',
     loadChildren: () => import('./suppliers/suppliers.module').then( m => m.SuppliersPageModule)
   }

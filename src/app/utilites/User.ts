@@ -71,6 +71,12 @@ export class User {
         return get('session')
     }
 
+
+    async getRole(){
+    return get ("role")
+    
+    }
+
     async getSavedUsername(){
         return get('username')
     }
@@ -90,5 +96,4 @@ export class User {
     getEmail(){
         return this.email
     }
-    
-}
+    }
