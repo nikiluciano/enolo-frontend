@@ -36,7 +36,7 @@ export class ConfermentService {
   }
 
   patchProcess(process: string, id: string, data: any){
-    return this.wineService.patch(this.WINE_CONFERMENT + "/" +  process  + "/" + id, data)
+    return this.wineService.patchWithToken(this.WINE_CONFERMENT + "/" +  process  + "/" + id, data)
 
   }
 }

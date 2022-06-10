@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../../assets/font/Quicksand-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'quicksand-semibold';
+    src: url('../../assets/font/Quicksand-SemiBold.ttf')
+}
+
+ion-toolbar {
+    --background: #3B5360;
+
+}
+
+.title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "quicksand-semibold";
+    font-size: 20px;
+    color: white;
+}
+
+.icon-toll-style {
+    color: white;
+}
+
+.style-title {
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: "quicksand-semibold";
+    padding-left: 10px;
+}
+
+.style-title-label {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-family: "quicksand-regular";
+    padding-left: 20px;
+}
+
+.style-theshold {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    margin: auto;
+    font-family: "quicksand-regular";
+}
+
+.style-button-refill {
+    font-family: "quicksand-regular";
+    margin: auto;
+    margin-top: 15px;
+    width: 250px;
+    height: 60px;
+    border-radius: 400px;
+    --background:#8B5E83;
+}
+
+.style-number-caps {
+    margin-left: 50px;
+    margin-top: 15px;
+    font-family: "quicksand-regular";
+    font-size: 24px;
+}
+
+.style-col {
+    margin-bottom: 50px;
+}
+
+.style-lab-warehouse {
+    font-size: 50px;
+    font-family: "quicksand-regular";
+    margin-bottom: 40px;
+}
+
+.style-number-tags {
+    font-family: "quicksand-regular";
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+.style-title-label-caps {
+    margin-bottom:50px;
+    font-size: 24px;
+    font-family: "quicksand-regular";
+    padding-left: 20px;
+}
+
+.style-title-label-tags {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-family: "quicksand-regular";
+    padding-left: 20px;
+}
+
+.style-sub {
+    font-size: 20px;
+    font-family: "quicksand-regular";
+}
+.style-button-save{
+    font-family: "quicksand-regular";
+    margin: auto;
+    margin-top: 15px;
+    width: 250px;
+    height: 60px;
+    border-radius: 400px;
+    --background: #BEE5D3;
+    color:black;
+}
+.style-picker{
+    height: 80px;
+    font-family: "quicksand-regular";
+    padding-left: 15px;
+}
+.style-picker-tags{
+    margin-right: 25px;
+    font-family:"quicksand-regular";
+    font-size:24px;
+    margin-top: 5px;
+}
+.style-number-tags-picker{
+    font-family: "quicksand-regular";
+    font-size: 24px;
+    margin-left: 5px;
+}
+.style-title-label-tags-picker{
+    font-family: "quicksand-regular";
+    font-size: 24px;
+    padding-left:15px ;
+    margin-top: 5px;
+}
+.style-title-label-caps-picker{
+    font-family: "quicksand-regular";
+    font-size: 24px;
+    padding-left:15px ;
+    margin-top: 10px;
+}
+.style-number-caps-picker{
+    font-family: "quicksand-regular";
+    font-size: 24px;
+    margin-left: 5px;
+}
