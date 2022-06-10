@@ -48,8 +48,9 @@ export class ViewConfermentPage implements OnInit {
     this.confermentService.getConfermentById(this.idConferment).then((res) => {
       if (res) {
         this.loading = false;
-        console.log(JSON.stringify(this.conferment))
+     
         this.conferment = findTheCurrentProcessForAConferment(res)
+        console.log(JSON.stringify(this.conferment))
         this.getNextProcess(this.conferment.current_process);
         this.initiazileModels();
       }

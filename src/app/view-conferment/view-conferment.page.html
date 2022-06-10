@@ -14,7 +14,9 @@
     <ion-card *ngIf="!loading">
       <ion-col>
         <ion-row class="style-row-title">
-          <ion-label class="title-c"> In {{conferment?.current_process}} </ion-label>
+          <ion-label *ngIf="conferment?.status=='PENDING'" class="title-c"> In {{conferment?.current_process}} </ion-label>
+          <ion-label *ngIf="conferment?.status=='DELIVERED'" class="title-c"> Lavorazione ancora non iniziata</ion-label>
+          <ion-label *ngIf="conferment?.status=='READY'" class="title-c"> Lavorazione conclusa</ion-label>
         </ion-row>
 
 
@@ -225,7 +227,7 @@
       </div>
 
 
-      <div *ngIf="conferment?.current_process!='Affinamento'">
+      <div *ngIf="conferment?.current_process!='Affinamento' && conferment?.status != 'READY'">
         <ion-item class="description-it" lines="none">
           <ion-input class="input" name="description" placeholder="Inserisci la descrizione" [(ngModel)]="description">
           </ion-input>
@@ -270,7 +272,7 @@
 
       </div>
 
-      <ion-button shape="round" expand="block" *ngIf="conferment?.current_process != null"
+      <ion-button shape="round" expand="block" *ngIf="conferment?.status != 'READY'"
         (click)="newProcess(conferment?.current_process, conferment?.status)">
         Avanza
       </ion-button>
