@@ -33,6 +33,7 @@ export class PatchAccountPage implements OnInit {
   constructor( private toastService: ToastService,
     private authService: AuthService,
     private router: Router,
+    private menu: MenuController
     ){
 
    
