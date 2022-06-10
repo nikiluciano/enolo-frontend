@@ -30,7 +30,7 @@ export class WarehousePage implements OnInit {
   private selectedNumber: string;
 
 
-  p
+  
   constructor(public warehouseService: WarehouseService,
               public menu:MenuController) { }
 
