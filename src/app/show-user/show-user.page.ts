@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { promise } from 'protractor';
 import { UserService } from '../services/user.service';
 import { WineService } from '../services/wine.service';
 import { MenuController } from '@ionic/angular';
@@ -19,7 +18,9 @@ user:any;
 contentLoaded=false;
 
   
-  constructor(public userService : UserService, public WineService : WineService) { 
+  constructor(public userService : UserService, 
+    public WineService : WineService,
+    private menu: MenuController) { 
 
 
 

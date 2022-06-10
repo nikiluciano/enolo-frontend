@@ -17,7 +17,9 @@ export class SettingsPage implements OnInit {
   currentAdmin=false;
   contentLoaded=false;
 
-  constructor(public userService : UserService, public WineService : WineService) { }
+  constructor(public userService : UserService,
+      public WineService : WineService,
+      private menu: MenuController) { }
 
 
   ngOnInit() {
