@@ -261,8 +261,8 @@
 .title-bar-warehouse {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 15px;
-  margin: auto;
+  font-size: 20px;
+ 
   font-family: "quicksand-regular";
 }
 .card-conf-style{
@@ -404,4 +404,12 @@ ion-toolbar{
     height: 9px;
   
   }
+}
+.title-bar-warehouse-number{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  margin-right: auto;
+  font-family: "quicksand-regular";
+  color:#3B5360;
 }

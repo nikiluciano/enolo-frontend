@@ -33,6 +33,7 @@
     "@ionic/cordova-builders": "^6.1.0",
     "@types/animejs": "^3.1.4",
     "animejs": "^3.2.1",
+    "chart.js": "^3.8.0",
     "cordova": "^11.0.0",
     "ng2-search-filter": "^0.5.1",
     "rxjs": "~6.6.0",

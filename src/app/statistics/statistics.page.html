@@ -1,10 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>statistics</ion-title>
+    <ion-item lines="none" color="police-blue">
+      <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
+      <ion-text class="title">Statistiche</ion-text>
+    </ion-item>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card-header>Scarto</ion-card-header>
+    <ion-card-content>
+      <canvas #doughnutCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+    </ion-card-content>
+  </ion-card>
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="opacity: 90%; ">
     <ion-fab-button  color="antique-fuchsia" (click)="openMenu()" >
       <ion-icon class="icon-fab" name="menu-outline" style="opacity: 100%; "></ion-icon>
