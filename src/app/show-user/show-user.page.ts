@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { promise } from 'protractor';
 import { UserService } from '../services/user.service';
 import { WineService } from '../services/wine.service';
+import { MenuController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-show-user',
@@ -23,10 +25,12 @@ contentLoaded=false;
 
   }
 
+
   ngOnInit() {
 this.getShowUser()
 this.showAdmin()
   }
+
 
 async showAdmin(){
 if (this.user.role=='ADMIN'){
@@ -53,6 +57,13 @@ console.log ("sono io bro")
   }
 
 
+  openMenu() {
+    this.menu.open();
+  }
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
 
 
 }

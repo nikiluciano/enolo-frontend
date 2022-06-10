@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import anime from 'animejs';
+import { MenuController } from '@ionic/angular';
 import { User } from '../utilites/User';
-
 
 @Component({
   selector: 'app-splashscreen',
@@ -12,7 +11,8 @@ import { User } from '../utilites/User';
 export class SplashscreenPage implements OnInit {
 
   constructor(private user: User,
-    private router: Router) { }
+    private router: Router,
+    private menu: MenuController) { }
 
   ngOnInit() {
     setTimeout(() => {
@@ -22,13 +22,22 @@ export class SplashscreenPage implements OnInit {
 
   }
 
+
   async checkSession() {
     const sessionExists = await this.user.checkSession()
-    if (sessionExists)
+    if (sessionExists){
+      const username=await this.user.getSavedUsername()
+      this.user.setUser(username)
       this.router.navigate(['/home'])
+    }
     else
       this.router.navigate(['/login'])
 
+  }
+
+  
+  ionViewWillEnter() {
+    this.menu.enable(false);
   }
 
 }

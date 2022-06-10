@@ -141,3 +141,13 @@ export function findTheCurrentProcessForAConferment(conferment: any) {
     }
     return obj;
 }
+
+
+export type bottlingDataPatch = {
+    bottles: {
+      bottles_quantity: number,
+      format: string
+    }
+    caps_quantity: number;
+    tags_quantity: number
+  }

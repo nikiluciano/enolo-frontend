@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WineService } from '../services/wine.service';
 import { UserService } from '../services/user.service';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class SettingsPage implements OnInit {
   contentLoaded=false;
 
   constructor(public userService : UserService, public WineService : WineService) { }
+
 
   ngOnInit() {
   this.getUser
@@ -48,5 +50,14 @@ export class SettingsPage implements OnInit {
           console.log(this.user)
         });
     }
+
+
+  openMenu() {
+    this.menu.open();
+  }
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
 
 }
