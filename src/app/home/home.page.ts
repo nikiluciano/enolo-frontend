@@ -5,12 +5,16 @@ import { Storage } from '@capacitor/storage';
 import { ConfermentService } from '../services/conferment.service';
 import { Style } from '@capacitor/status-bar';
 import { MenuController } from '@ionic/angular';
+import { ViewEncapsulation } from '@angular/core';
+import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
 
+SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomePage implements OnInit {
   [x: string]: any;
