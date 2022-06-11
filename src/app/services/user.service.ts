@@ -17,15 +17,9 @@ export class UserService {
     return this.wineService.get('users');
   }
 
-  getShowUser() {
-    return this.wineService.get('showUser');
-  }
-
+ 
   changeWorkerRole(username: string, patchData: any){
     return this.wineService.patchWithToken('users/role/' + username, patchData)
-
   }
 
-  
-  
 }

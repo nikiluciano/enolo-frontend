@@ -18,17 +18,17 @@ export class WarehouseService {
   constructor(private wineService: WineService) { }
  
   updateCapsQuantity(patchData : any){
-    return this.wineService.patchWithToken("warehouse/updateCaps", patchData)
+    return this.wineService.patchWithToken("warehouse/update_caps", patchData)
   }
 
 
   updateTagsQuantity( patchData : any){
-    return this.wineService.patchWithToken("warehouse/updateTags", patchData)
+    return this.wineService.patchWithToken("warehouse/update_tags", patchData)
   }
 
 
   updateBottleQuantity( patchData : any){
-    return this.wineService.patchWithToken("warehouse/updateBottle", patchData)
+    return this.wineService.patchWithToken("warehouse/update_bottle", patchData)
   }
 
 

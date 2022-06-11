@@ -47,7 +47,6 @@ export class HomePage implements OnInit {
 
   }
 
-  
 
   doRefresh(event) {
     this.getWarehouse()
@@ -58,6 +57,7 @@ export class HomePage implements OnInit {
 
   }
 
+
   async getWarehouse() {
     await this.warehouseService.getWarehouse().then(
       (res: any) => {
@@ -67,10 +67,11 @@ export class HomePage implements OnInit {
 
         } else {
 
-      
+
         }
       })
   }
+
 
   async getPendingConferments() {
     await this.confermentService.getPandingConferments().then(
@@ -79,18 +80,18 @@ export class HomePage implements OnInit {
           this.contentLoaded = true
           this.conferments = res
           this.thereArePendingConferments = true;
-
           this.filterConferments()
           //this.fillTheProgressBar()
-
-        }
-        else {
+        } else
           this.thereArePendingConferments = false;
-        }
       }
-    )
+    ).catch((err) => {
+
+    })
   }
-  
+
+
+
   findTheCurrentProcess() {
 
     this.filteredConferments.forEach(element => {
@@ -160,7 +161,7 @@ export class HomePage implements OnInit {
     }
   }
 
-  
+
   openMenu() {
     this.menu.open();
   }

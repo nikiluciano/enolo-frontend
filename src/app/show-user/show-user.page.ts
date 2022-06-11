@@ -5,6 +5,7 @@ import { MenuController } from '@ionic/angular';
 import { ValueAccessor } from '@ionic/angular/directives/control-value-accessors/value-accessor';
 import { AlertController } from '@ionic/angular';
 import { DataService } from '../services/DataService';
+import { ToastService } from '../services/toast.service';
 
 
 @Component({
@@ -26,7 +27,8 @@ export class ShowUserPage implements OnInit {
   constructor(public userService: UserService,
     private menu: MenuController,
     private alertCtrl: AlertController,
-    private dataService: DataService) {
+    private dataService: DataService,
+    private toastService: ToastService) {
 
   }
 
@@ -91,18 +93,21 @@ export class ShowUserPage implements OnInit {
               this.userService.changeWorkerRole(this.dataService.getUser().username, patchData)
                 .then(() => {
                   this.getAllWorkers()
+                }).catch((err) => {
+                  this.toastService.presentToast(err.msg)
                 })
             } else {
-            
-                let patchData = {
-                  username: username,
-                  role: 'ADMIN'
-                }
-                this.userService.changeWorkerRole(this.dataService.getUser().username, patchData)
-                  .then(() => {
-                    this.getAllWorkers()
-                  })
-              
+
+              let patchData = {
+                username: username,
+                role: 'ADMIN'
+              }
+              this.userService.changeWorkerRole(this.dataService.getUser().username, patchData)
+                .then(() => {
+                  this.getAllWorkers()
+                }).catch((err) => {
+                  this.toastService.presentToast(err.msg)
+                })
             }
           }
         }
@@ -110,7 +115,5 @@ export class ShowUserPage implements OnInit {
     });
 
     await alert.present();
-
   }
-
 }

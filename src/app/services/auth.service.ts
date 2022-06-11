@@ -18,14 +18,11 @@ export class AuthService {
 
   }
 
-
-
-
-  login(postData: any): Observable<any> {
+  login(postData: any): Promise<any> {
     return this.wineService.post('login', postData);
   }
 
-  signup(postData: any): Observable<any> {
+  signup(postData: any): Promise<any> {
     return this.wineService.post('signup', postData);
   }
 

@@ -9,6 +9,6 @@ export class StatisticsService {
   constructor(public wineService:WineService) { }
   
   getWaste() {
-    return this.wineService.get('statistics/waste-per-quantity');
+    return this.wineService.get('statistics/waste_per_quantity');
   }
 }
