@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from '../utilites/User';
 
 @Injectable({
     providedIn: 'root'
@@ -7,8 +8,9 @@ import { Injectable } from '@angular/core';
 export class DataService{
 
     idConfermentToView = '';
+    
 
-    constructor(){
+    constructor(private user: User){
 
     }
 
@@ -22,6 +24,15 @@ export class DataService{
     getIdConfermentToView(){
         return this.idConfermentToView
 
+    }
+
+    getUserDataStored(){
+        this.user.getCurrentStorage();
+
+    }
+
+    getUser(){
+        return this.user;
     }
 
 }

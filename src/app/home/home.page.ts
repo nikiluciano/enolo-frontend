@@ -5,6 +5,8 @@ import { Storage } from '@capacitor/storage';
 import { ConfermentService } from '../services/conferment.service';
 import { Style } from '@capacitor/status-bar';
 import { MenuController } from '@ionic/angular';
+import { DataService } from '../services/DataService';
+import { AppComponent } from '../app.component';
 
 
 @Component({
@@ -27,15 +29,25 @@ export class HomePage implements OnInit {
 
   constructor(public warehouseService: WarehouseService,
     public confermentService: ConfermentService,
-    private menu: MenuController) { }
+    private menu: MenuController,
+    private dataService: DataService,
+    private menuSet: AppComponent) { }
 
 
 
   ngOnInit() {
     this.getWarehouse()
     this.getPendingConferments()
+
   }
 
+  ionViewWillEnter() {
+    this.menu.enable(true)
+    this.menuSet.checkUser()
+
+  }
+
+  
 
   doRefresh(event) {
     this.getWarehouse()
@@ -152,12 +164,6 @@ export class HomePage implements OnInit {
   openMenu() {
     this.menu.open();
   }
-
-
-  ionViewWillEnter() {
-    this.menu.enable(true);
-  }
-
 
 
 }

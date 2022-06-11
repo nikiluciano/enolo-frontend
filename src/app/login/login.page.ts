@@ -6,6 +6,7 @@ import { get, set } from '../storage/data-storage'
 import { Network } from '@capacitor/network';
 import { User } from '../utilites/User';
 import { MenuController } from '@ionic/angular';
+import { DataService } from '../services/DataService';
 
 
 @Component({
@@ -32,7 +33,8 @@ export class LoginPage implements OnInit {
     private router: Router,
     private toastService: ToastService,
     private user: User,
-    private menu: MenuController
+    private menu: MenuController,
+    private dataService: DataService
   ) { }
 
   ngOnInit() {
@@ -83,15 +85,16 @@ export class LoginPage implements OnInit {
   async loginAction() {
     if (this.validateInputs()) {
       this.isLoading = true;
-      this.authService.login(this.postData).subscribe(
+      await this.authService.login(this.postData).subscribe(
         (res: any) => {
           this.isLoading = false;
 
           if (res) {
             this.router.navigate(['home']);
             let token = res.token;
-            set('token', token);
-            this.user.setUser(this.postData.username)
+            set('token', token).then(() =>
+              this.dataService.getUser().setUser(this.postData.username));
+
           }
         },
         (error: any) => {

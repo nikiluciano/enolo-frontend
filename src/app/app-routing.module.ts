@@ -74,7 +74,11 @@ const routes: Routes = [
   {
     path: 'suppliers',
     loadChildren: () => import('./suppliers/suppliers.module').then( m => m.SuppliersPageModule)
+  },  {
+    path: 'add-suppliers',
+    loadChildren: () => import('./add-suppliers/add-suppliers.module').then( m => m.AddSuppliersPageModule)
   }
+
 
 ];
 

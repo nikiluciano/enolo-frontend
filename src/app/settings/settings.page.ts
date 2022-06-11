@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WineService } from '../services/wine.service';
 import { UserService } from '../services/user.service';
 import { MenuController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,46 +14,20 @@ import { MenuController } from '@ionic/angular';
 
 export class SettingsPage implements OnInit {
 
-  user:any;
-  currentAdmin=false;
-  contentLoaded=false;
+  user: any;
+  currentAdmin = false;
+  contentLoaded = false;
+  pages = []
 
-  constructor(public userService : UserService,
-      public WineService : WineService,
-      private menu: MenuController) { }
+  constructor(public userService: UserService,
+    public WineService: WineService,
+    private menu: MenuController,
+    private router: Router) { }
 
 
   ngOnInit() {
-  this.getUser
-   this.showAdmin()
-
+    this.initializePages()
   }
-
-   async showAdmin(){
-     if (this.user){
-     this.currentAdmin=true 
-    }
-
-   }
-
-
-    async getUser(username:string) {
-      await this.userService.getUser(username).then(
-        (res: any) => {
-          if (res) {
-            this.contentLoaded = true
-            this.user = res
-            console.log(JSON.stringify(this.user))
-  
-          } else {
-  
-        
-          }
-
-          console.log(this.user)
-        });
-    }
-
 
   openMenu() {
     this.menu.open();
@@ -60,6 +35,20 @@ export class SettingsPage implements OnInit {
 
   ionViewWillEnter() {
     this.menu.enable(true);
+  }
+
+  initializePages() {
+    this.pages = [
+      { title: 'Gestione lavoratori', icon: 'accessibility-outline', route: 'show-user' },
+      { title: 'Info', icon: 'information-outline', route: '' },
+      { title: "Guida all'uso", icon: 'book-outline', route: '' },
+    ]
+
+  }
+
+  goAhead(route: string){
+    this.router.navigate([route])
+
   }
 
 }
