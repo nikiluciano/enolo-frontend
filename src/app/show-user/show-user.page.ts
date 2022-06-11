@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { WineService } from '../services/wine.service';
 import { MenuController } from '@ionic/angular';
+import { ValueAccessor } from '@ionic/angular/directives/control-value-accessors/value-accessor';
+import { AlertController } from '@ionic/angular';
+import { DataService } from '../services/DataService';
 
 
 @Component({
@@ -13,50 +16,46 @@ export class ShowUserPage implements OnInit {
 
 
 
-currentAdmin:any;
-user:any;
-contentLoaded=false;
+  currentAdmin: any;
+  user: any;
+  contentLoaded = false;
+  workers = [];
+  values = [];
+  loading = false
 
-  
-  constructor(public userService : UserService, 
-    public WineService : WineService,
-    private menu: MenuController) { 
-
-
+  constructor(public userService: UserService,
+    private menu: MenuController,
+    private alertCtrl: AlertController,
+    private dataService: DataService) {
 
   }
 
 
   ngOnInit() {
-this.getShowUser()
-this.showAdmin()
+    this.getAllWorkers();
   }
 
+  async getAllWorkers() {
+    this.loading = true;
+    this.userService.getWorkers()
+      .then((res) => {
+        this.workers = res;
+        this.workers.sort((a, b) => (a.role > b.role) ? 1 : ((b.role > a.role) ? -1 : 0))
+        this.values = []
+        this.workers.forEach((element) => {
+          if (element.role == 'ADMIN')
+            this.values.push(true)
+          else
+            this.values.push(false)
 
-async showAdmin(){
-if (this.user.role=='ADMIN'){
-this.currentAdmin=this.user
-console.log ("sono io bro")
+        })
+        this.loading = false
+      })
+      .catch((err) => {
 
-}
-
-
-}
-
-  async getShowUser() {
-    await this.userService.getShowUser().then(
-      (res: any) => {
-        if (res) {
-          this.contentLoaded = true
-          this.user = res
-
-        } else {
-
-      
-        }
+        //TODO: add toast
       })
   }
-
 
   openMenu() {
     this.menu.open();
@@ -64,7 +63,54 @@ console.log ("sono io bro")
 
   ionViewWillEnter() {
     this.menu.enable(true);
+    this.getAllWorkers();
   }
 
+  async changeRole(role: string, username: string) {
+    const alert = await this.alertCtrl.create({
+      header: 'Confirm!',
+      message: 'Sei sicuro di cambiare lo stato',
+      buttons: [
+        {
+          text: 'Annulla',
+          role: 'cancel',
+          cssClass: 'secondary',
+          id: 'cancel-button',
+          handler: () => {
+            console.log('rifiutato');
+          }
+        }, {
+          text: 'Conferma',
+          id: 'confirm-button',
+          handler: () => {
+            if (role == "ADMIN") {
+              let patchData = {
+                username: username,
+                role: 'WORKER'
+              }
+              this.userService.changeWorkerRole(this.dataService.getUser().username, patchData)
+                .then(() => {
+                  this.getAllWorkers()
+                })
+            } else {
+            
+                let patchData = {
+                  username: username,
+                  role: 'ADMIN'
+                }
+                this.userService.changeWorkerRole(this.dataService.getUser().username, patchData)
+                  .then(() => {
+                    this.getAllWorkers()
+                  })
+              
+            }
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+
+  }
 
 }

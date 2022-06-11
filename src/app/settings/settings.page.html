@@ -8,50 +8,16 @@
 </ion-header>
 
 <ion-content>
-  <div *ngIf="currentAdmin==true">
-<ion-list>
-  <ion-item-sliding>
-    <ion-item>
-      <ion-label [routerLink]="['/show-user']">Pannello Admin</ion-label>
-      <ion-icon name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-    <ion-item-options side="end">
-    </ion-item-options>
-  </ion-item-sliding>
 
-  <ion-item-sliding>
-    <ion-item>
-      <ion-label>Item</ion-label>
-    </ion-item>
-    <ion-item-options side="end">
-      <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
-
-  <ion-item-sliding>
-    <ion-item>
-      <ion-label>Item</ion-label>
-    </ion-item>
-    <ion-item-options side="end">
-      <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
-
-  <ion-item-sliding>
-    <ion-item>
-      <ion-label>Item</ion-label>
-    </ion-item>
-    <ion-item-options side="end">
-      <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
+<ion-list class="list">
+  <ion-item *ngFor="let page of pages" (click)="goAhead(page.route)">
+    <ion-icon class="icon" [name] ="page.icon"></ion-icon>
+   <ion-text class="page">{{page.title}}</ion-text>
+   
+     </ion-item>
 </ion-list>
 
-</div>
-<div *ngIf="currentAdmin==false">
-<ion-label>vincenzo</ion-label>
-</div>
-
+  
 
 <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="opacity: 90%; ">
   <ion-fab-button  color="antique-fuchsia" (click)="openMenu()" >
