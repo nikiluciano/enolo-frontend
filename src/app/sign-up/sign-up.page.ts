@@ -83,7 +83,7 @@ export class SignUpPage implements OnInit {
   }
 
   ngOnInit() {
-   }
+  }
 
 
 
@@ -107,27 +107,23 @@ export class SignUpPage implements OnInit {
       this.postData.email &&
       username.length > 0 &&
       email.length > 0 &&
-      pass.length > 0 
-      
+      pass.length > 0
+
     );
   }
 
   signAction() {
     if (this.validateInputs()) {
-      this.authService.signup(this.postData).subscribe(
-        (res: any) => {
-          if (res) {
-            this.router.navigate(['login']);
-          } else {
-            this.toastService.presentToast(
-              'Data alreay exists, please enter new details.'
-            );
-          }
-        },
-        (error: any) => {
-          this.toastService.presentToast('Network Issue.');
+      this.authService.signup(this.postData)
+        .then( res=>{
+          this.router.navigate(['login']);
+          this.toastService.presentToast("Utente registrato correttamente");
+        } 
+      )
+        .catch( err =>{
+          this.toastService.presentToast(err.msg);
         }
-      );
+      )
     } else {
       this.toastService.presentToast(
         'Riempire tutti i campi correttamente.'
@@ -167,7 +163,7 @@ export class SignUpPage implements OnInit {
     if (this.postData.email.length <= 0)
       this.missingEmail = true;
     else
-      this.missingEmail = false;  
+      this.missingEmail = false;
   }
 
 

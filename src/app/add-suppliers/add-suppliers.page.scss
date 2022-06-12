@@ -1,0 +1,72 @@
+@font-face { 
+    font-family: 'quicksand-regular'; 
+    src: url('../../assets/font/Quicksand-Regular.ttf') 
+} 
+ 
+@font-face { 
+    font-family: 'quicksand-semibold'; 
+    src: url('../../assets/font/Quicksand-SemiBold.ttf') 
+} 
+ 
+ 
+ 
+ion-toolbar { 
+  --background: #3B5360; 
+ 
+} 
+ 
+.arrow { 
+    color: white; 
+    margin-left: 0%; 
+    width: 22px; 
+    height: 22px; 
+} 
+ 
+.title { 
+    text-align: start; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-family: "quicksand-semibold"; 
+    font-size: 20px; 
+    color: white; 
+} 
+ 
+.login-btn { 
+    height: 40px; 
+    --background: #8B5E83; 
+    font-family: "quicksand-regular"; 
+     
+    } 
+    .btn-style { 
+      margin-top: 60px; 
+     
+    } 
+ 
+ 
+ 
+ 
+   
+    .icon-fab{ 
+      color: white; 
+    } 
+ 
+    .it { 
+ 
+        border: 1px solid #F1F1F1; 
+        border-radius: 25px; 
+        margin-bottom: 20px; 
+        font-family: "quicksand-regular"; 
+       
+      } 
+ 
+      .item-wrong { 
+        border: 1px solid red; 
+        border-radius: 25px; 
+        margin-bottom: 30px; 
+    } 
+     
+ 
+  .div1{ 
+    margin-top: 50px; 
+    padding: 20px; 
+  }

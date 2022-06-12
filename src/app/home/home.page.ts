@@ -1,14 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonChip } from '@ionic/angular';
 import { WarehouseService } from '../services/warehouse.service';
-import { Storage } from '@capacitor/storage';
 import { ConfermentService } from '../services/conferment.service';
-import { Style } from '@capacitor/status-bar';
 import { MenuController } from '@ionic/angular';
 import { ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
 
 SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
+import { DataService } from '../services/DataService';
+import { AppComponent } from '../app.component';
+import { ToastService } from '../services/toast.service';
+import { User } from '../utilites/User';
 
 @Component({
   selector: 'app-home',
@@ -29,15 +30,36 @@ export class HomePage implements OnInit {
   statusOfTheProcesses = [];
   filteredConferments = [];
 
+  loading = false
+
   constructor(public warehouseService: WarehouseService,
     public confermentService: ConfermentService,
-    private menu: MenuController) { }
+    private menu: MenuController,
+    private dataService: DataService,
+    private menuSet: AppComponent,
+    private toastService: ToastService,
+    private user: User) { }
 
 
 
   ngOnInit() {
+
     this.getWarehouse()
     this.getPendingConferments()
+  }
+
+  ionViewWillEnter() {
+
+
+    this.loading  = true
+    setTimeout(() => {
+      this.menuSet.checkUser()
+      this.loading = false
+      this.getWarehouse()
+      this.getPendingConferments()
+  
+    }, 2000);
+ 
   }
 
 
@@ -46,9 +68,10 @@ export class HomePage implements OnInit {
     this.getPendingConferments()
     setTimeout(() => {
       event.target.complete()
-    }, 2000);
+    }, 2500);
 
   }
+
 
   async getWarehouse() {
     await this.warehouseService.getWarehouse().then(
@@ -59,10 +82,14 @@ export class HomePage implements OnInit {
 
         } else {
 
-      
         }
-      })
+      }).catch((
+        err => {
+          this.toastService.presentToast(err.msg);
+        }
+      ))
   }
+
 
   async getPendingConferments() {
     await this.confermentService.getPandingConferments().then(
@@ -71,18 +98,20 @@ export class HomePage implements OnInit {
           this.contentLoaded = true
           this.conferments = res
           this.thereArePendingConferments = true;
-
           this.filterConferments()
           //this.fillTheProgressBar()
-
-        }
-        else {
+        } else
           this.thereArePendingConferments = false;
-        }
       }
-    )
+    ).catch((
+      err => {
+        this.toastService.presentToast(err.msg);
+      }
+    ))
   }
-  
+
+
+
   findTheCurrentProcess() {
 
     this.filteredConferments.forEach(element => {
@@ -152,16 +181,14 @@ export class HomePage implements OnInit {
     }
   }
 
-  
-  openMenu() {
-    this.menu.open();
+  openMenu(
+  ){
+    this.menu.open()
   }
 
-
-  ionViewWillEnter() {
-    this.menu.enable(true);
+  ionViewDidEnter(){
+    this.menu.enable(true)
   }
-
 
 
 }

@@ -1,37 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { User } from './utilites/User';
-import { UserService } from './services/user.service';
-
+import { DataService } from './services/DataService';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent implements OnInit{
-  
+
+
+export class AppComponent implements OnInit {
+
   email: string;
   username: string;
 
-  constructor(private user: User,
-              private userService:UserService) {
-    
-   }
+  constructor(private dataService: DataService) {
+
+  }
 
 
   ngOnInit() {
-    this.setMenuCredentials()
-  }
-
-  logout(){
-    this.user.makeLogout();
+    this.dataService.getUserDataStored();
 
   }
 
-  setMenuCredentials(){
-    this.email = this.user.getEmail()
-    this.username = this.user.getUsername()
+  logout() {
+    this.dataService.getUser().makeLogout()
+
+  }
+
+  ionViewWillEnter(){
+    this.dataService.getUserDataStored();
+
+  }
+
+
+
+  async checkUser() {
+    this.email = this.dataService.getUser().getEmail()
+    this.username = this.dataService.getUser().getUsername()
+    console.log("check user" + this.email)
+    console.log("check user" + this.username)
+  }
 
 }
-}
- 

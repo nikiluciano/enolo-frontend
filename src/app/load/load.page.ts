@@ -5,6 +5,7 @@ import { findTheCurrentProcess } from '../utilites/utilities-functions';
 import { DataService } from '../services/DataService';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { ToastService } from '../services/toast.service';
 
 @Component({
   selector: 'app-load',
@@ -53,7 +54,8 @@ export class LoadPage implements OnInit {
     public ng2SearchPipeModule: Ng2SearchPipeModule,
     private dataService: DataService,
     private router: Router,
-    private menu: MenuController) { }
+    private menu: MenuController,
+    private toastService: ToastService) { }
 
   slideOpts = {
     slidesPerView: 2,
@@ -78,19 +80,24 @@ export class LoadPage implements OnInit {
   getAllConferment() {
     this.loading = true
     this.confermentService.getAllConferments().then(
-      (res: any) => {
-        if (res) {
+      (res: []) => {
+        if (res.length>0) {
           this.loading = false
-
           this.postData = res
           this.postData = findTheCurrentProcess(this.postData)
           this.thereArePendingConferments = true;
 
         } else {
+          this.loading = false
           console.log("errore");
           this.thereArePendingConferments = false;
 
         }
+      }
+    ).catch(
+      err=>{
+        this.loading = false
+        this.toastService.presentToast(err.msg);
       }
     )
 
