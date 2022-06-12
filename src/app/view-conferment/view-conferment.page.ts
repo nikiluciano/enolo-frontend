@@ -43,6 +43,7 @@ export class ViewConfermentPage implements OnInit {
   }
 
   getConferment() {
+    this.initializeVariables()
     this.idConferment = this.dataService.getIdConfermentToView();
     this.loading = true;
     this.confermentService.getConfermentById(this.idConferment).then((res) => {
@@ -68,7 +69,7 @@ export class ViewConfermentPage implements OnInit {
         description: this.description
 
       }
-      this.confermentService.patchProcess(patchWinePressing, id, bodyWinePressing)
+      await this.confermentService.patchProcess(patchWinePressing, id, bodyWinePressing)
       this.getConferment();
 
     } else if (status != "READY") {
@@ -148,6 +149,7 @@ export class ViewConfermentPage implements OnInit {
 
   ionViewWillEnter() {
     this.menu.enable(true);
+    this.getConferment()
   }
 
 
@@ -188,5 +190,23 @@ export class ViewConfermentPage implements OnInit {
     this.format = null
     this.description = null;
     this.waste = null;
+  }
+
+  initializeVariables(){
+
+    this.conferment = null;
+    this.idConferment = null;
+    this.nextProcess= null;
+  
+    this.loading = false;
+  
+    this.description= null;
+    this.waste= null;
+  
+    this.bottles_quantity= null;
+    this.format= null;
+    this.caps_quantity= null;
+    this.tags_quantity= null;
+
   }
 }

@@ -112,7 +112,6 @@ export class WarehousePage implements OnInit {
   async bottlePicker() {
 
     var quantity: number = + this.selectedNumber
-
     this.newBottleQuantity = quantity
 
     if (this.newBottleQuantity == 0) {

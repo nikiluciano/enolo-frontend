@@ -30,7 +30,7 @@ export class ConfermentService {
   }
   
   getFilteredConferments(query: string){
-    return this.wineService.get( this.WINE_CONFERMENT + "/filters?" + query)
+    return this.wineService.get( this.WINE_CONFERMENTS + "/filters?" + query)
 
   }
 
