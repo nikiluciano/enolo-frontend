@@ -68,7 +68,7 @@ export class ShowUserPage implements OnInit {
     this.getAllWorkers();
   }
 
-  async changeRole(role: string, username: string) {
+  async changeRole(role: string, username: string, switchValue: boolean, index: number) {
     const alert = await this.alertCtrl.create({
       header: 'Confirm!',
       message: 'Sei sicuro di cambiare lo stato',
@@ -79,7 +79,7 @@ export class ShowUserPage implements OnInit {
           cssClass: 'secondary',
           id: 'cancel-button',
           handler: () => {
-            console.log('rifiutato');
+            this.values[index] = switchValue
           }
         }, {
           text: 'Conferma',
@@ -95,6 +95,8 @@ export class ShowUserPage implements OnInit {
                   this.getAllWorkers()
                 }).catch((err) => {
                   this.toastService.presentToast(err.msg)
+                  this.values[index] = switchValue
+
                 })
             } else {
 
@@ -107,6 +109,8 @@ export class ShowUserPage implements OnInit {
                   this.getAllWorkers()
                 }).catch((err) => {
                   this.toastService.presentToast(err.msg)
+                  this.values[index] = switchValue
+
                 })
             }
           }
