@@ -29,12 +29,17 @@
       <div>
         <ion-button class="filter-btn" (click)="handleFilters()">
           <ion-icon name="options-outline"></ion-icon>
-          <ion-label>Filtri</ion-label>
+          <ion-label>Filtri({{activeFilters}})</ion-label>
         </ion-button>
 
         <ion-button class="save-btn" (click)="filterConferments()">
       
           <ion-label>Salva</ion-label>
+        </ion-button>
+
+        <ion-button class="save-btn" (click)="resetFilters()">
+      
+          <ion-label>Reset</ion-label>
         </ion-button>
         
       </div>
@@ -72,9 +77,9 @@
           </ion-col>
           <ion-col>
             <ion-item class="it" lines="none">
-              <ion-select placeholder="Ordina per">
-                <ion-select-option value="1">Crescente</ion-select-option>
-                <ion-select-option value="-1">Decrescente</ion-select-option>
+              <ion-select [(ngModel)]="order" placeholder="Ordina per">
+                <ion-select-option value="Crescente">Crescente</ion-select-option>
+                <ion-select-option value="Decrescente">Decrescente</ion-select-option>
               </ion-select>
             </ion-item>
           </ion-col>

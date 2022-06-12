@@ -25,30 +25,12 @@ export class LoadPage implements OnInit {
 
   isOpen = false;
 
-  typology = ''
-  supplier = ''
-  status = ''
+  typology = null
+  supplier = null
+  status = null
+  order = null
   showFilters = false
-  // confermentsStatus = [
-  //   { label: 'Pronto', value: 'READY', isChecked: false },
-  //   { label: 'Non iniziato', value: 'DELIVERED', isChecked: false },
-  //   { label: 'In lavorazione', value: 'PENDING', isChecked: false }
-  // ];
-
-
-  // filtersOrdering = [
-  //   { label: 'Quantità crescente', value: 'READY', isChecked: false },
-  //   { label: 'Quantità decrescente', value: 'DELIVERED', isChecked: false }
-  // ];
-
-  // filteringSuppliers = [
-  //   { label: 'Nicola Scinocca', value: 'READY', isChecked: false },
-  //   { label: 'Luigi Occhionero', value: 'DELIVERED', isChecked: false }
-  // ];
-
-
-
-  // filteringIsActive = false;
+  activeFilters = 0;
 
   constructor(public confermentService: ConfermentService,
     public ng2SearchPipeModule: Ng2SearchPipeModule,
@@ -81,7 +63,7 @@ export class LoadPage implements OnInit {
     this.loading = true
     this.confermentService.getAllConferments().then(
       (res: []) => {
-        if (res.length>0) {
+        if (res.length > 0) {
           this.loading = false
           this.postData = res
           this.postData = findTheCurrentProcess(this.postData)
@@ -95,7 +77,7 @@ export class LoadPage implements OnInit {
         }
       }
     ).catch(
-      err=>{
+      err => {
         this.loading = false
         this.toastService.presentToast(err.msg);
       }
@@ -126,28 +108,47 @@ export class LoadPage implements OnInit {
   }
 
   filterConferments() {
+    this.activeFilters = 0
     let query: string;
-    if (this.status != '')
+    if (this.status != '') {
       query = "status=" + this.status
+      this.activeFilters += 1
+    }
 
-    if (this.supplier)
+    if (this.supplier) {
       query = query + "&supplier=" + this.supplier
+      this.activeFilters += 1
+
+    }
 
 
-    if (this.typology)
-      query = query + "&typology=" + this.typology + "&sort=-1"
+    if (this.typology) {
+      query = query + "&typology=" + this.typology
+      this.activeFilters += 1
 
-    console.log(query)
+    }
+
+    if (this.order) {
+      if (this.order == "Decrescente")
+        query = query + "&typology=" + this.typology + "&sort=-1"
+      else if (this.order = "Crescente")
+        query = query + "&typology=" + this.typology + "&sort=1"
+      this.activeFilters += 1
+
+    }
+
     this.loading = true
     this.confermentService.getFilteredConferments(query)
       .then(
         (res) => {
+
           this.loading = false
 
           this.conferments = res
           this.conferments = findTheCurrentProcess(this.conferments)
           this.postData = this.conferments
           console.log(JSON.stringify(this.conferments))
+
         })
 
   }
@@ -159,6 +160,14 @@ export class LoadPage implements OnInit {
 
   ionViewWillEnter() {
     this.menu.enable(true);
+  }
+
+  resetFilters() {
+    this.typology = null
+    this.supplier = null
+    this.status = null
+    this.order = null
+    this.activeFilters = 0
   }
 
 

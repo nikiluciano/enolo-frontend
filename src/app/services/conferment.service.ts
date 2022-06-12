@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { WineService } from './wine.service';
 
 @Injectable({
@@ -31,7 +30,7 @@ export class ConfermentService {
   }
   
   getFilteredConferments(query: string){
-    return this.wineService.get( this.WINE_CONFERMENTS + "/filters?" + query)
+    return this.wineService.get( this.WINE_CONFERMENT + "/filters?" + query)
 
   }
 
