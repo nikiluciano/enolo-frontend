@@ -7,7 +7,7 @@ import { Network } from '@capacitor/network';
 import { User } from '../utilites/User';
 import { MenuController } from '@ionic/angular';
 import { DataService } from '../services/DataService';
-
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
@@ -85,30 +85,25 @@ export class LoginPage implements OnInit {
   async loginAction() {
     if (this.validateInputs()) {
       this.isLoading = true;
-      await this.authService.login(this.postData).subscribe(
-        (res: any) => {
-          this.isLoading = false;
-
-          if (res) {
-            this.router.navigate(['home']);
-            let token = res.token;
-            set('token', token).then(() =>
+      await this.authService.login(this.postData)
+        .then(res => {
+          this.router.navigate(['home']);
+          let token = res.token;
+          set('token', token)
+            .then(() =>
               this.dataService.getUser().setUser(this.postData.username));
 
-          }
-        },
-        (error: any) => {
           this.isLoading = false;
-          this.toastService.presentToast('Username o password errati.');
-        }
-      );
+        })
+        .catch(err => {
+          this.toastService.presentToast(err.msg);
+          this.isLoading = false;
+        })
     } else {
       this.toastService.presentToast(
         'Inserire username o password.'
       );
     }
-    this.checkEmptyFields();
-
   }
 
   checkEmptyFields() {
@@ -127,12 +122,13 @@ export class LoginPage implements OnInit {
 
   }
 
-
-  ionViewWillEnter() {
+  ionViewDidEnter(): void {
     this.menu.enable(false);
   }
 
-
+  ionViewDidLeave(): void {
+    this.menu.enable(true);
+  }
 
 
 }

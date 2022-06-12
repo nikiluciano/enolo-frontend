@@ -22,28 +22,6 @@
         </ion-input>
       </ion-item>
 
-      <!-- <ion-item *ngIf="!missingStatus" class="it" lines="none">
-        <ion-input class="input" name="status" placeholder="Stato" [(ngModel)]="postData.status">
-        </ion-input>
-      </ion-item>
-
-      <ion-item *ngIf="missingStatus" class="item-wrong" lines="none">
-        <ion-input class="input" name="status" placeholder="Stato" [(ngModel)]="postData.status">
-        </ion-input>
-      </ion-item>  -->
-      <!-- 
-      <ion-item *ngIf="!missingCountry" class="it" lines="none">
-        <ion-input class="input" name="country" placeholder="Provenienza" [(ngModel)]="postData.country">
-        </ion-input>
-      </ion-item>
-
-
-      <ion-item *ngIf="missingCountry" class="item-wrong" lines="none">
-        <ion-input class="input" name="country" placeholder="Provenienza" [(ngModel)]="postData.country">
-        </ion-input>
-      </ion-item> -->
-
-
       <ion-item *ngIf="!missingSupplier" class="it" lines="none">
         <ion-select placeholder="Fornitore" [(ngModel)]="postData.supplier">
           <ion-select-option value="tizio">tizio</ion-select-option>
@@ -57,23 +35,6 @@
           <ion-select-option value="caio">caio</ion-select-option>
         </ion-select>
       </ion-item>
-
-      <!-- <ion-item *ngIf="!missingDate" class="it" lines="none" button="true" id="open-date-input">
-        <ion-text slot="end">{{dateValue}}</ion-text>
-        <ion-popover trigger="open-date-input" show-backdrop="false">
-          <ng-template>
-            <ion-datetime #popoverDatetime presentation="date"
-              (ionChange)="dateValue = formatDate(popoverDatetime.value)" [(ngModel)]="postData.date"></ion-datetime>
-          </ng-template>
-        </ion-popover>
-        <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.date">
-        </ion-input>
-      </ion-item>
-
-      <ion-item *ngIf="missingDate" class="item-wrong" lines="none">
-        <ion-input class="input" name="date" placeholder="Data" [(ngModel)]="postData.date">
-        </ion-input>
-      </ion-item> -->
 
       <ion-item *ngIf="!missingOrigin" class="it" lines="none">
         <!-- <ion-select>Regione</ion-select> -->
@@ -147,10 +108,4 @@
     </ion-list>
   </div>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="opacity: 90%; ">
-    <ion-fab-button  color="antique-fuchsia" (click)="openMenu()" >
-      <ion-icon class="icon-fab" name="menu-outline" style="opacity: 100%; "></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-  
 </ion-content>

@@ -7,8 +7,8 @@ import { WineService } from './wine.service';
   providedIn: 'root'
 })
 export class ConfermentService {
-  WINE_CONFERMENT = 'wineConferment';
-  WINE_CONFERMENTS = 'wineConferments';
+  WINE_CONFERMENT = 'wine_conferment';
+  WINE_CONFERMENTS = 'wine_conferments';
 
   constructor(private wineService: WineService,
     private router: Router) { }
