@@ -6,6 +6,7 @@ import { DataService } from '../services/DataService';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { ToastService } from '../services/toast.service';
+import { User } from '../utilites/User';
 
 @Component({
   selector: 'app-load',
@@ -37,7 +38,8 @@ export class LoadPage implements OnInit {
     private dataService: DataService,
     private router: Router,
     private menu: MenuController,
-    private toastService: ToastService) { }
+    private toastService: ToastService,
+    private user: User) { }
 
   slideOpts = {
     slidesPerView: 2,
@@ -160,6 +162,8 @@ export class LoadPage implements OnInit {
 
   ionViewWillEnter() {
     this.menu.enable(true);
+    this.getAllConferment();
+
   }
 
   resetFilters() {
@@ -168,7 +172,26 @@ export class LoadPage implements OnInit {
     this.status = null
     this.order = null
     this.activeFilters = 0
+    this.getAllConferment();
+
   }
 
 
+  deleteConferment(id: string){
+    let deleteData = {
+      id: id
+    }
+    this.confermentService.deleteConferment(this.dataService.getUser().username, deleteData)
+    .then(
+      res=>{
+        this.getAllConferment()
+        this.toastService.presentToast("Conferimento cancellato con successo!")
+      }
+    )
+    .catch(
+      err=>{
+        this.toastService.presentToast(err.msg)
+      }
+    )
+  }
 }

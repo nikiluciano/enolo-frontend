@@ -33,15 +33,15 @@
         </ion-button>
 
         <ion-button class="save-btn" (click)="filterConferments()">
-      
+
           <ion-label>Salva</ion-label>
         </ion-button>
 
         <ion-button class="save-btn" (click)="resetFilters()">
-      
+
           <ion-label>Reset</ion-label>
         </ion-button>
-        
+
       </div>
 
       <ion-grid *ngIf="showFilters">
@@ -53,20 +53,20 @@
                 <ion-select-option value="PENDING">In lavorazione</ion-select-option>
                 <ion-select-option value="DELIVERED">Non iniziato</ion-select-option>
               </ion-select>
-    
+
             </ion-item>
           </ion-col>
           <ion-col>
-  
-          <ion-item class="it" lines="none">
-            <ion-select [(ngModel)]="typology" placeholder="Tipologia">
-              <ion-select-option value="tintilia">tintilia</ion-select-option>
-              <ion-select-option value="montepulciano">montepulciano</ion-select-option>
-            </ion-select>
-  
-          </ion-item>
+
+            <ion-item class="it" lines="none">
+              <ion-select [(ngModel)]="typology" placeholder="Tipologia">
+                <ion-select-option value="tintilia">tintilia</ion-select-option>
+                <ion-select-option value="montepulciano">montepulciano</ion-select-option>
+              </ion-select>
+
+            </ion-item>
           </ion-col>
-  
+
           <ion-col>
             <ion-item class="it" lines="none">
               <ion-select [(ngModel)]="supplier" placeholder="Fornitore">
@@ -84,14 +84,14 @@
             </ion-item>
           </ion-col>
         </ion-row>
-        
+
 
       </ion-grid>
-   
+
 
       <div *ngFor="let Conf of postData | filter:search">
         <ion-item-sliding class="ion-no-padding item-style">
-          <ion-item-options side="start">
+          <ion-item-options (click)="deleteConferment(Conf?._id)" side="start">
             <ion-item-option color="danger" expandable>
               <ion-icon slot="icon-only" name="trash"></ion-icon>
             </ion-item-option>
@@ -127,23 +127,27 @@
                   <ion-text class="font-wine">{{Conf?.typology}}, {{Conf?.quantity}} kg</ion-text>
 
 
-                  <ion-row class="three-row">
-                    <ion-text class="font-wine text">{{Conf?.supplier}}</ion-text>
-                  </ion-row>
+
                 </ion-col>
               </ion-row>
 
-
+              <ion-row class="three-row">
+                <ion-text class="font-wine text">{{Conf?.supplier}}</ion-text>
+              </ion-row>
               <ion-row class="third-row">
-                <ion-chip outline color="primary">
-                  <ion-icon color="primary" name="calendar-outline"></ion-icon>
-                  <ion-text color="primary">{{Conf.date | date: 'dd-MM-yyyy'}}</ion-text>
+           
+                  <ion-chip outline color="primary">
+                    <ion-icon color="primary" name="calendar-outline"></ion-icon>
+                    <ion-text class="chip-text" color="primary">{{Conf.date | date: 'dd-MM-yyyy'}}</ion-text>
 
-                </ion-chip>
-                <ion-chip outline color="primary">
-                  <ion-icon color="primary" name="location-outline"></ion-icon>
-                  <ion-text color="primary">{{Conf.origin}}</ion-text>
-                </ion-chip>
+                  </ion-chip>
+      
+      
+                  <ion-chip outline color="primary">
+                    <ion-icon color="primary" name="location-outline"></ion-icon>
+                    <ion-text color="primary">{{Conf.origin}}</ion-text>
+                  </ion-chip>
+           
               </ion-row>
 
             </ion-grid>

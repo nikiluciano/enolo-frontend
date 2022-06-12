@@ -14,6 +14,7 @@ export class WineService {
   constructor(private http: HttpClient) { }
 
   options: any;
+  deleteOptions: any;
 
 
   //Function for POST calls
@@ -86,7 +87,7 @@ export class WineService {
       const headers = new HttpHeaders({
         'Authorization': res
       });
-      this.options = { headers: headers, withCredintials: false };
+      this.options = { headers: headers, withCredentials: false };
     })
 
   }
@@ -130,27 +131,9 @@ export class WineService {
 
 //delete calls
 
-  async deleteWithToken(serviceName: string, deleteData:any): Promise<any>{
-    await this.getBearerToken();
-    return this.deleteObjects(serviceName, deleteData)
-  }
 
 
-  deleteObjects(serviceName: string, deleteData:any): Promise<any>{
-    let url = environment.apiUrl + serviceName;
-    const headers = new HttpHeaders();
-    const options = { headers: headers, withCredintials: false, body: deleteData };
-    return new Promise((resolve, reject)=>{
-      this.http.delete(url, options).subscribe({
-        next: data =>{
-          resolve(data)
-        },
-        error: err =>{
-          reject(err)
-        }
-      })
-    })
-  }
+
 
   async deleteWithNoToken(serviceName: string, deleteData:any){
     let url = environment.apiUrl + serviceName;
@@ -162,10 +145,37 @@ export class WineService {
           resolve(data)
         },
         error: err =>{
-          reject(err)
+          reject(err.error)
         }
       })
     })
 
   }
+
+  async getTokenForDelete(deleteData: any){
+    return get('token').then(res => {
+      const headers = new HttpHeaders({
+        'Authorization': res
+      });
+      this.deleteOptions = { headers: headers, withCredentials: false, body: deleteData};
+    })
+    
+  }
+
+  async deleteObjects(serviceName: string, deleteData:any): Promise<any>{
+    let url = environment.apiUrl + serviceName;
+    this.getTokenForDelete(deleteData);
+    return new Promise((resolve, reject)=>{
+      this.http.delete(url, this.deleteOptions).subscribe({
+        next: data =>{
+          resolve(data)
+        },
+        error: err =>{
+          reject(err.error)
+        }
+      })
+    })
+  }
+
+
 }

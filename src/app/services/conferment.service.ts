@@ -38,4 +38,8 @@ export class ConfermentService {
     return this.wineService.patchWithToken(this.WINE_CONFERMENT + "/" +  process  + "/" + id, data)
 
   }
+
+  deleteConferment(username: string, deleteData){
+    return this.wineService.deleteObjects(this.WINE_CONFERMENT +"/" + username, deleteData)
+  }
 }
