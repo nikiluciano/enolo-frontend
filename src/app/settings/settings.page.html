@@ -9,20 +9,11 @@
 
 <ion-content>
 
-<ion-list class="list">
-  <ion-item *ngFor="let page of pages" (click)="goAhead(page.route)">
-    <ion-icon class="icon" [name] ="page.icon"></ion-icon>
-   <ion-text class="page">{{page.title}}</ion-text>
-   
-     </ion-item>
-</ion-list>
+  <ion-list class="list">
+    <ion-item *ngFor="let page of pages" (click)="goAhead(page.route)">
+      <ion-icon class="icon" [name]="page.icon"></ion-icon>
+      <ion-text class="page">{{page.title}}</ion-text>
 
-  
-
-<ion-fab vertical="bottom" horizontal="end" slot="fixed" style="opacity: 90%; ">
-  <ion-fab-button  color="antique-fuchsia" (click)="openMenu()" >
-    <ion-icon class="icon-fab" name="menu-outline" style="opacity: 100%; "></ion-icon>
-  </ion-fab-button>
-</ion-fab>
-
+    </ion-item>
+  </ion-list>
 </ion-content>

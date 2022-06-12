@@ -49,15 +49,18 @@ export class StatisticsPage implements OnInit, AfterViewInit {
 
   async ngAfterViewInit() {
 
-
+  
     this.getByTypologyStats()
     this.getBySuppliersStats()
     this.getWasteStats()
     setTimeout(() => {
+      this.loading = true
       this.barChartTypologies();
       this.barChartSuppliers();
       this.pieWaste()
-    }, 2000);
+      this.loading = false
+
+    }, 1500);
 
   }
 
@@ -69,6 +72,7 @@ export class StatisticsPage implements OnInit, AfterViewInit {
 
   async ionViewWillEnter() {
     this.menu.enable(true);
+
   }
 
 
@@ -138,13 +142,6 @@ export class StatisticsPage implements OnInit, AfterViewInit {
           borderColor: ["rgba(47,79,79,0.2)", "rgba(219,112,147,0.2)"],
           borderWidth: 1
         }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
       },
     });
   }

@@ -44,7 +44,7 @@ export class HomePage implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.menu.enable(true)
+
 
     this.loading  = true
     setTimeout(() => {
@@ -176,9 +176,13 @@ export class HomePage implements OnInit {
     }
   }
 
+  openMenu(
+  ){
+    this.menu.open()
+  }
 
-  openMenu() {
-    this.menu.open();
+  ionViewDidEnter(){
+    this.menu.enable(true)
   }
 
 
