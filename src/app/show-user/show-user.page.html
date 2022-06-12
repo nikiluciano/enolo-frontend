@@ -12,23 +12,16 @@
   <ion-list *ngIf="!loading">
     <ion-item-sliding>
       <ion-item class="item" *ngFor="let worker of workers, let i=index ">
-        <ion-toggle (click)="changeRole(worker.role, worker.username)" [(ngModel)]="values[i]" color="primary"></ion-toggle>
-
+        <ion-toggle (click)="changeRole(worker.role, worker.username, values[i], i)" [(ngModel)]="values[i]" color="primary"></ion-toggle>
         <ion-grid >
-
             <ion-row>
               <ion-label class="label-admin" *ngIf="worker.role=='ADMIN'">{{worker.role}}</ion-label>
             </ion-row>
             <ion-row>
               <ion-text class="name-worker">{{worker.name}} {{worker.surname}}</ion-text>
             </ion-row>
-  
- 
         </ion-grid>
-
-        
       </ion-item>
     </ion-item-sliding>
   </ion-list>
-
 </ion-content>

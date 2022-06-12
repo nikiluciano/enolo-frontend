@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { WineService } from './wine.service';
 
 @Injectable({
@@ -38,5 +37,9 @@ export class ConfermentService {
   patchProcess(process: string, id: string, data: any){
     return this.wineService.patchWithToken(this.WINE_CONFERMENT + "/" +  process  + "/" + id, data)
 
+  }
+
+  deleteConferment(username: string, deleteData){
+    return this.wineService.deleteObjects(this.WINE_CONFERMENT +"/" + username, deleteData)
   }
 }

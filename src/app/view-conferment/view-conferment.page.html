@@ -11,51 +11,55 @@
 <ion-content>
   <div class="main-div">
     <app-loading *ngIf="loading"></app-loading>
-    <ion-card *ngIf="!loading">
-      <ion-col>
-        <ion-row class="style-row-title">
-          <ion-label *ngIf="conferment?.status=='PENDING'" class="title-c"> In {{conferment?.current_process}} </ion-label>
-          <ion-label *ngIf="conferment?.status=='DELIVERED'" class="title-c"> Lavorazione ancora non iniziata</ion-label>
-          <ion-label *ngIf="conferment?.status=='READY'" class="title-c"> Lavorazione conclusa</ion-label>
-        </ion-row>
+      <ion-grid class="grid-card" *ngIf="!loading">
+        <ion-col>
+          <ion-row class="style-row-title">
+            <ion-label *ngIf="conferment?.status=='PENDING'" class="title-c"> In {{conferment?.current_process}}
+            </ion-label>
+            <ion-label *ngIf="conferment?.status=='DELIVERED'" class="title-c"> Lavorazione ancora non iniziata
+            </ion-label>
+            <ion-label *ngIf="conferment?.status=='READY'" class="title-c"> Lavorazione conclusa</ion-label>
+          </ion-row>
 
 
-        <ion-row>
-          <ion-progress-bar color="primary" class="bar-c" [value]="conferment?.progressBarValue"></ion-progress-bar>
-        </ion-row>
-        <ion-row>
-          <ion-col class="weight-col-style">
-            <ion-label class="style-labs-peso">{{conferment?.quantity}}<sub class="style-kg"> kg</sub></ion-label>
-          </ion-col>
+          <ion-row>
+            <ion-progress-bar color="primary" class="bar-c" [value]="conferment?.progressBarValue"></ion-progress-bar>
+          </ion-row>
+          <ion-row>
+            <ion-col class="weight-col-style">
+              <ion-label class="style-labs-peso">{{conferment?.quantity}}<sub class="style-kg"> kg</sub></ion-label>
+            </ion-col>
 
-          <ion-col class="wine-type-col-style">
-            <ion-label class="style-labs-c">{{conferment?.typology}}</ion-label>
-          </ion-col>
-        </ion-row>
+            <ion-col class="wine-type-col-style">
+              <ion-label class="style-labs-c">{{conferment?.typology}}</ion-label>
+            </ion-col>
+          </ion-row>
 
-        <ion-row>
-          <ion-col class="down-col-style">
-            <ion-item lines="none" class="ion-no-padding">
-              <ion-icon name="calendar-outline" class="icon-style"></ion-icon>
-              <ion-label class="calendar-label-style">{{conferment?.date | date: 'dd-MM-yyyy'}}</ion-label>
-            </ion-item>
-          </ion-col>
+          <ion-row>
+            <ion-col class="down-col-style">
+              <ion-item lines="none" class="ion-no-padding">
+                <ion-icon name="calendar-outline" class="icon-style"></ion-icon>
+                <ion-label class="calendar-label-style">{{conferment?.date | date: 'dd-MM-yyyy'}}</ion-label>
+              </ion-item>
+            </ion-col>
 
-          <ion-col class="supplier-col-style">
-            <ion-item class="ion-no-padding" lines="none">
-              <ion-label class="style-labs-f" slot="end">{{conferment?.supplier}}</ion-label>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-col>
-
-    </ion-card>
-
-    <div class="title-div">
+            <ion-col class="supplier-col-style">
+              <ion-item class="ion-no-padding" lines="none">
+                <ion-label class="style-labs-f" slot="end">{{conferment?.supplier}}</ion-label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-grid>
+    <div></div>
+    <ion-grid class="title-div">
+      <ion-row>
       <ion-title class="title-processes">Processi({{conferment?.numberOfTheProgress}})
       </ion-title>
+    </ion-row>
 
-    </div>
+    </ion-grid>
+
 
     <div class="accordion-style">
 
@@ -244,8 +248,7 @@
           <ion-label class="title-description">Bottiglie</ion-label>
         </ion-item>
         <ion-item lines="none" class="it">
-          <ion-input [(ngModel)]="bottles_quantity" type="number"
-            placeholder="Inserisci la quantità"></ion-input>
+          <ion-input [(ngModel)]="bottles_quantity" type="number" placeholder="Inserisci la quantità"></ion-input>
         </ion-item>
 
 
@@ -257,8 +260,8 @@
           <ion-label class="title-description">Tappi</ion-label>
         </ion-item>
         <ion-item lines="none" class="it">
-          <ion-input [(ngModel)]="caps_quantity" type="number"
-            placeholder="Inserisci la quantità dei tappi"></ion-input>
+          <ion-input [(ngModel)]="caps_quantity" type="number" placeholder="Inserisci la quantità dei tappi">
+          </ion-input>
         </ion-item>
 
 
@@ -266,8 +269,8 @@
           <ion-label class="title-description">Etichette</ion-label>
         </ion-item>
         <ion-item lines="none" class="it">
-          <ion-input [(ngModel)]="tags_quantity" type="number"
-            placeholder="Inserisci la quantità delle etichette"></ion-input>
+          <ion-input [(ngModel)]="tags_quantity" type="number" placeholder="Inserisci la quantità delle etichette">
+          </ion-input>
         </ion-item>
 
       </div>
