@@ -2,6 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { WarehouseService } from '../services/warehouse.service';
 import { ConfermentService } from '../services/conferment.service';
 import { MenuController } from '@ionic/angular';
+import { ViewEncapsulation } from '@angular/core';
+import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
+
+SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
 import { DataService } from '../services/DataService';
 import { AppComponent } from '../app.component';
 import { ToastService } from '../services/toast.service';
@@ -11,6 +15,7 @@ import { User } from '../utilites/User';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomePage implements OnInit {
   [x: string]: any;
