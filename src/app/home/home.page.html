@@ -4,7 +4,7 @@
     <ion-item lines="none" color="police-blue">
       <ion-menu-button color="white">
       </ion-menu-button>
-      <ion-label class="title-home">Home</ion-label>
+      <ion-label class="title-home" color="white">Home</ion-label>
       <ion-button [routerLink]="['/user-account']" fill="clear">
         <ion-icon name="person-circle-outline" slot="end" class="style-button"></ion-icon>
       </ion-button>
@@ -31,14 +31,14 @@
         </div>
 
         <ion-card *ngIf="thereArePendingConferments" >
-          <swiper  [loop]="true"  [scrollbar]="true">
+          <swiper  [scrollbar]="true">
             <ng-template swiperSlide *ngFor="let conferment of filteredConferments, let i = index">
               <ion-col>
                 <ion-row class="style-row-title">
                   <ion-label class="title-c"> In {{conferment.current_process}} </ion-label>
                 </ion-row>
                 <ion-row>
-                  <ion-progress-bar class="bar-c" [value]="statusOfTheProcesses[i]" ></ion-progress-bar>
+                  <ion-progress-bar class="bar-c" [value]="statusOfTheProcesses[i]"  color="primary"></ion-progress-bar>
                 </ion-row>
                 <ion-row>
                   <ion-col class="weight-col-style">
