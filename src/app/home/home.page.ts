@@ -1,13 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonChip } from '@ionic/angular';
 import { WarehouseService } from '../services/warehouse.service';
-import { Storage } from '@capacitor/storage';
 import { ConfermentService } from '../services/conferment.service';
-import { Style } from '@capacitor/status-bar';
 import { MenuController } from '@ionic/angular';
 import { DataService } from '../services/DataService';
 import { AppComponent } from '../app.component';
-
+import { ToastService } from '../services/toast.service';
+import { User } from '../utilites/User';
 
 @Component({
   selector: 'app-home',
@@ -27,24 +25,36 @@ export class HomePage implements OnInit {
   statusOfTheProcesses = [];
   filteredConferments = [];
 
+  loading = false
+
   constructor(public warehouseService: WarehouseService,
     public confermentService: ConfermentService,
     private menu: MenuController,
     private dataService: DataService,
-    private menuSet: AppComponent) { }
+    private menuSet: AppComponent,
+    private toastService: ToastService,
+    private user: User) { }
 
 
 
   ngOnInit() {
+
     this.getWarehouse()
     this.getPendingConferments()
-
   }
 
   ionViewWillEnter() {
     this.menu.enable(true)
-    this.menuSet.checkUser()
 
+    this.loading  = true
+    setTimeout(() => {
+      this.menuSet.checkUser()
+      this.loading = false
+      this.getWarehouse()
+      this.getPendingConferments()
+  
+    }, 2000);
+ 
   }
 
 
@@ -53,7 +63,7 @@ export class HomePage implements OnInit {
     this.getPendingConferments()
     setTimeout(() => {
       event.target.complete()
-    }, 2000);
+    }, 2500);
 
   }
 
@@ -67,9 +77,12 @@ export class HomePage implements OnInit {
 
         } else {
 
-
         }
-      })
+      }).catch((
+        err => {
+          this.toastService.presentToast(err.msg);
+        }
+      ))
   }
 
 
@@ -85,9 +98,11 @@ export class HomePage implements OnInit {
         } else
           this.thereArePendingConferments = false;
       }
-    ).catch((err) => {
-
-    })
+    ).catch((
+      err => {
+        this.toastService.presentToast(err.msg);
+      }
+    ))
   }
 
 

@@ -1,28 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { User } from './utilites/User';
-import { UserService } from './services/user.service';
 import { DataService } from './services/DataService';
-import { CheckboxControlValueAccessor } from '@angular/forms';
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
+
+
 export class AppComponent implements OnInit {
 
   email: string;
   username: string;
 
   constructor(private dataService: DataService) {
-    
+
   }
 
 
   ngOnInit() {
     this.dataService.getUserDataStored();
-    
+
   }
 
   logout() {
@@ -30,18 +27,18 @@ export class AppComponent implements OnInit {
 
   }
 
+  ionViewWillEnter(){
+    this.dataService.getUserDataStored();
 
-  async checkUser(){
-    await this.dataService.getUser().checkSession().then((result)=>{
-      if(result){
-        this.email = this.dataService.getUser().getEmail()
-        this.username = this.dataService.getUser().getUsername()
-      }
-
-
-    }
-   )
   }
 
+
+
+  async checkUser() {
+    this.email = this.dataService.getUser().getEmail()
+    this.username = this.dataService.getUser().getUsername()
+    console.log("check user" + this.email)
+    console.log("check user" + this.username)
+  }
 
 }
