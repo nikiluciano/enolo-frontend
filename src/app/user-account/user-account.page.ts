@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { DataService } from '../services/DataService';
 
 @Component({
   selector: 'app-user-account',
@@ -7,23 +8,27 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./user-account.page.scss'],
 })
 export class UserAccountPage implements OnInit {
+ 
 
-
+   user:any;
+  _id:string;
+  username:string;
+  email:string;
+  name:string;
+  surname:string;
+  phone:string;
+  address:string;
   
-  postData = {
-    email: 'prova@prova.it',
-    nome: 'Simone',
-    cognome:'Cassetta',
-    username:'Simone',
-    telefono:'123 4567890',
-    indirizzo:'Via Genova',
-    password:'prova123'
-  }
+  
 
 
-  constructor(private menu: MenuController) { }
+  constructor(private menu: MenuController,
+    private dataService: DataService,
+   
+    ) { }
 
   ngOnInit() {
+    this.dataService.getUserDataStored();
   }
   pwdIcon = "eye-outline"; 
   showPwd = false; 
@@ -33,14 +38,27 @@ export class UserAccountPage implements OnInit {
     this.pwdIcon = this.showPwd ? "eye-off-outline" : "eye-outline"; 
   }  
 
-  openMenu() {
+   openMenu() {
     this.menu.open();
   }
 
-  ionViewWillEnter() {
+   ionViewWillEnter() {
     this.menu.enable(true);
   }
 
+  async checkUser(){
+    await this.dataService.getUser().checkSession().then((result)=>{
+      if(result){
+      
+        this.email = this.dataService.getUser().getEmail()
+        this.username = this.dataService.getUser().getUsername()
+        
+      }
+
+
+    }
+   )
+  }
 
  
 }

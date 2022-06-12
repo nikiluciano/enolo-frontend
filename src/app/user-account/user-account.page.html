@@ -18,36 +18,40 @@
   <ion-col>
     <ion-row>
       <ion-label class="name"> 
-        {{postData.nome}}
-        {{postData.cognome}}
+        {{name}}
+        {{surname}}
       </ion-label>
     </ion-row>
   </ion-col>
     
   
   <ion-item  class="items">
+    <ion-icon class="telefone" name="person-outline"></ion-icon>
     <ion-text>
-      {{postData.username}}
+      {{username}}
     </ion-text>
   </ion-item>
 
   <ion-item class="items">
+
     <ion-text>
-      {{postData.email}}
+      <ion-icon class="telefone" name="mail-outline"></ion-icon>
+      {{email}}
     </ion-text>
   </ion-item>
 
   
 <ion-item class="items">
+  <ion-icon class="telefone" name="home-outline"></ion-icon>
     <ion-text>
-      {{postData.indirizzo}}
+      {{address}}
     </ion-text>
   </ion-item>
 
   <ion-item class="items">
     <ion-icon class="telefone" name="call-outline"></ion-icon>
     <ion-text>
-      {{postData.telefono}}
+      {{phone}}
     </ion-text>
   </ion-item>
 

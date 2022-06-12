@@ -14,37 +14,62 @@
   
 
 
-    <ion-item class="items" lines="none">
-      <ion-input class="input" value="{{postData.username}}" placeholder="Username">
-      </ion-input>
-    </ion-item>
+    <ion-item *ngIf="!missingEmail" class="it" lines="none"> 
+      <ion-input  [(ngModel)] = "patchData.email" class="input" placeholder="Email"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingEmail" class="item-wrong" lines="none"> 
+      <ion-input  [(ngModel)] = "patchData.email"  class="input" placeholder="Email" >
+      </ion-input> 
+    </ion-item> 
 
-    <ion-item class="items" lines="none">
-      <ion-input class="input" value="{{postData.email}}" placeholder="E-mail">
-      </ion-input>
-    </ion-item>
+    <ion-item *ngIf="!missingName" class="it" lines="none"> 
+      <ion-input [(ngModel)] = "patchData.name" class="input" placeholder="Nome" >
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingName" class="item-wrong" lines="none"> 
+      <ion-input   [(ngModel)] = "patchData.name"  class="input" placeholder="Nome" > 
+      </ion-input> 
+    </ion-item> 
 
  
-    <ion-item class="items" lines="none">
-      <ion-input value="{{postData.nome}}" class="input" placeholder="Nome">
-      </ion-input>
-    </ion-item>
-
-    <ion-item class="items" lines="none">
-      <ion-input class="input" value="{{postData.cognome}}" placeholder="Cognome">
-      </ion-input>
-    </ion-item>
+  
+    <ion-item *ngIf="!missingSurname" class="it" lines="none"> 
+      <ion-input  [(ngModel)] = "patchData.surname" class="input" placeholder="Cognome" > 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingSurname" class="item-wrong" lines="none"> 
+      <ion-input   [(ngModel)] = "patchData.surname"  class="input" placeholder="Cognome"> 
+      </ion-input> 
+    </ion-item> 
 
    
+    <ion-item *ngIf="!missingAddress" class="it" lines="none"> 
+      <ion-input  [(ngModel)] = "patchData.address" class="input"  placeholder="Indirizzo"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingAddress" class="item-wrong" lines="none"> 
+      <ion-input [(ngModel)] = "patchData.address"  class="input" placeholder="Indirizzo">
+      </ion-input> 
+    </ion-item> 
 
-    <ion-item class="items" lines="none">
-      <ion-input class="input" value="{{postData.indirizzo}}" placeholder="Indirizzo">
-      </ion-input>
-    </ion-item>
+    <ion-item *ngIf="!missingPhone" class="it" lines="none"> 
+      <ion-input   type="number" [(ngModel)] = "patchData.phone" class="input"  placeholder="Telefono">
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingPhone" class="item-wrong" lines="none"> 
+      <ion-input  type="number" [(ngModel)] = "patchData.phone"  class="input" placeholder="Telefono" > 
+      </ion-input> 
+    </ion-item> 
 
 
   
-    <ion-button shape="round" class="login-btn" expand="block" type="submit">
+    <ion-button (click)="addUser()" shape="round" class="login-btn" expand="block" type="submit">
       Modifica
     </ion-button>
   </ion-list>
