@@ -63,7 +63,7 @@ export class ViewConfermentPage implements OnInit {
     console.log("nuovo process in avvio")
     let id = this.conferment._id
     if (status == null || status == "DELIVERED") {
-      let patchWinePressing = "winePressingProcess"
+      let patchWinePressing = "wine_pressing_process"
       let bodyWinePressing = {
         description: this.description
 
@@ -74,7 +74,7 @@ export class ViewConfermentPage implements OnInit {
     } else if (status != "READY") {
       switch (currentProcess) {
         case "Pigiatura":
-          let patchDestemming = "destemmingProcess";
+          let patchDestemming = "destemming_process";
           let bodyDestemming = {
             description: this.description,
             waste: this.waste
@@ -84,7 +84,7 @@ export class ViewConfermentPage implements OnInit {
           break;
 
         case "Diraspatura":
-          let patchWineMaking = "winemakingProcess";
+          let patchWineMaking = "wine_making_process";
           let bodyWineMaking = {
             description: this.description,
             waste: this.waste
@@ -94,7 +94,7 @@ export class ViewConfermentPage implements OnInit {
           break;
 
         case "Vinificazione":
-          let patchRacking = "rackingProcess";
+          let patchRacking = "racking_process";
           let bodyRacking = {
             description: this.description,
           }
@@ -105,7 +105,7 @@ export class ViewConfermentPage implements OnInit {
           break;
 
         case "Svinatura":
-          let patchRefinement = "refinementProcess";
+          let patchRefinement = "refinement_process";
           let bodyRefinement = {
             description: this.description,
 
@@ -115,7 +115,7 @@ export class ViewConfermentPage implements OnInit {
           break;
 
         case "Affinamento":
-          let patchBottling = "bottlingProcess"
+          let patchBottling = "bottling_process"
           let bodyBottling = {
             bottles: {
               bottles_quantity: this.bottles_quantity,

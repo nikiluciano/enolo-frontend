@@ -19,8 +19,7 @@ export class WineService {
   //Function for POST calls
 
   //function for post where BearerToken is not needed
-  //this one uses the environment URL, that's pointing to an HEROKU place
-  post(serviceName: string, data: any) {
+  post(serviceName: string, data: any): Promise<any> {
     const headers = new HttpHeaders();
     const options = { headers: headers, withCredintials: false };
     const url = environment.apiUrl + serviceName;
@@ -49,7 +48,7 @@ export class WineService {
 
 
   //post that will be concatenated to the function that retrieves Bearer token
-  postObjects(serviceName: string, postData: any, options) {
+  postObjects(serviceName: string, postData: any, options): Promise<any> {
     let url = environment.apiUrl + serviceName;
     return new Promise((resolve, reject)=>{
       this.http.post(url, postData, options).subscribe({
@@ -66,7 +65,7 @@ export class WineService {
   }
 
 
-  async postWithToken(serviceName: string, postData: any) {
+  async postWithToken(serviceName: string, postData: any): Promise<any> {
     await this.getBearerToken();
     return this.postObjects(serviceName, postData, this.options)
 
@@ -76,13 +75,12 @@ export class WineService {
   //Function for GET calls
 
   //concatenate the token function with the get call function
-  async get(serviceName: string) {
+  async get(serviceName: string): Promise<any> {
     await this.getBearerToken();
     return this.getObjects(serviceName, this.options)
 
   }
 
-  //obtains the token of the current user
   getBearerToken() {
     return get('token').then(res => {
       const headers = new HttpHeaders({
@@ -93,8 +91,7 @@ export class WineService {
 
   }
 
-  //make a get call to the server
-  getObjects(serviceName: string, options) {
+  getObjects(serviceName: string, options): Promise<any> {
     let url = environment.apiUrl + serviceName;
     return new Promise((resolve, reject)=>{
       this.http.get(url, options).subscribe({
@@ -110,7 +107,7 @@ export class WineService {
 
 
   //functions to make patch corse
-  patchObjects(serviceName: string, patchData: any, options) {
+  patchObjects(serviceName: string, patchData: any, options): Promise<any> {
     let url = environment.apiUrl + serviceName;
     return new Promise((resolve, reject) => {
       this.http.patch(url, patchData, options).subscribe({
@@ -125,9 +122,50 @@ export class WineService {
 
   }
 
-  async patchWithToken(serviceName: string, patchData: any) {
+  async patchWithToken(serviceName: string, patchData: any): Promise<any> {
     await this.getBearerToken();
     return this.patchObjects(serviceName, patchData, this.options)
   }
 
+
+//delete calls
+
+  async deleteWithToken(serviceName: string, deleteData:any): Promise<any>{
+    await this.getBearerToken();
+    return this.deleteObjects(serviceName, deleteData)
+  }
+
+
+  deleteObjects(serviceName: string, deleteData:any): Promise<any>{
+    let url = environment.apiUrl + serviceName;
+    const headers = new HttpHeaders();
+    const options = { headers: headers, withCredintials: false, body: deleteData };
+    return new Promise((resolve, reject)=>{
+      this.http.delete(url, options).subscribe({
+        next: data =>{
+          resolve(data)
+        },
+        error: err =>{
+          reject(err)
+        }
+      })
+    })
+  }
+
+  async deleteWithNoToken(serviceName: string, deleteData:any){
+    let url = environment.apiUrl + serviceName;
+    const headers = new HttpHeaders();
+    const options = { headers: headers, withCredintials: false, body: deleteData };
+    return new Promise((resolve, reject)=>{
+      this.http.delete(url, options).subscribe({
+        next: data =>{
+          resolve(data)
+        },
+        error: err =>{
+          reject(err)
+        }
+      })
+    })
+
+  }
 }

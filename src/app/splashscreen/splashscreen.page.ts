@@ -36,7 +36,7 @@ export class SplashscreenPage implements OnInit {
   }
 
   
-  ionViewWillEnter() {
+  ionViewDidEnter(): void {
     this.menu.enable(false);
   }
 

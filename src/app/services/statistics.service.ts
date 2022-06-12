@@ -7,8 +7,16 @@ import { WineService } from './wine.service';
 export class StatisticsService {
 
   constructor(public wineService:WineService) { }
-  
-  getWaste() {
-    return this.wineService.get('statistics/waste_per_quantity');
+  STATISTICS = 'statistics/'
+  getKgForTypology() {
+    return this.wineService.get(this.STATISTICS + 'quantity_per_typology');
+  }
+
+  getKgForSuppliers(){
+    return this.wineService.get(this.STATISTICS + 'quantity_per_supplier');
+  }
+
+  getWasteStats(){
+    return this.wineService.get(this.STATISTICS +'waste_per_quantity');
   }
 }

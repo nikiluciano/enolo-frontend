@@ -7,7 +7,7 @@ import { Network } from '@capacitor/network';
 import { User } from '../utilites/User';
 import { MenuController } from '@ionic/angular';
 import { DataService } from '../services/DataService';
-
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
@@ -92,6 +92,7 @@ export class LoginPage implements OnInit {
           set('token', token)
             .then(() =>
               this.dataService.getUser().setUser(this.postData.username));
+
           this.isLoading = false;
         })
         .catch(err => {
@@ -121,12 +122,13 @@ export class LoginPage implements OnInit {
 
   }
 
-
-  ionViewWillEnter() {
+  ionViewDidEnter(): void {
     this.menu.enable(false);
   }
 
-
+  ionViewDidLeave(): void {
+    this.menu.enable(true);
+  }
 
 
 }
