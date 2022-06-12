@@ -32,14 +32,22 @@ ion-input{
   } 
   
 
-  
-  .items {
+  .it { 
+ 
+    border: 1px solid #F1F1F1; 
+    border-radius: 25px; 
+    margin-bottom: 20px; 
+    font-family: "quicksand-regular"; 
+   
+  } 
 
-    border: 1px solid #F1F1F1;
-    border-radius: 25px;
-    margin-bottom: 20px;
+  .item-wrong { 
+    border: 1px solid red; 
+    border-radius: 25px; 
+    margin-bottom: 30px; 
+} 
+
   
-  }
 
   .login-btn {
     height: 40px;

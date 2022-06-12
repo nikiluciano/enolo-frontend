@@ -6,13 +6,18 @@ import { WineService } from './wine.service';
   providedIn: 'root'
 })
 export class UserService {
+  
 
+  
   constructor(private wineService: WineService) { }
-
+  
+  USER='users'
+  
   getUser(username: string): Promise<any> {
     return this.wineService.get('users/' + username);
   }
 
+  
   getWorkers(): Promise<any>{
     return this.wineService.get('users');
   }
@@ -26,6 +31,10 @@ export class UserService {
 
   }
 
+  addUser(patchData: any,username:string){
+    return this.wineService.patchWithToken(this.USER + '/' + username ,patchData)
+
+  }
   
   
 }
