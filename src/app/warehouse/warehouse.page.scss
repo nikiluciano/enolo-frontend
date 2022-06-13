@@ -53,9 +53,6 @@ ion-toolbar {
     font-family: "quicksand-regular";
     margin: auto;
     margin-top: 15px;
-    width: 250px;
-    height: 60px;
-    border-radius: 400px;
     --background:#8B5E83;
 }
 
@@ -72,9 +69,11 @@ ion-toolbar {
 }
 
 .style-lab-warehouse {
-    font-size: 50px;
+    font-size: 30px;
     font-family: "quicksand-regular";
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .style-number-tags {
@@ -99,16 +98,14 @@ ion-toolbar {
 }
 
 .style-sub {
-    font-size: 20px;
+    font-size: 12px;
     font-family: "quicksand-regular";
 }
 .style-button-save{
     font-family: "quicksand-regular";
     margin: auto;
     margin-top: 15px;
-    width: 250px;
-    height: 60px;
-    border-radius: 400px;
+
     --background: #8B5E83;
 }
 .style-picker{
@@ -151,4 +148,45 @@ ion-toolbar {
 .style-color-segment{
     --indicator-color:#3B5360;
     --color-checked:#3B5360;
+    padding-top: 5px;
+    height: 70px;
+    width: 80px;
+}
+
+ion-segment {
+
+    --background: none
+    padding-top: 10px;
+}
+
+ion-segment-button{
+    --background: none
+}
+
+.segment-row{
+
+    padding: 10px;
+}
+
+.new-quantity-bottles{
+
+    border: 1px solid grey;
+    border-radius: 25px;
+    max-width: 70px;
+    margin-right: 5px;
+}
+
+.save-div{
+
+    padding: 15px;
+}
+
+.style-button-save-btl{
+    --background:#8B5E83;
+    max-width: 80px;
+}
+
+.style-button-cancel{
+    --background:#8B5E83;
+    max-width: 100px;
 }

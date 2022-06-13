@@ -23,27 +23,16 @@
           <ion-label class="style-title-label">Bottiglie</ion-label>
         </ion-row>
 
-        <ion-row>
-          <ion-segment  scrollable >
-            <ion-segment-button expand="block" fill="clear" class="style-color-segment" 
+        <ion-row class="segment-row">
+          <ion-segment scrollable>
+            <ion-segment-button expand="block" fill="clear" class="style-color-segment"
               *ngFor="let bottle of warehouse.bottles.formats">
-            <ion-label class="style-lab-warehouse" >
-              {{bottle.quantity}}<sub class="style-sub">{{bottle.format}} </sub>
-            </ion-label>
+              <ion-label class="style-lab-warehouse">
+                {{bottle.quantity}}<sub class="style-sub">{{bottle.format}} </sub>
+              </ion-label>
             </ion-segment-button>
           </ion-segment>
-          <!--  <swiper [pagination]="true" >
-            <ng-template swiperSlide *ngFor="let bottle of warehouse.bottles.formats" >
-              <ion-label class="style-lab-warehouse">{{bottle.quantity}}<sub class="style-sub">{{bottle.format}} </sub>
-              </ion-label>
-            </ng-template>
-          </swiper> -->
-          <!--  <ion-slides [options]="slideOpts">
-            <ion-slide *ngFor="let bottle of warehouse.bottles.formats">
-              <ion-label class="style-lab-warehouse">{{bottle.quantity}}<sub class="style-sub">{{bottle.format}} </sub>
-              </ion-label>
-            </ion-slide>
-          </ion-slides> -->
+
         </ion-row>
 
         <ion-row>
@@ -63,15 +52,17 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-button class="style-button-refill" (click)="change()">Refill</ion-button>
+          <ion-button shape="round" class="style-button-refill" (click)="change()">Refill</ion-button>
         </ion-row>
       </ion-col>
 
     </ion-grid>
   </div>
-  <div *ngIf="button==true && contentLoaded==true">
-    <!-- <app-loading *ngIf="isLoading"></app-loading> -->
+  <div class="save-div" *ngIf="button==true && contentLoaded==true">
     <ion-grid>
+      <ion-row>
+        <ion-button shape="round" class="style-button-save" (click)="exitWarehousePatches()">Annulla</ion-button>
+      </ion-row>
       <ion-col>
         <ion-row>
           <ion-label class="style-title">Stato</ion-label>
@@ -80,56 +71,79 @@
           <ion-label class="style-title-label">Bottiglie</ion-label>
         </ion-row>
 
-        <ion-row>
-          <ion-segment scrollable>
-            <ion-segment-button expand="block" (click)="bottlePicker()" class="style-picker" fill="clear"
-              *ngFor="let bottle of warehouse.bottles.formats">
-              <ion-input *ngIf="!bottleArechanged" class="style-lab-warehouse" [(ngModel)]="newBottlequantity" type="number">
-                {{bottle.quantity}}<sub class="style-sub">{{bottle.format}}
-                </sub>
-              </ion-input>
-              <ion-input *ngIf="bottleArechanged" class="style-lab-warehouse" [(ngModel)]="newBottlequantity" type="number">
-                {{bottle.quantity + newBottlequantity}}<sub class="style-sub">{{bottle.format}}
-                </sub>
-              </ion-input>
-            </ion-segment-button>
-          </ion-segment>
-
-        </ion-row>
-        <ion-row>
-          <ion-col class="style-col">
-            <ion-label class="style-title-label-caps-picker">Tappi</ion-label>
-          </ion-col>
-          <ion-col class="style-col">
-            <ion-button expand="block" (click)="capsPicker()" fill="clear" class="style-button-caps">
-              <ion-input *ngIf="!capsArechanged" class="style-number-caps-picker" [(ngModel)]="newCapsQuantity" type="number">
-                {{warehouse.caps_quantity}}
-              </ion-input>
-              <ion-input *ngIf="capsArechanged" class="style-number-caps-picker" [(ngModel)]="newCapsQuantity" type="number">
-                {{warehouse.caps_quantity + newCapsQuantity}}
-              </ion-input>
-            </ion-button>
+        <ion-row *ngFor="let bottle of warehouse.bottles.formats, let i = index">
+          <ion-col>
+            <ion-label class="style-lab-warehouse">
+              {{bottle.quantity}}<sub class="style-sub">{{bottle.format}} </sub>
+            </ion-label>
           </ion-col>
 
-        </ion-row>
-        <ion-row>
-          <ion-col class="style-col">
-            <ion-row class="style-title-label-tags-picker">Etichette</ion-row>
-          </ion-col>
-          <ion-col class="style-col">
-            <ion-button expand="block" (click)="tagsPicker()" fill="clear"> 
-              <ion-input *ngIf="!tagsArechanged" class="style-number-tags-picker" [(ngModel)]="newTagsQuantity" type="number">
-                {{warehouse.tags_quantity}}
-              </ion-input>
-              <ion-input *ngIf="tagsArechanged" class="style-number-tags-picker" [(ngModel)]="newTagsQuantity" type="number">
-                {{warehouse.tags_quantity + newTagsQuantity}}
-              </ion-input>
-            </ion-button>
+          <ion-col>
+            <ion-row *ngIf="cancelButtonValues[i]">
+              <ion-input type="number" [(ngModel)]="newBottlesQuantity[i]" class="new-quantity-bottles"></ion-input>
+              <ion-button shape="round" class="style-button-cancel" (click)="cancelAction(i)">Cancella</ion-button>
+              <ion-button shape="round" (click)="patchTheBottle(bottle, i)" class="style-button-save-btl">Salva
+              </ion-button>
+            </ion-row>
+
+            <ion-row>
+              <ion-button shape="round" class="style-button-save" (click)="setModifyThis(i)"
+                *ngIf="modifyButtonsValues[i]">Modifica</ion-button>
+            </ion-row>
           </ion-col>
         </ion-row>
+
         <ion-row>
-          <ion-button class="style-button-save" (click)="saveChanges()">Salva</ion-button>
+          <ion-text class="style-title-label-caps-picker"> Tappi
+          </ion-text>
         </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text type="number">
+              {{warehouse.caps_quantity}}
+            </ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-row *ngIf="cancelBtnCaps">
+              <ion-input type="number" [(ngModel)]="newCapsQuantity" class="new-quantity-bottles"></ion-input>
+              <ion-button shape="round" class="style-button-cancel" (click)="cancelActionCaps()">Cancella</ion-button>
+              <ion-button shape="round" (click)="patchTheCaps()" class="style-button-save-btl" >Salva</ion-button>
+            </ion-row>
+
+            <ion-row>
+              <ion-button shape="round" class="style-button-save" (click)="setModifyCaps()" *ngIf="modifyBtnCaps">
+                Modifica</ion-button>
+
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-text class="style-title-label-tags-picker"> Etichette
+          </ion-text>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text type="number">
+              {{warehouse.tags_quantity}}
+            </ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-row *ngIf="cancelBtnTags">
+              <ion-input type="number" [(ngModel)]="newTagsQuantity" class="new-quantity-bottles"></ion-input>
+              <ion-button shape="round" class="style-button-cancel" (click)="cancelActionTaps()">Cancella</ion-button>
+              <ion-button shape="round" (click)="patchTheTags()" class="style-button-save-btl" >Salva</ion-button>
+            </ion-row>
+
+            <ion-row>
+              <ion-button shape="round" class="style-button-save" (click)="setModifyTags()" *ngIf="modifyBtnTags">
+                Modifica</ion-button>
+
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+
       </ion-col>
 
     </ion-grid>

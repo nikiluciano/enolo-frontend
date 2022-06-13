@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WarehouseService } from '../services/warehouse.service';
 import { IonList, MenuController, PickerController } from '@ionic/angular';
+import { ToastService } from '../services/toast.service';
 
 @Component({
   selector: 'app-warehouse',
@@ -27,12 +28,24 @@ export class WarehousePage implements OnInit {
   tagsAreChanged = false;
   bottleArechanged = false;
 
-  private selectedNumber: string;
+  modifyButtonsValues = [];
+  cancelButtonValues = [];
+
+  newBottlesQuantity = [];
+
+  modifyBtnCaps = true;
+  cancelBtnCaps = false;
+
+  modifyBtnTags = true;
+  cancelBtnTags = false;
+
+  private selectedNumber: number;
 
 
-  
+
   constructor(public warehouseService: WarehouseService,
-              public menu:MenuController) { }
+    public menu: MenuController,
+    private toast: ToastService) { }
 
   ionViewDidEnter(): void {
     this.menu.enable(true);
@@ -41,7 +54,7 @@ export class WarehousePage implements OnInit {
 
   ngOnInit() {
 
-    this.resetValues()
+
     this.getWarehouse();
     this.saveCapsQuantity();
 
@@ -59,6 +72,8 @@ export class WarehousePage implements OnInit {
 
   //function get for warehouse
   async getWarehouse() {
+
+    this.resetValues();
     await this.warehouseService.getWarehouse().then(
       (res: any) => {
         if (res) {
@@ -66,7 +81,7 @@ export class WarehousePage implements OnInit {
           this.contentLoaded = true
           this.warehouse = res
           this.currentBottle = this.warehouse.bottle_quantity
-
+          this.generateModifyAndCancelBtns()
         } else {
         }
       })
@@ -77,6 +92,16 @@ export class WarehousePage implements OnInit {
     slidesPerView: 3,
     centerSlide: true,
     loop: false,
+  }
+
+  generateModifyAndCancelBtns() {
+    this.warehouse.bottles.formats.forEach(element => {
+      this.modifyButtonsValues.push(true);
+      this.cancelButtonValues.push(false);
+      this.newBottlesQuantity.push(0)
+    });
+
+
   }
 
   // function to change page, refill to save page
@@ -110,16 +135,11 @@ export class WarehousePage implements OnInit {
   }
 
   async bottlePicker() {
-
     var quantity: number = + this.selectedNumber
     this.newBottleQuantity = quantity
-
     if (this.newBottleQuantity == 0) {
-
       this.bottleArechanged = false
-
     } else {
-
       this.bottleArechanged = true
     }
     console.log(this.newBottleQuantity)
@@ -128,13 +148,10 @@ export class WarehousePage implements OnInit {
   async tagsPicker() {
     var quantity: number = + this.selectedNumber
     this.newTagsQuantity = quantity
-
     if (this.newTagsQuantity == 0) {
-
       this.tagsAreChanged = false
 
     } else {
-
       this.tagsAreChanged = true
 
     }
@@ -146,7 +163,6 @@ export class WarehousePage implements OnInit {
     var caps: CapsPatch = {
       quantity: 0
     }
-
     caps.quantity = this.newCapsQuantity;
 
     await this.warehouseService.updateCapsQuantity(caps).then(
@@ -235,5 +251,124 @@ export class WarehousePage implements OnInit {
     this.newCapsQuantity = 0;
     this.newTagsQuantity = 0;
     this.newBottleQuantity = 0;
+    this.modifyButtonsValues = [];
+    this.cancelButtonValues = [];
+    this.newBottlesQuantity = [];
+  }
+
+
+  setModifyThis(i: number) {
+    this.cancelButtonValues[i] = true;
+    this.modifyButtonsValues[i] = false;
+
+
+  }
+
+
+  cancelAction(i: number) {
+    this.cancelButtonValues[i] = false;
+    this.modifyButtonsValues[i] = true;
+
+
+  }
+
+  setModifyCaps() {
+    this.modifyBtnCaps = false;
+    this.cancelBtnCaps = true;
+
+  }
+
+  cancelActionCaps() {
+
+    this.modifyBtnCaps = true;
+    this.cancelBtnCaps = false;
+  }
+
+
+  setModifyTags() {
+    this.modifyBtnTags = false;
+    this.cancelBtnTags = true;
+
+  }
+
+  cancelActionTags() {
+
+    this.modifyBtnTags = true;
+    this.cancelBtnTags = false;
+  }
+
+
+  patchTheBottle(bottle: any, i: number) {
+    console.log(JSON.stringify(bottle))
+    if (this.newBottlesQuantity[i] <= 0) {
+      this.toast.presentToast("Aggiungi una quantità valida!")
+    } else {
+      let patchData = {
+        format: bottle.format,
+        quantity: this.newBottlesQuantity[i]
+      }
+
+      this.warehouseService.updateBottleFormat(patchData)
+        .then(res => {
+          this.toast.presentToast("Bottiglie aggiunte con successo!")
+          this.getWarehouse()
+
+        })
+        .catch(err => {
+          this.toast.presentToast(err.msg)
+        })
+    }
+  }
+
+  patchTheCaps() {
+    let patchData = {
+      quantity: this.newCapsQuantity
+
+    }
+    if (this.newCapsQuantity <= 0) {
+      this.toast.presentToast("Aggiungi una quantità valida!")
+
+    } else {
+      this.warehouseService.updateCapsQuantity(patchData)
+        .then(res => {
+          this.toast.presentToast("Tappi aggiunti con successo!")
+          this.getWarehouse()
+
+        })
+        .catch(err => {
+          this.toast.presentToast(err.msg)
+
+        })
+    }
+
+
+  }
+
+  patchTheTags() {
+    let patchData = {
+      quantity: this.newTagsQuantity
+    }
+
+    if (this.newTagsQuantity <= 0) {
+      this.toast.presentToast("Aggiungi una quantità valida!")
+
+    } else {
+      this.warehouseService.updateTagsQuantity(patchData)
+        .then(res=>{
+          this.toast.presentToast("Etichette aggiunte con successo!")
+          this.getWarehouse()
+        })
+        .catch(err=>{
+          this.toast.presentToast(err.msg)
+
+        })
+
+    }
+
+  }
+
+  exitWarehousePatches() {
+    this.button = false
+
   }
 }

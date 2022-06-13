@@ -33,7 +33,7 @@ export class WarehouseService {
 
 
   updateBottleFormat( patchData : any){
-    return this.wineService.patchWithToken("warehouse/updateFormat", patchData)
+    return this.wineService.patchWithToken("warehouse/update_format", patchData)
   }
 
 }
