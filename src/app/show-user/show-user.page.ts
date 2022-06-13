@@ -13,6 +13,11 @@ import { ToastService } from '../services/toast.service';
   templateUrl: './show-user.page.html',
   styleUrls: ['./show-user.page.scss'],
 })
+
+
+/**
+ * Page where an user can handle role of other workers
+ */
 export class ShowUserPage implements OnInit {
 
 
@@ -36,6 +41,13 @@ export class ShowUserPage implements OnInit {
   ngOnInit() {
     this.getAllWorkers();
   }
+
+  /**
+   * retrieve from DB list of all workers.
+   * If the promise is resolved, list will be sorted to show
+   * on the top the users that are admin
+   * 
+   */
 
   async getAllWorkers() {
     this.loading = true;
@@ -68,10 +80,18 @@ export class ShowUserPage implements OnInit {
     this.getAllWorkers();
   }
 
+
+  /**
+   * 
+   * @param role current role of the user
+   * @param username username of the user to change the role
+   * @param switchValue value to reset the toggle in case the user gives up
+   * @param index position of the switch value
+   */
   async changeRole(role: string, username: string, switchValue: boolean, index: number) {
     const alert = await this.alertCtrl.create({
-      header: 'Confirm!',
-      message: 'Sei sicuro di cambiare lo stato',
+      header: 'Attenzione!',
+      message: 'Sei sicuro di cambiare lo stato di' + username + '?',
       buttons: [
         {
           text: 'Annulla',

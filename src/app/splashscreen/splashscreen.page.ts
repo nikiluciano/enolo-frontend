@@ -25,6 +25,11 @@ export class SplashscreenPage implements OnInit {
   }
 
 
+  /**
+   * Check the session of the user.
+   * If it's true, the user will be redirected on home page, 
+   * otherwise on login page
+   */
   async checkSession() {
     const sessionExists = await this.user.checkSession()
     if (sessionExists){

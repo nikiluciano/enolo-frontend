@@ -48,18 +48,17 @@ export class HomePage implements OnInit {
     this.getPendingConferments()
   }
 
+  
   ionViewWillEnter() {
-
-
-    this.loading  = true
+    this.loading = true
     setTimeout(() => {
       this.menuSet.checkUser()
       this.loading = false
       this.getWarehouse()
       this.getPendingConferments()
-  
+
     }, 2000);
- 
+
   }
 
 
@@ -73,16 +72,16 @@ export class HomePage implements OnInit {
   }
 
 
+  /**
+   * gets the warehouse data frome the DB.
+   */
   async getWarehouse() {
     await this.warehouseService.getWarehouse().then(
       (res: any) => {
-        if (res) {
-          this.contentLoaded = true
-          this.warehouse = res
 
-        } else {
+        this.contentLoaded = true
+        this.warehouse = res
 
-        }
       }).catch((
         err => {
           this.toastService.presentToast(err.msg);
@@ -91,6 +90,9 @@ export class HomePage implements OnInit {
   }
 
 
+  /**
+   * Gets the conferments from the DB.
+   */
   async getPendingConferments() {
     await this.confermentService.getPandingConferments().then(
       (res: any) => {
@@ -112,6 +114,10 @@ export class HomePage implements OnInit {
 
 
 
+  /**
+   * Finds the current status of a process and the value which the progress bar will be filled with.
+   * The value is calculated by dividign by 6 the current process number.
+   */
   findTheCurrentProcess() {
 
     this.filteredConferments.forEach(element => {
@@ -158,15 +164,14 @@ export class HomePage implements OnInit {
             break;
         }
       }
-
-
-
     })
-
-
-
   }
 
+
+  /**
+   * Filters the conferments by pushing in the filteredConferments array 
+   * only the one that are currently processed
+   */
   filterConferments() {
     this.filteredConferments = []
     this.conferments.forEach(element => {
@@ -182,13 +187,11 @@ export class HomePage implements OnInit {
   }
 
   openMenu(
-  ){
+  ) {
     this.menu.open()
   }
 
-  ionViewDidEnter(){
+  ionViewDidEnter() {
     this.menu.enable(true)
   }
-
-
 }

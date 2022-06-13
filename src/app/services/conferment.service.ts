@@ -5,6 +5,10 @@ import { WineService } from './wine.service';
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * Service to make call to the collection of conferments of the DB.
+ */
 export class ConfermentService {
   WINE_CONFERMENT = 'wine_conferment';
   WINE_CONFERMENTS = 'wine_conferments';
@@ -24,22 +28,22 @@ export class ConfermentService {
     return this.wineService.get(this.WINE_CONFERMENT);
   }
 
-  getConfermentById(id: string){
+  getConfermentById(id: string) {
     return this.wineService.get(this.WINE_CONFERMENT + '/' + id)
 
   }
-  
-  getFilteredConferments(query: string){
-    return this.wineService.get( this.WINE_CONFERMENTS + "/filters?" + query)
+
+  getFilteredConferments(query: string) {
+    return this.wineService.get(this.WINE_CONFERMENTS + "/filters?" + query)
 
   }
 
-  patchProcess(process: string, id: string, data: any){
-    return this.wineService.patchWithToken(this.WINE_CONFERMENT + "/" +  process  + "/" + id, data)
+  patchProcess(process: string, id: string, data: any) {
+    return this.wineService.patchWithToken(this.WINE_CONFERMENT + "/" + process + "/" + id, data)
 
   }
 
-  deleteConferment(username: string, deleteData){
-    return this.wineService.deleteObjects(this.WINE_CONFERMENT +"/" + username, deleteData)
+  deleteConferment(username: string, deleteData) {
+    return this.wineService.deleteObjects(this.WINE_CONFERMENT + "/" + username, deleteData)
   }
 }

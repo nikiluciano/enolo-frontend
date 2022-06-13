@@ -37,6 +37,10 @@ export class SettingsPage implements OnInit {
     this.menu.enable(true);
   }
 
+  /**
+   * Initialize dinamycally content of items to be displayed in settings page
+   */
+
   initializePages() {
     this.pages = [
       { title: 'Gestione lavoratori', icon: 'accessibility-outline', route: 'show-user' },

@@ -51,8 +51,12 @@ export class AddSuppliersPage implements OnInit {
     this.menu.open();
   }
 
+
+  /**
+   * 
+   * @returns true if all the fields are correctly filled, false if some of the fields is missing.
+   */
   validateInputs() {
-    console.log(this.postData);
     let username = this.postData.username.trim();
     let email = this.postData.email.trim();
     let surname = this.postData.surname.trim();
@@ -80,15 +84,10 @@ export class AddSuppliersPage implements OnInit {
   }
 
 
+  /**
+   * Adds a new supplier to the DB.
+   */
   async addSupplier() {
-    //this.idSupplier = this.supplierService.getIdSupplier(id,this.postData); 
-    console.log(this.validateInputs())
-    console.log(this.postData.username.length)
-    console.log(this.postData.email.length)
-    console.log(this.postData.name.length)
-    console.log(this.postData.surname.length)
-    console.log(this.postData.address.length)
-    console.log(this.postData.phone.length)
 
     if (this.validateInputs()) {
 
@@ -106,8 +105,6 @@ export class AddSuppliersPage implements OnInit {
           'Errore.'
         );
       })
-
-
     }
     else {
       this.toastService.presentToast(

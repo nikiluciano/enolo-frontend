@@ -10,6 +10,10 @@ import { ToastService } from "../services/toast.service";
     providedIn: 'root'
 })
 
+/**
+ *  Class used to store user data, make login and logout.
+ * The data is stored on the user's device, through the capacitor storage
+ */
 export class User {
 
     name: string;
@@ -30,6 +34,11 @@ export class User {
 
     }
 
+    /**
+     * 
+     * @param username Given the username, the function will do a call to the server
+     * to get the user data and store it on the user's device
+     */
     async setUser(username: string) {
         await this.userService.getUser(username).then((res) => {
             this.name = res.name;
@@ -42,14 +51,17 @@ export class User {
             this.email = res.email
             this.saveLogin();
             console.log(JSON.stringify(res))
-    
+
 
         })
 
     }
 
 
-  async  saveLogin() {
+    /**
+     * for each key, stores on the device of the user his own data
+     */
+    async saveLogin() {
         set('session', true);
         set('name', this.name);
         set('surname', this.surname);
@@ -63,6 +75,9 @@ export class User {
     }
 
 
+    /**
+     * removes the user data from the device
+     */
     async makeLogout() {
 
         set('session', false);
@@ -89,20 +104,37 @@ export class User {
         this.router.navigate(['/login'])
     }
 
+    /**
+     * If true, the user is logged on the device checked.
+     * 
+     */
     async checkSession() {
         return get('session')
     }
 
 
+    /**
+     * 
+     * @returns ADMIN or WORKER, based on the role of the user stored in the DB
+     */
     async getRole() {
         return get("role")
 
     }
 
+    /**
+     * 
+     * @returns the username of the user saved on the device
+     */
     async getSavedUsername() {
         return get('username')
     }
 
+
+    /**
+     * 
+     * @returns the name of the user saved on the device
+     */
     getName() {
         return this.name
     }
@@ -119,9 +151,13 @@ export class User {
         return this.email
     }
 
+
+    /**
+     * sets the class variables with the data saved on the user's device
+     */
     async getCurrentStorage() {
         if (get('session')) {
-            this.session =  await get('session');
+            this.session = await get('session');
             this.name = await get('name');
             this.surname = await get('surname');
             this.address = await get('address');
@@ -135,9 +171,5 @@ export class User {
             console.log(this.name)
             console.log(this.surname)
         }
-       
-
-
     }
-
 }

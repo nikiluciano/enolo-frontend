@@ -5,6 +5,13 @@ import { WineService } from './wine.service';
 @Injectable({
   providedIn: 'root'
 })
+
+
+/**
+ * Service for authentication.
+ * Used to make login, signup and make a logout call,
+ * to the server, based on user actions.
+ */
 export class AuthService {
 
   constructor(private wineService: WineService,
@@ -19,12 +26,6 @@ export class AuthService {
     return this.wineService.post('signup', postData);
   }
 
-  logout(deleteData: any): Promise<any> {
-    return this.wineService.deleteWithNoToken('logout', deleteData)
-  }
 
-  refreshToken(postData: any): Promise<any>{
-    return this.wineService.postWithToken('refresh_token', postData)
-  }
 
 }

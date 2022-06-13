@@ -5,33 +5,39 @@ import { User } from '../utilites/User';
     providedIn: 'root'
 })
 
-export class DataService{
+
+/**
+ * Service used to provide global variables 
+ * like the id of a conferment,
+ * which more pages in certain cases need to share.
+ * It's accessible the User instance from here too.
+ */
+export class DataService {
 
     idConfermentToView = '';
-    
 
-    constructor(private user: User){
+
+    constructor(private user: User) {
 
     }
 
-
-    setIdConfermentToView(id: string){
+    setIdConfermentToView(id: string) {
         this.idConfermentToView = id;
 
     }
 
 
-    getIdConfermentToView(){
+    getIdConfermentToView() {
         return this.idConfermentToView
 
     }
 
-    getUserDataStored(){
+    getUserDataStored() {
         this.user.getCurrentStorage();
 
     }
 
-    getUser(){
+    getUser() {
         return this.user;
     }
 

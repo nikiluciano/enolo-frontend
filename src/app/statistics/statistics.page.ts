@@ -12,6 +12,9 @@ Chart.register(...registerables);
   styleUrls: ['./statistics.page.scss'],
 })
 export class StatisticsPage implements OnInit, AfterViewInit {
+  /**
+   * Canvas to draw on the charts
+   */
   @ViewChild('pieCanvas') private pieCanvas: ElementRef;
   @ViewChild('barCanvas') private barCanvas: ElementRef;
   @ViewChild('lineCanvas') private lineCanvas: ElementRef;
@@ -49,7 +52,7 @@ export class StatisticsPage implements OnInit, AfterViewInit {
 
   async ngAfterViewInit() {
 
-  
+
     this.getByTypologyStats()
     this.getBySuppliersStats()
     this.getWasteStats()
@@ -81,6 +84,9 @@ export class StatisticsPage implements OnInit, AfterViewInit {
   }
 
 
+  /**
+   * bar chart for typology and kg stats
+   */
   barChartTypologies() {
 
     this.barChart = new Chart(this.barCanvas.nativeElement, {
@@ -106,6 +112,9 @@ export class StatisticsPage implements OnInit, AfterViewInit {
   }
 
 
+  /**
+  * bar chart for suppliers and kg stats
+  */
   barChartSuppliers() {
     this.barSuppliers = new Chart(this.barCanvasSuppliers.nativeElement, {
       type: 'bar',
@@ -129,7 +138,9 @@ export class StatisticsPage implements OnInit, AfterViewInit {
     });
   }
 
-
+/**
+ * pie chart for waste stats
+ */
   pieWaste() {
     this.pieStatsWaste = new Chart(this.pieCanvas.nativeElement, {
       type: 'pie',
@@ -148,7 +159,11 @@ export class StatisticsPage implements OnInit, AfterViewInit {
 
 
 
-
+/**
+ * 
+ * @param array array of colors to be shuffled
+ * @returns the array shuffled
+ */
   shuffleColors(array) {
     let currentIndex = array.length, randomIndex;
 
@@ -162,8 +177,11 @@ export class StatisticsPage implements OnInit, AfterViewInit {
     }
     return array;
   }
-  
 
+
+  /**
+   * get the typology stats from the DB
+   */
   async getByTypologyStats() {
     this.statisticsService.getKgForTypology()
       .then(
@@ -181,6 +199,10 @@ export class StatisticsPage implements OnInit, AfterViewInit {
   }
 
 
+  /**
+   * given the typology stats object, 
+   * it creates the labels and values to be shown
+   */
   async createIndexesTypologies() {
 
     this.typologyStats.forEach(element => {
@@ -190,6 +212,11 @@ export class StatisticsPage implements OnInit, AfterViewInit {
   }
 
 
+
+   /**
+   * based on the length of the typologyStats array,
+   * generate the right number of colors needed
+   */
   async generateColorsTypologies() {
     let col = this.shuffleColors(this.colors)
     for (let i = 0; i < this.typologyStats.length; i++) {
@@ -202,6 +229,9 @@ export class StatisticsPage implements OnInit, AfterViewInit {
   }
 
 
+  /**
+   * get the suppliers stats from the DB
+   */
   async getBySuppliersStats() {
     this.statisticsService.getKgForSuppliers()
       .then(res => {
@@ -215,6 +245,10 @@ export class StatisticsPage implements OnInit, AfterViewInit {
   }
 
 
+    /**
+   * given the suppliers stats object, 
+   * it creates the labels and values to be shown
+   */
   createIndexesSuppliers() {
     this.suppliersStats.forEach(element => {
       this.suppliersValues.push(element.total)
@@ -224,6 +258,10 @@ export class StatisticsPage implements OnInit, AfterViewInit {
   }
 
 
+  /**
+   * based on the length of the suppliersStats array,
+   * generate the right number of colors needed
+   */
   generateColorsSuppliers() {
     let col = this.shuffleColors(this.colors)
 
@@ -253,11 +291,11 @@ export class StatisticsPage implements OnInit, AfterViewInit {
 
 
   createIndexesWaste() {
-   
-      this.wasteValues.push(this.wasteStats.destemmingWaste)
-      this.wasteValues.push(this.wasteStats.winemakingWaste)
-      this.wasteLabels.push("Diraspatura")
-      this.wasteLabels.push("Vinificazione")
+
+    this.wasteValues.push(this.wasteStats.destemmingWaste)
+    this.wasteValues.push(this.wasteStats.winemakingWaste)
+    this.wasteLabels.push("Diraspatura")
+    this.wasteLabels.push("Vinificazione")
 
   }
 
