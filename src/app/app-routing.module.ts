@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'splashscreen',
     pathMatch: 'full'
   },
  {
@@ -33,11 +33,14 @@ const routes: Routes = [
   },
   {
     path: 'settings',
-    loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule)
+    loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule),
+    data: {
+      role: 'ADMIN'
+    }
   },
   {
     path: 'forgot-pw',
-    loadChildren: () => import('./forgot-pw/forgot-pw.module').then( m => m.ForgotPwPageModule)
+    loadChildren: () => import('./forgot-pw/forgot-pw.module').then(m => m.ForgotPwPageModule)
   },
   {
     path: 'insert-conferment',
@@ -54,7 +57,9 @@ const routes: Routes = [
   {
     path: 'patch-account',
     loadChildren: () => import('./patch-account/patch-account.module').then( m => m.PatchAccountPageModule)
-  },  {
+
+  },
+  {
     path: 'info',
     loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
   },
@@ -65,6 +70,28 @@ const routes: Routes = [
   {
     path: 'developer',
     loadChildren: () => import('./developer/developer.module').then( m => m.DeveloperPageModule)
+
+
+  },
+  {
+    path: 'view-conferment',
+    loadChildren: () => import('./view-conferment/view-conferment.module').then( m => m.ViewConfermentPageModule)
+  },
+  {
+    path: 'splashscreen',
+    loadChildren: () => import('./splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule)
+  },
+  {
+    path: 'show-user',
+    loadChildren: () => import('./show-user/show-user.module').then( m => m.ShowUserPageModule)
+  },
+  {
+    path: 'suppliers',
+    loadChildren: () => import('./suppliers/suppliers.module').then( m => m.SuppliersPageModule)
+  },
+  {
+    path: 'add-suppliers',
+    loadChildren: () => import('./add-suppliers/add-suppliers.module').then( m => m.AddSuppliersPageModule)
   }
 
 
@@ -74,6 +101,6 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule] 
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

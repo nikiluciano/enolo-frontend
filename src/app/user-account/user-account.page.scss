@@ -1,36 +1,52 @@
-.toolbar{
-  background-color: #3B5360  ;
-  color:#ffffff;
+@font-face {   
+  font-family: 'quicksand-regular';   
+  src: url('../../assets/font/Quicksand-Regular.ttf')   
+}   
+   
+@font-face {   
+  font-family: 'quicksand-semibold';   
+  src: url('../../assets/font/Quicksand-SemiBold.ttf')   
+}  
+
+
+
+.arrow{    
+  color: white;   
+  margin-left:0%;    
+  width: 25px;     
+  height: 25px;    
+} 
+
+ion-text{
+  margin-left: 10px;
 }
 
-.arrow{
-    margin-left: 10px;
-    width: 30px; 
-    height: 30px;
-    color: #ffffff;
-   
-  
-  
-  
-  } 
+ion-item{
+  font-family: "quicksand-regular";
+  font-size: 20px;   
 
-  ion-title.title-large {
-    color: purple;
-    font-size: 30px;
-  }
+}
 
 .hammer{
 
-    margin-right: 10px;
-    width: 30px; 
-    height: 30px;
-  color: #ffffff;
+  color: white;   
+  margin-right:0%;    
+  width: 25px;     
+  height: 25px;  
   
   
   } 
 
 
-
+  .title {   
+    text-align: center;   
+    margin-left: auto;   
+    margin-right: auto;   
+    font-family: "quicksand-semibold";   
+    font-size: 20px;   
+    color:white;   
+  }   
+    
 
 
 ion-img{
@@ -47,76 +63,30 @@ ion-img{
   } 
 
 
+  
+.items {
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+}
+
   .name{ 
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 60px;
+    font-family: "quicksand-semibold";   
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
 
   }
 
+ .telefone{
+  width: 20px;     
+  height: 20px; 
+ } 
 
 
-    
-    .telefone{
-      margin-left: 40px;
-      width: 30px; 
-      height: 30px;
-      top: -80%;
-      padding: 20px;
-
-     } 
-
-
-     .lable {
-      color: #808080;
-      font-size: 10px;
-      margin-left: 20px;
-
-      text-align: center;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      position:static;
-      
-      top: -35%;
-    } 
-
-    .item{ 
-      margin-left: 20px;
-      text-align: left;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      position: relative;
-      top: 0%;}
-
-      .number{ 
-        text-align: center;
-        font-family: Comic Sans MS;
-      font-size: 25px;
-      margin-top: -20%;
-        margin-left: 93px;
-        margin-right: auto;
-        color:#3f3e3e;
-        padding: -35%;
-      top: -30%;}
-
-
-      .lable1 {
-        color: #808080;
-        font-size: 10px;
-        margin-left: 20px;
-        margin-top: 20px;
-  
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-      } 
-
-
-      .fields{margin-top: 20px;}
-
-
-
+ .icon-fab{
+  color: white;
+}
       
 
 

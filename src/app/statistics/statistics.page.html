@@ -1,9 +1,41 @@
-<ion-header>
+<ion-header >
   <ion-toolbar>
-    <ion-title>statistics</ion-title>
+    <ion-item color="police-blue" lines="none">
+      <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
+      <ion-text class="title">Statistiche</ion-text>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+ <app-loading *ngIf = "loading"></app-loading> 
+<ion-content [fullscreen]="true">
+  <div  *ngIf = "!loading"   class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        Quantità per tipologie
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+      </ion-card-content>
+    </ion-card>
 
+    <ion-card>
+      <ion-card-header>
+        Quantità per fornitori
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvasSuppliers style="position: relative; height:20vh; width:40vw"></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Scarto
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #pieCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 </ion-content>

@@ -1,0 +1,27 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-item color="police-blue" lines="none">
+      <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/settings']"></ion-icon>
+      <ion-text class="title">Pannello Utente</ion-text>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="title">
+  <app-loading *ngIf="loading"></app-loading>
+  <ion-list *ngIf="!loading">
+    <ion-item-sliding>
+      <ion-item class="item" *ngFor="let worker of workers, let i=index ">
+        <ion-toggle (click)="changeRole(worker.role, worker.username, values[i], i)" [(ngModel)]="values[i]" color="primary"></ion-toggle>
+        <ion-grid >
+            <ion-row>
+              <ion-label class="label-admin" *ngIf="worker.role=='ADMIN'">{{worker.role}}</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-text class="name-worker">{{worker.name}} {{worker.surname}}</ion-text>
+            </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

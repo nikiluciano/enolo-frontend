@@ -1,9 +1,19 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>settings</ion-title>
+    <ion-item color="police-blue" lines="none">
+      <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
+      <ion-text class="title">Impostazioni</ion-text>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-list class="list">
+    <ion-item *ngFor="let page of pages" (click)="goAhead(page.route)">
+      <ion-icon class="icon" [name]="page.icon"></ion-icon>
+      <ion-text class="page">{{page.title}}</ion-text>
+
+    </ion-item>
+  </ion-list>
 </ion-content>

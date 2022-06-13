@@ -1,8 +1,9 @@
-
 <ion-content >
   <app-loading *ngIf="isLoading"></app-loading>
-  <div  class="div1" >
-    <div class = "div2">
+  <app-no-connection *ngIf="!connection"></app-no-connection>
+  <div *ngIf="connection" class="div1" >
+
+    <div  class = "div2">
       <ion-img src="../../assets/icon/logo_whitewine.jpg" class="logo"></ion-img>
     </div>
     <div class = "login-div">
@@ -50,6 +51,7 @@
         <ion-button shape="round" class="login-btn"  (click)="loginAction()" expand="block" type="submit">
           Accedi
         </ion-button>
+
         <ion-item  class="signup-item"   lines="none" text-center>
           <ion-label class="font">Non hai un account?  
             <a [routerLink]="['/sign-up']"  class="font2">Registrati</a>

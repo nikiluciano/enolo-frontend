@@ -17,4 +17,4 @@ import { InsertConfermentPage } from './insert-conferment.page';
   ],
   declarations: [InsertConfermentPage]
 })
-export class InsertConfermentPageModule {}
+export class InsertConfermentPageModule { }

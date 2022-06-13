@@ -1,0 +1,1604 @@
+{
+    "typology": [
+        {
+            "name": "Villamagna",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Ortona",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Terre Tollesi\nTullum",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Trebbiano d'Abruzzo",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Controguerra",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Cerasuolo d'Abruzzo",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Montepulciano d'Abruzzo Colline\nTeramane",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Abruzzo",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Montepulciano d'Abruzzo",
+            "region": "ABRUZZO"
+        },
+        {
+            "name": "Grottino di Roccanova",
+            "region": "BASILICATA"
+        },
+        {
+            "name": "Terre dell'Alta Val d'Agri",
+            "region": "BASILICATA"
+        },
+        {
+            "name": "Aglianico del Vulture Superiore",
+            "region": "BASILICATA"
+        },
+        {
+            "name": "Matera",
+            "region": "BASILICATA"
+        },
+        {
+            "name": "Aglianico del Vulture",
+            "region": "BASILICATA"
+        },
+        {
+            "name": "Bivongi",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "Cir",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "Melissa",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "Lamezia",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "Scavigna",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "Terre di Cosenza",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "Savuto",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "Greco di Bianco",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "S. Anna di Isola Capo Rizzuto",
+            "region": "CALABRIA"
+        },
+        {
+            "name": "Aversa",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Ischia",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Campi Flegrei",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Capri",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Taurasi",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Casavecchia di Pontelatone",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Castel San Lorenzo",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Sannio",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Cilento",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Greco di Tufo",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Falanghina del Sannio",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Falerno del Massico",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Aglianico del Taburno",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Costa d'Amalfi",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Irpinia",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Fiano di Avellino",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Galluccio",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Penisola Sorrentina",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Vesuvio",
+            "region": "CAMPANIA"
+        },
+        {
+            "name": "Colli Romagna centrale",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Reggiano",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Colli d'Imola",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Colli di Faenza",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Colli di Parma",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Colli di Rimini",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Colli di Scandiano e di Canossa",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Colli Piacentini",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Gutturnio",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Ortrugo dei Colli Piacentini *\nOrtrugo - Colli Piacentini *",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Romagna",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Romagna Albana",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Reno",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Colli Bolognesi Classico Pignoletto",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Modena\ndi Modena",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Lambrusco Salamino di Santa Croce",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Lambrusco Grasparossa di Castelvetro",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Colli Bolognesi",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Lambrusco di Sorbara",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Bosco Eliceo",
+            "region": "EMILIA ROMAGNA"
+        },
+        {
+            "name": "Friuli Latisana",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Carso\nCarso - Kras",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Friuli Grave",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Friuli Colli Orientali",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Friuli Aquileia",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Colli Orientali del Friuli Picolit",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Friuli Isonzo\nIsonzo del Friuli",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Collio Goriziano\nCollio",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Rosazzo",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Friuli Annia",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Ramandolo",
+            "region": "FRIULI VENEZIA GIULIA"
+        },
+        {
+            "name": "Lison-Pramaggiore",
+            "region": "FRIULI VENEZIA GIULIA\nVENETO"
+        },
+        {
+            "name": "Prosecco",
+            "region": "FRIULI VENEZIA GIULIA\nVENETO"
+        },
+        {
+            "name": "Lison",
+            "region": "FRIULI VENEZIA GIULIA\nVENETO"
+        },
+        {
+            "name": "Cesanese di Olevano Romano\nOlevano Romano",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Est! Est!! Est!!! Di Montefiascone",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Cesanese di Affile\nAffile",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Montecompatri Colonna Montecompatri\nColonna",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Genazzano",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Cerveteri",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Frascati Superiore",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Colli della Sabina",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Cesanese del Piglio\nPiglio",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Castelli Romani",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Aprilia",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Terracina\nMoscato di Terracina",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Aleatico di Gradoli",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Cannellino di Frascati",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Roma",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Zagarolo",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Nettuno",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Colli Albani",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Velletri",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Marino",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Bianco Capena",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Circeo",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Tarquinia",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Frascati",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Colli Lanuvini",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Cori",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Atina",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Colli Etruschi Viterbesi\nTuscia",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Vignanello",
+            "region": "LAZIO"
+        },
+        {
+            "name": "Orvieto",
+            "region": "LAZIO\nUMBRIA"
+        },
+        {
+            "name": "Colline di Levanto",
+            "region": "LIGURIA"
+        },
+        {
+            "name": "Val Polcvera",
+            "region": "LIGURIA"
+        },
+        {
+            "name": "Cinque Terre\nCinque Terre Sciacchetr",
+            "region": "LIGURIA"
+        },
+        {
+            "name": "Pornassio\nOrmeasco di Pornassio",
+            "region": "LIGURIA"
+        },
+        {
+            "name": "Riviera Ligure di Ponente",
+            "region": "LIGURIA"
+        },
+        {
+            "name": "Rossese di Dolceacqua\nDolceaqua",
+            "region": "LIGURIA"
+        },
+        {
+            "name": "Golfo del Tigullio - Portofino\nPortofino",
+            "region": "LIGURIA"
+        },
+        {
+            "name": "Colli di Luni",
+            "region": "LIGURIA\nTOSCANA"
+        },
+        {
+            "name": "Buttafuoco dell'Oltrep Pavese\nButtafuoco",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Casteggio",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Lambrusco Mantovano",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Cellatica",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Valtellina Superiore",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Sforzato di Valtellina\nSfursat di Valtellina",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Riviera del Garda Bresciano\nGarda Bresciano",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Valcalepio",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Oltrep Pavese Pinot grigio",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Oltrep Pavese",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Scanzo\nMoscato di Scanzo",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Sangue di Giuda dell'Oltrep Pavese\nSangue di Giuda",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Franciacorta",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Terre del Colleoni\nColleoni",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Oltrep Pavese metodo classico",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Pinot nero dell'Oltrep Pavese",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Bonarda dell'Oltrep Pavese",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Botticino",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Curtefranca",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "San Colombano al Lambro\nSan Colombano",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Garda Colli Mantovani",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Valtnesi",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Valtellina rosso\nRosso di Valtellina",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Capriano del Colle",
+            "region": "LOMBARDIA"
+        },
+        {
+            "name": "Lugana",
+            "region": "LOMBARDIA\nVENETO"
+        },
+        {
+            "name": "San Martino della Battaglia",
+            "region": "LOMBARDIA\nVENETO"
+        },
+        {
+            "name": "Garda",
+            "region": "LOMBARDIA\nVENETO"
+        },
+        {
+            "name": "San Ginesio",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Cnero",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Vernaccia di Serrapetrona",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Verdicchio di Matelica",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Offida",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Verdicchio dei Castelli di Jesi",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Bianchello del Metauro",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Castelli di Jesi Verdicchio Riserva",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Rosso Cnero",
+            "region": "MARCHE"
+        },
+        {
+            "name": "I Terreni di Sanseverino",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Pergola",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Serrapetrona",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Rosso Piceno\nPiceno",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Colli Maceratesi",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Colli Pesaresi",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Esino",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Falerio",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Terre di Offida",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Verdicchio di Matelica Riserva",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Lacrima di Morro\nLacrima di Morro d'Alba",
+            "region": "MARCHE"
+        },
+        {
+            "name": "Tintilia del Molise",
+            "region": "MOLISE"
+        },
+        {
+            "name": "Biferno",
+            "region": "MOLISE"
+        },
+        {
+            "name": "Pentro di Isernia\nPentro",
+            "region": "MOLISE"
+        },
+        {
+            "name": "Molise\ndel Molise",
+            "region": "MOLISE"
+        },
+        {
+            "name": "Colline Novaresi",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Freisa di Chieri",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Monferrato",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Rubino di Cantavenna",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Ruch di Castagnole Monferrato",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Fara",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Bramaterra",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Piemonte",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Pinerolese",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Roero",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Ghemme",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Cisterna d'Asti",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Boca",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Albugnano",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Dolcetto di Ovada",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Malvasia di Castelnuovo Don Bosco",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Malvasia di Casorzo d'Asti Casorzo\nMalvasia di Casorzo",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Freisa d'Asti",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Alta Langa",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Asti",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Terre Alfieri",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Calosso",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Gabiano",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Barbaresco",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Barbera d'Asti",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Canavese",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Barbera del Monferrato Superiore",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Barolo",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Brachetto d'Acqui\nAcqui",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Barbera d'Alba",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Colli Tortonesi",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Collina Torinese",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Nebbiolo d'Alba",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Barbera del Monferrato",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Grignolino d'Asti",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Grignolino del Monferrato Casalese",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Carema",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Dolcetto d'Asti",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Strevi",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Colline Saluzzesi",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Dogliani",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Valsusa",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Dolcetto di Diano d'Alba\nDiano d'Alba",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Dolcetto di Ovada Superiore\nOvada",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Erbaluce di Caluso\nCaluso",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Cortese dell'Alto Monferrato",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Gattinara",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Sizzano",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Langhe",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Verduno Pelaverga\nVerduno",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Lessona",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Gavi\nCortese di Gavi",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Coste della Sesia",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Valli Ossolane",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Loazzolo",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Alba",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Dolcetto d'Acqui",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Dolcetto d'Alba",
+            "region": "PIEMONTE"
+        },
+        {
+            "name": "Alto Adige dell'Alto Adige Sdtirol\nSdtiroler",
+            "region": "PROVINCIA AUTONOMA DI BOLZANO"
+        },
+        {
+            "name": "Lago di Caldaro Caldaro Kalterersee\nKalterer",
+            "region": "PROVINCIA AUTONOMA DI BOLZANO\nPROVINCIA AUTONOMA DI\nTRENTO"
+        },
+        {
+            "name": "Valdadige Etschtaler",
+            "region": "PROVINCIA AUTONOMA DI BOLZANO\nPROVINCIA AUTONOMA DI TRENTO\nVENETO"
+        },
+        {
+            "name": "Trento",
+            "region": "PROVINCIA AUTONOMA DI\nTRENTO"
+        },
+        {
+            "name": "Teroldego Rotaliano",
+            "region": "PROVINCIA AUTONOMA DI\nTRENTO"
+        },
+        {
+            "name": "Casteller",
+            "region": "PROVINCIA AUTONOMA DI\nTRENTO"
+        },
+        {
+            "name": "Trentino",
+            "region": "PROVINCIA AUTONOMA DI\nTRENTO"
+        },
+        {
+            "name": "Valdadige Terradeiforti Terradeiforti",
+            "region": "PROVINCIA AUTONOMA DI TRENTO\nVENETO"
+        },
+        {
+            "name": "Galatina",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Primitivo di Manduria Dolce Naturale",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Castel del Monte Rosso Riserva",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Castel del Monte Nero di Troia Riserva",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Castel del Monte Bombino Nero",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Primitivo di Manduria",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Locorotondo",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Lizzano",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Barletta",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Leverano",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Salice Salentino",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Moscato di Trani",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Negroamaro di Terra d'Otranto",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Martina\nMartina Franca",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Nard",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Alezio",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Brindisi",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Aleatico di Puglia",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Squinzano",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Castel del Monte",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Tavoliere delle Puglie\nTavoliere",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Matino",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Gravina",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Ostuni",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "San Severo",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Orta Nova",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Gioia del Colle",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Rosso di Cerignola",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Copertino",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Colline Joniche Tarantine",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Terra d'Otranto",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Cacc'e mmitte di Lucera",
+            "region": "PUGLIA"
+        },
+        {
+            "name": "Vernaccia di Oristano",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Mandrolisai",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Vermentino di Sardegna",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Malvasia di Bosa",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Vermentino di Gallura",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Alghero",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Arborea",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Sardegna Semidano",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Campidano di Terralba\nTerralba",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Cannonau di Sardegna",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Carignano del Sulcis",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Nuragus di Cagliari",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Nasco di Cagliari",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Moscato di Sorso-Sennori Moscato di Sorso\nMoscato di Sennori",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Moscato di Sardegna",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Monica di Sardegna",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Gir di Cagliari",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Cagliari",
+            "region": "SARDEGNA"
+        },
+        {
+            "name": "Contea di Sclafani",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Monreale",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Sciacca",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Vittoria",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Mamertino di Milazzo\nMamertino",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Cerasuolo di Vittoria",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Siracusa",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Malvasia delle Lipari",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Noto",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Faro",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Sicilia",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Pantelleria",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Menfi",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Erice",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Eloro",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Contessa Entellina",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Delia Nivolelli",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Santa Margherita di Belice",
+            "region": "SICILIA"
+        },
+        {
+            "name": "Salaparuta",
+            "region": "SICILIA"
+        },
+        {
+            "name":"Alcamo",
+            "region":"SICILIA"
+            },
+            {
+            "name":"Riesi",
+            "region":"SICILIA"
+            },
+            {
+            "name":"Sambuca di Sicilia",
+            "region":"SICILIA"
+            },
+            {
+            "name":"Marsala",
+            "region":"SICILIA"
+            },
+            {
+            "name":"Etna",
+            "region":"SICILIA"
+            },
+            {
+            "name":"Grance Senesi",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Montescudaio",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Rosso di Montalcino",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Pomino",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Terratico di Bibbona",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Moscadello di Montalcino",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Terre di Casole",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Bianco di Pitigliano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Terre di Pisa",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Rosso di Montepulciano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Elba",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Bianco dell'Empolese",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Bolgheri",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Cortona",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Barco Reale di Carmignano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Montecarlo",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Colline Lucchesi",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Val d'Arbia",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Val d'Arno di Sopra\nValdarno di Sopra",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"San Gimignano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Maremma toscana",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Vino Nobile di Montepulciano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Val di Cornia",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Ansonica Costa dell'Argentario",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Orcia",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Vernaccia di San Gimignano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Colli dell'Etruria Centrale",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Montecucco",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Valdichiana toscana",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Val di Cornia Rosso\nRosso della Val di Cornia",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Suvereto",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Valdinievole",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"San Torp",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Morellino di Scansano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Vin Santo di Montepulciano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Montecucco Sangiovese",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Elba Aleatico Passito\nAleatico Passito dell'Elba",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Sovana",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Vin Santo di Carmignano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Parrina",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Capalbio",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Chianti Classico",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Candia dei Colli Apuani",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Chianti",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Sant'Antimo",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Carmignano",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Brunello di Montalcino",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Vin Santo del Chianti",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Bolgheri Sassicaia",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Vin Santo del Chianti Classico",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Monteregio di Massa Marittima",
+            "region":"TOSCANA"
+            },
+            {
+            "name":"Rosso Orvietano\nOrvietano Rosso",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Colli Martani",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Todi",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Lago di Corbara",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Torgiano",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Torgiano Rosso Riserva",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Colli Altotiberini",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Montefalco Sagrantino",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Amelia",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Spoleto",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Assisi",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Colli del Trasimeno\nTrasimeno",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Montefalco",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Colli Perugini",
+            "region":"UMBRIA"
+            },
+            {
+            "name":"Valle d'Aosta\nValle d'Aoste",
+            "region":"VALLE D'AOSTA"
+            },
+            {
+            "name":"Bianco di Custoza\nCustoza",
+            "region":"VENETO"
+            },
+            {
+            "name":"Valpolicella",
+            "region":"VENETO"
+            },
+            {
+            "name":"Valpolicella Ripasso",
+            "region":"VENETO"
+            },
+            {
+            "name":"Colli Berici",
+            "region":"VENETO"
+            },
+            {
+            "name":"Soave",
+            "region":"VENETO"
+            },
+            {
+            "name":"Lessini Durello\nDurello Lessini",
+            "region":"VENETO"
+            },
+            {
+            "name":"Piave",
+            "region":"VENETO"
+            },
+            {
+            "name":"Breganze",
+            "region":"VENETO"
+            },
+            {
+            "name":"Venezia",
+            "region":"VENETO"
+            },
+            {
+            "name":"Vigneti della Serenissima\nSerenissima",
+            "region":"VENETO"
+            },
+            {
+            "name":"Bardolino",
+            "region":"VENETO"
+            },
+            {
+            "name":"Bagnoli di Sopra\nBagnoli",
+            "region":"VENETO"
+            },
+            {
+            "name":"Merlara",
+            "region":"VENETO"
+            },
+            {
+            "name":"Arcole",
+            "region":"VENETO"
+            },
+            {
+            "name":"Colli Euganei",
+            "region":"VENETO"
+            },
+            {
+            "name":"Soave Superiore",
+            "region":"VENETO"
+            },
+            {
+            "name":"Recioto di Soave",
+            "region":"VENETO"
+            },
+            {
+            "name":"Recioto di Gambellara",
+            "region":"VENETO"
+            },
+            {
+            "name":"Recioto della Valpolicella",
+            "region":"VENETO"
+            },
+            {
+            "name":"Piave Malanotte\nMalanotte del Piave",
+            "region":"VENETO"
+            },
+            {
+            "name":"Montello rosso\nMontello",
+            "region":"VENETO"
+            },
+            {
+            "name":"Conegliano Valdobbiadene - Prosecco Conegliano - Prosecco\nValdobbiadene - Prosecco",
+            "region":"VENETO"
+            },
+            {
+            "name":"Colli Euganei Fior d'Arancio\nFior d'Arancio Colli Euganei",
+            "region":"VENETO"
+            },
+            {
+            "name":"Colli di Conegliano",
+            "region":"VENETO"
+            },
+            {
+            "name":"Colli Asolani - Prosecco\nAsolo - Prosecco",
+            "region":"VENETO"
+            },
+            {
+            "name":"Bardolino Superiore",
+            "region":"VENETO"
+            },
+            {
+            "name":"Bagnoli Friularo\nFriularo di Bagnoli",
+            "region":"VENETO"
+            },
+            {
+            "name":"Amarone della Valpolicella",
+            "region":"VENETO"
+            },
+            {
+            "name":"Corti Benedettine del Padovano",
+            "region":"VENETO"
+            }
+    ]
+}

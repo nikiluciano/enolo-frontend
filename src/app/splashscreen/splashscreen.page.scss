@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'quicksand-medium';
+    src: url('../../assets/font/Quicksand-Medium.ttf')
+  }
+
+  @font-face {
+    font-family: 'quicksand-light';
+    src: url('../../assets/font/Quicksand-Light.ttf')
+  }
+  
+  
+
+
+  .div{
+    text-align: center;
+    vertical-align: middle;
+    font-family: quicksand-light;
+  }
+  
+
+
+.div-style {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    font-family: quicksand-light;
+    margin-bottom: 100px;
+}
+
+
+  .logo-enolo{
+      max-width: 300px;
+  }

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { ToastService } from '../services/toast.service';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -38,7 +39,8 @@ export class SignUpPage implements OnInit {
     private authService: AuthService,
     private toastService: ToastService,
     private router: Router,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private menu: MenuController
   ) {
     this.SignUpForm = this.formBuilder.group({
 
@@ -80,7 +82,10 @@ export class SignUpPage implements OnInit {
     });
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
+
+
 
   pwdIcon = "eye-outline";
   showPwd = false;
@@ -103,31 +108,28 @@ export class SignUpPage implements OnInit {
       username.length > 0 &&
       email.length > 0 &&
       pass.length > 0
+
     );
   }
 
   signAction() {
     if (this.validateInputs()) {
-      this.authService.signup(this.postData).subscribe(
-        (res: any) => {
-          if (res) {
-            this.router.navigate(['login']);
-          } else {
-            this.toastService.presentToast(
-              'Data alreay exists, please enter new details.'
-            );
-          }
-        },
-        (error: any) => {
-          this.toastService.presentToast('Network Issue.');
+      this.authService.signup(this.postData)
+        .then( res=>{
+          this.router.navigate(['login']);
+          this.toastService.presentToast("Utente registrato correttamente");
+        } 
+      )
+        .catch( err =>{
+          this.toastService.presentToast(err.msg);
         }
-      );
+      )
     } else {
       this.toastService.presentToast(
         'Riempire tutti i campi correttamente.'
       );
     }
-    console.log(this.postData.username);
+
     if (this.postData.username.length <= 0)
       this.missingUsername = true;
     else
@@ -162,9 +164,6 @@ export class SignUpPage implements OnInit {
       this.missingEmail = true;
     else
       this.missingEmail = false;
-
-
-
   }
 
 
@@ -194,6 +193,10 @@ export class SignUpPage implements OnInit {
   comparepwCheck(error): boolean {
     return !this.SignUpForm.get('confirmPassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
       (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
+  }
+
+  ionViewWillEnter() {
+    this.menu.enable(false);
   }
 
 

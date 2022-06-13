@@ -1,0 +1,99 @@
+<ion-header> 
+  <ion-toolbar> 
+    <ion-item color="police-blue" lines="none"> 
+      <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/suppliers']"></ion-icon> 
+      <ion-text class="title">Aggiungi Fornitore</ion-text> 
+    </ion-item> 
+  </ion-toolbar> 
+</ion-header> 
+ 
+<ion-content> 
+  <ion-list class="div1"> 
+ 
+    <ion-item *ngIf="!missingUsername" class="it" lines="none"> 
+      <ion-input [(ngModel)] = "postData.username" class="input"  placeholder="Username"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingUsername" class="item-wrong" lines="none"> 
+      <ion-input [(ngModel)] = "postData.username"  class="input"  placeholder="Username"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="!missingEmail" class="it" lines="none"> 
+      <ion-input [(ngModel)] = "postData.email" class="input"  placeholder="Email"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingEmail" class="item-wrong" lines="none"> 
+      <ion-input [(ngModel)] = "postData.email"  class="input"  placeholder="Email"> 
+      </ion-input> 
+    </ion-item> 
+ 
+ 
+    <ion-item *ngIf="!missingName" class="it" lines="none"> 
+      <ion-input [(ngModel)] = "postData.name" class="input"  placeholder="Nome"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingName" class="item-wrong" lines="none"> 
+      <ion-input [(ngModel)] = "postData.name" class="input"  placeholder="Nome"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="!missingSurname" class="it" lines="none"> 
+      <ion-input [(ngModel)] = "postData.surname" class="input"  placeholder="Cognome"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingSurname" class="item-wrong" lines="none"> 
+      <ion-input [(ngModel)] = "postData.surname" class="input"  placeholder="Cognome"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="!missingAddress" class="it" lines="none"> 
+      <ion-input [(ngModel)] = "postData.address" class="input"  placeholder="Indirizzo"> 
+      </ion-input> 
+    </ion-item> 
+ 
+    <ion-item *ngIf="missingAddress" class="item-wrong" lines="none"> 
+      <ion-input [(ngModel)] = "postData.address" class="input"  placeholder="Indirizzo"> 
+      </ion-input> 
+    </ion-item> 
+ 
+      <ion-item *ngIf="!missingPhone" class="it" lines="none"> 
+        <ion-input [(ngModel)] = "postData.phone"  type="number" class="input"  placeholder="Telefono"> 
+        </ion-input> 
+      </ion-item> 
+ 
+      <ion-item *ngIf="missingPhone" class="item-wrong" lines="none"> 
+        <ion-input [(ngModel)] = "postData.phone" type="number" class="input"  placeholder="Telefono"> 
+        </ion-input> 
+      </ion-item> 
+
+      <ion-item *ngIf="!missingCompany" class="it" lines="none"> 
+        <ion-input [(ngModel)] = "postData.company"   class="input"  placeholder="Azienda"> 
+        </ion-input> 
+      </ion-item> 
+ 
+      <ion-item *ngIf="missingCompany" class="item-wrong" lines="none"> 
+        <ion-input [(ngModel)] = "postData.company"  class="input"  placeholder="Azienda"> 
+        </ion-input> 
+      </ion-item> 
+ 
+ 
+ 
+      <ion-button (click)="addSupplier()" shape="round" class="login-btn" expand="block" type="submit"> 
+ 
+        Aggiungi 
+      </ion-button> 
+ 
+  </ion-list> 
+ 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="opacity: 90%; "> 
+    <ion-fab-button color="antique-fuchsia" (click)="openMenu()"> 
+      <ion-icon class="icon-fab" name="menu-outline" style="opacity: 100%; "></ion-icon> 
+    </ion-fab-button> 
+  </ion-fab> 
+ 
+</ion-content>

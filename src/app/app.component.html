@@ -1,7 +1,6 @@
-
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="overlay" swipe-gesture="true">
       <div class="style-logo">
         <div>
           <img src="assets/icon/logo_enolo.jpg" class="img">
@@ -14,7 +13,7 @@
 
             <div class="upper-menu-div">
               <div class="div-avatar">
-                <ion-avatar>
+                <ion-avatar  [routerLink]="['/user-account']">
                   <img
                     src="https://img.myloview.it/adesivi/user-icon-vector-male-person-symbol-profile-circle-avatar-sign-in-flat-color-glyph-pictogram-illustration-700-168677638.jpg" />
                 </ion-avatar>
@@ -22,10 +21,10 @@
 
               <div class="div-user-email">
                 <div class="div-row-user">
-                  <ion-label class="style-user">Vinicola</ion-label>
+                  <ion-label class="style-user">{{username}}</ion-label>
                 </div>
                 <div class="div-row-email">
-                  <ion-label class="style-email">Vinicola@gmail.com</ion-label>
+                  <ion-label class="style-email">{{email}}</ion-label>
                 </div>
               </div>
 
@@ -52,6 +51,13 @@
                   <ion-icon name="stats-chart-outline"></ion-icon>
                   <ion-label class="lab">Statistiche</ion-label>
                 </ion-button>
+
+                <ion-button fill="clear" class="style-labs-menu" [routerLink]="['/suppliers']">
+                  <ion-icon name="people-circle-outline"></ion-icon>                 
+                 <ion-label class="lab">Fornitori</ion-label>
+                </ion-button>
+
+
               </ion-menu-toggle>
             </div>
           </ion-list>
@@ -65,7 +71,14 @@
           <ion-button (click)="button5()" fill="clear" color="dark" class="style-settings" [routerLink]="['/settings']">
             <ion-icon name="cog-outline"></ion-icon>
             <ion-label class="lab">Impostazioni </ion-label>
+
+
           </ion-button>
+          <ion-button (click)="logout()" fill="clear" color="dark" class="style-settings">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <ion-label class="lab">Logout </ion-label>
+          </ion-button>
+
         </ion-menu-toggle>
       </ion-footer>
 

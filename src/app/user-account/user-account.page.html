@@ -1,9 +1,14 @@
 <ion-header>
-  <ion-toolbar class="toolbar" color="customColor">
-    <ion-icon class="arrow" slot="start" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
-    <ion-title>Account</ion-title>
-    <ion-icon class="hammer" slot="end" name="hammer-outline" [routerLink]="['/patch-account'] "></ion-icon>
+
+  <ion-toolbar color="police-blue">
+    <ion-item lines="none" color="police-blue">
+      <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
+      <ion-text class="title">Account</ion-text>
+      <ion-icon class="hammer" slot="end" name="hammer-outline" [routerLink]="['/patch-account']"></ion-icon>
+    </ion-item>
+
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
@@ -12,63 +17,44 @@
  
 
 
+  <ion-col>
+    <ion-row>
+      <ion-label class="name"> 
+        {{name}}
+        {{surname}}
+      </ion-label>
+    </ion-row>
+  </ion-col>
+    
   
-    <ion-label class="name"> 
-      {{postData.nome}}
-      {{postData.cognome}}
-    </ion-label>
-  
-    <div class="fields">
-      <ion-label class="lable1">
-          Username:
-        </ion-label>
-        <ion-input class="item">
-        {{postData.username}}
-      </ion-input>
-            
-           <ion-label class="lable">
-                E-mail:
-              </ion-label>
-              <ion-input class="item">
-              {{postData.email}}
-            </ion-input>
-                  
-            <ion-label class="lable">
-                      Indirizzo:
-                    </ion-label>
-                    <ion-input class="item">
-                    {{postData.indirizzo}}
-                  </ion-input>
-                   
-        <ion-label class="lable">
-          Password:
-        </ion-label>
-       
-        <ion-item lines="none" class="ion-no-padding">  
-          <ion-input  [type]="showPwd ? 'text' : 'password'"
-            placeholder="Password" value="password">
-          </ion-input>
-         
-          <ion-icon slot="end" [name]="pwdIcon" (click)="togglePwd()">
-          </ion-icon>
-        </ion-item>
+  <ion-item  class="items">
+    <ion-icon class="telefone" name="person-outline"></ion-icon>
+    <ion-text>
+      {{username}}
+    </ion-text>
+  </ion-item>
 
+  <ion-item class="items">
 
-        </div>
-      
-      
+    <ion-text>
+      <ion-icon class="telefone" name="mail-outline"></ion-icon>
+      {{email}}
+    </ion-text>
+  </ion-item>
 
   
+<ion-item class="items">
+  <ion-icon class="telefone" name="home-outline"></ion-icon>
+    <ion-text>
+      {{address}}
+    </ion-text>
+  </ion-item>
 
-
-
-  <ion-icon class="telefone" name="call-outline"></ion-icon>
-
-    <ion-label>
-      <ion-input class="number" type="tel">
-      {{postData.telefono}}
-      </ion-input>
-    </ion-label>
-  
+  <ion-item class="items">
+    <ion-icon class="telefone" name="call-outline"></ion-icon>
+    <ion-text>
+      {{phone}}
+    </ion-text>
+  </ion-item>
 
 </ion-content>
