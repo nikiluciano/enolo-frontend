@@ -46,12 +46,12 @@ export class UserAccountPage implements OnInit {
     this.getUser()
   }
 
-   getUser() {
-  this.email =  this.dataService.getUser().email
-  this.name=   this.dataService.getUser().name
+  getUser() {
+    this.email = this.dataService.getUser().email
+    this.name = this.dataService.getUser().name
     this.surname = this.dataService.getUser().surname
-    this.address =  this.dataService.getUser().address
-    this.phone=   this.dataService.getUser().phone
-      this.username = this.dataService.getUser().username
+    this.address = this.dataService.getUser().address
+    this.phone = this.dataService.getUser().phone
+    this.username = this.dataService.getUser().username
   }
 }

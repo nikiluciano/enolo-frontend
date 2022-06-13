@@ -19,7 +19,6 @@ export class InsertConfermentPage implements OnInit {
 
   postData = {
     _idworker: '',
-    // status: '',
     country: 'Italia',
     supplier: '',
     description: '',
@@ -30,8 +29,6 @@ export class InsertConfermentPage implements OnInit {
 
 
   missing_idworker = false;
-  // missingStatus = false;
-  // missingCountry = false;
   missingSupplier = false;
   missingDescription = false;
   missingTypology = false;
@@ -43,12 +40,11 @@ export class InsertConfermentPage implements OnInit {
   regionSelected = "";
   typologies = []
   typologySelected: string;
-  suppliers : any;
+  suppliers: any;
   loading = false;
 
   chosenSupplier: any;
   constructor(
-    private authService: AuthService,
     private toastService: ToastService,
     private router: Router,
     public confermentService: ConfermentService,
@@ -67,21 +63,25 @@ export class InsertConfermentPage implements OnInit {
 
 
 
+  /**
+   * @returns true if all the required fields are correctly filled, false
+   * if there is missing one of the fields
+   */
   validateInputs() {
     let _idworker = this.postData._idworker.trim();
-    // let status = this.postData.status.trim();
     let country = this.postData.country.trim();
     return (
       this.postData._idworker &&
-      // this.postData.status &&
       this.postData.country &&
-      // status.length > 0 &&
       country.length > 0
     );
   }
 
 
-  checkEmpityFields() {
+  /**
+   * Insert a new conferment, if the input are correctly validated, into the DB
+   */
+  insertNewConferment() {
     if (this.validateInputs()) {
       this.postData.supplier = this.chosenSupplier.name + " " + this.chosenSupplier.surname
       this.confermentService.insertConferment(this.postData).then(
@@ -107,22 +107,10 @@ export class InsertConfermentPage implements OnInit {
       );
     }
 
-    console.log(this.postData);
     if (this.postData._idworker.length <= 0)
       this.missing_idworker = true;
     else
       this.missing_idworker = false;
-
-
-    // if (this.postData.status.length <= 0)
-    //   this.missingStatus = true;
-    // else
-    //   this.missingStatus = false;
-
-    // if (this.postData.country.length <= 0)
-    //   this.missingCountry = true;
-    // else
-    //   this.missingCountry = false;
 
     if (this.postData.supplier.length <= 0)
       this.missingSupplier = true;
@@ -139,10 +127,10 @@ export class InsertConfermentPage implements OnInit {
     else
       this.missingTypology = false;
 
-     if (this.postData.origin.length <= 0)
-       this.missingOrigin = true;
-     else
-       this.missingOrigin = false;
+    if (this.postData.origin.length <= 0)
+      this.missingOrigin = true;
+    else
+      this.missingOrigin = false;
 
     if (this.postData.quantity.length <= 0)
       this.missingQuantity = true;
@@ -152,6 +140,11 @@ export class InsertConfermentPage implements OnInit {
 
   }
 
+
+  /**
+   * Change the flag of the region to be displayed, 
+   * according to the current selected region
+   */
   changeRegion() {
     let index = this.showFlag(this.regionSelected);
     this.flagToShow = this.regions[index].logo;
@@ -163,11 +156,11 @@ export class InsertConfermentPage implements OnInit {
 
       case "Abruzzo":
         return 0;
-        
+
 
       case "Basilicata":
         return 1;
-        
+
 
       case "Calabria":
         return 2;
@@ -227,16 +220,29 @@ export class InsertConfermentPage implements OnInit {
 
   }
 
+
+  /**
+   * Gets all the italian most known wine typologies
+   */
   getWineTypologies() {
     this.typologies = this.countryProvider.getTypologies();
   }
 
+
+  /**
+   * Gets all the italian regions, 
+   * with name and link to the logo image
+   */
   getRegions() {
     this.regions = this.countryProvider.getItalianRegions().regions;
 
   }
 
-  changeTypology(){
+
+/**
+ * Changes the selected typology
+ */
+  changeTypology() {
     this.postData.typology = this.typologySelected
   }
 
@@ -253,21 +259,20 @@ export class InsertConfermentPage implements OnInit {
   }
 
 
+  /**
+   * Gets the list of the suppliers from the DB
+   */
   getSuppliers() {
     this.loading = true
- 
+
     this.supplierService.getAllSuppliers()
       .then((res) => {
         this.loading = false
         this.suppliers = res;
-        console.log(JSON.stringify(this.suppliers))
 
       }).catch((err => {
-
-
       }))
   }
-
 }
 
 

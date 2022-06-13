@@ -1,0 +1,2276 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>enolo-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">enolo-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  StatisticsPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/statistics/statistics.page.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-statistics</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./statistics.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./statistics.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#abc" >abc</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#barCanvas" >barCanvas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#barCanvasSuppliers" >barCanvasSuppliers</a>
+                            </li>
+                            <li>
+                                <a href="#barChart" >barChart</a>
+                            </li>
+                            <li>
+                                <a href="#barSuppliers" >barSuppliers</a>
+                            </li>
+                            <li>
+                                <a href="#colors" >colors</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#lineCanvas" >lineCanvas</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#pieCanvas" >pieCanvas</a>
+                            </li>
+                            <li>
+                                <a href="#pieStatsWaste" >pieStatsWaste</a>
+                            </li>
+                            <li>
+                                <a href="#suppliersBorderColors" >suppliersBorderColors</a>
+                            </li>
+                            <li>
+                                <a href="#suppliersColors" >suppliersColors</a>
+                            </li>
+                            <li>
+                                <a href="#suppliersLabels" >suppliersLabels</a>
+                            </li>
+                            <li>
+                                <a href="#suppliersStats" >suppliersStats</a>
+                            </li>
+                            <li>
+                                <a href="#suppliersValues" >suppliersValues</a>
+                            </li>
+                            <li>
+                                <a href="#typologyBorderColors" >typologyBorderColors</a>
+                            </li>
+                            <li>
+                                <a href="#typologyColors" >typologyColors</a>
+                            </li>
+                            <li>
+                                <a href="#typologyLabels" >typologyLabels</a>
+                            </li>
+                            <li>
+                                <a href="#typologyStats" >typologyStats</a>
+                            </li>
+                            <li>
+                                <a href="#typologyValues" >typologyValues</a>
+                            </li>
+                            <li>
+                                <a href="#wasteLabels" >wasteLabels</a>
+                            </li>
+                            <li>
+                                <a href="#wasteStats" >wasteStats</a>
+                            </li>
+                            <li>
+                                <a href="#wasteValues" >wasteValues</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#barChartSuppliers" >barChartSuppliers</a>
+                            </li>
+                            <li>
+                                <a href="#barChartTypologies" >barChartTypologies</a>
+                            </li>
+                            <li>
+                                <a href="#createIndexesSuppliers" >createIndexesSuppliers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createIndexesTypologies" >createIndexesTypologies</a>
+                            </li>
+                            <li>
+                                <a href="#createIndexesWaste" >createIndexesWaste</a>
+                            </li>
+                            <li>
+                                <a href="#generateColorsSuppliers" >generateColorsSuppliers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#generateColorsTypologies" >generateColorsTypologies</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBySuppliersStats" >getBySuppliersStats</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getByTypologyStats" >getByTypologyStats</a>
+                            </li>
+                            <li>
+                                <a href="#getWasteStats" >getWasteStats</a>
+                            </li>
+                            <li>
+                                <a href="#initializeVariables" >initializeVariables</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ionViewWillEnter" >ionViewWillEnter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openMenu" >openMenu</a>
+                            </li>
+                            <li>
+                                <a href="#pieWaste" >pieWaste</a>
+                            </li>
+                            <li>
+                                <a href="#shuffleColors" >shuffleColors</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(menu: MenuController, statisticsService: <a href="../injectables/StatisticsService.html" target="_self">StatisticsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/statistics/statistics.page.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>menu</td>
+                                                  
+                                                        <td>
+                                                                    <code>MenuController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>statisticsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StatisticsService.html" target="_self" >StatisticsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="barChartSuppliers"></a>
+                    <span class="name">
+                        <span ><b>barChartSuppliers</b></span>
+                        <a href="#barChartSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>barChartSuppliers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:118</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>bar chart for suppliers and kg stats</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="barChartTypologies"></a>
+                    <span class="name">
+                        <span ><b>barChartTypologies</b></span>
+                        <a href="#barChartTypologies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>barChartTypologies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>bar chart for typology and kg stats</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createIndexesSuppliers"></a>
+                    <span class="name">
+                        <span ><b>createIndexesSuppliers</b></span>
+                        <a href="#createIndexesSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createIndexesSuppliers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="252"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:252</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>given the suppliers stats object,
+it creates the labels and values to be shown</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createIndexesTypologies"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>createIndexesTypologies</b></span>
+                        <a href="#createIndexesTypologies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createIndexesTypologies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="206"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:206</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>given the typology stats object,
+it creates the labels and values to be shown</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createIndexesWaste"></a>
+                    <span class="name">
+                        <span ><b>createIndexesWaste</b></span>
+                        <a href="#createIndexesWaste"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createIndexesWaste()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="293"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:293</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateColorsSuppliers"></a>
+                    <span class="name">
+                        <span ><b>generateColorsSuppliers</b></span>
+                        <a href="#generateColorsSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateColorsSuppliers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="265"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:265</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>based on the length of the suppliersStats array,
+generate the right number of colors needed</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateColorsTypologies"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>generateColorsTypologies</b></span>
+                        <a href="#generateColorsTypologies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateColorsTypologies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="220"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:220</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>based on the length of the typologyStats array,
+generate the right number of colors needed</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBySuppliersStats"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getBySuppliersStats</b></span>
+                        <a href="#getBySuppliersStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBySuppliersStats()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="235"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:235</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>get the suppliers stats from the DB</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getByTypologyStats"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getByTypologyStats</b></span>
+                        <a href="#getByTypologyStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getByTypologyStats()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="185"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:185</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>get the typology stats from the DB</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWasteStats"></a>
+                    <span class="name">
+                        <span ><b>getWasteStats</b></span>
+                        <a href="#getWasteStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWasteStats()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="280"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:280</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeVariables"></a>
+                    <span class="name">
+                        <span ><b>initializeVariables</b></span>
+                        <a href="#initializeVariables"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializeVariables()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="305"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:305</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewWillEnter"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>ionViewWillEnter</b></span>
+                        <a href="#ionViewWillEnter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ionViewWillEnter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openMenu"></a>
+                    <span class="name">
+                        <span ><b>openMenu</b></span>
+                        <a href="#openMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openMenu()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pieWaste"></a>
+                    <span class="name">
+                        <span ><b>pieWaste</b></span>
+                        <a href="#pieWaste"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>pieWaste()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="144"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:144</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>pie chart for waste stats</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="shuffleColors"></a>
+                    <span class="name">
+                        <span ><b>shuffleColors</b></span>
+                        <a href="#shuffleColors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>shuffleColors(array)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="167"
+                            class="link-to-prism">src/app/statistics/statistics.page.ts:167</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>array</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>array of colors to be shuffled</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the array shuffled</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="abc"></a>
+                    <span class="name">
+                        <span ><b>abc</b></span>
+                        <a href="#abc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/statistics/statistics.page.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="barCanvas"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>barCanvas</b></span>
+                        <a href="#barCanvas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;barCanvas&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/statistics/statistics.page.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="barCanvasSuppliers"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>barCanvasSuppliers</b></span>
+                        <a href="#barCanvasSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;barCanvasSuppliers&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/statistics/statistics.page.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="barChart"></a>
+                    <span class="name">
+                        <span ><b>barChart</b></span>
+                        <a href="#barChart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/statistics/statistics.page.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="barSuppliers"></a>
+                    <span class="name">
+                        <span ><b>barSuppliers</b></span>
+                        <a href="#barSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/statistics/statistics.page.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="colors"></a>
+                    <span class="name">
+                        <span ><b>colors</b></span>
+                        <a href="#colors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>colors.bar_colors</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/statistics/statistics.page.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="lineCanvas"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>lineCanvas</b></span>
+                        <a href="#lineCanvas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;lineCanvas&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/statistics/statistics.page.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/statistics/statistics.page.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pieCanvas"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>pieCanvas</b></span>
+                        <a href="#pieCanvas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;pieCanvas&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/statistics/statistics.page.ts:18</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Canvas to draw on the charts</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pieStatsWaste"></a>
+                    <span class="name">
+                        <span ><b>pieStatsWaste</b></span>
+                        <a href="#pieStatsWaste"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/statistics/statistics.page.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="suppliersBorderColors"></a>
+                    <span class="name">
+                        <span ><b>suppliersBorderColors</b></span>
+                        <a href="#suppliersBorderColors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/statistics/statistics.page.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="suppliersColors"></a>
+                    <span class="name">
+                        <span ><b>suppliersColors</b></span>
+                        <a href="#suppliersColors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/statistics/statistics.page.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="suppliersLabels"></a>
+                    <span class="name">
+                        <span ><b>suppliersLabels</b></span>
+                        <a href="#suppliersLabels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/statistics/statistics.page.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="suppliersStats"></a>
+                    <span class="name">
+                        <span ><b>suppliersStats</b></span>
+                        <a href="#suppliersStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/statistics/statistics.page.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="suppliersValues"></a>
+                    <span class="name">
+                        <span ><b>suppliersValues</b></span>
+                        <a href="#suppliersValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/statistics/statistics.page.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typologyBorderColors"></a>
+                    <span class="name">
+                        <span ><b>typologyBorderColors</b></span>
+                        <a href="#typologyBorderColors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/statistics/statistics.page.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typologyColors"></a>
+                    <span class="name">
+                        <span ><b>typologyColors</b></span>
+                        <a href="#typologyColors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/statistics/statistics.page.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typologyLabels"></a>
+                    <span class="name">
+                        <span ><b>typologyLabels</b></span>
+                        <a href="#typologyLabels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/statistics/statistics.page.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typologyStats"></a>
+                    <span class="name">
+                        <span ><b>typologyStats</b></span>
+                        <a href="#typologyStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/statistics/statistics.page.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typologyValues"></a>
+                    <span class="name">
+                        <span ><b>typologyValues</b></span>
+                        <a href="#typologyValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/statistics/statistics.page.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="wasteLabels"></a>
+                    <span class="name">
+                        <span ><b>wasteLabels</b></span>
+                        <a href="#wasteLabels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/statistics/statistics.page.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="wasteStats"></a>
+                    <span class="name">
+                        <span ><b>wasteStats</b></span>
+                        <a href="#wasteStats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/statistics/statistics.page.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="wasteValues"></a>
+                    <span class="name">
+                        <span ><b>wasteValues</b></span>
+                        <a href="#wasteValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/statistics/statistics.page.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { MenuController } from &#x27;@ionic/angular&#x27;;
+import { Chart, registerables } from &#x27;chart.js&#x27;;
+import { StatisticsService } from &#x27;../services/statistics.service&#x27;;
+import colors from &#x27;../utilites/colors.json&#x27;
+Chart.register(...registerables);
+
+
+@Component({
+  selector: &#x27;app-statistics&#x27;,
+  templateUrl: &#x27;./statistics.page.html&#x27;,
+  styleUrls: [&#x27;./statistics.page.scss&#x27;],
+})
+export class StatisticsPage implements OnInit, AfterViewInit {
+  /**
+   * Canvas to draw on the charts
+   */
+  @ViewChild(&#x27;pieCanvas&#x27;) private pieCanvas: ElementRef;
+  @ViewChild(&#x27;barCanvas&#x27;) private barCanvas: ElementRef;
+  @ViewChild(&#x27;lineCanvas&#x27;) private lineCanvas: ElementRef;
+  @ViewChild(&#x27;barCanvasSuppliers&#x27;) private barCanvasSuppliers: ElementRef;
+
+
+  barChart: any;
+  barSuppliers: any;
+  pieStatsWaste: any;
+  abc: any;
+
+  typologyStats: any;
+  typologyLabels &#x3D; [];
+  typologyValues &#x3D; [];
+
+  suppliersStats: any;
+  suppliersLabels &#x3D; [];
+  suppliersValues &#x3D; [];
+
+  wasteStats: any;
+  wasteLabels &#x3D; [];
+  wasteValues &#x3D; [];
+
+  colors &#x3D; colors.bar_colors;
+  typologyColors &#x3D; [];
+  typologyBorderColors &#x3D; [];
+  suppliersColors &#x3D; [];
+  suppliersBorderColors &#x3D; [];
+
+  loading &#x3D; false;
+
+  constructor(private menu: MenuController,
+    private statisticsService: StatisticsService) { }
+
+
+  async ngAfterViewInit() {
+
+
+    this.getByTypologyStats()
+    this.getBySuppliersStats()
+    this.getWasteStats()
+    setTimeout(() &#x3D;&gt; {
+      this.loading &#x3D; true
+      this.barChartTypologies();
+      this.barChartSuppliers();
+      this.pieWaste()
+      this.loading &#x3D; false
+
+    }, 1500);
+
+  }
+
+
+  ngOnInit() {
+
+  }
+
+
+  async ionViewWillEnter() {
+    this.menu.enable(true);
+
+  }
+
+
+  openMenu() {
+    this.menu.open();
+  }
+
+
+  /**
+   * bar chart for typology and kg stats
+   */
+  barChartTypologies() {
+
+    this.barChart &#x3D; new Chart(this.barCanvas.nativeElement, {
+      type: &#x27;bar&#x27;,
+      data: {
+        labels: this.typologyLabels,
+        datasets: [{
+          label: &#x27;# di quantità(kg) per tipologia&#x27;,
+          data: this.typologyValues,
+          backgroundColor: this.typologyColors,
+          borderColor: this.typologyBorderColors,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      },
+    });
+  }
+
+
+  /**
+  * bar chart for suppliers and kg stats
+  */
+  barChartSuppliers() {
+    this.barSuppliers &#x3D; new Chart(this.barCanvasSuppliers.nativeElement, {
+      type: &#x27;bar&#x27;,
+      data: {
+        labels: this.suppliersLabels,
+        datasets: [{
+          label: &#x27;# di quantità(kg) per fornitori&#x27;,
+          data: this.suppliersValues,
+          backgroundColor: this.suppliersColors,
+          borderColor: this.suppliersBorderColors,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      },
+    });
+  }
+
+/**
+ * pie chart for waste stats
+ */
+  pieWaste() {
+    this.pieStatsWaste &#x3D; new Chart(this.pieCanvas.nativeElement, {
+      type: &#x27;pie&#x27;,
+      data: {
+        labels: this.wasteLabels,
+        datasets: [{
+          label: &#x27;scarto (in kg) dei processi&#x27;,
+          data: this.wasteValues,
+          backgroundColor: [&quot;rgba(47,79,79,1)&quot;, &quot;rgba(219,112,147,1)&quot;],
+          borderColor: [&quot;rgba(47,79,79,0.2)&quot;, &quot;rgba(219,112,147,0.2)&quot;],
+          borderWidth: 1
+        }]
+      },
+    });
+  }
+
+
+
+/**
+ * 
+ * @param array array of colors to be shuffled
+ * @returns the array shuffled
+ */
+  shuffleColors(array) {
+    let currentIndex &#x3D; array.length, randomIndex;
+
+    while (currentIndex !&#x3D; 0) {
+
+      randomIndex &#x3D; Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] &#x3D; [
+        array[randomIndex], array[currentIndex]];
+    }
+    return array;
+  }
+
+
+  /**
+   * get the typology stats from the DB
+   */
+  async getByTypologyStats() {
+    this.statisticsService.getKgForTypology()
+      .then(
+        res &#x3D;&gt; {
+          this.typologyStats &#x3D; res;
+          this.createIndexesTypologies()
+          this.generateColorsTypologies()
+        }
+      )
+      .catch(
+        err &#x3D;&gt; {
+
+        }
+      )
+  }
+
+
+  /**
+   * given the typology stats object, 
+   * it creates the labels and values to be shown
+   */
+  async createIndexesTypologies() {
+
+    this.typologyStats.forEach(element &#x3D;&gt; {
+      this.typologyValues.push(element.total)
+      this.typologyLabels.push(element._id)
+    });
+  }
+
+
+
+   /**
+   * based on the length of the typologyStats array,
+   * generate the right number of colors needed
+   */
+  async generateColorsTypologies() {
+    let col &#x3D; this.shuffleColors(this.colors)
+    for (let i &#x3D; 0; i &lt; this.typologyStats.length; i++) {
+      this.typologyColors.push(col[i].background)
+      this.typologyBorderColors.push(col[i].border)
+
+    }
+    /*  console.log(JSON.stringify(this.typologyColors))
+     console.log(JSON.stringify(this.typologyBorderColors)) */
+  }
+
+
+  /**
+   * get the suppliers stats from the DB
+   */
+  async getBySuppliersStats() {
+    this.statisticsService.getKgForSuppliers()
+      .then(res &#x3D;&gt; {
+        this.suppliersStats &#x3D; res
+        this.createIndexesSuppliers()
+        this.generateColorsSuppliers()
+      })
+      .catch(err &#x3D;&gt; {
+
+      })
+  }
+
+
+    /**
+   * given the suppliers stats object, 
+   * it creates the labels and values to be shown
+   */
+  createIndexesSuppliers() {
+    this.suppliersStats.forEach(element &#x3D;&gt; {
+      this.suppliersValues.push(element.total)
+      this.suppliersLabels.push(element._id)
+    });
+
+  }
+
+
+  /**
+   * based on the length of the suppliersStats array,
+   * generate the right number of colors needed
+   */
+  generateColorsSuppliers() {
+    let col &#x3D; this.shuffleColors(this.colors)
+
+    for (let i &#x3D; 0; i &lt; this.suppliersStats.length; i++) {
+      this.suppliersColors.push(col[i].background)
+      this.suppliersBorderColors.push(col[i].border)
+
+    }
+    console.log(JSON.stringify(this.suppliersColors))
+    console.log(JSON.stringify(this.suppliersBorderColors))
+  }
+
+
+
+
+  getWasteStats() {
+    this.statisticsService.getWasteStats()
+      .then(res &#x3D;&gt; {
+        this.wasteStats &#x3D; res
+        this.createIndexesWaste()
+      })
+      .catch(err &#x3D;&gt; {
+
+      })
+
+  }
+
+
+  createIndexesWaste() {
+
+    this.wasteValues.push(this.wasteStats.destemmingWaste)
+    this.wasteValues.push(this.wasteStats.winemakingWaste)
+    this.wasteLabels.push(&quot;Diraspatura&quot;)
+    this.wasteLabels.push(&quot;Vinificazione&quot;)
+
+  }
+
+
+
+
+  initializeVariables() {
+
+    this.typologyLabels &#x3D; [];
+    this.typologyValues &#x3D; [];
+
+
+    this.suppliersLabels &#x3D; [];
+    this.suppliersValues &#x3D; [];
+
+    this.typologyColors &#x3D; [];
+    this.typologyBorderColors &#x3D; [];
+    this.suppliersColors &#x3D; [];
+    this.suppliersBorderColors &#x3D; [];
+
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header &gt;
+  &lt;ion-toolbar&gt;
+    &lt;ion-item color&#x3D;&quot;police-blue&quot; lines&#x3D;&quot;none&quot;&gt;
+      &lt;ion-menu-button color&#x3D;&quot;white&quot;&gt;
+      &lt;/ion-menu-button&gt;      &lt;ion-text class&#x3D;&quot;title&quot;&gt;Statistiche&lt;/ion-text&gt;
+    &lt;/ion-item&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+ &lt;app-loading *ngIf &#x3D; &quot;loading&quot;&gt;&lt;/app-loading&gt; 
+&lt;ion-content [fullscreen]&#x3D;&quot;true&quot;&gt;
+  &lt;div  *ngIf &#x3D; &quot;!loading&quot;   class&#x3D;&quot;ion-padding&quot;&gt;
+    &lt;ion-card&gt;
+      &lt;ion-card-header&gt;
+        Quantità per tipologie
+      &lt;/ion-card-header&gt;
+      &lt;ion-card-content&gt;
+        &lt;canvas #barCanvas style&#x3D;&quot;position: relative; height:20vh; width:40vw&quot;&gt;&lt;/canvas&gt;
+      &lt;/ion-card-content&gt;
+    &lt;/ion-card&gt;
+
+    &lt;ion-card&gt;
+      &lt;ion-card-header&gt;
+        Quantità per fornitori
+      &lt;/ion-card-header&gt;
+      &lt;ion-card-content&gt;
+        &lt;canvas #barCanvasSuppliers style&#x3D;&quot;position: relative; height:20vh; width:40vw&quot;&gt;&lt;/canvas&gt;
+      &lt;/ion-card-content&gt;
+    &lt;/ion-card&gt;
+
+    &lt;ion-card&gt;
+      &lt;ion-card-header&gt;
+        Scarto
+      &lt;/ion-card-header&gt;
+      &lt;ion-card-content&gt;
+        &lt;canvas #pieCanvas style&#x3D;&quot;position: relative; height:20vh; width:40vw&quot;&gt;&lt;/canvas&gt;
+      &lt;/ion-card-content&gt;
+    &lt;/ion-card&gt;
+
+  &lt;/div&gt;
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./statistics.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.icon-fab {
+  color: white;
+}
+
+@font-face {
+  font-family: &#x27;quicksand-regular&#x27;;
+  src: url(&#x27;../../assets/font/Quicksand-Regular.ttf&#x27;)
+}
+
+@font-face {
+  font-family: &#x27;quicksand-semibold&#x27;;
+  src: url(&#x27;../../assets/font/Quicksand-SemiBold.ttf&#x27;)
+}
+
+.arrow {
+  color: white;
+  margin-left: 0%;
+  width: 22px;
+  height: 22px;
+}
+
+.title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: &quot;quicksand-semibold&quot;;
+  font-size: 20px;
+  color: white;
+}
+
+ion-toolbar {
+  --background: #3B5360;
+
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header >  <ion-toolbar>    <ion-item color="police-blue" lines="none">      <ion-menu-button color="white">      </ion-menu-button>      <ion-text class="title">Statistiche</ion-text>    </ion-item>  </ion-toolbar></ion-header> <app-loading *ngIf = "loading"></app-loading> <ion-content [fullscreen]="true">  <div  *ngIf = "!loading"   class="ion-padding">    <ion-card>      <ion-card-header>        Quantità per tipologie      </ion-card-header>      <ion-card-content>        <canvas #barCanvas style="position: relative; height:20vh; width:40vw"></canvas>      </ion-card-content>    </ion-card>    <ion-card>      <ion-card-header>        Quantità per fornitori      </ion-card-header>      <ion-card-content>        <canvas #barCanvasSuppliers style="position: relative; height:20vh; width:40vw"></canvas>      </ion-card-content>    </ion-card>    <ion-card>      <ion-card-header>        Scarto      </ion-card-header>      <ion-card-content>        <canvas #pieCanvas style="position: relative; height:20vh; width:40vw"></canvas>      </ion-card-content>    </ion-card>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AddSuppliersPage', 'selector': 'app-add-suppliers'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DeveloperPage', 'selector': 'app-developer'},{'name': 'ForgotPwPage', 'selector': 'app-forgot-pw'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'InfoPage', 'selector': 'app-info'},{'name': 'InsertConfermentPage', 'selector': 'app-insert-conferment'},{'name': 'LoadingComponent', 'selector': 'app-loading'},{'name': 'LoadPage', 'selector': 'app-load'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'NoConnectionComponent', 'selector': 'app-no-connection'},{'name': 'PatchAccountPage', 'selector': 'app-patch-account'},{'name': 'SettingsPage', 'selector': 'app-settings'},{'name': 'ShowUserPage', 'selector': 'app-show-user'},{'name': 'SignUpPage', 'selector': 'app-sign-up'},{'name': 'SplashscreenPage', 'selector': 'app-splashscreen'},{'name': 'StatisticsPage', 'selector': 'app-statistics'},{'name': 'SuppliersPage', 'selector': 'app-suppliers'},{'name': 'UserAccountPage', 'selector': 'app-user-account'},{'name': 'ViewConfermentPage', 'selector': 'app-view-conferment'},{'name': 'WarehousePage', 'selector': 'app-warehouse'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'StatisticsPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'StatisticsPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

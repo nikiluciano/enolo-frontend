@@ -22,23 +22,28 @@ export class AppComponent implements OnInit {
 
   }
 
+
+  /** 
+   * deletes the data stored in the user's device
+  */
   logout() {
     this.dataService.getUser().makeLogout()
 
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.dataService.getUserDataStored();
 
   }
 
 
-
+  /**
+   * gets the mail and username to be shown in the menu 
+   */
   async checkUser() {
     this.email = this.dataService.getUser().getEmail()
     this.username = this.dataService.getUser().getUsername()
-    console.log("check user" + this.email)
-    console.log("check user" + this.username)
+
   }
 
 }

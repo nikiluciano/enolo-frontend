@@ -1,0 +1,2058 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>enolo-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">enolo-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ViewConfermentPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/view-conferment/view-conferment.page.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-view-conferment</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./view-conferment.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./view-conferment.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#bottles_quantity" >bottles_quantity</a>
+                            </li>
+                            <li>
+                                <a href="#caps_quantity" >caps_quantity</a>
+                            </li>
+                            <li>
+                                <a href="#conferment" >conferment</a>
+                            </li>
+                            <li>
+                                <a href="#description" >description</a>
+                            </li>
+                            <li>
+                                <a href="#format" >format</a>
+                            </li>
+                            <li>
+                                <a href="#idConferment" >idConferment</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#nextProcess" >nextProcess</a>
+                            </li>
+                            <li>
+                                <a href="#tags_quantity" >tags_quantity</a>
+                            </li>
+                            <li>
+                                <a href="#waste" >waste</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getConferment" >getConferment</a>
+                            </li>
+                            <li>
+                                <a href="#getNextProcess" >getNextProcess</a>
+                            </li>
+                            <li>
+                                <a href="#initializeVariables" >initializeVariables</a>
+                            </li>
+                            <li>
+                                <a href="#initiazileModels" >initiazileModels</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewWillEnter" >ionViewWillEnter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#newProcess" >newProcess</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openMenu" >openMenu</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dataService: <a href="../injectables/DataService.html" target="_self">DataService</a>, confermentService: <a href="../injectables/ConfermentService.html" target="_self">ConfermentService</a>, menu: MenuController)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confermentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfermentService.html" target="_self" >ConfermentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>menu</td>
+                                                  
+                                                        <td>
+                                                                    <code>MenuController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferment"></a>
+                    <span class="name">
+                        <span ><b>getConferment</b></span>
+                        <a href="#getConferment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferment()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>request to server for a specific conferment</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNextProcess"></a>
+                    <span class="name">
+                        <span ><b>getNextProcess</b></span>
+                        <a href="#getNextProcess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNextProcess(currentProcess: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:173</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>will generate the next process based on specific cases.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>currentProcess</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>ex: Diraspatura
+will generate the next process based on specific cases.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeVariables"></a>
+                    <span class="name">
+                        <span ><b>initializeVariables</b></span>
+                        <a href="#initializeVariables"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializeVariables()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="212"
+                            class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:212</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initiazileModels"></a>
+                    <span class="name">
+                        <span ><b>initiazileModels</b></span>
+                        <a href="#initiazileModels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initiazileModels()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewWillEnter"></a>
+                    <span class="name">
+                        <span ><b>ionViewWillEnter</b></span>
+                        <a href="#ionViewWillEnter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ionViewWillEnter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="162"
+                            class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:162</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newProcess"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>newProcess</b></span>
+                        <a href="#newProcess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>newProcess(currentProcess: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, status: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>make a patch request to the server
+the status is needed to understand if it&#39;s a new conferment
+or it&#39;s already in processing</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>currentProcess</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>ex: DIRASPATURA</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>status</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>PENDING
+the status is needed to understand if it&#39;s a new conferment
+or it&#39;s already in processing</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openMenu"></a>
+                    <span class="name">
+                        <span ><b>openMenu</b></span>
+                        <a href="#openMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openMenu()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:157</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bottles_quantity"></a>
+                    <span class="name">
+                        <span ><b>bottles_quantity</b></span>
+                        <a href="#bottles_quantity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="caps_quantity"></a>
+                    <span class="name">
+                        <span ><b>caps_quantity</b></span>
+                        <a href="#caps_quantity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="conferment"></a>
+                    <span class="name">
+                        <span ><b>conferment</b></span>
+                        <a href="#conferment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="description"></a>
+                    <span class="name">
+                        <span ><b>description</b></span>
+                        <a href="#description"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="format"></a>
+                    <span class="name">
+                        <span ><b>format</b></span>
+                        <a href="#format"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="idConferment"></a>
+                    <span class="name">
+                        <span ><b>idConferment</b></span>
+                        <a href="#idConferment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nextProcess"></a>
+                    <span class="name">
+                        <span ><b>nextProcess</b></span>
+                        <a href="#nextProcess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tags_quantity"></a>
+                    <span class="name">
+                        <span ><b>tags_quantity</b></span>
+                        <a href="#tags_quantity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="waste"></a>
+                    <span class="name">
+                        <span ><b>waste</b></span>
+                        <a href="#waste"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/view-conferment/view-conferment.page.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { DataService } from &#x27;../services/DataService&#x27;;
+import { ConfermentService } from &#x27;../services/conferment.service&#x27;
+import { findTheCurrentProcessForAConferment } from &#x27;../utilites/utilities-functions&#x27;;
+import { MenuController } from &#x27;@ionic/angular&#x27;;
+
+@Component({
+  selector: &#x27;app-view-conferment&#x27;,
+  templateUrl: &#x27;./view-conferment.page.html&#x27;,
+  styleUrls: [&#x27;./view-conferment.page.scss&#x27;],
+})
+
+
+export class ViewConfermentPage implements OnInit {
+
+  conferment: any;
+  idConferment &#x3D; &#x27;&#x27;;
+  nextProcess: string;
+
+  loading &#x3D; true;
+
+  description: string;
+  waste: number;
+
+  bottles_quantity: number;
+  format: string;
+  caps_quantity: number;
+  tags_quantity: number
+
+
+  constructor(private dataService: DataService,
+    private confermentService: ConfermentService,
+    private menu: MenuController
+  ) {
+
+  }
+
+  ngOnInit() {
+    this.getConferment();
+    this.initiazileModels();
+  }
+
+
+  /**
+   * request to server for a specific conferment
+   */
+  getConferment() {
+    this.initializeVariables()
+    this.idConferment &#x3D; this.dataService.getIdConfermentToView();
+    this.loading &#x3D; true;
+    this.confermentService.getConfermentById(this.idConferment).then((res) &#x3D;&gt; {
+      if (res) {
+        this.loading &#x3D; false;
+     
+        this.conferment &#x3D; findTheCurrentProcessForAConferment(res)
+        console.log(JSON.stringify(this.conferment))
+        this.getNextProcess(this.conferment.current_process);
+        this.initiazileModels();
+      }
+    }).catch(
+      err&#x3D;&gt;{
+
+      }
+    )
+  }
+
+
+/**
+ * make a patch request to the server
+ * @param currentProcess ex: DIRASPATURA
+ * @param status PENDING
+ * the status is needed to understand if it&#x27;s a new conferment
+ * or it&#x27;s already in processing
+ */
+  async newProcess(currentProcess: string, status: string) {
+    console.log(&quot;nuovo process in avvio&quot;)
+    let id &#x3D; this.conferment._id
+    if (status &#x3D;&#x3D; null || status &#x3D;&#x3D; &quot;DELIVERED&quot;) {
+      let patchWinePressing &#x3D; &quot;wine_pressing_process&quot;
+      let bodyWinePressing &#x3D; {
+        description: this.description
+
+      }
+      await this.confermentService.patchProcess(patchWinePressing, id, bodyWinePressing)
+      this.getConferment();
+
+    } else if (status !&#x3D; &quot;READY&quot;) {
+      switch (currentProcess) {
+        case &quot;Pigiatura&quot;:
+          let patchDestemming &#x3D; &quot;destemming_process&quot;;
+          let bodyDestemming &#x3D; {
+            description: this.description,
+            waste: this.waste
+          }
+          await this.confermentService.patchProcess(patchDestemming, id, bodyDestemming)
+          this.getConferment();
+          break;
+
+        case &quot;Diraspatura&quot;:
+          let patchWineMaking &#x3D; &quot;wine_making_process&quot;;
+          let bodyWineMaking &#x3D; {
+            description: this.description,
+            waste: this.waste
+          }
+          await this.confermentService.patchProcess(patchWineMaking, id, bodyWineMaking)
+          this.getConferment();
+          break;
+
+        case &quot;Vinificazione&quot;:
+          let patchRacking &#x3D; &quot;racking_process&quot;;
+          let bodyRacking &#x3D; {
+            description: this.description,
+          }
+          await this.confermentService.patchProcess(patchRacking, id, bodyRacking)
+          this.getConferment();
+          console.log(&quot;wine making to racking&quot;)
+
+          break;
+
+        case &quot;Svinatura&quot;:
+          let patchRefinement &#x3D; &quot;refinement_process&quot;;
+          let bodyRefinement &#x3D; {
+            description: this.description,
+
+          }
+          await this.confermentService.patchProcess(patchRefinement, id, bodyRefinement)
+          this.getConferment();
+          break;
+
+        case &quot;Affinamento&quot;:
+          let patchBottling &#x3D; &quot;bottling_process&quot;
+          let bodyBottling &#x3D; {
+            bottles: {
+              bottles_quantity: this.bottles_quantity,
+              format: this.format
+            },
+            caps_quantity: this.caps_quantity,
+            tags_quantity: this.tags_quantity
+
+          }
+          console.log(JSON.stringify(bodyBottling))
+          await this.confermentService.patchProcess(patchBottling, id, bodyBottling)
+            .catch(error &#x3D;&gt; {
+
+            })
+          this.getConferment();
+          break;
+
+        case &quot;Imbottigliamento&quot;:
+
+          break;
+      }
+    }
+  }
+
+
+  openMenu() {
+    this.menu.open();
+  }
+
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+    this.getConferment()
+  }
+
+
+  /**
+   * 
+   * @param currentProcess ex: Diraspatura
+   * will generate the next process based on specific cases. 
+   */
+  getNextProcess(currentProcess: string) {
+    switch (currentProcess) {
+      case &quot;Pigiatura&quot;:
+        this.nextProcess &#x3D; &quot;Diraspatura&quot;;
+        break;
+
+      case &quot;Diraspatura&quot;:
+        this.nextProcess &#x3D; &quot;Vinificazione&quot;;
+        break;
+
+      case &quot;Vinificazione&quot;:
+        this.nextProcess &#x3D; &quot;Svinatura&quot;;
+        break;
+
+      case &quot;Svinatura&quot;:
+        this.nextProcess &#x3D; &quot;Affinamento&quot;;
+        break;
+
+      case &quot;Affinamento&quot;:
+        this.nextProcess &#x3D; &quot;Imbottigliamento&quot;;
+        break;
+
+      case &quot;Imbottigliamento&quot;:
+
+        break;
+    }
+  }
+
+
+  initiazileModels() {
+    //this.bottlingData &#x3D; &quot;&quot;;
+    this.bottles_quantity &#x3D; null;
+    this.caps_quantity &#x3D; null;
+    this.tags_quantity &#x3D; null;
+    this.format &#x3D; null
+    this.description &#x3D; null;
+    this.waste &#x3D; null;
+  }
+
+  initializeVariables(){
+
+    this.conferment &#x3D; null;
+    this.idConferment &#x3D; null;
+    this.nextProcess&#x3D; null;
+  
+    this.loading &#x3D; false;
+  
+    this.description&#x3D; null;
+    this.waste&#x3D; null;
+  
+    this.bottles_quantity&#x3D; null;
+    this.format&#x3D; null;
+    this.caps_quantity&#x3D; null;
+    this.tags_quantity&#x3D; null;
+
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-toolbar&gt;
+    &lt;ion-item lines&#x3D;&quot;none&quot; color&#x3D;&quot;police-blue&quot;&gt;
+      &lt;ion-menu-button color&#x3D;&quot;white&quot;&gt;
+      &lt;/ion-menu-button&gt;      &lt;ion-text class&#x3D;&quot;title&quot;&gt;Visualizza Conferimento&lt;/ion-text&gt;
+    &lt;/ion-item&gt;
+  &lt;/ion-toolbar&gt;
+
+&lt;/ion-header&gt;
+
+&lt;ion-content&gt;
+  &lt;div class&#x3D;&quot;main-div&quot;&gt;
+    &lt;app-loading *ngIf&#x3D;&quot;loading&quot;&gt;&lt;/app-loading&gt;
+      &lt;ion-grid class&#x3D;&quot;grid-card&quot; *ngIf&#x3D;&quot;!loading&quot;&gt;
+        &lt;ion-col&gt;
+          &lt;ion-row class&#x3D;&quot;style-row-title&quot;&gt;
+            &lt;ion-label *ngIf&#x3D;&quot;conferment?.status&#x3D;&#x3D;&#x27;PENDING&#x27;&quot; class&#x3D;&quot;title-c&quot;&gt; In {{conferment?.current_process}}
+            &lt;/ion-label&gt;
+            &lt;ion-label *ngIf&#x3D;&quot;conferment?.status&#x3D;&#x3D;&#x27;DELIVERED&#x27;&quot; class&#x3D;&quot;title-c&quot;&gt; Lavorazione ancora non iniziata
+            &lt;/ion-label&gt;
+            &lt;ion-label *ngIf&#x3D;&quot;conferment?.status&#x3D;&#x3D;&#x27;READY&#x27;&quot; class&#x3D;&quot;title-c&quot;&gt; Lavorazione conclusa&lt;/ion-label&gt;
+          &lt;/ion-row&gt;
+
+
+          &lt;ion-row&gt;
+            &lt;ion-progress-bar color&#x3D;&quot;primary&quot; class&#x3D;&quot;bar-c&quot; [value]&#x3D;&quot;conferment?.progressBarValue&quot;&gt;&lt;/ion-progress-bar&gt;
+          &lt;/ion-row&gt;
+          &lt;ion-row&gt;
+            &lt;ion-col class&#x3D;&quot;weight-col-style&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;style-labs-peso&quot;&gt;{{conferment?.quantity}}&lt;sub class&#x3D;&quot;style-kg&quot;&gt; kg&lt;/sub&gt;&lt;/ion-label&gt;
+            &lt;/ion-col&gt;
+
+            &lt;ion-col class&#x3D;&quot;wine-type-col-style&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;style-labs-c&quot;&gt;{{conferment?.typology}}&lt;/ion-label&gt;
+            &lt;/ion-col&gt;
+          &lt;/ion-row&gt;
+
+          &lt;ion-row&gt;
+            &lt;ion-col class&#x3D;&quot;down-col-style&quot;&gt;
+              &lt;ion-item lines&#x3D;&quot;none&quot; class&#x3D;&quot;ion-no-padding&quot;&gt;
+                &lt;ion-icon name&#x3D;&quot;calendar-outline&quot; class&#x3D;&quot;icon-style&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-label class&#x3D;&quot;calendar-label-style&quot;&gt;{{conferment?.date | date: &#x27;dd-MM-yyyy&#x27;}}&lt;/ion-label&gt;
+              &lt;/ion-item&gt;
+            &lt;/ion-col&gt;
+
+            &lt;ion-col class&#x3D;&quot;supplier-col-style&quot;&gt;
+              &lt;ion-item class&#x3D;&quot;ion-no-padding&quot; lines&#x3D;&quot;none&quot;&gt;
+                &lt;ion-label class&#x3D;&quot;style-labs-f&quot; slot&#x3D;&quot;end&quot;&gt;{{conferment?.supplier}}&lt;/ion-label&gt;
+              &lt;/ion-item&gt;
+            &lt;/ion-col&gt;
+          &lt;/ion-row&gt;
+        &lt;/ion-col&gt;
+      &lt;/ion-grid&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;ion-grid class&#x3D;&quot;title-div&quot;&gt;
+      &lt;ion-row&gt;
+      &lt;ion-title class&#x3D;&quot;title-processes&quot;&gt;Processi({{conferment?.numberOfTheProgress}})
+      &lt;/ion-title&gt;
+    &lt;/ion-row&gt;
+
+    &lt;/ion-grid&gt;
+
+
+    &lt;div class&#x3D;&quot;accordion-style&quot;&gt;
+
+      &lt;ion-accordion-group&gt;
+        &lt;ion-accordion *ngIf&#x3D;&quot;conferment?.wine_pressing_process !&#x3D; null&quot;&gt;
+          &lt;ion-item lines&#x3D;&quot;none&quot; slot&#x3D;&quot;header&quot;&gt;
+            &lt;ion-label class&#x3D;&quot;title-process&quot;&gt;Pigiatura&lt;/ion-label&gt;
+          &lt;/ion-item&gt;
+
+          &lt;ion-list slot&#x3D;&quot;content&quot;&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Descrizione&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                {{conferment?.wine_pressing_process.description}}
+              &lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+          &lt;/ion-list&gt;
+        &lt;/ion-accordion&gt;
+      &lt;/ion-accordion-group&gt;
+
+      &lt;ion-accordion-group&gt;
+        &lt;ion-accordion *ngIf&#x3D;&quot;conferment?.destemming_process !&#x3D; null&quot;&gt;
+          &lt;ion-item lines&#x3D;&quot;none&quot; slot&#x3D;&quot;header&quot;&gt;
+            &lt;ion-label class&#x3D;&quot;title-process&quot;&gt;Diraspatura&lt;/ion-label&gt;
+          &lt;/ion-item&gt;
+          &lt;ion-list slot&#x3D;&quot;content&quot;&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Descrizione&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                {{conferment?.destemming_process.description}}
+              &lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Scarto&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                {{conferment?.destemming_process.waste}}
+              &lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+          &lt;/ion-list&gt;
+        &lt;/ion-accordion&gt;
+      &lt;/ion-accordion-group&gt;
+
+      &lt;ion-accordion-group&gt;
+        &lt;ion-accordion *ngIf&#x3D;&quot;conferment?.winemaking_process !&#x3D; null&quot;&gt;
+          &lt;ion-item lines&#x3D;&quot;none&quot; slot&#x3D;&quot;header&quot;&gt;
+            &lt;ion-label class&#x3D;&quot;title-process&quot;&gt;Vinificazione&lt;/ion-label&gt;
+          &lt;/ion-item&gt;
+
+          &lt;ion-list slot&#x3D;&quot;content&quot;&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Descrizione&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                {{conferment?.winemaking_process.description}}
+              &lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Scarto&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                {{conferment?.winemaking_process.waste}}
+              &lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+          &lt;/ion-list&gt;
+        &lt;/ion-accordion&gt;
+      &lt;/ion-accordion-group&gt;
+
+      &lt;ion-accordion-group&gt;
+        &lt;ion-accordion *ngIf&#x3D;&quot;conferment?.racking_process !&#x3D; null&quot;&gt;
+          &lt;ion-item lines&#x3D;&quot;none&quot; slot&#x3D;&quot;header&quot;&gt;
+            &lt;ion-label class&#x3D;&quot;title-process&quot;&gt;Svinatura&lt;/ion-label&gt;
+          &lt;/ion-item&gt;
+
+          &lt;ion-list slot&#x3D;&quot;content&quot;&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label&gt;Descrizione&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                {{conferment?.racking_process.description}}
+              &lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+
+          &lt;/ion-list&gt;
+        &lt;/ion-accordion&gt;
+      &lt;/ion-accordion-group&gt;
+
+      &lt;ion-accordion-group&gt;
+        &lt;ion-accordion *ngIf&#x3D;&quot;conferment?.refinement_process !&#x3D; null&quot;&gt;
+          &lt;ion-item lines&#x3D;&quot;none&quot; slot&#x3D;&quot;header&quot;&gt;
+            &lt;ion-label class&#x3D;&quot;title-process&quot;&gt;Affinamento&lt;/ion-label&gt;
+          &lt;/ion-item&gt;
+          &lt;ion-list slot&#x3D;&quot;content&quot;&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Descrizione&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                {{conferment?.refinement_process.description}}
+              &lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+
+          &lt;/ion-list&gt;
+        &lt;/ion-accordion&gt;
+      &lt;/ion-accordion-group&gt;
+
+
+      &lt;ion-accordion-group&gt;
+        &lt;ion-accordion *ngIf&#x3D;&quot;conferment?.bottling_process !&#x3D; null&quot;&gt;
+          &lt;ion-item slot&#x3D;&quot;header&quot;&gt;
+            &lt;ion-label class&#x3D;&quot;title-process&quot;&gt;Imbottigliamento&lt;/ion-label&gt;
+          &lt;/ion-item&gt;
+
+          &lt;ion-list slot&#x3D;&quot;content&quot;&gt;
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Bottiglie&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                Bottiglie utilizzate: {{conferment.bottling_process.bottles.bottles_quantity}}
+              &lt;/ion-text&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                Formato: {{conferment.bottling_process.bottles.format}}
+              &lt;/ion-text&gt;
+
+            &lt;/ion-item&gt;
+
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Tappi utilizzati&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+
+
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt;
+                {{conferment.bottling_process.caps_quantity}}
+              &lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+
+
+            &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+              &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Etichette utilizzate&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+
+            &lt;ion-item&gt;
+              &lt;ion-text class&#x3D;&quot;text-description&quot;&gt; {{conferment.bottling_process.tags_quantity}}&lt;/ion-text&gt;
+            &lt;/ion-item&gt;
+
+          &lt;/ion-list&gt;
+        &lt;/ion-accordion&gt;
+      &lt;/ion-accordion-group&gt;
+
+      &lt;div class&#x3D;&quot;div-next-pr&quot;&gt;
+        &lt;ion-title *ngIf&#x3D;&quot;conferment?.status!&#x3D;&#x27;READY&#x27; &amp;&amp; conferment?.status!&#x3D;&#x27;DELIVERED&#x27;&quot; class&#x3D;&quot;title-next-process&quot;&gt;
+          Prossimo processo:&lt;/ion-title&gt;
+        &lt;ion-title *ngIf&#x3D;&quot;conferment?.status&#x3D;&#x3D;&#x27;DELIVERED&#x27; || conferment?.current_process&#x3D;&#x3D;null&quot;
+          class&#x3D;&quot;title-next-process&quot;&gt;Inizia la lavorazione:&lt;/ion-title&gt;
+
+        &lt;ion-title *ngIf&#x3D;&quot;conferment?.status!&#x3D;&#x27;READY&#x27;&quot; class&#x3D;&quot;next-process-style&quot;&gt;{{nextProcess}}&lt;/ion-title&gt;
+
+      &lt;/div&gt;
+
+
+      &lt;div *ngIf&#x3D;&quot;conferment?.current_process!&#x3D;&#x27;Affinamento&#x27; &amp;&amp; conferment?.status !&#x3D; &#x27;READY&#x27;&quot;&gt;
+        &lt;ion-item class&#x3D;&quot;description-it&quot; lines&#x3D;&quot;none&quot;&gt;
+          &lt;ion-input class&#x3D;&quot;input&quot; name&#x3D;&quot;description&quot; placeholder&#x3D;&quot;Inserisci la descrizione&quot; [(ngModel)]&#x3D;&quot;description&quot;&gt;
+          &lt;/ion-input&gt;
+        &lt;/ion-item&gt;
+
+        &lt;ion-item *ngIf&#x3D;&quot;nextProcess &#x3D;&#x3D; &#x27;Diraspatura&#x27; || nextProcess &#x3D;&#x3D; &#x27;Vinificazione&#x27;&quot; class&#x3D;&quot;it&quot; lines&#x3D;&quot;none&quot;&gt;
+          &lt;ion-input class&#x3D;&quot;input&quot; name&#x3D;&quot;waste&quot; placeholder&#x3D;&quot;Inserisci lo scarto&quot; type&#x3D;&quot;number&quot; [(ngModel)]&#x3D;&quot;waste&quot;&gt;
+          &lt;/ion-input&gt;
+        &lt;/ion-item&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf&#x3D;&quot;conferment?.current_process&#x3D;&#x3D;&#x27;Affinamento&#x27;&quot;&gt;
+        &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+          &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Bottiglie&lt;/ion-label&gt;
+        &lt;/ion-item&gt;
+        &lt;ion-item lines&#x3D;&quot;none&quot; class&#x3D;&quot;it&quot;&gt;
+          &lt;ion-input [(ngModel)]&#x3D;&quot;bottles_quantity&quot; type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;Inserisci la quantità&quot;&gt;&lt;/ion-input&gt;
+        &lt;/ion-item&gt;
+
+
+        &lt;ion-item lines&#x3D;&quot;none&quot; class&#x3D;&quot;it&quot;&gt;
+          &lt;ion-input [(ngModel)]&#x3D;&quot;format&quot; placeholder&#x3D;&quot;Inserisci il formato&quot;&gt;&lt;/ion-input&gt;
+        &lt;/ion-item&gt;
+
+        &lt;ion-item lines&#x3D;&quot;none&quot; lines&#x3D;&quot;none&quot;&gt;
+          &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Tappi&lt;/ion-label&gt;
+        &lt;/ion-item&gt;
+        &lt;ion-item lines&#x3D;&quot;none&quot; class&#x3D;&quot;it&quot;&gt;
+          &lt;ion-input [(ngModel)]&#x3D;&quot;caps_quantity&quot; type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;Inserisci la quantità dei tappi&quot;&gt;
+          &lt;/ion-input&gt;
+        &lt;/ion-item&gt;
+
+
+        &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+          &lt;ion-label class&#x3D;&quot;title-description&quot;&gt;Etichette&lt;/ion-label&gt;
+        &lt;/ion-item&gt;
+        &lt;ion-item lines&#x3D;&quot;none&quot; class&#x3D;&quot;it&quot;&gt;
+          &lt;ion-input [(ngModel)]&#x3D;&quot;tags_quantity&quot; type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;Inserisci la quantità delle etichette&quot;&gt;
+          &lt;/ion-input&gt;
+        &lt;/ion-item&gt;
+
+      &lt;/div&gt;
+
+      &lt;ion-button shape&#x3D;&quot;round&quot; expand&#x3D;&quot;block&quot; *ngIf&#x3D;&quot;conferment?.status !&#x3D; &#x27;READY&#x27;&quot;
+        (click)&#x3D;&quot;newProcess(conferment?.current_process, conferment?.status)&quot;&gt;
+        Avanza
+      &lt;/ion-button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./view-conferment.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.style-c { 
+  min-height: 250px; 
+  margin-top: 10px; 
+  border-bottom-style: ridge; 
+} 
+ 
+ion-progress-bar{ 
+  color: primary; 
+} 
+ 
+ 
+.list-style{   
+  padding:30px;   
+   
+} 
+ 
+ 
+.list-style1{   
+  padding:10px;   
+   
+}   
+ 
+ 
+.card-conf-style{ 
+ 
+  font-size: 15px; 
+  font-family:&quot;quicksand-regular&quot;; 
+} 
+ 
+.login-btn { 
+  height: 40px; 
+  --background: #8B5E83; 
+  font-family: &quot;quicksand-regular&quot;; 
+   margin-top: 5px; 
+} 
+ 
+.div1{ 
+  max-width: 300px; 
+  position: absolute; 
+  margin: auto; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  padding: 10px; 
+} 
+ 
+.div1{ 
+  position: center; 
+  margin: auto; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  padding: 10px; 
+} 
+ 
+.c { 
+  min-height: 250px; 
+  margin-top: 10px; 
+  border-bottom-style: ridge; 
+} 
+ 
+.gridstyle { 
+  height: auto; 
+  flex-flow: column; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+  min-height: 150px; 
+  padding-bottom: 10px; 
+} 
+ 
+.title-c { 
+  margin-top: 15px; 
+  margin-bottom: 15px; 
+  font-size: 24px; 
+  margin: auto; 
+  font-family: &quot;quicksand-regular&quot;; 
+} 
+
+
+ 
+.style-labs-c { 
+  margin-left: 15px; 
+  margin-bottom: 25px; 
+  margin-top: 20px; 
+  font-size: 30px; 
+  font-family: &quot;quicksand-regular&quot;; 
+} 
+ 
+.calendar-label-style { 
+  font-size: 15px; 
+  font-family: &quot;quicksand-regular&quot;; 
+} 
+ 
+ 
+.labc { 
+  font-size: 20px; 
+  margin-top: 15px; 
+ 
+} 
+ 
+.style-title-c { 
+  margin-bottom: 40px; 
+  margin-top: 20px; 
+  font-size: 20px; 
+  font-family: &quot;quicksand-semibold&quot;; 
+  padding-left: 10px; 
+} 
+ 
+ 
+.bar-c { 
+  margin-top: 15px; 
+  height: 16px; 
+  border-radius: 50px; 
+  width: 60%; 
+  margin: auto; 
+  --background: white; 
+  border: 1px solid black; 
+} 
+ 
+.style-row-title { 
+  margin-bottom: 15px; 
+  padding: 10px;
+} 
+ 
+@font-face { 
+  font-family: &#x27;quicksand-regular&#x27;; 
+  src: url(&#x27;../../assets/font/Quicksand-Regular.ttf&#x27;) 
+} 
+ 
+@font-face { 
+  font-family: &#x27;quicksand-semibold&#x27;; 
+  src: url(&#x27;../../assets/font/Quicksand-SemiBold.ttf&#x27;) 
+} 
+ 
+.weight-col-style { 
+  height: 80px; 
+  flex-flow: column wrap; 
+  text-align: left; 
+  padding-left: 20px; 
+  margin-top: 15px; 
+ 
+} 
+ 
+.wine-type-col-style { 
+  height: 80px; 
+  flex-flow: column wrap; 
+  text-align: right; 
+  padding-right: 10px; 
+  margin-top: 15px; 
+ 
+} 
+ 
+.down-col-style { 
+  height: 80px; 
+  flex-flow: column wrap; 
+  margin-bottom: 50px; 
+  text-align: left; 
+  padding-left: 10px; 
+ 
+} 
+ 
+.style-labs-f { 
+  font-size: 20px; 
+  font-family: &quot;quicksand-regular&quot;; 
+  color: #8c8c8c; 
+} 
+ 
+.icon-style { 
+  height: 20px; 
+ 
+} 
+ 
+.style-labs-peso { 
+ 
+  font-size: 30px; 
+  font-family: &quot;quicksand-regular&quot;; 
+} 
+ 
+.style-kg { 
+  font-size: 20px; 
+  font-family: &quot;quicksand-regular&quot;; 
+} 
+ 
+.card-conf-style { 
+  font-size: 20px; 
+  margin: auto; 
+  font-family: &quot;quicksand-regular&quot;; 
+  padding-left: 15px; 
+} 
+ 
+.butt-conf-style { 
+  font-size: 15px; 
+  margin: auto; 
+  font-family: &quot;quicksand-regular&quot;; 
+} 
+ 
+ion-toolbar { 
+  --background: #3B5360; 
+} 
+ 
+.title-processes { 
+ 
+  font-family: &quot;quicksand-semibold&quot; 
+ 
+} 
+
+.title-next-process { 
+  margin-top: 30px;
+  font-family: &quot;quicksand-semibold&quot; 
+ 
+} 
+ 
+ 
+.title-div { 
+  margin-top: 25px; 
+  margin-bottom: 10px; 
+  margin-left: 10px; 
+  margin-right: 10px; 
+ 
+} 
+ 
+.accordion-style { 
+  padding: 10px; 
+ 
+ 
+} 
+ 
+.title-process { 
+  font-family: &quot;quicksand-regular&quot;; 
+ 
+ 
+} 
+ 
+.title-description { 
+  font-family: &quot;quicksand-semibold&quot;; 
+  font-size: 15px; 
+} 
+ 
+.text-description { 
+ 
+  font-family: &quot;quicksand-regular&quot;; 
+  font-size: 15px; 
+ 
+} 
+ 
+.title {    
+  text-align: center;    
+  margin-left: auto;    
+  margin-right: auto;    
+  font-family: &quot;quicksand-semibold&quot;;    
+  font-size: 20px;    
+  color:white;    
+}   
+ 
+.arrow{     
+  color: white;    
+  margin-left:0%;     
+  width: 22px;      
+  height: 22px;     
+}     
+   
+ 
+ion-button { 
+  --background: #8B5E83; 
+  font-family: &quot;quicksand-regular&quot;; 
+}
+
+.it {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  margin-left:10px;
+  margin-right: 10px;
+}
+
+
+
+
+.description-it {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  margin-left:10px;
+  margin-right: 10px;
+  height: 200px;
+}
+
+.input {
+  font-family: &quot;quicksand-semibold&quot;;
+}
+
+.next-process-style{
+  font-family: &quot;quicksand-regular&quot;; 
+  font-style: italic;
+  color: gray;
+  
+}
+
+.div-next-pr{
+  margin-bottom: 20px;
+
+}
+
+.main-div{
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+.new-pr-btn{
+  max-width: 200px;
+  border-radius: 25px;
+
+}
+
+@media (max-width: 392px) {
+
+  .style-labs-c {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+
+  .style-labs-peso {
+
+    font-size: 22px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+
+  .calendar-label-style {
+    font-size: 13px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+
+  .style-labs-f {
+    font-size: 16px;
+    font-family: &quot;quicksand-regular&quot;;
+    color: #8c8c8c;
+  }
+
+  .style-kg {
+    font-size: 16px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+  .icon-style {
+    height: 15px;
+  
+  }
+}
+
+@media (max-width: 356px) {
+
+  .style-labs-c {
+
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .style-labs-peso {
+
+    font-size: 20px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .calendar-label-style {
+
+    font-size: 11px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .style-labs-f {
+
+    font-size: 14px;
+    font-family: &quot;quicksand-regular&quot;;
+    color: #8c8c8c;
+
+  }
+
+  .style-kg {
+
+    font-size: 14px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+  .icon-style {
+    height: 12px;
+  
+  }
+}
+
+@media (max-width: 330px) {
+
+  .style-labs-c {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .style-labs-peso {
+
+    font-size: 17px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .calendar-label-style {
+    font-size: 8px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .style-labs-f {
+    font-size: 11px;
+    font-family: &quot;quicksand-regular&quot;;
+    color: #8c8c8c;
+
+  }
+
+  .style-kg {
+    font-size: 11px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+  .icon-style {
+    height: 9px;
+  
+  }
+}
+
+
+.icon-fab{
+  color: white;
+}
+
+
+.grid-card{
+  border: 10px;
+
+}
+
+
+.card{
+  margin-bottom: 10px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-toolbar>    <ion-item lines="none" color="police-blue">      <ion-menu-button color="white">      </ion-menu-button>      <ion-text class="title">Visualizza Conferimento</ion-text>    </ion-item>  </ion-toolbar></ion-header><ion-content>  <div class="main-div">    <app-loading *ngIf="loading"></app-loading>      <ion-grid class="grid-card" *ngIf="!loading">        <ion-col>          <ion-row class="style-row-title">            <ion-label *ngIf="conferment?.status==\'PENDING\'" class="title-c"> In {{conferment?.current_process}}            </ion-label>            <ion-label *ngIf="conferment?.status==\'DELIVERED\'" class="title-c"> Lavorazione ancora non iniziata            </ion-label>            <ion-label *ngIf="conferment?.status==\'READY\'" class="title-c"> Lavorazione conclusa</ion-label>          </ion-row>          <ion-row>            <ion-progress-bar color="primary" class="bar-c" [value]="conferment?.progressBarValue"></ion-progress-bar>          </ion-row>          <ion-row>            <ion-col class="weight-col-style">              <ion-label class="style-labs-peso">{{conferment?.quantity}}<sub class="style-kg"> kg</sub></ion-label>            </ion-col>            <ion-col class="wine-type-col-style">              <ion-label class="style-labs-c">{{conferment?.typology}}</ion-label>            </ion-col>          </ion-row>          <ion-row>            <ion-col class="down-col-style">              <ion-item lines="none" class="ion-no-padding">                <ion-icon name="calendar-outline" class="icon-style"></ion-icon>                <ion-label class="calendar-label-style">{{conferment?.date | date: \'dd-MM-yyyy\'}}</ion-label>              </ion-item>            </ion-col>            <ion-col class="supplier-col-style">              <ion-item class="ion-no-padding" lines="none">                <ion-label class="style-labs-f" slot="end">{{conferment?.supplier}}</ion-label>              </ion-item>            </ion-col>          </ion-row>        </ion-col>      </ion-grid>    <div></div>    <ion-grid class="title-div">      <ion-row>      <ion-title class="title-processes">Processi({{conferment?.numberOfTheProgress}})      </ion-title>    </ion-row>    </ion-grid>    <div class="accordion-style">      <ion-accordion-group>        <ion-accordion *ngIf="conferment?.wine_pressing_process != null">          <ion-item lines="none" slot="header">            <ion-label class="title-process">Pigiatura</ion-label>          </ion-item>          <ion-list slot="content">            <ion-item lines="none">              <ion-label class="title-description">Descrizione</ion-label>            </ion-item>            <ion-item>              <ion-text class="text-description">                {{conferment?.wine_pressing_process.description}}              </ion-text>            </ion-item>          </ion-list>        </ion-accordion>      </ion-accordion-group>      <ion-accordion-group>        <ion-accordion *ngIf="conferment?.destemming_process != null">          <ion-item lines="none" slot="header">            <ion-label class="title-process">Diraspatura</ion-label>          </ion-item>          <ion-list slot="content">            <ion-item lines="none">              <ion-label class="title-description">Descrizione</ion-label>            </ion-item>            <ion-item lines="none">              <ion-text class="text-description">                {{conferment?.destemming_process.description}}              </ion-text>            </ion-item>            <ion-item lines="none">              <ion-label class="title-description">Scarto</ion-label>            </ion-item>            <ion-item>              <ion-text class="text-description">                {{conferment?.destemming_process.waste}}              </ion-text>            </ion-item>          </ion-list>        </ion-accordion>      </ion-accordion-group>      <ion-accordion-group>        <ion-accordion *ngIf="conferment?.winemaking_process != null">          <ion-item lines="none" slot="header">            <ion-label class="title-process">Vinificazione</ion-label>          </ion-item>          <ion-list slot="content">            <ion-item lines="none">              <ion-label class="title-description">Descrizione</ion-label>            </ion-item>            <ion-item lines="none">              <ion-text class="text-description">                {{conferment?.winemaking_process.description}}              </ion-text>            </ion-item>            <ion-item lines="none">              <ion-label class="title-description">Scarto</ion-label>            </ion-item>            <ion-item>              <ion-text class="text-description">                {{conferment?.winemaking_process.waste}}              </ion-text>            </ion-item>          </ion-list>        </ion-accordion>      </ion-accordion-group>      <ion-accordion-group>        <ion-accordion *ngIf="conferment?.racking_process != null">          <ion-item lines="none" slot="header">            <ion-label class="title-process">Svinatura</ion-label>          </ion-item>          <ion-list slot="content">            <ion-item lines="none">              <ion-label>Descrizione</ion-label>            </ion-item>            <ion-item>              <ion-text class="text-description">                {{conferment?.racking_process.description}}              </ion-text>            </ion-item>          </ion-list>        </ion-accordion>      </ion-accordion-group>      <ion-accordion-group>        <ion-accordion *ngIf="conferment?.refinement_process != null">          <ion-item lines="none" slot="header">            <ion-label class="title-process">Affinamento</ion-label>          </ion-item>          <ion-list slot="content">            <ion-item lines="none">              <ion-label class="title-description">Descrizione</ion-label>            </ion-item>            <ion-item>              <ion-text class="text-description">                {{conferment?.refinement_process.description}}              </ion-text>            </ion-item>          </ion-list>        </ion-accordion>      </ion-accordion-group>      <ion-accordion-group>        <ion-accordion *ngIf="conferment?.bottling_process != null">          <ion-item slot="header">            <ion-label class="title-process">Imbottigliamento</ion-label>          </ion-item>          <ion-list slot="content">            <ion-item lines="none">              <ion-label class="title-description">Bottiglie</ion-label>            </ion-item>            <ion-item lines="none">              <ion-text class="text-description">                Bottiglie utilizzate: {{conferment.bottling_process.bottles.bottles_quantity}}              </ion-text>              <ion-text class="text-description">                Formato: {{conferment.bottling_process.bottles.format}}              </ion-text>            </ion-item>            <ion-item lines="none">              <ion-label class="title-description">Tappi utilizzati</ion-label>            </ion-item>            <ion-item lines="none">              <ion-text class="text-description">                {{conferment.bottling_process.caps_quantity}}              </ion-text>            </ion-item>            <ion-item lines="none">              <ion-label class="title-description">Etichette utilizzate</ion-label>            </ion-item>            <ion-item>              <ion-text class="text-description"> {{conferment.bottling_process.tags_quantity}}</ion-text>            </ion-item>          </ion-list>        </ion-accordion>      </ion-accordion-group>      <div class="div-next-pr">        <ion-title *ngIf="conferment?.status!=\'READY\' && conferment?.status!=\'DELIVERED\'" class="title-next-process">          Prossimo processo:</ion-title>        <ion-title *ngIf="conferment?.status==\'DELIVERED\' || conferment?.current_process==null"          class="title-next-process">Inizia la lavorazione:</ion-title>        <ion-title *ngIf="conferment?.status!=\'READY\'" class="next-process-style">{{nextProcess}}</ion-title>      </div>      <div *ngIf="conferment?.current_process!=\'Affinamento\' && conferment?.status != \'READY\'">        <ion-item class="description-it" lines="none">          <ion-input class="input" name="description" placeholder="Inserisci la descrizione" [(ngModel)]="description">          </ion-input>        </ion-item>        <ion-item *ngIf="nextProcess == \'Diraspatura\' || nextProcess == \'Vinificazione\'" class="it" lines="none">          <ion-input class="input" name="waste" placeholder="Inserisci lo scarto" type="number" [(ngModel)]="waste">          </ion-input>        </ion-item>      </div>      <div *ngIf="conferment?.current_process==\'Affinamento\'">        <ion-item lines="none">          <ion-label class="title-description">Bottiglie</ion-label>        </ion-item>        <ion-item lines="none" class="it">          <ion-input [(ngModel)]="bottles_quantity" type="number" placeholder="Inserisci la quantità"></ion-input>        </ion-item>        <ion-item lines="none" class="it">          <ion-input [(ngModel)]="format" placeholder="Inserisci il formato"></ion-input>        </ion-item>        <ion-item lines="none" lines="none">          <ion-label class="title-description">Tappi</ion-label>        </ion-item>        <ion-item lines="none" class="it">          <ion-input [(ngModel)]="caps_quantity" type="number" placeholder="Inserisci la quantità dei tappi">          </ion-input>        </ion-item>        <ion-item lines="none">          <ion-label class="title-description">Etichette</ion-label>        </ion-item>        <ion-item lines="none" class="it">          <ion-input [(ngModel)]="tags_quantity" type="number" placeholder="Inserisci la quantità delle etichette">          </ion-input>        </ion-item>      </div>      <ion-button shape="round" expand="block" *ngIf="conferment?.status != \'READY\'"        (click)="newProcess(conferment?.current_process, conferment?.status)">        Avanza      </ion-button>    </div>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AddSuppliersPage', 'selector': 'app-add-suppliers'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DeveloperPage', 'selector': 'app-developer'},{'name': 'ForgotPwPage', 'selector': 'app-forgot-pw'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'InfoPage', 'selector': 'app-info'},{'name': 'InsertConfermentPage', 'selector': 'app-insert-conferment'},{'name': 'LoadingComponent', 'selector': 'app-loading'},{'name': 'LoadPage', 'selector': 'app-load'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'NoConnectionComponent', 'selector': 'app-no-connection'},{'name': 'PatchAccountPage', 'selector': 'app-patch-account'},{'name': 'SettingsPage', 'selector': 'app-settings'},{'name': 'ShowUserPage', 'selector': 'app-show-user'},{'name': 'SignUpPage', 'selector': 'app-sign-up'},{'name': 'SplashscreenPage', 'selector': 'app-splashscreen'},{'name': 'StatisticsPage', 'selector': 'app-statistics'},{'name': 'SuppliersPage', 'selector': 'app-suppliers'},{'name': 'UserAccountPage', 'selector': 'app-user-account'},{'name': 'ViewConfermentPage', 'selector': 'app-view-conferment'},{'name': 'WarehousePage', 'selector': 'app-warehouse'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ViewConfermentPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ViewConfermentPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

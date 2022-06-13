@@ -21,7 +21,6 @@ export class LoadPage implements OnInit {
   search: string;
   postData: any;
 
-
   thereArePendingConferments = true;
   conferments: any;
 
@@ -78,6 +77,9 @@ export class LoadPage implements OnInit {
   }
 
 
+  /**
+   * Gets the conferments from the DB
+   */
   getAllConferment() {
     this.loading = true
     this.confermentService.getAllConferments().then(
@@ -105,6 +107,14 @@ export class LoadPage implements OnInit {
   }
 
 
+/**
+ * 
+ * @param id id of the conferment the user wants to see in details.
+ * the function calls the dataService to set the id 
+ * so after this, the page view-conferment,
+ * calling back the dataService will be able to have the id
+ * of the conferment
+ */
   viewDetailsConferment(id: string) {
     this.dataService.setIdConfermentToView(id);
     console.log(id)
@@ -126,6 +136,10 @@ export class LoadPage implements OnInit {
 
   }
 
+  /**
+   * checks on which filters the user has selected
+   * and creates the query to be passed to the server
+   */
   filterConferments() {
     console.log(this.typology)
     this.activeFilters = 0
@@ -176,7 +190,12 @@ export class LoadPage implements OnInit {
 
   }
 
-  resetFilters() {
+
+  /**Reset the filter
+   * and requires again the conferments from the DB.
+   * 
+   */
+    resetFilters() {
     this.typology = null
     this.supplier = null
     this.status = null
@@ -188,6 +207,11 @@ export class LoadPage implements OnInit {
   }
 
 
+
+  /**
+   * 
+   * @param id id of the conferment to be deleted.
+   */
   deleteConferment(id: string) {
     let deleteData = {
       id: id
@@ -211,6 +235,11 @@ export class LoadPage implements OnInit {
   }
 
 
+
+  /**
+   * Gets the list of the suppliers to be shown in the menu select,
+   * from the DB.
+   */
   getSuppliers() {
 
 
@@ -220,9 +249,6 @@ export class LoadPage implements OnInit {
 
       }).catch((err => {
 
-
       }))
   }
-
-
 }

@@ -4,6 +4,10 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * Service used to display loading custom component
+ */
 export class UiService {
 
   loading = new BehaviorSubject(false)

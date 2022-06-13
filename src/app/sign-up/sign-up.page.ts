@@ -96,6 +96,11 @@ export class SignUpPage implements OnInit {
   }
 
 
+   /**
+    * 
+    * @returns true if all the fields are correctly filled,
+    * otherwise false
+    */
   validateInputs() {
     console.log(this.postData);
     let username = this.postData.username.trim();
@@ -112,6 +117,12 @@ export class SignUpPage implements OnInit {
     );
   }
 
+
+  /**
+   * If validate inputs gives back true, 
+   * the function will attempt a signup on the DB of the new user.
+   * Will be shown a toast if the request is rejected with the error message inside
+   */
   signAction() {
     if (this.validateInputs()) {
       this.authService.signup(this.postData)
@@ -173,10 +184,12 @@ export class SignUpPage implements OnInit {
     return password === confirmPassword ? null : { passwordNotMatch: true };
   }
 
+  
   emailCheck(error): boolean {
     return this.SignUpForm.get('email') &&
       (this.SignUpForm.get('email').dirty || this.SignUpForm.get('email').touched)
   }
+
 
   pwCheck(error): boolean {
     return this.SignUpForm.get('password') &&
@@ -184,16 +197,19 @@ export class SignUpPage implements OnInit {
 
   }
 
+
   confpwCheck(error): boolean {
     return this.SignUpForm.get('confirmPassword') &&
       (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
 
   }
 
+
   comparepwCheck(error): boolean {
     return !this.SignUpForm.get('confirmPassword').errors && this.SignUpForm.hasError('passwordNotMatch') &&
       (this.SignUpForm.get('confirmPassword').dirty || this.SignUpForm.get('confirmPassword').touched)
   }
+
 
   ionViewWillEnter() {
     this.menu.enable(false);

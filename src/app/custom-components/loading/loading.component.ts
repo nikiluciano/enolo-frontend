@@ -17,6 +17,10 @@ import { Injectable } from '@angular/core';
 })
 
 
+/**
+ * This class is the TS of the loading, 
+ * a custom component to be used during the calls made to the server
+ */
 export class LoadingComponent implements OnInit {
 
   loading = false;
@@ -35,7 +39,9 @@ export class LoadingComponent implements OnInit {
   }
 
 
-
+/**
+ * make the loading visible
+ */
   watchLoading() {
     this.uiService.watchLoading()
       .subscribe(loading => {

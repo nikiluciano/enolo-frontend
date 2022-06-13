@@ -1,0 +1,1855 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>enolo-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">enolo-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  InsertConfermentPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/insert-conferment/insert-conferment.page.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-insert-conferment</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./insert-conferment.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./insert-conferment.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#chosenSupplier" >chosenSupplier</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#confermentService" >confermentService</a>
+                            </li>
+                            <li>
+                                <a href="#flagToShow" >flagToShow</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#missing_idworker" >missing_idworker</a>
+                            </li>
+                            <li>
+                                <a href="#missingDescription" >missingDescription</a>
+                            </li>
+                            <li>
+                                <a href="#missingOrigin" >missingOrigin</a>
+                            </li>
+                            <li>
+                                <a href="#missingQuantity" >missingQuantity</a>
+                            </li>
+                            <li>
+                                <a href="#missingSupplier" >missingSupplier</a>
+                            </li>
+                            <li>
+                                <a href="#missingTypology" >missingTypology</a>
+                            </li>
+                            <li>
+                                <a href="#postData" >postData</a>
+                            </li>
+                            <li>
+                                <a href="#regions" >regions</a>
+                            </li>
+                            <li>
+                                <a href="#regionSelected" >regionSelected</a>
+                            </li>
+                            <li>
+                                <a href="#suppliers" >suppliers</a>
+                            </li>
+                            <li>
+                                <a href="#typologies" >typologies</a>
+                            </li>
+                            <li>
+                                <a href="#typologySelected" >typologySelected</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeRegion" >changeRegion</a>
+                            </li>
+                            <li>
+                                <a href="#changeTypology" >changeTypology</a>
+                            </li>
+                            <li>
+                                <a href="#getRegions" >getRegions</a>
+                            </li>
+                            <li>
+                                <a href="#getSuppliers" >getSuppliers</a>
+                            </li>
+                            <li>
+                                <a href="#getWineTypologies" >getWineTypologies</a>
+                            </li>
+                            <li>
+                                <a href="#insertNewConferment" >insertNewConferment</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewWillEnter" >ionViewWillEnter</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openMenu" >openMenu</a>
+                            </li>
+                            <li>
+                                <a href="#showFlag" >showFlag</a>
+                            </li>
+                            <li>
+                                <a href="#validateInputs" >validateInputs</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(toastService: <a href="../injectables/ToastService.html" target="_self">ToastService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, confermentService: <a href="../injectables/ConfermentService.html" target="_self">ConfermentService</a>, countryProvider: <a href="../injectables/CountryProvider.html" target="_self">CountryProvider</a>, menu: MenuController, supplierService: <a href="../injectables/SupplierService.html" target="_self">SupplierService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:46</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>toastService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ToastService.html" target="_self" >ToastService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confermentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfermentService.html" target="_self" >ConfermentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>countryProvider</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CountryProvider.html" target="_self" >CountryProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>menu</td>
+                                                  
+                                                        <td>
+                                                                    <code>MenuController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplierService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplierService.html" target="_self" >SupplierService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeRegion"></a>
+                    <span class="name">
+                        <span ><b>changeRegion</b></span>
+                        <a href="#changeRegion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeRegion()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="148"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:148</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Change the flag of the region to be displayed,
+according to the current selected region</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeTypology"></a>
+                    <span class="name">
+                        <span ><b>changeTypology</b></span>
+                        <a href="#changeTypology"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeTypology()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="245"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:245</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Changes the selected typology</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRegions"></a>
+                    <span class="name">
+                        <span ><b>getRegions</b></span>
+                        <a href="#getRegions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRegions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:236</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all the italian regions,
+with name and link to the logo image</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSuppliers"></a>
+                    <span class="name">
+                        <span ><b>getSuppliers</b></span>
+                        <a href="#getSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSuppliers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="265"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:265</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the list of the suppliers from the DB</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWineTypologies"></a>
+                    <span class="name">
+                        <span ><b>getWineTypologies</b></span>
+                        <a href="#getWineTypologies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWineTypologies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="227"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:227</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all the italian most known wine typologies</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="insertNewConferment"></a>
+                    <span class="name">
+                        <span ><b>insertNewConferment</b></span>
+                        <a href="#insertNewConferment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>insertNewConferment()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Insert a new conferment, if the input are correctly validated, into the DB</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewWillEnter"></a>
+                    <span class="name">
+                        <span ><b>ionViewWillEnter</b></span>
+                        <a href="#ionViewWillEnter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ionViewWillEnter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="254"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:254</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openMenu"></a>
+                    <span class="name">
+                        <span ><b>openMenu</b></span>
+                        <a href="#openMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openMenu()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="249"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:249</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showFlag"></a>
+                    <span class="name">
+                        <span ><b>showFlag</b></span>
+                        <a href="#showFlag"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showFlag(regionName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:154</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>regionName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateInputs"></a>
+                    <span class="name">
+                        <span ><b>validateInputs</b></span>
+                        <a href="#validateInputs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateInputs()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>if there is missing one of the fields</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>true if all the required fields are correctly filled, false
+if there is missing one of the fields</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="chosenSupplier"></a>
+                    <span class="name">
+                        <span ><b>chosenSupplier</b></span>
+                        <a href="#chosenSupplier"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confermentService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>confermentService</b></span>
+                        <a href="#confermentService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/ConfermentService.html" target="_self" >ConfermentService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="flagToShow"></a>
+                    <span class="name">
+                        <span ><b>flagToShow</b></span>
+                        <a href="#flagToShow"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="missing_idworker"></a>
+                    <span class="name">
+                        <span ><b>missing_idworker</b></span>
+                        <a href="#missing_idworker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="missingDescription"></a>
+                    <span class="name">
+                        <span ><b>missingDescription</b></span>
+                        <a href="#missingDescription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="missingOrigin"></a>
+                    <span class="name">
+                        <span ><b>missingOrigin</b></span>
+                        <a href="#missingOrigin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="missingQuantity"></a>
+                    <span class="name">
+                        <span ><b>missingQuantity</b></span>
+                        <a href="#missingQuantity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="missingSupplier"></a>
+                    <span class="name">
+                        <span ><b>missingSupplier</b></span>
+                        <a href="#missingSupplier"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="missingTypology"></a>
+                    <span class="name">
+                        <span ><b>missingTypology</b></span>
+                        <a href="#missingTypology"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="postData"></a>
+                    <span class="name">
+                        <span ><b>postData</b></span>
+                        <a href="#postData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    _idworker: &#x27;&#x27;,
+    country: &#x27;Italia&#x27;,
+    supplier: &#x27;&#x27;,
+    description: &#x27;&#x27;,
+    typology: &#x27;&#x27;,
+    origin: &#x27;&#x27;,
+    quantity: &#x27;&#x27;
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="regions"></a>
+                    <span class="name">
+                        <span ><b>regions</b></span>
+                        <a href="#regions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="regionSelected"></a>
+                    <span class="name">
+                        <span ><b>regionSelected</b></span>
+                        <a href="#regionSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="suppliers"></a>
+                    <span class="name">
+                        <span ><b>suppliers</b></span>
+                        <a href="#suppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typologies"></a>
+                    <span class="name">
+                        <span ><b>typologies</b></span>
+                        <a href="#typologies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typologySelected"></a>
+                    <span class="name">
+                        <span ><b>typologySelected</b></span>
+                        <a href="#typologySelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/insert-conferment/insert-conferment.page.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { AuthService } from &#x27;../services/auth.service&#x27;;
+import { ToastService } from &#x27;../services/toast.service&#x27;;
+import { ConfermentService } from &#x27;../services/conferment.service&#x27;;
+import { CountryProvider } from &#x27;../utilites/CountryProvider&#x27;;
+import { MenuController } from &#x27;@ionic/angular&#x27;;
+import { SupplierService } from &#x27;../services/supplier.service&#x27;;
+
+
+@Component({
+  selector: &#x27;app-insert-conferment&#x27;,
+  templateUrl: &#x27;./insert-conferment.page.html&#x27;,
+  styleUrls: [&#x27;./insert-conferment.page.scss&#x27;],
+})
+
+
+export class InsertConfermentPage implements OnInit {
+
+  postData &#x3D; {
+    _idworker: &#x27;&#x27;,
+    country: &#x27;Italia&#x27;,
+    supplier: &#x27;&#x27;,
+    description: &#x27;&#x27;,
+    typology: &#x27;&#x27;,
+    origin: &#x27;&#x27;,
+    quantity: &#x27;&#x27;
+  };
+
+
+  missing_idworker &#x3D; false;
+  missingSupplier &#x3D; false;
+  missingDescription &#x3D; false;
+  missingTypology &#x3D; false;
+  missingOrigin &#x3D; false;
+  missingQuantity &#x3D; false;
+
+  regions: Array&lt;any&gt;
+  flagToShow &#x3D; &quot;&quot;;
+  regionSelected &#x3D; &quot;&quot;;
+  typologies &#x3D; []
+  typologySelected: string;
+  suppliers: any;
+  loading &#x3D; false;
+
+  chosenSupplier: any;
+  constructor(
+    private toastService: ToastService,
+    private router: Router,
+    public confermentService: ConfermentService,
+    private countryProvider: CountryProvider,
+    private menu: MenuController,
+    private supplierService: SupplierService
+
+  ) { }
+
+
+  ngOnInit() {
+    this.getRegions()
+    this.getWineTypologies();
+    this.getSuppliers();
+  }
+
+
+
+  /**
+   * @returns true if all the required fields are correctly filled, false
+   * if there is missing one of the fields
+   */
+  validateInputs() {
+    let _idworker &#x3D; this.postData._idworker.trim();
+    let country &#x3D; this.postData.country.trim();
+    return (
+      this.postData._idworker &amp;&amp;
+      this.postData.country &amp;&amp;
+      country.length &gt; 0
+    );
+  }
+
+
+  /**
+   * Insert a new conferment, if the input are correctly validated, into the DB
+   */
+  insertNewConferment() {
+    if (this.validateInputs()) {
+      this.postData.supplier &#x3D; this.chosenSupplier.name + &quot; &quot; + this.chosenSupplier.surname
+      this.confermentService.insertConferment(this.postData).then(
+        (res: any) &#x3D;&gt; {
+          if (res) {
+            this.router.navigate([&#x27;load&#x27;]);
+            this.toastService.presentToast(
+              &#x27;Conferimento aggiunto con successo.&#x27;
+            );
+          } else {
+            this.toastService.presentToast(
+              &#x27;Data alreay exists, please enter new details.&#x27;
+            );
+          }
+        },
+        (error: any) &#x3D;&gt; {
+          this.toastService.presentToast(&#x27;Network Issue.&#x27;);
+        }
+      );
+    } else {
+      this.toastService.presentToast(
+        &#x27;Riempire tutti i campi correttamente.&#x27;
+      );
+    }
+
+    if (this.postData._idworker.length &lt;&#x3D; 0)
+      this.missing_idworker &#x3D; true;
+    else
+      this.missing_idworker &#x3D; false;
+
+    if (this.postData.supplier.length &lt;&#x3D; 0)
+      this.missingSupplier &#x3D; true;
+    else
+      this.missingSupplier &#x3D; false;
+
+    if (this.postData.description.length &lt;&#x3D; 0)
+      this.missingDescription &#x3D; true;
+    else
+      this.missingDescription &#x3D; false;
+
+    if (this.postData.typology.length &lt;&#x3D; 0)
+      this.missingTypology &#x3D; true;
+    else
+      this.missingTypology &#x3D; false;
+
+    if (this.postData.origin.length &lt;&#x3D; 0)
+      this.missingOrigin &#x3D; true;
+    else
+      this.missingOrigin &#x3D; false;
+
+    if (this.postData.quantity.length &lt;&#x3D; 0)
+      this.missingQuantity &#x3D; true;
+    else
+      this.missingQuantity &#x3D; false;
+
+
+  }
+
+
+  /**
+   * Change the flag of the region to be displayed, 
+   * according to the current selected region
+   */
+  changeRegion() {
+    let index &#x3D; this.showFlag(this.regionSelected);
+    this.flagToShow &#x3D; this.regions[index].logo;
+
+  }
+
+  showFlag(regionName: string) {
+    switch (regionName) {
+
+      case &quot;Abruzzo&quot;:
+        return 0;
+
+
+      case &quot;Basilicata&quot;:
+        return 1;
+
+
+      case &quot;Calabria&quot;:
+        return 2;
+
+      case &quot;Campania&quot;:
+        return 3;
+
+      case &quot;Emilia-Romagna&quot;:
+        return 4;
+
+      case &quot;Friuli-Venezia Giulia&quot;:
+        return 5;
+
+      case &quot;Lazio&quot;:
+        return 6;
+
+      case &quot;Liguria&quot;:
+        return 7;
+
+      case &quot;Lombardia&quot;:
+        return 8;
+
+      case &quot;Marche&quot;:
+        return 9;
+
+      case &quot;Molise&quot;:
+        return 10;
+
+      case &quot;Piemonte&quot;:
+        return 11;
+
+      case &quot;Puglia&quot;:
+        return 12;
+
+      case &quot;Sardegna&quot;:
+        return 13;
+
+      case &quot;Sicilia&quot;:
+        return 14;
+
+      case &quot;Toscana&quot;:
+        return 15;
+
+      case &quot;Trentino-Alto Adige&quot;:
+        return 16;
+
+      case &quot;Umbria&quot;:
+        return 17;
+
+      case &quot;Valle d&#x27;Aosta&quot;:
+        return 18;
+
+      case &quot;Veneto&quot;:
+        return 19;
+
+    }
+
+  }
+
+
+  /**
+   * Gets all the italian most known wine typologies
+   */
+  getWineTypologies() {
+    this.typologies &#x3D; this.countryProvider.getTypologies();
+  }
+
+
+  /**
+   * Gets all the italian regions, 
+   * with name and link to the logo image
+   */
+  getRegions() {
+    this.regions &#x3D; this.countryProvider.getItalianRegions().regions;
+
+  }
+
+
+/**
+ * Changes the selected typology
+ */
+  changeTypology() {
+    this.postData.typology &#x3D; this.typologySelected
+  }
+
+  openMenu() {
+    this.menu.open();
+  }
+
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+    this.getRegions()
+    this.getWineTypologies();
+    this.getSuppliers();
+  }
+
+
+  /**
+   * Gets the list of the suppliers from the DB
+   */
+  getSuppliers() {
+    this.loading &#x3D; true
+
+    this.supplierService.getAllSuppliers()
+      .then((res) &#x3D;&gt; {
+        this.loading &#x3D; false
+        this.suppliers &#x3D; res;
+
+      }).catch((err &#x3D;&gt; {
+      }))
+  }
+}
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header [translucent]&#x3D;&quot;true&quot;&gt;
+  &lt;ion-toolbar&gt;
+    &lt;ion-item color&#x3D;&quot;police-blue&quot; lines&#x3D;&quot;none&quot;&gt;
+      &lt;ion-menu-button color&#x3D;&quot;white&quot;&gt;
+      &lt;/ion-menu-button&gt;
+      &lt;ion-text class&#x3D;&quot;title&quot;&gt;Aggiungi Conferimento&lt;/ion-text&gt;
+    &lt;/ion-item&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content&gt;
+  &lt;app-loading *ngIf&#x3D;&quot;loading&quot;&gt;&lt;/app-loading&gt;
+
+  &lt;div *ngIf&#x3D;&quot;!loading&quot; class&#x3D;&quot;insert-div&quot;&gt;
+    &lt;ion-list&gt;
+      &lt;ion-item *ngIf&#x3D;&quot;!missing_idworker&quot; class&#x3D;&quot;it&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-input class&#x3D;&quot;input&quot; name&#x3D;&quot;_idworker&quot; placeholder&#x3D;&quot;Id&quot; [(ngModel)]&#x3D;&quot;postData._idworker&quot;&gt;
+        &lt;/ion-input&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;missing_idworker&quot; class&#x3D;&quot;item-wrong&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-input class&#x3D;&quot;input&quot; name&#x3D;&quot;_idworker&quot; placeholder&#x3D;&quot;Id&quot; [(ngModel)]&#x3D;&quot;postData._idworker&quot;&gt;
+        &lt;/ion-input&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;!missingSupplier&quot;   class&#x3D;&quot;it&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-select placeholder&#x3D;&quot;Fornitore&quot; [(ngModel)]&#x3D;&quot;chosenSupplier&quot;  ok-text&#x3D;&quot;Si&quot; cancel-text&#x3D;&quot;No&quot;&gt;
+          &lt;ion-select-option  *ngFor&#x3D;&quot;let supplier of suppliers&quot; [value]&#x3D;&quot;supplier&quot; &gt;
+            {{supplier?.name}} {{supplier?.surname}}&lt;/ion-select-option&gt;
+        &lt;/ion-select&gt;
+      &lt;/ion-item&gt;
+
+
+      &lt;ion-item *ngIf&#x3D;&quot;missingSupplier&quot; class&#x3D;&quot;item-wrong&quot;  lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-select placeholder&#x3D;&quot;Fornitore&quot; [(ngModel)]&#x3D;&quot;chosenSupplier&quot;  ok-text&#x3D;&quot;Si&quot; cancel-text&#x3D;&quot;No&quot;&gt;
+      
+            &lt;ion-select-option  *ngFor&#x3D;&quot;let supplier of suppliers&quot; value&#x3D;&quot;supplier&quot;&gt;
+              {{supplier?.name}} {{supplier?.surname}}&lt;/ion-select-option&gt;
+
+
+        &lt;/ion-select&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-item *ngIf&#x3D;&quot;!missingOrigin&quot; class&#x3D;&quot;it&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;!-- &lt;ion-select&gt;Regione&lt;/ion-select&gt; --&gt;
+        &lt;ion-avatar *ngIf&#x3D;&quot;regionSelected !&#x3D; &#x27;&#x27; &quot;&gt;
+          &lt;img src&#x3D;&quot;{{flagToShow}}&quot;&gt;
+        &lt;/ion-avatar&gt;
+        &lt;ion-select placeholder&#x3D;&quot;Regione&quot; [(ngModel)]&#x3D;&quot;postData.origin&quot; [(ngModel)]&#x3D;&quot;regionSelected&quot;
+          (ngModelChange)&#x3D;&quot;changeRegion()&quot; ok-text&#x3D;&quot;Si&quot; cancel-text&#x3D;&quot;No&quot;&gt;
+          &lt;ion-select-option *ngFor&#x3D;&quot;let region of regions,  let i  &#x3D; index&quot; value&#x3D;&quot;{{region.name}}&quot;&gt;{{region.name}}
+          &lt;/ion-select-option&gt;
+        &lt;/ion-select&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;missingOrigin&quot; class&#x3D;&quot;item-wrong&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;!-- &lt;ion-label &gt;Regione&lt;/ion-label&gt; --&gt;
+        &lt;ion-avatar *ngIf&#x3D;&quot;regionSelected !&#x3D; &#x27;&#x27; &quot;&gt;
+          &lt;img src&#x3D;&quot;{{flagToShow}}&quot;&gt;
+        &lt;/ion-avatar&gt;
+        &lt;ion-select placeholder&#x3D;&quot;Regione&quot; [(ngModel)]&#x3D;&quot;postData.origin&quot; [(ngModel)]&#x3D;&quot;regionSelected&quot;
+          (ngModelChange)&#x3D;&quot;changeRegion()&quot; ok-text&#x3D;&quot;Si&quot; cancel-text&#x3D;&quot;No&quot;&gt;
+          &lt;ion-select-option *ngFor&#x3D;&quot;let region of regions,  let i  &#x3D; index&quot; value&#x3D;&quot;{{region.name}}&quot;&gt;{{region.name}}
+          &lt;/ion-select-option&gt;
+        &lt;/ion-select&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;!missingTypology&quot; class&#x3D;&quot;it&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-select placeholder&#x3D;&quot;Tipologia&quot; class&#x3D;&quot;input&quot; [(ngModel)]&#x3D;&quot;typologySelected&quot;
+          (ngModelChange)&#x3D;&quot;changeTypology()&quot; ok-text&#x3D;&quot;Si&quot; cancel-text&#x3D;&quot;No&quot;&gt;
+          &lt;ion-select-option *ngFor&#x3D;&quot;let typology of typologies,  let i  &#x3D; index&quot; value&#x3D;&quot;{{typology.name}}&quot;&gt;
+            {{typology.name}}&lt;/ion-select-option&gt;
+        &lt;/ion-select&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;missingTypology&quot; class&#x3D;&quot;item-wrong&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-select placeholder&#x3D;&quot;Tipologia&quot; class&#x3D;&quot;input&quot; [(ngModel)]&#x3D;&quot;typologySelected&quot;
+          (ngModelChange)&#x3D;&quot;changeTypology()&quot; ok-text&#x3D;&quot;Si&quot; cancel-text&#x3D;&quot;No&quot;&gt;
+          &lt;ion-select-option *ngFor&#x3D;&quot;let typology of typologies,  let i  &#x3D; index&quot; value&#x3D;&quot;{{typology.name}}&quot;&gt;
+            {{typology.name}}&lt;/ion-select-option&gt;
+        &lt;/ion-select&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;!missingQuantity&quot; class&#x3D;&quot;it&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-input type&#x3D;&quot;number&quot; class&#x3D;&quot;input&quot; name&#x3D;&quot;quantity&quot; placeholder&#x3D;&quot;Quantità (Kg)&quot;
+          [(ngModel)]&#x3D;&quot;postData.quantity&quot;&gt;
+        &lt;/ion-input&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;missingQuantity&quot; class&#x3D;&quot;item-wrong&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-input type&#x3D;&quot;number&quot; class&#x3D;&quot;input&quot; name&#x3D;&quot;quantity&quot; placeholder&#x3D;&quot;Quantità (Kg)&quot;
+          [(ngModel)]&#x3D;&quot;postData.quantity&quot;&gt;
+        &lt;/ion-input&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;!missingDescription&quot; class&#x3D;&quot;it&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-input class&#x3D;&quot;input&quot; name&#x3D;&quot;description&quot; placeholder&#x3D;&quot;Descrizione&quot; [(ngModel)]&#x3D;&quot;postData.description&quot;&gt;
+        &lt;/ion-input&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;missingDescription&quot; class&#x3D;&quot;item-wrong&quot; lines&#x3D;&quot;none&quot;&gt;
+        &lt;ion-input class&#x3D;&quot;input&quot; name&#x3D;&quot;description&quot; placeholder&#x3D;&quot;Descrizione&quot; [(ngModel)]&#x3D;&quot;postData.description&quot;&gt;
+        &lt;/ion-input&gt;
+      &lt;/ion-item&gt;
+
+      &lt;ion-button class&#x3D;&quot;input&quot; color&#x3D;&quot;antique-fuchsia&quot; class&#x3D;&quot;btn-style&quot; expand&#x3D;&quot;block&quot; shape&#x3D;&quot;round&quot; type&#x3D;&quot;submit&quot;
+        (click)&#x3D;&quot;insertNewConferment()&quot;&gt;
+        Aggiungi carico
+      &lt;/ion-button&gt;
+    &lt;/ion-list&gt;
+  &lt;/div&gt;
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./insert-conferment.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">    @font-face {
+        font-family: &#x27;quicksand-regular&#x27;;
+        src: url(&#x27;../../assets/font/Quicksand-Regular.ttf&#x27;)
+    }
+
+    @font-face {
+        font-family: &#x27;quicksand-semibold&#x27;;
+        src: url(&#x27;../../assets/font/Quicksand-SemiBold.ttf&#x27;)
+    }
+
+    .arrow {
+        color: white;
+        margin-left: 0%;
+        width: 22px;
+        height: 22px;
+    }
+
+    .title {
+        text-align: start;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: &quot;quicksand-semibold&quot;;
+        font-size: 20px;
+        color: white;
+    }
+
+    .btn-style {
+        margin-top: 60px;
+    }
+
+    .space {
+        height: 15%;
+    }
+
+    .input {
+        font-family: &quot;quicksand-semibold&quot;;
+    }
+
+    .it {
+        border: 1px solid #F1F1F1;
+        border-radius: 25px;
+        margin-bottom: 30px;
+    }
+
+
+    .item-wrong {
+        border: 1px solid red;
+        border-radius: 25px;
+        margin-bottom: 30px;
+    }
+
+
+    .insert-div {
+        position: absolute;
+        margin-top: 0;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        top: 60px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        max-width: 300px;
+    }
+
+
+.icon-fab{
+    color: white;
+  }
+
+  ion-toolbar{
+    --background: #3B5360;
+   }
+  </code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header [translucent]="true">  <ion-toolbar>    <ion-item color="police-blue" lines="none">      <ion-menu-button color="white">      </ion-menu-button>      <ion-text class="title">Aggiungi Conferimento</ion-text>    </ion-item>  </ion-toolbar></ion-header><ion-content>  <app-loading *ngIf="loading"></app-loading>  <div *ngIf="!loading" class="insert-div">    <ion-list>      <ion-item *ngIf="!missing_idworker" class="it" lines="none">        <ion-input class="input" name="_idworker" placeholder="Id" [(ngModel)]="postData._idworker">        </ion-input>      </ion-item>      <ion-item *ngIf="missing_idworker" class="item-wrong" lines="none">        <ion-input class="input" name="_idworker" placeholder="Id" [(ngModel)]="postData._idworker">        </ion-input>      </ion-item>      <ion-item *ngIf="!missingSupplier"   class="it" lines="none">        <ion-select placeholder="Fornitore" [(ngModel)]="chosenSupplier"  ok-text="Si" cancel-text="No">          <ion-select-option  *ngFor="let supplier of suppliers" [value]="supplier" >            {{supplier?.name}} {{supplier?.surname}}</ion-select-option>        </ion-select>      </ion-item>      <ion-item *ngIf="missingSupplier" class="item-wrong"  lines="none">        <ion-select placeholder="Fornitore" [(ngModel)]="chosenSupplier"  ok-text="Si" cancel-text="No">                  <ion-select-option  *ngFor="let supplier of suppliers" value="supplier">              {{supplier?.name}} {{supplier?.surname}}</ion-select-option>        </ion-select>      </ion-item>      <ion-item *ngIf="!missingOrigin" class="it" lines="none">        <!-- <ion-select>Regione</ion-select> -->        <ion-avatar *ngIf="regionSelected != \'\' ">          <img src="{{flagToShow}}">        </ion-avatar>        <ion-select placeholder="Regione" [(ngModel)]="postData.origin" [(ngModel)]="regionSelected"          (ngModelChange)="changeRegion()" ok-text="Si" cancel-text="No">          <ion-select-option *ngFor="let region of regions,  let i  = index" value="{{region.name}}">{{region.name}}          </ion-select-option>        </ion-select>      </ion-item>      <ion-item *ngIf="missingOrigin" class="item-wrong" lines="none">        <!-- <ion-label >Regione</ion-label> -->        <ion-avatar *ngIf="regionSelected != \'\' ">          <img src="{{flagToShow}}">        </ion-avatar>        <ion-select placeholder="Regione" [(ngModel)]="postData.origin" [(ngModel)]="regionSelected"          (ngModelChange)="changeRegion()" ok-text="Si" cancel-text="No">          <ion-select-option *ngFor="let region of regions,  let i  = index" value="{{region.name}}">{{region.name}}          </ion-select-option>        </ion-select>      </ion-item>      <ion-item *ngIf="!missingTypology" class="it" lines="none">        <ion-select placeholder="Tipologia" class="input" [(ngModel)]="typologySelected"          (ngModelChange)="changeTypology()" ok-text="Si" cancel-text="No">          <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">            {{typology.name}}</ion-select-option>        </ion-select>      </ion-item>      <ion-item *ngIf="missingTypology" class="item-wrong" lines="none">        <ion-select placeholder="Tipologia" class="input" [(ngModel)]="typologySelected"          (ngModelChange)="changeTypology()" ok-text="Si" cancel-text="No">          <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">            {{typology.name}}</ion-select-option>        </ion-select>      </ion-item>      <ion-item *ngIf="!missingQuantity" class="it" lines="none">        <ion-input type="number" class="input" name="quantity" placeholder="Quantità (Kg)"          [(ngModel)]="postData.quantity">        </ion-input>      </ion-item>      <ion-item *ngIf="missingQuantity" class="item-wrong" lines="none">        <ion-input type="number" class="input" name="quantity" placeholder="Quantità (Kg)"          [(ngModel)]="postData.quantity">        </ion-input>      </ion-item>      <ion-item *ngIf="!missingDescription" class="it" lines="none">        <ion-input class="input" name="description" placeholder="Descrizione" [(ngModel)]="postData.description">        </ion-input>      </ion-item>      <ion-item *ngIf="missingDescription" class="item-wrong" lines="none">        <ion-input class="input" name="description" placeholder="Descrizione" [(ngModel)]="postData.description">        </ion-input>      </ion-item>      <ion-button class="input" color="antique-fuchsia" class="btn-style" expand="block" shape="round" type="submit"        (click)="insertNewConferment()">        Aggiungi carico      </ion-button>    </ion-list>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AddSuppliersPage', 'selector': 'app-add-suppliers'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DeveloperPage', 'selector': 'app-developer'},{'name': 'ForgotPwPage', 'selector': 'app-forgot-pw'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'InfoPage', 'selector': 'app-info'},{'name': 'InsertConfermentPage', 'selector': 'app-insert-conferment'},{'name': 'LoadingComponent', 'selector': 'app-loading'},{'name': 'LoadPage', 'selector': 'app-load'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'NoConnectionComponent', 'selector': 'app-no-connection'},{'name': 'PatchAccountPage', 'selector': 'app-patch-account'},{'name': 'SettingsPage', 'selector': 'app-settings'},{'name': 'ShowUserPage', 'selector': 'app-show-user'},{'name': 'SignUpPage', 'selector': 'app-sign-up'},{'name': 'SplashscreenPage', 'selector': 'app-splashscreen'},{'name': 'StatisticsPage', 'selector': 'app-statistics'},{'name': 'SuppliersPage', 'selector': 'app-suppliers'},{'name': 'UserAccountPage', 'selector': 'app-user-account'},{'name': 'ViewConfermentPage', 'selector': 'app-view-conferment'},{'name': 'WarehousePage', 'selector': 'app-warehouse'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InsertConfermentPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InsertConfermentPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

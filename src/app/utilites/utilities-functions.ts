@@ -1,3 +1,9 @@
+/**
+ * @param conferments the list of conferments to find the current process.
+ * The function calculates also the value for filling a progress bar 
+ * by dividing the current number of the process by the total number of the processes
+ * @returns the same array with the new features specified above
+ */
 export function findTheCurrentProcess(conferments: any) {
     interface looseConfermentsObj {
         [key: string]: any
@@ -72,6 +78,12 @@ export function findTheCurrentProcess(conferments: any) {
 }
 
 
+/**
+ * 
+ * @param conferment given a conferment, the function finds the current process and
+ * the value the progress bar will be filled with.
+ * @returns the same conferments with the features specified above.
+ */
 export function findTheCurrentProcessForAConferment(conferment: any) {
     interface looseConfermentsObj {
         [key: string]: any
@@ -142,7 +154,9 @@ export function findTheCurrentProcessForAConferment(conferment: any) {
     return obj;
 }
 
-
+/**
+ * Handcrafted type data to be used for bottle processing patches.
+ */
 export type bottlingDataPatch = {
     bottles: {
       bottles_quantity: number,

@@ -56,11 +56,8 @@ export class WarehousePage implements OnInit {
 
 
     this.getWarehouse();
-    this.saveCapsQuantity();
-
   }
 
-  //function to refresh event 
   doRefresh(event) {
     this.getWarehouse();
     this.resetValues();
@@ -70,7 +67,7 @@ export class WarehousePage implements OnInit {
 
   }
 
-  //function get for warehouse
+
   async getWarehouse() {
 
     this.resetValues();
@@ -94,6 +91,9 @@ export class WarehousePage implements OnInit {
     loop: false,
   }
 
+  /**
+   * generates buttons when a user attempts to refill the warehouse
+  */
   generateModifyAndCancelBtns() {
     this.warehouse.bottles.formats.forEach(element => {
       this.modifyButtonsValues.push(true);
@@ -104,135 +104,9 @@ export class WarehousePage implements OnInit {
 
   }
 
-  // function to change page, refill to save page
 
   async change() {
-
     this.button = true;
-
-  }
-
-
-  async capsPicker() {
-
-    var quantity: number = + this.selectedNumber
-
-    this.newCapsQuantity = quantity
-
-    if (this.newCapsQuantity == 0) {
-
-      this.capsAreChanged = false
-
-    } else {
-
-      this.capsAreChanged = true
-
-    }
-
-    console.log(this.capsAreChanged)
-    console.log(this.warehouse.caps_quantity + this.newCapsQuantity)
-
-  }
-
-  async bottlePicker() {
-    var quantity: number = + this.selectedNumber
-    this.newBottleQuantity = quantity
-    if (this.newBottleQuantity == 0) {
-      this.bottleArechanged = false
-    } else {
-      this.bottleArechanged = true
-    }
-    console.log(this.newBottleQuantity)
-  }
-
-  async tagsPicker() {
-    var quantity: number = + this.selectedNumber
-    this.newTagsQuantity = quantity
-    if (this.newTagsQuantity == 0) {
-      this.tagsAreChanged = false
-
-    } else {
-      this.tagsAreChanged = true
-
-    }
-  }
-
-  //function to save new caps quantity
-  async saveCapsQuantity() {
-    interface CapsPatch { quantity: number }
-    var caps: CapsPatch = {
-      quantity: 0
-    }
-    caps.quantity = this.newCapsQuantity;
-
-    await this.warehouseService.updateCapsQuantity(caps).then(
-      (res: any) => {
-        if (res) {
-          console.log(res)
-        }
-      },
-      (error: any) => {
-      }
-    );
-  }
-
-  //function to save new tags quantity
-  async saveTagsQuantity() {
-    interface TagsPatch { quantity: number }
-    var tags: TagsPatch = {
-      quantity: 0
-    }
-
-    tags.quantity = this.newTagsQuantity
-
-    this.warehouseService.updateTagsQuantity(tags).then(
-      (res: any) => {
-        if (res) {
-          console.log(res)
-        }
-      },
-      (error: any) => {
-      }
-    );
-  }
-
-  //function to save new bottle  quantity
-  async saveBottleQuantity() {
-    interface BottlePatch { quantity: number }
-    var bottle: BottlePatch = {
-      quantity: 0
-    }
-
-    bottle.quantity = this.newBottleQuantity
-
-    this.warehouseService.updateBottleQuantity(bottle).then(
-      (res: any) => {
-        if (res) {
-          console.log(res)
-        }
-      },
-      (error: any) => {
-      }
-    );
-  }
-
-  //event for button save after check
-  async saveChanges() {
-    if (this.capsAreChanged == true) {
-      this.saveCapsQuantity();
-
-    }
-    if (this.tagsAreChanged == true) {
-      this.saveTagsQuantity();
-
-    }
-    if (this.bottleArechanged == true) {
-      this.saveBottleQuantity();
-
-    }
-
-    this.button = false;
-    this.getWarehouse();
   }
 
 
@@ -241,6 +115,7 @@ export class WarehousePage implements OnInit {
     this.newBottleQuantity = this.warehouse.bottle_quantity
     this.newTagsQuantity = this.warehouse.tags_quantity
   }
+
 
   resetValues() {
     this.button = false;
@@ -298,6 +173,15 @@ export class WarehousePage implements OnInit {
   }
 
 
+  /**
+   * make a request to the server to patch the bottles quantity
+   * @param bottle ex:   {
+    *            "format": "0.75L",
+    *            "quantity": 55,
+    *            "description": "3 quarter format"
+    *        }
+   * @param i index of the bottle quantity to be refilled in the warehouse
+   */
   patchTheBottle(bottle: any, i: number) {
     console.log(JSON.stringify(bottle))
     if (this.newBottlesQuantity[i] <= 0) {
@@ -320,6 +204,10 @@ export class WarehousePage implements OnInit {
     }
   }
 
+
+/**
+ * make a request to the server to patch the caps quantity
+ */
   patchTheCaps() {
     let patchData = {
       quantity: this.newCapsQuantity
@@ -344,6 +232,9 @@ export class WarehousePage implements OnInit {
 
   }
 
+  /**
+ * make a request to the server to patch the tags quantity
+ */
   patchTheTags() {
     let patchData = {
       quantity: this.newTagsQuantity
@@ -354,11 +245,11 @@ export class WarehousePage implements OnInit {
 
     } else {
       this.warehouseService.updateTagsQuantity(patchData)
-        .then(res=>{
+        .then(res => {
           this.toast.presentToast("Etichette aggiunte con successo!")
           this.getWarehouse()
         })
-        .catch(err=>{
+        .catch(err => {
           this.toast.presentToast(err.msg)
 
         })
@@ -367,6 +258,7 @@ export class WarehousePage implements OnInit {
 
   }
 
+  
   exitWarehousePatches() {
     this.button = false
 

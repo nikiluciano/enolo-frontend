@@ -1,0 +1,1910 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>enolo-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">enolo-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  HomePage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/home/home.page.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-home</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>home.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>home.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#conferments" >conferments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#confermentService" >confermentService</a>
+                            </li>
+                            <li>
+                                <a href="#contentLoaded" >contentLoaded</a>
+                            </li>
+                            <li>
+                                <a href="#filteredConferments" >filteredConferments</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#progress" >progress</a>
+                            </li>
+                            <li>
+                                <a href="#statusOfTheProcesses" >statusOfTheProcesses</a>
+                            </li>
+                            <li>
+                                <a href="#thereArePendingConferments" >thereArePendingConferments</a>
+                            </li>
+                            <li>
+                                <a href="#warehouse" >warehouse</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#warehouseService" >warehouseService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#doRefresh" >doRefresh</a>
+                            </li>
+                            <li>
+                                <a href="#filterConferments" >filterConferments</a>
+                            </li>
+                            <li>
+                                <a href="#findTheCurrentProcess" >findTheCurrentProcess</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPendingConferments" >getPendingConferments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getWarehouse" >getWarehouse</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewDidEnter" >ionViewDidEnter</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewWillEnter" >ionViewWillEnter</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openMenu" >openMenu</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(warehouseService: <a href="../injectables/WarehouseService.html" target="_self">WarehouseService</a>, confermentService: <a href="../injectables/ConfermentService.html" target="_self">ConfermentService</a>, menu: MenuController, dataService: <a href="../injectables/DataService.html" target="_self">DataService</a>, menuSet: <a href="../components/AppComponent.html" target="_self">AppComponent</a>, toastService: <a href="../injectables/ToastService.html" target="_self">ToastService</a>, user: <a href="../injectables/User.html" target="_self">User</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/home/home.page.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>warehouseService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WarehouseService.html" target="_self" >WarehouseService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confermentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfermentService.html" target="_self" >ConfermentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>menu</td>
+                                                  
+                                                        <td>
+                                                                    <code>MenuController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>menuSet</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../components/AppComponent.html" target="_self" >AppComponent</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ToastService.html" target="_self" >ToastService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>user</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/User.html" target="_self" >User</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="doRefresh"></a>
+                    <span class="name">
+                        <span ><b>doRefresh</b></span>
+                        <a href="#doRefresh"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>doRefresh(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/home/home.page.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterConferments"></a>
+                    <span class="name">
+                        <span ><b>filterConferments</b></span>
+                        <a href="#filterConferments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filterConferments()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="175"
+                            class="link-to-prism">src/app/home/home.page.ts:175</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters the conferments by pushing in the filteredConferments array
+only the one that are currently processed</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findTheCurrentProcess"></a>
+                    <span class="name">
+                        <span ><b>findTheCurrentProcess</b></span>
+                        <a href="#findTheCurrentProcess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findTheCurrentProcess()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/app/home/home.page.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Finds the current status of a process and the value which the progress bar will be filled with.
+The value is calculated by dividign by 6 the current process number.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPendingConferments"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getPendingConferments</b></span>
+                        <a href="#getPendingConferments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPendingConferments()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/home/home.page.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the conferments from the DB.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWarehouse"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getWarehouse</b></span>
+                        <a href="#getWarehouse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getWarehouse()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/home/home.page.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>gets the warehouse data frome the DB.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewDidEnter"></a>
+                    <span class="name">
+                        <span ><b>ionViewDidEnter</b></span>
+                        <a href="#ionViewDidEnter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ionViewDidEnter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="194"
+                            class="link-to-prism">src/app/home/home.page.ts:194</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewWillEnter"></a>
+                    <span class="name">
+                        <span ><b>ionViewWillEnter</b></span>
+                        <a href="#ionViewWillEnter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ionViewWillEnter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/home/home.page.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/home/home.page.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openMenu"></a>
+                    <span class="name">
+                        <span ><b>openMenu</b></span>
+                        <a href="#openMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openMenu()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="189"
+                            class="link-to-prism">src/app/home/home.page.ts:189</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="conferments"></a>
+                    <span class="name">
+                        <span ><b>conferments</b></span>
+                        <a href="#conferments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/home/home.page.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confermentService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>confermentService</b></span>
+                        <a href="#confermentService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/ConfermentService.html" target="_self" >ConfermentService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/home/home.page.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contentLoaded"></a>
+                    <span class="name">
+                        <span ><b>contentLoaded</b></span>
+                        <a href="#contentLoaded"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/home/home.page.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredConferments"></a>
+                    <span class="name">
+                        <span ><b>filteredConferments</b></span>
+                        <a href="#filteredConferments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/home/home.page.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/home/home.page.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="progress"></a>
+                    <span class="name">
+                        <span ><b>progress</b></span>
+                        <a href="#progress"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/home/home.page.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="statusOfTheProcesses"></a>
+                    <span class="name">
+                        <span ><b>statusOfTheProcesses</b></span>
+                        <a href="#statusOfTheProcesses"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/home/home.page.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="thereArePendingConferments"></a>
+                    <span class="name">
+                        <span ><b>thereArePendingConferments</b></span>
+                        <a href="#thereArePendingConferments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/home/home.page.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="warehouse"></a>
+                    <span class="name">
+                        <span ><b>warehouse</b></span>
+                        <a href="#warehouse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/home/home.page.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="warehouseService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>warehouseService</b></span>
+                        <a href="#warehouseService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/WarehouseService.html" target="_self" >WarehouseService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/home/home.page.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { WarehouseService } from &#x27;../services/warehouse.service&#x27;;
+import { ConfermentService } from &#x27;../services/conferment.service&#x27;;
+import { MenuController } from &#x27;@ionic/angular&#x27;;
+import { ViewEncapsulation } from &#x27;@angular/core&#x27;;
+import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from &#x27;swiper&#x27;;
+
+SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
+import { DataService } from &#x27;../services/DataService&#x27;;
+import { AppComponent } from &#x27;../app.component&#x27;;
+import { ToastService } from &#x27;../services/toast.service&#x27;;
+import { User } from &#x27;../utilites/User&#x27;;
+
+@Component({
+  selector: &#x27;app-home&#x27;,
+  templateUrl: &#x27;home.page.html&#x27;,
+  styleUrls: [&#x27;home.page.scss&#x27;],
+  encapsulation: ViewEncapsulation.None
+})
+export class HomePage implements OnInit {
+  [x: string]: any;
+
+  warehouse: any;
+  contentLoaded &#x3D; false;
+  conferments: any;
+  progress: number;
+
+  thereArePendingConferments &#x3D; true;
+
+  statusOfTheProcesses &#x3D; [];
+  filteredConferments &#x3D; [];
+
+  loading &#x3D; false
+
+  constructor(public warehouseService: WarehouseService,
+    public confermentService: ConfermentService,
+    private menu: MenuController,
+    private dataService: DataService,
+    private menuSet: AppComponent,
+    private toastService: ToastService,
+    private user: User) { }
+
+
+
+  ngOnInit() {
+
+    this.getWarehouse()
+    this.getPendingConferments()
+  }
+
+  
+  ionViewWillEnter() {
+    this.loading &#x3D; true
+    setTimeout(() &#x3D;&gt; {
+      this.menuSet.checkUser()
+      this.loading &#x3D; false
+      this.getWarehouse()
+      this.getPendingConferments()
+
+    }, 2000);
+
+  }
+
+
+  doRefresh(event) {
+    this.getWarehouse()
+    this.getPendingConferments()
+    setTimeout(() &#x3D;&gt; {
+      event.target.complete()
+    }, 2500);
+
+  }
+
+
+  /**
+   * gets the warehouse data frome the DB.
+   */
+  async getWarehouse() {
+    await this.warehouseService.getWarehouse().then(
+      (res: any) &#x3D;&gt; {
+
+        this.contentLoaded &#x3D; true
+        this.warehouse &#x3D; res
+
+      }).catch((
+        err &#x3D;&gt; {
+          this.toastService.presentToast(err.msg);
+        }
+      ))
+  }
+
+
+  /**
+   * Gets the conferments from the DB.
+   */
+  async getPendingConferments() {
+    await this.confermentService.getPandingConferments().then(
+      (res: any) &#x3D;&gt; {
+        if (res) {
+          this.contentLoaded &#x3D; true
+          this.conferments &#x3D; res
+          this.thereArePendingConferments &#x3D; true;
+          this.filterConferments()
+          //this.fillTheProgressBar()
+        } else
+          this.thereArePendingConferments &#x3D; false;
+      }
+    ).catch((
+      err &#x3D;&gt; {
+        this.toastService.presentToast(err.msg);
+      }
+    ))
+  }
+
+
+
+  /**
+   * Finds the current status of a process and the value which the progress bar will be filled with.
+   * The value is calculated by dividign by 6 the current process number.
+   */
+  findTheCurrentProcess() {
+
+    this.filteredConferments.forEach(element &#x3D;&gt; {
+      if (element.status &#x3D;&#x3D; &quot;READY&quot;) {
+        element.current_process &#x3D; &quot;Pronto&quot;
+
+      } else if (element.status &#x3D;&#x3D; &quot;DELIVERED&quot;)
+        element.current_process &#x3D; &quot;Non iniziato&quot;
+
+      else if (element.status &#x3D;&#x3D; null)
+        element.current_process &#x3D; &quot;Non iniziato&quot;
+
+      else {
+
+        switch (element.current_process) {
+          case &quot;wine_pressing_process&quot;:
+            element.current_process &#x3D; &quot;pigiatura&quot;
+            this.statusOfTheProcesses.push(1 / 6)
+            break;
+
+          case &quot;destemming_process&quot;:
+            element.current_process &#x3D; &quot;diraspatura&quot;
+            this.statusOfTheProcesses.push(2 / 6)
+            break;
+
+          case &quot;winemaking_process&quot;:
+            element.current_process &#x3D; &quot;vinificazione&quot;
+            this.statusOfTheProcesses.push(3 / 6)
+            break;
+
+          case &quot;racking_process&quot;:
+            element.current_process &#x3D; &quot;svinatura&quot;
+            this.statusOfTheProcesses.push(4 / 6)
+            break;
+
+          case &quot;refinement_process&quot;:
+            element.current_process &#x3D; &quot;affinamento&quot;
+            this.statusOfTheProcesses.push(5 / 6)
+            break;
+
+          case &quot;bottling_process&quot;:
+            element.current_process &#x3D; &quot;imbottigliamento&quot;
+            this.statusOfTheProcesses.push(6 / 6)
+            break;
+        }
+      }
+    })
+  }
+
+
+  /**
+   * Filters the conferments by pushing in the filteredConferments array 
+   * only the one that are currently processed
+   */
+  filterConferments() {
+    this.filteredConferments &#x3D; []
+    this.conferments.forEach(element &#x3D;&gt; {
+      if (element.status &#x3D;&#x3D; &quot;PENDING&quot;)
+        this.filteredConferments.push(element)
+    });
+    if (this.filteredConferments.length &#x3D;&#x3D; 0)
+      this.thereArePendingConferments &#x3D; false
+    else {
+      this.thereArePendingConferments &#x3D; true
+      this.findTheCurrentProcess()
+    }
+  }
+
+  openMenu(
+  ) {
+    this.menu.open()
+  }
+
+  ionViewDidEnter() {
+    this.menu.enable(true)
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-toolbar&gt;
+
+    &lt;ion-item lines&#x3D;&quot;none&quot; color&#x3D;&quot;police-blue&quot;&gt;
+      &lt;ion-menu-button color&#x3D;&quot;white&quot;&gt;
+      &lt;/ion-menu-button&gt;
+      &lt;ion-label class&#x3D;&quot;title-home&quot; color&#x3D;&quot;white&quot;&gt;Home&lt;/ion-label&gt;
+      &lt;ion-button [routerLink]&#x3D;&quot;[&#x27;/user-account&#x27;]&quot; fill&#x3D;&quot;clear&quot;&gt;
+        &lt;ion-icon name&#x3D;&quot;person-circle-outline&quot; slot&#x3D;&quot;end&quot; class&#x3D;&quot;style-button&quot;&gt;&lt;/ion-icon&gt;
+      &lt;/ion-button&gt;
+
+    &lt;/ion-item&gt;
+  &lt;/ion-toolbar&gt;
+
+&lt;/ion-header&gt;
+&lt;ion-content&gt;
+  &lt;app-loading *ngIf&#x3D;&quot;loading&quot;&gt;&lt;/app-loading&gt;
+  &lt;ion-refresher slot&#x3D;&quot;fixed&quot; pullFactor&#x3D;&quot;0.5&quot; pullMin&#x3D;&quot;100&quot; pullMax&#x3D;&quot;200&quot; (ionRefresh)&#x3D;&quot;doRefresh($event)&quot;&gt;
+    &lt;ion-refresher-content&gt;&lt;/ion-refresher-content&gt;
+  &lt;/ion-refresher&gt;
+  &lt;div *ngIf&#x3D;&quot;contentLoaded &amp;&amp; !loading&quot;&gt;
+    &lt;ion-grid class&#x3D;&quot;gridstyle&quot;&gt;
+      &lt;ion-col&gt;
+
+        &lt;ion-row&gt;
+          &lt;ion-label class&#x3D;&quot;style-title-c&quot;&gt;Stato dei conferimenti&lt;/ion-label&gt;
+        &lt;/ion-row&gt;
+
+        &lt;div *ngIf&#x3D;&quot;!thereArePendingConferments&quot; lines&#x3D;&quot;none&quot; border-lines&#x3D;&quot;none&quot;&gt;
+          &lt;ion-label class&#x3D;&quot;card-conf-style&quot;&gt;Nessun conferimento in lavorazione&lt;/ion-label&gt;
+        &lt;/div&gt;
+
+        &lt;ion-card *ngIf&#x3D;&quot;thereArePendingConferments&quot; &gt;
+          &lt;swiper  [scrollbar]&#x3D;&quot;true&quot;&gt;
+            &lt;ng-template swiperSlide *ngFor&#x3D;&quot;let conferment of filteredConferments, let i &#x3D; index&quot;&gt;
+              &lt;ion-col&gt;
+                &lt;ion-row class&#x3D;&quot;style-row-title&quot;&gt;
+                  &lt;ion-label class&#x3D;&quot;title-c&quot;&gt; In {{conferment.current_process}} &lt;/ion-label&gt;
+                &lt;/ion-row&gt;
+                &lt;ion-row&gt;
+                  &lt;ion-progress-bar class&#x3D;&quot;bar-c&quot; [value]&#x3D;&quot;statusOfTheProcesses[i]&quot;  color&#x3D;&quot;primary&quot;&gt;&lt;/ion-progress-bar&gt;
+                &lt;/ion-row&gt;
+                &lt;ion-row&gt;
+                  &lt;ion-col class&#x3D;&quot;weight-col-style&quot;&gt;
+                    &lt;ion-label class&#x3D;&quot;style-labs-peso&quot;&gt;{{conferment.quantity}}&lt;sub class&#x3D;&quot;style-kg&quot;&gt; kg&lt;/sub&gt;
+                    &lt;/ion-label&gt;
+                  &lt;/ion-col&gt;
+
+                  &lt;ion-col class&#x3D;&quot;wine-type-col-style&quot;&gt;
+                    &lt;ion-label class&#x3D;&quot;style-labs-c&quot;&gt;{{conferment.typology}}&lt;/ion-label&gt;
+                  &lt;/ion-col&gt;
+                &lt;/ion-row&gt;
+
+                &lt;ion-row&gt;
+                  &lt;ion-col class&#x3D;&quot;down-col-style&quot;&gt;
+
+                      &lt;ion-icon name&#x3D;&quot;calendar-outline&quot; class&#x3D;&quot;icon-style&quot;&gt;&lt;/ion-icon&gt;
+                      &lt;ion-label class&#x3D;&quot;calendar-label-style&quot;&gt;{{conferment.date | date: &#x27;dd-MM-yyyy&#x27;}}&lt;/ion-label&gt;
+                  &lt;/ion-col&gt;
+
+                  &lt;ion-col class&#x3D;&quot;supplier-col-style&quot;&gt;
+                      &lt;ion-label class&#x3D;&quot;style-labs-f&quot;&gt;{{conferment.supplier}}&lt;/ion-label&gt;
+                  &lt;/ion-col&gt;
+                &lt;/ion-row&gt;
+              &lt;/ion-col&gt;
+            &lt;/ng-template&gt;
+          &lt;/swiper&gt;
+         
+        &lt;/ion-card&gt;
+      &lt;/ion-col&gt;
+      
+      &lt;ion-row class&#x3D;&quot;row-warehouse&quot;&gt;
+        &lt;ion-col&gt;
+          &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot;&gt;
+            &lt;ion-label class&#x3D;&quot;title-warehouse&quot;&gt;Il tuo magazzino&lt;/ion-label&gt;
+          &lt;/ion-row&gt;
+
+          &lt;div
+            *ngIf&#x3D;&quot;warehouse.caps_quantity.length&#x3D;&#x3D;0 &amp;&amp; warehouse.bottles.bottles_quantity.length&#x3D;&#x3D;0 &amp;&amp; warehouse.tags_quantity.length&#x3D;&#x3D;0&#x3D;&#x3D;0&quot;&gt;
+            &lt;ion-label class&#x3D;&quot;card-conf-style&quot;&gt;OPS! il tuo magazzino e&#x27; vuoto&lt;/ion-label&gt;
+            &lt;ion-button fill&#x3D;&quot;clear&quot; [routerLink]&#x3D;&quot;[&#x27;/warehouse&#x27;]&quot; class&#x3D;&quot;butt-conf-style&quot;&gt;Gestisci qui il tuo
+              magazzino!&lt;/ion-button&gt;
+          &lt;/div&gt;
+          &lt;div *ngIf&#x3D;&quot; warehouse.caps_quantity &lt;&#x3D; 25&quot;&gt;
+            &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot;&gt;
+              &lt;ion-col&gt;
+                &lt;ion-label class&#x3D;&quot;title-bar-warehouse&quot;&gt;Tappi&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+              &lt;ion-col&gt;
+                &lt;ion-label class&#x3D;&quot;title-bar-warehouse-number&quot;&gt;{{warehouse.caps_quantity}}&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+          &lt;/div&gt;
+          &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot; *ngIf&#x3D;&quot;warehouse.caps_quantity &gt; 25&quot;&gt;
+            &lt;ion-col&gt;
+              &lt;ion-label class&#x3D;&quot;title-bar-warehouse&quot;&gt;Tappi&lt;/ion-label&gt;
+            &lt;/ion-col&gt;
+            &lt;ion-col&gt;
+              &lt;ion-label class&#x3D;&quot;title-bar-warehouse-number&quot;&gt;{{warehouse.caps_quantity}}&lt;/ion-label&gt;
+            &lt;/ion-col&gt;
+          &lt;/ion-row&gt;
+          &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot;&gt;
+
+          &lt;/ion-row&gt;
+
+          &lt;div *ngIf&#x3D;&quot; warehouse.bottles.bottles_quantity &lt;&#x3D; 25&quot;&gt;
+            &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot;&gt;
+              &lt;ion-col&gt;
+                &lt;ion-label class&#x3D;&quot;title-bar-warehouse&quot;&gt;Bottiglie&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+              &lt;ion-col&gt;
+                &lt;ion-label class&#x3D;&quot;title-bar-warehouse-number&quot;&gt;{{warehouse.bottles.bottles_quantity}}&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+          &lt;/div&gt;
+          &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot; *ngIf&#x3D;&quot; warehouse.bottles.bottles_quantity &gt; 25&quot;&gt;
+            &lt;ion-col&gt;
+              &lt;ion-label class&#x3D;&quot;title-bar-warehouse&quot;&gt;Bottiglie&lt;/ion-label&gt;
+            &lt;/ion-col&gt;
+            &lt;ion-col&gt;
+              &lt;ion-label class&#x3D;&quot;title-bar-warehouse-number&quot;&gt;{{warehouse.bottles.bottles_quantity}}&lt;/ion-label&gt;
+            &lt;/ion-col&gt;
+          &lt;/ion-row&gt;
+          &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot;&gt;
+
+          &lt;/ion-row&gt;
+
+
+          &lt;div *ngIf&#x3D;&quot; warehouse.tags_quantity &lt;&#x3D; 25&quot;&gt;
+            &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot;&gt;
+              &lt;ion-col&gt;
+                &lt;ion-label class&#x3D;&quot;title-bar-warehouse&quot;&gt;Etichette&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+              &lt;ion-col&gt;
+                &lt;ion-label class&#x3D;&quot;title-bar-warehouse-number&quot;&gt;{{warehouse.tags_quantity}}&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+          &lt;/div&gt;
+          &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot; *ngIf&#x3D;&quot; warehouse.tags_quantity &gt; 25&quot;&gt;
+            &lt;ion-col&gt;
+              &lt;ion-label class&#x3D;&quot;title-bar-warehouse&quot;&gt;Etichette&lt;/ion-label&gt;
+            &lt;/ion-col&gt;
+            &lt;ion-col&gt;
+              &lt;ion-label class&#x3D;&quot;title-bar-warehouse-number&quot;&gt;{{warehouse.tags_quantity}}&lt;/ion-label&gt;
+            &lt;/ion-col&gt;
+
+          &lt;/ion-row&gt;
+          &lt;ion-row class&#x3D;&quot;row-style-warehouse&quot;&gt;
+
+          &lt;/ion-row&gt;
+        &lt;/ion-col&gt;
+
+      &lt;/ion-row&gt;
+    &lt;/ion-grid&gt;
+  &lt;/div&gt;
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>home.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;~swiper/scss&#x27;;
+@import &#x27;~@ionic/angular/css/ionic-swiper&#x27;;
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.style-burger {
+  color: white;
+}
+
+.bot {
+  color: black;
+}
+
+.card {
+  height: 180px;
+  width: 100%;
+}
+
+.stato {
+  min-height: 300px;
+  margin-top: 10px;
+  border-bottom-style: ridge;
+}
+
+.row-warehouse {
+  min-height: 250px;
+  border-bottom-style: ridge;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.style-c {
+  min-height: 250px;
+  margin-top: 10px;
+  border-bottom-style: ridge;
+}
+
+.c {
+  min-height: 250px;
+  margin-top: 10px;
+  border-bottom-style: ridge;
+}
+
+.gridstyle {
+  height: auto;
+  flex-flow: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 150px;
+  padding-bottom: 10px;
+}
+
+.title-c {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  margin: auto;
+  font-family: &quot;quicksand-regular&quot;;
+}
+
+.style-labs-c {
+  margin-left: 15px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: &quot;quicksand-regular&quot;;
+}
+
+.calendar-label-style {
+  font-size: 20px;
+  font-family: &quot;quicksand-regular&quot;;
+  margin-bottom: 20px;
+}
+
+.style-labs-warehouse {
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.title-warehouse {
+  margin-bottom:20px;
+  margin-top:40px;
+  font-size: 20px;
+  font-family: &quot;quicksand-semibold&quot;;
+}
+
+.bar-caps {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  height: 15px;
+  border-radius: 50px;
+  margin: auto;
+  --background: white;
+  --progress-background: #fc736a;
+  border: 1px solid black;
+  width: 90%;
+}
+
+.labc {
+  font-size: 20px;
+  margin-top: 15px;
+
+}
+
+.style-title-c {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: &quot;quicksand-semibold&quot;;
+  padding-left: 10px;
+}
+
+
+.bar-c {
+  margin-top: 15px;
+  height: 16px;
+  border-radius: 50px;
+  width: 60%;
+  margin: auto;
+  --background: white;
+  --progress-background: #BEE5D3;
+  border: 1px solid black;
+}
+
+.style-row-title {
+  margin-bottom: 15px;
+}
+
+@font-face {
+  font-family: &#x27;quicksand-regular&#x27;;
+  src: url(&#x27;../../assets/font/Quicksand-Regular.ttf&#x27;)
+}
+
+@font-face {
+  font-family: &#x27;quicksand-semibold&#x27;;
+  src: url(&#x27;../../assets/font/Quicksand-SemiBold.ttf&#x27;)
+}
+
+.weight-col-style {
+  height: 80px;
+  flex-flow: column wrap;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 15px;
+
+}
+
+.wine-type-col-style {
+  height: 80px;
+  flex-flow: column wrap;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 15px;
+
+}
+
+.down-col-style {
+  height: 80px;
+  flex-flow: column wrap;
+  margin-bottom: 50px;
+  text-align: left;
+  padding-left: 10px;
+
+}
+
+.style-labs-f {
+  font-size: 20px;
+  font-family: &quot;quicksand-regular&quot;;
+  color: #8c8c8c;
+}
+
+.icon-style {
+  height: 15px;
+
+}
+
+.style-labs-peso {
+
+  font-size: 30px;
+  font-family: &quot;quicksand-regular&quot;;
+}
+
+.style-kg {
+  font-size: 20px;
+  font-family: &quot;quicksand-regular&quot;;
+}
+
+.supplier-col-style {
+
+  height: 80px;
+  flex-flow: column wrap;
+  text-align: right;
+  padding-right: 10px;
+
+}
+
+.title-home {
+ 
+  text-align: center;
+  font-family: &quot;quicksand-semibold&quot;;
+  font-size: 22px;
+  color:white;
+}
+
+.bar-labels {
+
+  height: 15px;
+  border-radius: 50px;
+  margin: auto;
+  --background: white;
+  --progress-background: #92f8aa;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.bar-bottle {
+  margin-top: 40px;
+  height: 15px;
+  border-radius: 50px;
+  margin: auto;
+  --background: white;
+  --progress-background: #FF7514;
+  border: 1px solid black;
+  width: 90%;
+}
+
+.style-button {
+  color: white;
+  height: 80px;
+  width: 30px;
+
+}
+
+.row-style-warehouse {
+  margin-bottom: 15px;
+}
+
+.title-bar-warehouse {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+ 
+  font-family: &quot;quicksand-regular&quot;;
+}
+.card-conf-style{
+  font-size: 20px;
+  margin: auto;
+  font-family:&quot;quicksand-regular&quot;;
+  padding-left: 15px;
+}
+.butt-conf-style{
+  font-size: 15px;
+  margin: auto;
+  font-family:&quot;quicksand-regular&quot;;
+}
+
+ion-toolbar{
+  --background: #3B5360;
+ }
+
+ .icon-fab{
+   color: white;
+ }
+ @media (max-width: 392px) {
+
+  .style-labs-c {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+
+  .style-labs-peso {
+
+    font-size: 22px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+
+  .calendar-label-style {
+    font-size: 13px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+
+  .style-labs-f {
+    font-size: 16px;
+    font-family: &quot;quicksand-regular&quot;;
+    color: #8c8c8c;
+  }
+
+  .style-kg {
+    font-size: 16px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+  .icon-style {
+    height: 15px;
+  
+  }
+}
+
+@media (max-width: 356px) {
+
+  .style-labs-c {
+
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .style-labs-peso {
+
+    font-size: 20px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .calendar-label-style {
+
+    font-size: 11px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .style-labs-f {
+
+    font-size: 14px;
+    font-family: &quot;quicksand-regular&quot;;
+    color: #8c8c8c;
+
+  }
+
+  .style-kg {
+
+    font-size: 14px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+  .icon-style {
+    height: 12px;
+  
+  }
+}
+
+@media (max-width: 330px) {
+
+  .style-labs-c {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 19px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .style-labs-peso {
+
+    font-size: 19px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .calendar-label-style {
+    font-size: 12px;
+    font-family: &quot;quicksand-regular&quot;;
+
+  }
+
+  .style-labs-f {
+    font-size: 11px;
+    font-family: &quot;quicksand-regular&quot;;
+    color: #8c8c8c;
+
+  }
+
+  .style-kg {
+    font-size: 12px;
+    font-family: &quot;quicksand-regular&quot;;
+  }
+  .icon-style {
+    height: 12px;
+  
+  }
+}
+.title-bar-warehouse-number{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  margin-right: auto;
+  font-family: &quot;quicksand-regular&quot;;
+  color:#3B5360;
+}
+
+
+.menu-button{
+  color: white
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-toolbar>    <ion-item lines="none" color="police-blue">      <ion-menu-button color="white">      </ion-menu-button>      <ion-label class="title-home" color="white">Home</ion-label>      <ion-button [routerLink]="[\'/user-account\']" fill="clear">        <ion-icon name="person-circle-outline" slot="end" class="style-button"></ion-icon>      </ion-button>    </ion-item>  </ion-toolbar></ion-header><ion-content>  <app-loading *ngIf="loading"></app-loading>  <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">    <ion-refresher-content></ion-refresher-content>  </ion-refresher>  <div *ngIf="contentLoaded && !loading">    <ion-grid class="gridstyle">      <ion-col>        <ion-row>          <ion-label class="style-title-c">Stato dei conferimenti</ion-label>        </ion-row>        <div *ngIf="!thereArePendingConferments" lines="none" border-lines="none">          <ion-label class="card-conf-style">Nessun conferimento in lavorazione</ion-label>        </div>        <ion-card *ngIf="thereArePendingConferments" >          <swiper  [scrollbar]="true">            <ng-template swiperSlide *ngFor="let conferment of filteredConferments, let i = index">              <ion-col>                <ion-row class="style-row-title">                  <ion-label class="title-c"> In {{conferment.current_process}} </ion-label>                </ion-row>                <ion-row>                  <ion-progress-bar class="bar-c" [value]="statusOfTheProcesses[i]"  color="primary"></ion-progress-bar>                </ion-row>                <ion-row>                  <ion-col class="weight-col-style">                    <ion-label class="style-labs-peso">{{conferment.quantity}}<sub class="style-kg"> kg</sub>                    </ion-label>                  </ion-col>                  <ion-col class="wine-type-col-style">                    <ion-label class="style-labs-c">{{conferment.typology}}</ion-label>                  </ion-col>                </ion-row>                <ion-row>                  <ion-col class="down-col-style">                      <ion-icon name="calendar-outline" class="icon-style"></ion-icon>                      <ion-label class="calendar-label-style">{{conferment.date | date: \'dd-MM-yyyy\'}}</ion-label>                  </ion-col>                  <ion-col class="supplier-col-style">                      <ion-label class="style-labs-f">{{conferment.supplier}}</ion-label>                  </ion-col>                </ion-row>              </ion-col>            </ng-template>          </swiper>                 </ion-card>      </ion-col>            <ion-row class="row-warehouse">        <ion-col>          <ion-row class="row-style-warehouse">            <ion-label class="title-warehouse">Il tuo magazzino</ion-label>          </ion-row>          <div            *ngIf="warehouse.caps_quantity.length==0 && warehouse.bottles.bottles_quantity.length==0 && warehouse.tags_quantity.length==0==0">            <ion-label class="card-conf-style">OPS! il tuo magazzino e\' vuoto</ion-label>            <ion-button fill="clear" [routerLink]="[\'/warehouse\']" class="butt-conf-style">Gestisci qui il tuo              magazzino!</ion-button>          </div>          <div *ngIf=" warehouse.caps_quantity <= 25">            <ion-row class="row-style-warehouse">              <ion-col>                <ion-label class="title-bar-warehouse">Tappi</ion-label>              </ion-col>              <ion-col>                <ion-label class="title-bar-warehouse-number">{{warehouse.caps_quantity}}</ion-label>              </ion-col>            </ion-row>          </div>          <ion-row class="row-style-warehouse" *ngIf="warehouse.caps_quantity > 25">            <ion-col>              <ion-label class="title-bar-warehouse">Tappi</ion-label>            </ion-col>            <ion-col>              <ion-label class="title-bar-warehouse-number">{{warehouse.caps_quantity}}</ion-label>            </ion-col>          </ion-row>          <ion-row class="row-style-warehouse">          </ion-row>          <div *ngIf=" warehouse.bottles.bottles_quantity <= 25">            <ion-row class="row-style-warehouse">              <ion-col>                <ion-label class="title-bar-warehouse">Bottiglie</ion-label>              </ion-col>              <ion-col>                <ion-label class="title-bar-warehouse-number">{{warehouse.bottles.bottles_quantity}}</ion-label>              </ion-col>            </ion-row>          </div>          <ion-row class="row-style-warehouse" *ngIf=" warehouse.bottles.bottles_quantity > 25">            <ion-col>              <ion-label class="title-bar-warehouse">Bottiglie</ion-label>            </ion-col>            <ion-col>              <ion-label class="title-bar-warehouse-number">{{warehouse.bottles.bottles_quantity}}</ion-label>            </ion-col>          </ion-row>          <ion-row class="row-style-warehouse">          </ion-row>          <div *ngIf=" warehouse.tags_quantity <= 25">            <ion-row class="row-style-warehouse">              <ion-col>                <ion-label class="title-bar-warehouse">Etichette</ion-label>              </ion-col>              <ion-col>                <ion-label class="title-bar-warehouse-number">{{warehouse.tags_quantity}}</ion-label>              </ion-col>            </ion-row>          </div>          <ion-row class="row-style-warehouse" *ngIf=" warehouse.tags_quantity > 25">            <ion-col>              <ion-label class="title-bar-warehouse">Etichette</ion-label>            </ion-col>            <ion-col>              <ion-label class="title-bar-warehouse-number">{{warehouse.tags_quantity}}</ion-label>            </ion-col>          </ion-row>          <ion-row class="row-style-warehouse">          </ion-row>        </ion-col>      </ion-row>    </ion-grid>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AddSuppliersPage', 'selector': 'app-add-suppliers'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DeveloperPage', 'selector': 'app-developer'},{'name': 'ForgotPwPage', 'selector': 'app-forgot-pw'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'InfoPage', 'selector': 'app-info'},{'name': 'InsertConfermentPage', 'selector': 'app-insert-conferment'},{'name': 'LoadingComponent', 'selector': 'app-loading'},{'name': 'LoadPage', 'selector': 'app-load'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'NoConnectionComponent', 'selector': 'app-no-connection'},{'name': 'PatchAccountPage', 'selector': 'app-patch-account'},{'name': 'SettingsPage', 'selector': 'app-settings'},{'name': 'ShowUserPage', 'selector': 'app-show-user'},{'name': 'SignUpPage', 'selector': 'app-sign-up'},{'name': 'SplashscreenPage', 'selector': 'app-splashscreen'},{'name': 'StatisticsPage', 'selector': 'app-statistics'},{'name': 'SuppliersPage', 'selector': 'app-suppliers'},{'name': 'UserAccountPage', 'selector': 'app-user-account'},{'name': 'ViewConfermentPage', 'selector': 'app-view-conferment'},{'name': 'WarehousePage', 'selector': 'app-warehouse'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HomePage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomePage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -3,7 +3,6 @@ import { DataService } from '../services/DataService';
 import { ConfermentService } from '../services/conferment.service'
 import { findTheCurrentProcessForAConferment } from '../utilites/utilities-functions';
 import { MenuController } from '@ionic/angular';
-import { bottlingDataPatch } from '../utilites/utilities-functions';
 
 @Component({
   selector: 'app-view-conferment',
@@ -38,10 +37,13 @@ export class ViewConfermentPage implements OnInit {
 
   ngOnInit() {
     this.getConferment();
-    console.log("CIAO INIT")
     this.initiazileModels();
   }
 
+
+  /**
+   * request to server for a specific conferment
+   */
   getConferment() {
     this.initializeVariables()
     this.idConferment = this.dataService.getIdConfermentToView();
@@ -55,11 +57,21 @@ export class ViewConfermentPage implements OnInit {
         this.getNextProcess(this.conferment.current_process);
         this.initiazileModels();
       }
-    })
+    }).catch(
+      err=>{
+
+      }
+    )
   }
 
 
-
+/**
+ * make a patch request to the server
+ * @param currentProcess ex: DIRASPATURA
+ * @param status PENDING
+ * the status is needed to understand if it's a new conferment
+ * or it's already in processing
+ */
   async newProcess(currentProcess: string, status: string) {
     console.log("nuovo process in avvio")
     let id = this.conferment._id
@@ -153,6 +165,11 @@ export class ViewConfermentPage implements OnInit {
   }
 
 
+  /**
+   * 
+   * @param currentProcess ex: Diraspatura
+   * will generate the next process based on specific cases. 
+   */
   getNextProcess(currentProcess: string) {
     switch (currentProcess) {
       case "Pigiatura":
