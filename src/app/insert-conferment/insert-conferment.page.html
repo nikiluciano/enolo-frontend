@@ -10,7 +10,7 @@
 <ion-content>
   <app-loading *ngIf="loading"></app-loading>
 
-  <div class="insert-div">
+  <div *ngIf="!loading" class="insert-div">
     <ion-list>
       <ion-item *ngIf="!missing_idworker" class="it" lines="none">
         <ion-input class="input" name="_idworker" placeholder="Id" [(ngModel)]="postData._idworker">
@@ -22,28 +22,32 @@
         </ion-input>
       </ion-item>
 
-      <ion-item *ngIf="!missingSupplier" class="it" lines="none">
-        <ion-select placeholder="Fornitore" [(ngModel)]="postData.supplier">
-          <ion-select-option value="tizio">tizio</ion-select-option>
-          <ion-select-option value="caio">caio</ion-select-option>
+      <ion-item *ngIf="!missingSupplier"   class="it" lines="none">
+        <ion-select placeholder="Fornitore" [(ngModel)]="chosenSupplier"  ok-text="Si" cancel-text="No">
+          <ion-select-option  *ngFor="let supplier of suppliers" [value]="supplier" >
+            {{supplier?.name}} {{supplier?.surname}}</ion-select-option>
         </ion-select>
       </ion-item>
 
-      <ion-item *ngIf="missingSupplier" class="item-wrong" lines="none">
-        <ion-select placeholder="Fornitore" [(ngModel)]="postData.supplier">
-          <ion-select-option value="tizio">tizio</ion-select-option>
-          <ion-select-option value="caio">caio</ion-select-option>
+
+      <ion-item *ngIf="missingSupplier" class="item-wrong"  lines="none">
+        <ion-select placeholder="Fornitore" [(ngModel)]="chosenSupplier"  ok-text="Si" cancel-text="No">
+      
+            <ion-select-option  *ngFor="let supplier of suppliers" value="supplier">
+              {{supplier?.name}} {{supplier?.surname}}</ion-select-option>
+
+
         </ion-select>
       </ion-item>
-
       <ion-item *ngIf="!missingOrigin" class="it" lines="none">
         <!-- <ion-select>Regione</ion-select> -->
         <ion-avatar *ngIf="regionSelected != '' ">
           <img src="{{flagToShow}}">
         </ion-avatar>
-        <ion-select  placeholder="Regione" [(ngModel)]="postData.origin" [(ngModel)]="regionSelected" (ngModelChange)="changeRegion()"
-          ok-text="Si" cancel-text="No">
-          <ion-select-option *ngFor="let region of regions,  let i  = index" value="{{region.name}}">{{region.name}}</ion-select-option>
+        <ion-select placeholder="Regione" [(ngModel)]="postData.origin" [(ngModel)]="regionSelected"
+          (ngModelChange)="changeRegion()" ok-text="Si" cancel-text="No">
+          <ion-select-option *ngFor="let region of regions,  let i  = index" value="{{region.name}}">{{region.name}}
+          </ion-select-option>
         </ion-select>
       </ion-item>
 
@@ -52,32 +56,38 @@
         <ion-avatar *ngIf="regionSelected != '' ">
           <img src="{{flagToShow}}">
         </ion-avatar>
-        <ion-select  placeholder="Regione" [(ngModel)]="postData.origin" [(ngModel)]="regionSelected" (ngModelChange)="changeRegion()"
-          ok-text="Si" cancel-text="No">
+        <ion-select placeholder="Regione" [(ngModel)]="postData.origin" [(ngModel)]="regionSelected"
+          (ngModelChange)="changeRegion()" ok-text="Si" cancel-text="No">
           <ion-select-option *ngFor="let region of regions,  let i  = index" value="{{region.name}}">{{region.name}}
           </ion-select-option>
         </ion-select>
       </ion-item>
-      
+
       <ion-item *ngIf="!missingTypology" class="it" lines="none">
-        <ion-select  placeholder="Tipologia" class="input" [(ngModel)]="typologySelected" (ngModelChange)="changeTypology()" ok-text="Si" cancel-text="No" >
-          <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">{{typology.name}}</ion-select-option>
+        <ion-select placeholder="Tipologia" class="input" [(ngModel)]="typologySelected"
+          (ngModelChange)="changeTypology()" ok-text="Si" cancel-text="No">
+          <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">
+            {{typology.name}}</ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item *ngIf="missingTypology" class="item-wrong" lines="none">
-        <ion-select  placeholder="Tipologia" class="input" [(ngModel)]="typologySelected" (ngModelChange)="changeTypology()" ok-text="Si" cancel-text="No" >
-          <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">{{typology.name}}</ion-select-option>
+        <ion-select placeholder="Tipologia" class="input" [(ngModel)]="typologySelected"
+          (ngModelChange)="changeTypology()" ok-text="Si" cancel-text="No">
+          <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">
+            {{typology.name}}</ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item *ngIf="!missingQuantity" class="it" lines="none">
-        <ion-input type="number" class="input" name="quantity" placeholder="Quantità (Kg)" [(ngModel)]="postData.quantity">
+        <ion-input type="number" class="input" name="quantity" placeholder="Quantità (Kg)"
+          [(ngModel)]="postData.quantity">
         </ion-input>
       </ion-item>
 
       <ion-item *ngIf="missingQuantity" class="item-wrong" lines="none">
-        <ion-input type="number" class="input" name="quantity" placeholder="Quantità (Kg)" [(ngModel)]="postData.quantity">
+        <ion-input type="number" class="input" name="quantity" placeholder="Quantità (Kg)"
+          [(ngModel)]="postData.quantity">
         </ion-input>
       </ion-item>
 
@@ -90,16 +100,6 @@
         <ion-input class="input" name="description" placeholder="Descrizione" [(ngModel)]="postData.description">
         </ion-input>
       </ion-item>
-
-      <!-- <ion-item *ngIf="!missingOrigin" class="it" lines="none">
-        <ion-input class="input" name="origin" placeholder="Origine" [(ngModel)]="postData.origin">
-        </ion-input>
-      </ion-item>
-
-      <ion-item *ngIf="missingOrigin" class="item-wrong" lines="none">
-        <ion-input class="input" name="origin" placeholder="Origine" [(ngModel)]="postData.origin">
-        </ion-input>
-      </ion-item> -->
 
       <ion-button class="input" color="antique-fuchsia" class="btn-style" expand="block" shape="round" type="submit"
         (click)="checkEmpityFields()">

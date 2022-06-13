@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { ToastService } from '../services/toast.service';
 import { User } from '../utilites/User';
+import { CountryProvider } from '../utilites/CountryProvider';
 
 @Component({
   selector: 'app-load',
@@ -32,6 +33,7 @@ export class LoadPage implements OnInit {
   order = null
   showFilters = false
   activeFilters = 0;
+  typologies = []
 
   constructor(public confermentService: ConfermentService,
     public ng2SearchPipeModule: Ng2SearchPipeModule,
@@ -39,7 +41,8 @@ export class LoadPage implements OnInit {
     private router: Router,
     private menu: MenuController,
     private toastService: ToastService,
-    private user: User) { }
+    private user: User,
+    private countryProvider: CountryProvider) { }
 
   slideOpts = {
     slidesPerView: 2,
@@ -50,6 +53,7 @@ export class LoadPage implements OnInit {
 
   ngOnInit() {
     this.getAllConferment();
+    this.getWineTypologies();
   }
 
 
@@ -58,6 +62,8 @@ export class LoadPage implements OnInit {
       event.target.complete()
     }, 3000);
     this.getAllConferment();
+    this.getWineTypologies();
+
   }
 
 
@@ -110,9 +116,10 @@ export class LoadPage implements OnInit {
   }
 
   filterConferments() {
+    console.log(this.typology)
     this.activeFilters = 0
     let query: string;
-    if (this.status != '') {
+    if (this.status) {
       query = "status=" + this.status
       this.activeFilters += 1
     }
@@ -140,6 +147,7 @@ export class LoadPage implements OnInit {
     }
 
     this.loading = true
+    console.log(query)
     this.confermentService.getFilteredConferments(query)
       .then(
         (res) => {
@@ -194,4 +202,9 @@ export class LoadPage implements OnInit {
       }
     )
   }
+
+  getWineTypologies() {
+    this.typologies = this.countryProvider.getTypologies();
+  }
+
 }
