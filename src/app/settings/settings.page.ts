@@ -40,8 +40,8 @@ export class SettingsPage implements OnInit {
   initializePages() {
     this.pages = [
       { title: 'Gestione lavoratori', icon: 'accessibility-outline', route: 'show-user' },
-      { title: 'Info', icon: 'information-outline', route: '' },
-      { title: "Guida all'uso", icon: 'book-outline', route: '' },
+      { title: 'Info', icon: 'information-outline', route: 'info' },
+      { title: "Guida all'uso", icon: 'book-outline', route: 'home' },
     ]
 
   }

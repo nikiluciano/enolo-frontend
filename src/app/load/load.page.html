@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
     <ion-item lines="none" color="police-blue">
-      <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
-      <ion-text class="title">Gestisci conferimenti</ion-text>
+      <ion-menu-button color="white">
+      </ion-menu-button>      <ion-text class="title">Gestisci conferimenti</ion-text>
       <ion-icon class="add" name="add-outline" [routerLink]="['/insert-conferment']"></ion-icon>
     </ion-item>
   </ion-toolbar>
@@ -48,7 +48,7 @@
         <ion-row>
           <ion-col>
             <ion-item class="it" lines="none">
-              <ion-select [(ngModel)]="status" placeholder="Stato">
+              <ion-select [(ngModel)]="status" placeholder="Stato"  ok-text="Si" cancel-text="No">
                 <ion-select-option value="READY">Pronto</ion-select-option>
                 <ion-select-option value="PENDING">In lavorazione</ion-select-option>
                 <ion-select-option value="DELIVERED">Non iniziato</ion-select-option>
@@ -59,30 +59,24 @@
           <ion-col>
 
             <ion-item class="it" lines="none">
-              <ion-select [(ngModel)]="typology" placeholder="Tipologia">
-                <ion-select-option value="tintilia">tintilia</ion-select-option>
-                <ion-select-option value="montepulciano">montepulciano</ion-select-option>
-              </ion-select>
+              <ion-select placeholder="Tipologia" class="input" [(ngModel)]="typology"
+              ok-text="Si" cancel-text="No">
+              <ion-select-option *ngFor="let typology of typologies,  let i  = index" value="{{typology.name}}">
+                {{typology.name}}</ion-select-option>
+            </ion-select>
 
             </ion-item>
           </ion-col>
 
           <ion-col>
             <ion-item class="it" lines="none">
-              <ion-select [(ngModel)]="supplier" placeholder="Fornitore">
-                <ion-select-option value="tizio">tizio</ion-select-option>
-                <ion-select-option value="caio">caio</ion-select-option>
+              <ion-select placeholder="Fornitore" [(ngModel)]="chosenSupplier"  ok-text="Si" cancel-text="No">
+                <ion-select-option  *ngFor="let supplier of suppliers" [value]="supplier" >
+                  {{supplier?.name}} {{supplier?.surname}}</ion-select-option>
               </ion-select>
             </ion-item>
           </ion-col>
-          <ion-col>
-            <ion-item class="it" lines="none">
-              <ion-select [(ngModel)]="order" placeholder="Ordina per">
-                <ion-select-option value="Crescente">Crescente</ion-select-option>
-                <ion-select-option value="Decrescente">Decrescente</ion-select-option>
-              </ion-select>
-            </ion-item>
-          </ion-col>
+     
         </ion-row>
 
 
@@ -116,7 +110,6 @@
                     <ion-icon *ngIf="Conf.status!='READY'" class="process-ended-not-vis"
                       name="checkmark-circle-outline"></ion-icon>
                   </ion-row>
-
                 </ion-col>
 
               </ion-row>

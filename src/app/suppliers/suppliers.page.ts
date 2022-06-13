@@ -13,19 +13,22 @@ export class SuppliersPage implements OnInit {
 
 
   constructor(private supplierService: SupplierService,
-        private menu: MenuController) { }
+    private menu: MenuController) { }
 
   ngOnInit() {
     this.getSuppliers();
   }
 
   getSuppliers() {
-    this.supplierService.getAllSuppliers().then((res) => {
-      if (res) {
+    this.supplierService.getAllSuppliers()
+      .then((res) => {
         this.suppliers = res;
         console.log(JSON.stringify(this.suppliers))
-      }
-    })
+
+      }).catch((err => {
+
+
+      }))
   }
 
   openMenu() {

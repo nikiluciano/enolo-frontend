@@ -2,9 +2,9 @@
 
   <ion-toolbar color="police-blue">
     <ion-item lines="none" color="police-blue">
-      <ion-icon class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
-      <ion-text class="title">Account</ion-text>
-      <ion-icon class="hammer" slot="end" name="hammer-outline" [routerLink]="['/patch-account']"></ion-icon>
+      <ion-menu-button color="white">
+      </ion-menu-button>      <ion-text class="title">Account</ion-text>
+  
     </ion-item>
 
   </ion-toolbar>
@@ -12,11 +12,7 @@
 </ion-header>
 
 <ion-content>
-
   <ion-img src="assets/profilo.jpeg"></ion-img>
- 
-
-
   <ion-col>
     <ion-row>
       <ion-label class="name"> 
@@ -26,7 +22,6 @@
     </ion-row>
   </ion-col>
     
-  
   <ion-item  class="items">
     <ion-icon class="telefone" name="person-outline"></ion-icon>
     <ion-text>
@@ -56,5 +51,4 @@
       {{phone}}
     </ion-text>
   </ion-item>
-
 </ion-content>

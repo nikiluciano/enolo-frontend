@@ -2,7 +2,8 @@
   <ion-toolbar>
 
     <ion-item lines="none" color="police-blue">
-      <ion-icon slot="start" class="arrow" name="arrow-back-outline" [routerLink]="['/home']"></ion-icon>
+      <ion-menu-button color="white">
+      </ion-menu-button>
       <ion-label class="title-home ion-text-center">Fornitori</ion-label>
       <ion-icon class="add" name="add-outline" [routerLink]="['/add-suppliers']"></ion-icon>
 
@@ -13,26 +14,26 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let supplier of suppliers">
-     <ion-grid>
-      <ion-row class="row-name">
-        <ion-text>{{supplier.name}} {{supplier.surname}}</ion-text>
-      </ion-row>
-      <ion-row class="row-tel">
-        <ion-col >
-          <ion-row>
-            <ion-icon name="call-outline"></ion-icon>
-            <ion-label class="number">{{supplier.phone}}</ion-label>
-          </ion-row>
-          <ion-row>
-            <ion-icon name="mail-outline"></ion-icon>            
-            <ion-label class="address">
-              {{supplier.email}}
-            </ion-label>
-          </ion-row>
-        </ion-col>
-       
-      </ion-row>
-     </ion-grid> 
+      <ion-grid>
+        <ion-row class="row-name">
+          <ion-text>{{supplier.name}} {{supplier.surname}}</ion-text>
+        </ion-row>
+        <ion-row class="row-tel">
+          <ion-col>
+            <ion-row>
+              <ion-icon name="call-outline"></ion-icon>
+              <ion-label class="number">{{supplier.phone}}</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-icon name="mail-outline"></ion-icon>
+              <ion-label class="address">
+                {{supplier.email}}
+              </ion-label>
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
 
     </ion-item>
 

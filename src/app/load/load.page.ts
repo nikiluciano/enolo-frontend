@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { ToastService } from '../services/toast.service';
 import { User } from '../utilites/User';
+import { CountryProvider } from '../utilites/CountryProvider';
+import { SupplierService } from '../services/supplier.service';
+
 
 @Component({
   selector: 'app-load',
@@ -27,11 +30,15 @@ export class LoadPage implements OnInit {
   isOpen = false;
 
   typology = null
-  supplier = null
   status = null
   order = null
   showFilters = false
   activeFilters = 0;
+  typologies = []
+
+  suppliers: any;
+  supplier = null
+  chosenSupplier: any;
 
   constructor(public confermentService: ConfermentService,
     public ng2SearchPipeModule: Ng2SearchPipeModule,
@@ -39,7 +46,10 @@ export class LoadPage implements OnInit {
     private router: Router,
     private menu: MenuController,
     private toastService: ToastService,
-    private user: User) { }
+    private user: User,
+    private countryProvider: CountryProvider,
+    private supplierService: SupplierService
+  ) { }
 
   slideOpts = {
     slidesPerView: 2,
@@ -50,6 +60,9 @@ export class LoadPage implements OnInit {
 
   ngOnInit() {
     this.getAllConferment();
+    this.getWineTypologies();
+    this.getSuppliers();
+
   }
 
 
@@ -58,6 +71,10 @@ export class LoadPage implements OnInit {
       event.target.complete()
     }, 3000);
     this.getAllConferment();
+    this.getWineTypologies();
+    this.getSuppliers();
+
+
   }
 
 
@@ -110,19 +127,19 @@ export class LoadPage implements OnInit {
   }
 
   filterConferments() {
+    console.log(this.typology)
     this.activeFilters = 0
     let query: string;
-    if (this.status != '') {
+    if (this.status) {
       query = "status=" + this.status
       this.activeFilters += 1
     }
 
-    if (this.supplier) {
-      query = query + "&supplier=" + this.supplier
+    if (this.chosenSupplier) {
+      query = query + "&supplier=" + this.chosenSupplier.name + " " + this.chosenSupplier.surname
       this.activeFilters += 1
 
     }
-
 
     if (this.typology) {
       query = query + "&typology=" + this.typology
@@ -130,16 +147,9 @@ export class LoadPage implements OnInit {
 
     }
 
-    if (this.order) {
-      if (this.order == "Decrescente")
-        query = query + "&typology=" + this.typology + "&sort=-1"
-      else if (this.order = "Crescente")
-        query = query + "&typology=" + this.typology + "&sort=1"
-      this.activeFilters += 1
-
-    }
 
     this.loading = true
+    console.log(query)
     this.confermentService.getFilteredConferments(query)
       .then(
         (res) => {
@@ -171,27 +181,48 @@ export class LoadPage implements OnInit {
     this.supplier = null
     this.status = null
     this.order = null
+    this.chosenSupplier = null
     this.activeFilters = 0
     this.getAllConferment();
 
   }
 
 
-  deleteConferment(id: string){
+  deleteConferment(id: string) {
     let deleteData = {
       id: id
     }
     this.confermentService.deleteConferment(this.dataService.getUser().username, deleteData)
-    .then(
-      res=>{
-        this.getAllConferment()
-        this.toastService.presentToast("Conferimento cancellato con successo!")
-      }
-    )
-    .catch(
-      err=>{
-        this.toastService.presentToast(err.msg)
-      }
-    )
+      .then(
+        res => {
+          this.getAllConferment()
+          this.toastService.presentToast("Conferimento cancellato con successo!")
+        }
+      )
+      .catch(
+        err => {
+          this.toastService.presentToast(err.msg)
+        }
+      )
   }
+
+  getWineTypologies() {
+    this.typologies = this.countryProvider.getTypologies();
+  }
+
+
+  getSuppliers() {
+
+
+    this.supplierService.getAllSuppliers()
+      .then((res) => {
+        this.suppliers = res;
+
+      }).catch((err => {
+
+
+      }))
+  }
+
+
 }

@@ -5,6 +5,7 @@ import { ToastService } from '../services/toast.service';
 import { ConfermentService } from '../services/conferment.service';
 import { CountryProvider } from '../utilites/CountryProvider';
 import { MenuController } from '@ionic/angular';
+import { SupplierService } from '../services/supplier.service';
 
 
 @Component({
@@ -42,14 +43,18 @@ export class InsertConfermentPage implements OnInit {
   regionSelected = "";
   typologies = []
   typologySelected: string;
+  suppliers : any;
+  loading = false;
 
+  chosenSupplier: any;
   constructor(
     private authService: AuthService,
     private toastService: ToastService,
     private router: Router,
     public confermentService: ConfermentService,
     private countryProvider: CountryProvider,
-    private menu: MenuController
+    private menu: MenuController,
+    private supplierService: SupplierService
 
   ) { }
 
@@ -57,10 +62,12 @@ export class InsertConfermentPage implements OnInit {
   ngOnInit() {
     this.getRegions()
     this.getWineTypologies();
+    this.getSuppliers();
   }
 
+
+
   validateInputs() {
-    console.log(this.postData);
     let _idworker = this.postData._idworker.trim();
     // let status = this.postData.status.trim();
     let country = this.postData.country.trim();
@@ -76,6 +83,7 @@ export class InsertConfermentPage implements OnInit {
 
   checkEmpityFields() {
     if (this.validateInputs()) {
+      this.postData.supplier = this.chosenSupplier.name + " " + this.chosenSupplier.surname
       this.confermentService.insertConferment(this.postData).then(
         (res: any) => {
           if (res) {
@@ -239,10 +247,26 @@ export class InsertConfermentPage implements OnInit {
 
   ionViewWillEnter() {
     this.menu.enable(true);
+    this.getRegions()
+    this.getWineTypologies();
+    this.getSuppliers();
   }
 
 
+  getSuppliers() {
+    this.loading = true
+ 
+    this.supplierService.getAllSuppliers()
+      .then((res) => {
+        this.loading = false
+        this.suppliers = res;
+        console.log(JSON.stringify(this.suppliers))
 
+      }).catch((err => {
+
+
+      }))
+  }
 
 }
 
