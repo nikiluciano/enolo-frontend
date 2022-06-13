@@ -60,6 +60,20 @@ const routes: Routes = [
 
   },
   {
+    path: 'info',
+    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
+  },
+  {
+    path: 'info',
+    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
+  },
+  {
+    path: 'developer',
+    loadChildren: () => import('./developer/developer.module').then( m => m.DeveloperPageModule)
+
+
+  },
+  {
     path: 'view-conferment',
     loadChildren: () => import('./view-conferment/view-conferment.module').then( m => m.ViewConfermentPageModule)
   },
@@ -74,7 +88,8 @@ const routes: Routes = [
   {
     path: 'suppliers',
     loadChildren: () => import('./suppliers/suppliers.module').then( m => m.SuppliersPageModule)
-  },  {
+  },
+  {
     path: 'add-suppliers',
     loadChildren: () => import('./add-suppliers/add-suppliers.module').then( m => m.AddSuppliersPageModule)
   }
